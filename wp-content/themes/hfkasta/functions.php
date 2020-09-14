@@ -4,8 +4,7 @@
         register_nav_menus(
             array(
                 'main' => __( 'Main' ),
-                'footer' => __( 'Footer' ),
-                'language-switch' => __( 'Language-Switch' )
+                'footer' => __( 'Footer' )
             )
         );
     }

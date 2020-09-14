@@ -61,20 +61,6 @@
             if (window.innerWidth >= 768) {
                 if (window.pageYOffset > 400) {
                     pageElevator.classList.add('show');
-
-                    /*
-                    let pageElevatorBottom = 20;
-
-                    if (window.pageYOffset > documentHeight - footerHeight) {
-                        console.log("now");
-
-                        pageElevatorBottom = documentHeight - window.pageYOffset;
-                    }
-
-                    console.log(pageElevatorBottom);
-
-                    pageElevator.style.bottom = pageElevatorBottom + 'px';
-                    */
                 } else {
                     pageElevator.classList.remove('show');
                 }
