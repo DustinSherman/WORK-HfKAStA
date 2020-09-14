@@ -2,14 +2,14 @@
   font-family: 'GT Haptik Regular';
   font-style: normal;
   font-weight: normal;
-  src: url(/hfkasta/wp-content/themes/hfkasta/assets/font/gt-haptik-regular.otf), url(/hfkasta/wp-content/themes/hfkasta/assets/font/gt-haptik-regular.woff), url(/hfkasta/wp-content/themes/hfkasta/assets/font/gt-haptik-regular.woff2);
+  src: url(../assets/font/gt-haptik-regular.otf), url(../assets/font/gt-haptik-regular.woff), url(../assets/font/gt-haptik-regular.woff2);
 }
 
 @font-face {
   font-family: 'GT Haptik Bold';
   font-style: normal;
   font-weight: black;
-  src: url(/hfkasta/wp-content/themes/hfkasta/assets/font/gt-haptik-bold.otf), url(/hfkasta/wp-content/themes/hfkasta/assets/font/gt-haptik-bold.woff), url(/hfkasta/wp-content/themes/hfkasta/assets/font/gt-haptik-bold.woff2);
+  src: url(../assets/font/gt-haptik-bold.otf), url(../assets/font/gt-haptik-bold.woff), url(../assets/font/gt-haptik-bold.woff2);
 }
 
 .hamburger.hamburger--squeeze {
@@ -135,7 +135,7 @@ nav ul li.menu-item-has-children .dropdown {
   margin: 0 0 4px 6px;
   height: 18px;
   width: 20px;
-  background: url("/hfkasta/wp-content/themes/hfkasta/assets/dropdown.svg") no-repeat center center;
+  background: url("../assets/dropdown.svg") no-repeat center center;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transition: -webkit-transform 0.5s;
@@ -597,7 +597,7 @@ a {
 .wrapper main .content a::before {
   width: 1rem;
   height: 1rem;
-  background: url("/hfkasta/wp-content/themes/hfkasta/assets/link_content.svg") no-repeat center center;
+  background: url("../assets/link_content.svg") no-repeat center center;
   margin: 0 2px -2px 4px;
 }
 
@@ -613,7 +613,7 @@ a {
 .wrapper nav .sidebar_note a::before {
   width: 1.2rem;
   height: 1.2rem;
-  background: url("/hfkasta/wp-content/themes/hfkasta/assets/link_sidebar.svg") no-repeat center center;
+  background: url("../assets/link_sidebar.svg") no-repeat center center;
   margin: 0 4px 0 0;
   top: 50%;
   left: 0;
