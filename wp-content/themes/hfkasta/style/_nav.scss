@@ -163,6 +163,45 @@ nav {
     }
 }
 
+// Language Switch
+$language-menu-rotation: 12deg;
+
+.language-switch {
+    border: $border-weight solid $brand-primary-color;
+    position: absolute;
+    padding: 15px 10px 15px 20px;
+    top: 70px;
+    left: -13px;
+    transform: rotate($language-menu-rotation);
+
+    .menu {
+        margin: 0;
+        padding: 0;
+        transform: rotate(-$language-menu-rotation);
+
+        li {
+            list-style-type: none;
+            display: inline;
+
+            a {
+                color: $brand-secondary-color;
+            }
+
+            &.current-lang {
+                a {
+                    font-family: 'GT Haptik Bold', sans-serif;
+                }
+            }
+
+            &:not(:first-child)::before {
+                content: '/';
+                margin: 0 4px;
+                color: $brand-secondary-color;
+            }
+        }
+    }
+}
+
 // Hide Sidebar Note on search-result site
 body.search-result {
     .content {

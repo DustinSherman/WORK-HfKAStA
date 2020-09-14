@@ -70,7 +70,7 @@
 
         function setTickerValues() {
             let ticker = document.getElementById('ticker');
-            let tickerWidth = -ticker.clientWidth/2;
+            let tickerWidth = -ticker.clientWidth/3;
 
             document.documentElement.style.setProperty('--tickerWidth', tickerWidth + 'px');
         }

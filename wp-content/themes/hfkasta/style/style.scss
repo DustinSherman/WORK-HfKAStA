@@ -25,6 +25,15 @@ $border-weight: 3px;
         url(../assets/font/gt-haptik-bold.woff2);
 }
 
+@font-face {
+    font-family: 'GT Haptik Italic';
+    font-style: italic;
+    font-weight: normal;
+    src: url(../assets/font/gt-haptik-regular-oblique.otf),
+        url(../assets/font/gt-haptik-regular-oblique.woff),
+        url(../assets/font/gt-haptik-regular-oblique.woff2);
+}
+
 // Imports
 @import "./nav";
 @import "./footer";
@@ -50,16 +59,27 @@ h6,
 p,
 span,
 a,
-li {
+li,
+input,
+button,
+cite {
     color: $brand-primary-color;
 }
 
 p,
 span,
 a,
-li {
+li,
+input,
+button,
+figcaption {
     font-family: 'GT Haptik Regular', sans-serif;
     font-size: 1rem;
+}
+
+cite {
+    font-family: 'GT Haptik Italic', sans-serif;
+    font-size: .9rem;
 }
 
 h1,
@@ -79,6 +99,10 @@ h1 {
 
 a {
     text-decoration: none;
+}
+
+pre {
+    white-space: break-spaces;
 }
 
 .wrapper {
@@ -106,6 +130,14 @@ a {
             margin: 0 auto;
             position: relative;
             padding: 150px 0 0 0;
+
+            .wp-block-file__button {
+                display: inline-block;
+                background: none;
+                border: $border-weight solid $brand-secondary-color;
+                font-size: 1rem;
+                padding: 5px 10px;
+            }
         }
 
         h1 {

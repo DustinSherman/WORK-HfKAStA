@@ -12,6 +12,13 @@
   src: url(../assets/font/gt-haptik-bold.otf), url(../assets/font/gt-haptik-bold.woff), url(../assets/font/gt-haptik-bold.woff2);
 }
 
+@font-face {
+  font-family: 'GT Haptik Italic';
+  font-style: italic;
+  font-weight: normal;
+  src: url(../assets/font/gt-haptik-regular-oblique.otf), url(../assets/font/gt-haptik-regular-oblique.woff), url(../assets/font/gt-haptik-regular-oblique.woff2);
+}
+
 .hamburger.hamburger--squeeze {
   position: fixed;
   right: 0;
@@ -176,6 +183,42 @@ nav ul.sub-menu li a {
 
 nav ul.sub-menu li.current-menu-item a {
   font-family: 'GT Haptik Bold', sans-serif;
+}
+
+.language-switch {
+  border: 3px solid #5a00be;
+  position: absolute;
+  padding: 15px 10px 15px 20px;
+  top: 70px;
+  left: -13px;
+  -webkit-transform: rotate(12deg);
+          transform: rotate(12deg);
+}
+
+.language-switch .menu {
+  margin: 0;
+  padding: 0;
+  -webkit-transform: rotate(-12deg);
+          transform: rotate(-12deg);
+}
+
+.language-switch .menu li {
+  list-style-type: none;
+  display: inline;
+}
+
+.language-switch .menu li a {
+  color: #d50e31;
+}
+
+.language-switch .menu li.current-lang a {
+  font-family: 'GT Haptik Bold', sans-serif;
+}
+
+.language-switch .menu li:not(:first-child)::before {
+  content: '/';
+  margin: 0 4px;
+  color: #d50e31;
 }
 
 body.search-result .content .sidebar_note {
@@ -497,16 +540,27 @@ h6,
 p,
 span,
 a,
-li {
+li,
+input,
+button,
+cite {
   color: #5a00be;
 }
 
 p,
 span,
 a,
-li {
+li,
+input,
+button,
+figcaption {
   font-family: 'GT Haptik Regular', sans-serif;
   font-size: 1rem;
+}
+
+cite {
+  font-family: 'GT Haptik Italic', sans-serif;
+  font-size: .9rem;
 }
 
 h1,
@@ -526,6 +580,10 @@ h1 {
 
 a {
   text-decoration: none;
+}
+
+pre {
+  white-space: break-spaces;
 }
 
 .wrapper {
@@ -556,6 +614,14 @@ a {
   margin: 0 auto;
   position: relative;
   padding: 150px 0 0 0;
+}
+
+.wrapper main .content .wp-block-file__button {
+  display: inline-block;
+  background: none;
+  border: 3px solid #d50e31;
+  font-size: 1rem;
+  padding: 5px 10px;
 }
 
 .wrapper main h1 {

@@ -10,7 +10,7 @@
 <div class="ticker-wrap">
     <div class="ticker" id="ticker">
         <?php if ( $the_query->have_posts() ) : ?>
-            <?php for ($i = 0 ; $i < 2; $i++) : ?>
+            <?php for ($i = 0 ; $i < 3; $i++) : ?>
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                     <div class="news">
                     <?php if ( get_field('news_link') ) : ?>

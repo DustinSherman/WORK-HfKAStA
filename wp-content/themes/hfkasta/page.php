@@ -3,6 +3,17 @@
 <?php include get_template_directory() . '/ticker.php'; ?>
 
 <div class="wrapper">
+    <div class="language-switch">
+        <?php
+            wp_nav_menu( 
+                array(
+                    'theme_location' => 'language-switch',
+                    'menu' => 'Language-Switch'
+                )
+            );
+        ?>
+    </div>
+
     <main>
         <div class="content">
             <?php if (get_field('background_boxes') !== 'no-boxes') : ?>
