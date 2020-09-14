@@ -1,6 +1,6 @@
     <div id="overlay"></div>
 
-    <footer>
+    <footer id="footer">
         <?php
             wp_nav_menu( 
                 array(
@@ -14,32 +14,37 @@
     <script>
         var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
 
-        // Toogle Classes on hamburger Menu
         var hamburgers = document.querySelectorAll(".hamburger");
         var nav = document.getElementById("nav");
         var overlay = document.getElementById("overlay");
+        let footerHeight = document.getElementById('footer').clientHeight;
+        let hamburger = document.getElementById('hamburger');
 
-        if (hamburgers.length > 0) {
-            forEach(hamburgers, function(hamburger) {
-                hamburger.addEventListener("click", function() {
-                    this.classList.toggle("is-active");
-                    nav.classList.toggle("is-open");
-                    overlay.classList.toggle("open");
-                }, false);
-            });
-        }
+        let documentHeight = document.body.clientHeight;
+
+        // Toogle Classes on hamburger Menu
+        hamburger.addEventListener("click", function() {
+            this.classList.toggle("is-active");
+            nav.classList.toggle("is-open");
+            overlay.classList.toggle("open");
+        }, false);
 
         overlay.addEventListener("click", function() {
-            forEach(hamburgers, function(hamburger) {
-                hamburger.classList.toggle("is-active");
-            });
+            hamburger.classList.toggle("is-active");
             
             mobileNav.classList.toggle("is-open");
             overlay.classList.toggle("open");
         });
  
-        // Move Hamburger Menu
+        // Page Elevator
+        let pageElevator = document.getElementById('page-elevator');
+        pageElevator.addEventListener("click", function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        })
+
         window.onscroll = function() {
+            // Move Hamburger Menu
             if (window.pageYOffset <= 100) {
                 let hamburgerTop = 0;
 
@@ -49,7 +54,30 @@
                     hamburgerTop = 0;
                 }
 
-                document.getElementById('hamburger').style.top = hamburgerTop + 'px';
+                hamburger.style.top = hamburgerTop + 'px';
+            }
+
+            // Show / Hide Page-Elevator
+            if (window.innerWidth >= 768) {
+                if (window.pageYOffset > 400) {
+                    pageElevator.classList.add('show');
+
+                    /*
+                    let pageElevatorBottom = 20;
+
+                    if (window.pageYOffset > documentHeight - footerHeight) {
+                        console.log("now");
+
+                        pageElevatorBottom = documentHeight - window.pageYOffset;
+                    }
+
+                    console.log(pageElevatorBottom);
+
+                    pageElevator.style.bottom = pageElevatorBottom + 'px';
+                    */
+                } else {
+                    pageElevator.classList.remove('show');
+                }
             }
         };
 

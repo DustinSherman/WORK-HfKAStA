@@ -41,6 +41,10 @@ $border-weight: 3px;
 @import "./boxes";
 @import "./ticker";
 
+html {
+    scroll-behavior: smooth;
+}
+
 html,
 body {
     margin: 0;

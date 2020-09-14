@@ -35,4 +35,13 @@
         return $classes;
     }
     add_filter( 'nav_menu_css_class', 'wpse_310629_nav_menu_css_class', 10, 4 );
+
+    // Limit Menu depth
+    function limit_menu_depth( $hook ) {
+        if ( $hook != 'nav-menus.php' ) return;
+      
+        // override default value right after 'nav-menu' JS
+        wp_add_inline_script( 'nav-menu', 'wpNavMenu.options.globalMaxDepth = 1;', 'after' );
+    }
+    add_action( 'admin_enqueue_scripts', 'limit_menu_depth' );
 ?>

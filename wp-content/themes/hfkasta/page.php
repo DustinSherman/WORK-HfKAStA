@@ -4,14 +4,9 @@
 
 <div class="wrapper">
     <div class="language-switch">
-        <?php
-            wp_nav_menu( 
-                array(
-                    'theme_location' => 'language-switch',
-                    'menu' => 'Language-Switch'
-                )
-            );
-        ?>
+        <ul>
+            <?php pll_the_languages();?>
+        </ul>
     </div>
 
     <main>
@@ -68,6 +63,10 @@
                     </div>
                 <?php endif; ?>
             <?php endif; ?>
+        </div>
+
+        <div class="page-elevator" id="page-elevator">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/arrow-elevator.svg" class="page-elevator-icon">
         </div>
     </main>
 

@@ -188,6 +188,7 @@ nav ul.sub-menu li.current-menu-item a {
 .language-switch {
   border: 3px solid #5a00be;
   position: absolute;
+  z-index: 30;
   padding: 15px 10px 15px 20px;
   top: 70px;
   left: -13px;
@@ -195,30 +196,34 @@ nav ul.sub-menu li.current-menu-item a {
           transform: rotate(12deg);
 }
 
-.language-switch .menu {
+.language-switch ul {
   margin: 0;
   padding: 0;
   -webkit-transform: rotate(-12deg);
           transform: rotate(-12deg);
 }
 
-.language-switch .menu li {
+.language-switch ul li {
   list-style-type: none;
   display: inline;
 }
 
-.language-switch .menu li a {
+.language-switch ul li a {
   color: #d50e31;
 }
 
-.language-switch .menu li.current-lang a {
+.language-switch ul li.current-lang a {
   font-family: 'GT Haptik Bold', sans-serif;
 }
 
-.language-switch .menu li:not(:first-child)::before {
+.language-switch ul li:not(:first-child)::before {
   content: '/';
   margin: 0 4px;
   color: #d50e31;
+}
+
+.page-elevator {
+  display: none;
 }
 
 body.search-result .content .sidebar_note {
@@ -247,6 +252,22 @@ nav .sidebar_note {
   }
   .content .content_note {
     display: none;
+  }
+  .page-elevator {
+    position: fixed;
+    display: block;
+    left: 70%;
+    bottom: 80px;
+    width: 20px;
+    height: auto;
+    -webkit-transition: left .5s ease;
+    transition: left .5s ease;
+  }
+  .page-elevator.show {
+    left: calc(70% - 60px);
+  }
+  .page-elevator:hover {
+    cursor: pointer;
   }
 }
 
@@ -520,6 +541,10 @@ footer ul li {
   color: #5a00be;
   font-weight: bold;
   line-height: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,

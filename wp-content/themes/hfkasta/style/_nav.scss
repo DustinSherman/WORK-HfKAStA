@@ -169,12 +169,13 @@ $language-menu-rotation: 12deg;
 .language-switch {
     border: $border-weight solid $brand-primary-color;
     position: absolute;
+    z-index: 30;
     padding: 15px 10px 15px 20px;
     top: 70px;
     left: -13px;
     transform: rotate($language-menu-rotation);
 
-    .menu {
+    ul {
         margin: 0;
         padding: 0;
         transform: rotate(-$language-menu-rotation);
@@ -200,6 +201,11 @@ $language-menu-rotation: 12deg;
             }
         }
     }
+}
+
+// Page Elevator
+.page-elevator {
+    display: none;
 }
 
 // Hide Sidebar Note on search-result site
@@ -247,6 +253,25 @@ nav {
     .content {
         .content_note {
             display: none;
+        }
+    }
+
+    // Page Elevator
+    .page-elevator {
+        position: fixed;
+        display: block;
+        left: 70%;
+        bottom: $footer-height + 20px;
+        width: 20px;
+        height: auto;
+        transition: left .5s ease;
+
+        &.show {
+            left: calc(70% - 60px);
+        }
+
+        &:hover {
+            cursor: pointer;
         }
     }
 }
