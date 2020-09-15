@@ -1,6 +1,6 @@
 $search-bar-height: 40px;
 $icon-height: 18px;
-$nav-width: 350px;
+$nav-width: 460px;
 $search-form-padding: 5px;
 
 .hamburger.hamburger--squeeze {
@@ -21,7 +21,8 @@ nav {
     border-left: $border-weight solid $brand-primary-color;
     z-index: 30;
     transition: right $transition-time ease;
-    padding: (60px + $ticker-height) 20px 20px 20px;
+    //padding: (60px + $ticker-height) 20px 20px 20px;
+    padding: 2rem;
     box-sizing: border-box;
 
     &.is-open {
@@ -234,7 +235,7 @@ nav {
 
     nav {
         position: relative;
-        padding-top: 20px;
+        //padding-top: 20px;
         margin: 0;
         right: auto;
 
