@@ -1,0 +1,56 @@
+// Content Links
+main .content,
+nav .sidebar_note {
+    a {
+        color: $brand-secondary-color;
+
+        &::before {
+            content: '';
+            position: relative;
+            display: inline-block;
+        }
+
+        &:hover {
+            color: $brand-primary-color;
+        }
+    }
+}
+
+// Footer und Navigations-Links
+nav .menu,
+footer .menu {
+    a {
+        color: $brand-primary-color;
+
+        &:hover {
+            color: $brand-secondary-color;
+        }
+    }
+}
+
+// Several Links
+
+
+main .content,
+nav .sidebar_note {
+
+    // Link intern
+    a {
+        &::before {
+            width: 1rem;
+            height: 1rem;
+            margin: 0 2px -2px 4px;
+        }
+    }
+
+    // External Link
+    a[href*='http://'] {
+        &::before {}
+    }
+
+    // File Link
+    a[href*='.pdf'],
+    a[href*='.txt'] {
+        &::before {}
+    }
+}

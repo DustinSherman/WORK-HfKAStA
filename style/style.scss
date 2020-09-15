@@ -13,8 +13,11 @@ $border-weight: 2px;
 @import "./search";
 @import "./boxes";
 @import "./ticker";
+@import "./links";
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: inherit;
     -webkit-font-smoothing: antialiased;
     word-break: break-word;
@@ -73,14 +76,13 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'GT Haptik', sans-serif;
+    font-family: 'GT Haptik Regular', sans-serif;
     font-weight: normal;
 }
 
 h1 {
     margin-top: 0;
     font-size: 1.4rem;
-    /*padding-right: 40px;*/
 }
 
 a {
@@ -92,9 +94,6 @@ a {
 pre {
     white-space: break-spaces;
 }
-
-// main + wrapper + post
-// TODO split in files?
 
 .section-inner {
     margin-left: auto;
@@ -111,13 +110,13 @@ pre {
     padding: 6rem 0;
 }
 
-.entry-content > * {
+.entry-content>* {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1.25em;
 }
 
-.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide),
+.entry-content>*:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide),
 .post {
     max-width: 58rem;
     width: calc(100% - 14rem);
@@ -131,11 +130,12 @@ pre {
     margin-bottom: 1.25em;
 }
 
-.post-inner .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+.post-inner .entry-content>*:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
     width: calc(100% - 2rem);
 }
 
-.entry-content p, .entry-content li {
+.entry-content p,
+.entry-content li {
     line-height: 1.4;
     font-size: 1.6rem;
 }
@@ -196,49 +196,6 @@ pre {
 
         .content_note {
             padding: 20px;
-        }
-    }
-}
-
-// Link Styling
-.wrapper {
-
-    main .content,
-    nav .sidebar_note {
-        a {
-            color: $brand-secondary-color;
-
-            &::before {
-                content: '';
-                position: relative;
-                display: inline-block;
-            }
-        }
-    }
-
-    main .content a::before {
-        width: 1rem;
-        height: 1rem;
-        background: url('../assets/link_content.svg') no-repeat center center;
-        margin: 0 2px -2px 4px;
-    }
-
-    nav .sidebar_note a {
-        height: 100%;
-        position: relative;
-        padding-left: 1.8rem;
-        display: block;
-        box-sizing: border-box;
-
-        &::before {
-            width: 1.2rem;
-            height: 1.2rem;
-            background: url('../assets/link_sidebar.svg') no-repeat center center;
-            margin: 0 4px 0 0;
-            top: 50%;
-            left: 0;
-            position: absolute;
-            margin-top: -.6rem;
         }
     }
 }
