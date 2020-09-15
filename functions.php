@@ -72,4 +72,32 @@
         );
     }
     add_action( 'after_setup_theme', 'tabor_gutenberg_color_palette' );
+
+    add_filter( 'allowed_block_types', 'misha_allowed_block_types' );
+    function misha_allowed_block_types( $allowed_blocks ) {
+        return array(
+            'core/image',
+            'core/paragraph',
+            'core/heading',
+            'core/list',
+            'core/table',
+            'core/button',
+            'core/gallery',
+            'core/video',
+            'core/separator',
+            'core/spacer',
+            'core/shortcode',
+            'core/embed',
+            'core-embed/twitter',
+            'core-embed/youtube',
+            'core-embed/facebook',
+            'core-embed/instagram',
+            'core-embed/wordpress',
+            'core-embed/soundcloud',
+            'core-embed/spotify',
+            'core-embed/flickr',
+            'core-embed/vimeo',
+            'core-embed/mixcloud',
+        );
+    }
 ?>
