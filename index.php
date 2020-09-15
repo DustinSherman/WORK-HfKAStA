@@ -106,13 +106,7 @@ get_header();
 
                 <div class="no-search-results-form section-inner thin">
 
-                    <?php
-                    get_search_form(
-                        array(
-                            'label' => __( 'search again', 'twentytwenty' ),
-                        )
-                    );
-                    ?>
+                        <h1>Keine Suchergebnisse für <span><?php echo get_search_query() ?></span></h1>
 
                 </div><!-- .no-search-results -->
 
