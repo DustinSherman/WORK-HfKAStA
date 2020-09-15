@@ -1,5 +1,6 @@
 $search-bar-height: 40px;
 $icon-height: 18px;
+$nav-width: 350px;
 
 .hamburger.hamburger--squeeze {
     position: fixed;
@@ -10,9 +11,9 @@ $icon-height: 18px;
 
 nav {
     position: absolute;
-    width: 280px;
+    width: $nav-width;
     min-height: 100%;
-    right: -280px;
+    right: -$nav-width;
     top: 0;
     background: #fff;
     color: $brand-primary-color;

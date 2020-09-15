@@ -4,45 +4,25 @@ $brand-secondary-color: #d50e31;
 $transition-time: .5s;
 $footer-height: 60px;
 $ticker-height: 40px;
-$border-weight: 3px;
-
-// Font
-@font-face {
-    font-family: 'GT Haptik Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: url(../assets/font/gt-haptik-regular.otf),
-        url(../assets/font/gt-haptik-regular.woff),
-        url(../assets/font/gt-haptik-regular.woff2);
-}
-
-@font-face {
-    font-family: 'GT Haptik Bold';
-    font-style: normal;
-    font-weight: black;
-    src: url(../assets/font/gt-haptik-bold.otf),
-        url(../assets/font/gt-haptik-bold.woff),
-        url(../assets/font/gt-haptik-bold.woff2);
-}
-
-@font-face {
-    font-family: 'GT Haptik Italic';
-    font-style: italic;
-    font-weight: normal;
-    src: url(../assets/font/gt-haptik-regular-oblique.otf),
-        url(../assets/font/gt-haptik-regular-oblique.woff),
-        url(../assets/font/gt-haptik-regular-oblique.woff2);
-}
+$border-weight: 2px;
 
 // Imports
+@import "./fonts";
 @import "./nav";
 @import "./footer";
 @import "./search";
 @import "./boxes";
 @import "./ticker";
 
+*, *::before, *::after {
+    box-sizing: inherit;
+    -webkit-font-smoothing: antialiased;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+
 html {
-    scroll-behavior: smooth;
+    /*scroll-behavior: smooth;*/
 }
 
 html,
@@ -52,6 +32,7 @@ body {
     min-width: 100%;
     min-height: 100%;
     height: 100%;
+    font-size: 14px;
 }
 
 h1,
@@ -78,12 +59,12 @@ input,
 button,
 figcaption {
     font-family: 'GT Haptik Regular', sans-serif;
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 cite {
     font-family: 'GT Haptik Italic', sans-serif;
-    font-size: .9rem;
+    font-size: .9em;
 }
 
 h1,
@@ -92,21 +73,71 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'GT Haptik Bold', sans-serif;
+    font-family: 'GT Haptik', sans-serif;
+    font-weight: normal;
 }
 
 h1 {
     margin-top: 0;
     font-size: 1.4rem;
-    padding-right: 40px;
+    /*padding-right: 40px;*/
 }
 
 a {
     text-decoration: none;
+    color: $brand-secondary-color;
+    font-weight: bold;
 }
 
 pre {
     white-space: break-spaces;
+}
+
+// main + wrapper + post
+// TODO split in files?
+
+.section-inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 120rem;
+    width: calc(100% - 4rem);
+}
+
+.entry-header {
+    font-size: 1.5rem;
+}
+
+.entry-header {
+    padding: 6rem 0;
+}
+
+.entry-content > * {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.25em;
+}
+
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide),
+.post {
+    max-width: 58rem;
+    width: calc(100% - 14rem);
+}
+
+.post {
+    border: $border-weight solid;
+    border-color: $brand-primary-color;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.25em;
+}
+
+.post-inner .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: calc(100% - 2rem);
+}
+
+.entry-content p, .entry-content li {
+    line-height: 1.4;
+    font-size: 1.6rem;
 }
 
 .wrapper {

@@ -69,3 +69,4 @@ ehthumbs.db
 .ftppass
 package-lock.json
 
+.sass-cache
