@@ -1,0 +1,80 @@
+[
+    {
+        "ID": false,
+        "key": "group_5f56190f2ec1d",
+        "title": "Ticker",
+        "fields": [
+            {
+                "key": "field_5f60a07e295a1",
+                "label": "Tickernachricht",
+                "name": "ticker_message",
+                "type": "textarea",
+                "instructions": "Wird im Ticker angezeigt. Wenn Leer wird der Titel des Beitrags übernommen.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_5f60a0a3295a2",
+                "label": "Externer Link?",
+                "name": "",
+                "type": "message",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Bitte trage bei externen Links die URL im Feld \"Simple Redirect To\".",
+                "new_lines": "wpautop",
+                "esc_html": 0
+            },
+            {
+                "key": "field_5f60a2e9d7634",
+                "label": "Kategorie!",
+                "name": "",
+                "type": "message",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Es werden nur Meldungen im Ticker anzeigt, die die Kategorie \"Ticker\" aktiviert haben.",
+                "new_lines": "wpautop",
+                "esc_html": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "side",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": true
+    }
+]

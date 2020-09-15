@@ -1,0 +1,86 @@
+[
+    {
+        "ID": false,
+        "key": "group_5f55fd0df3512",
+        "title": "Weitere Seiteninhalte (außerhalb des Haupteils)",
+        "fields": [
+            {
+                "key": "field_5f55fd1e2e3ab",
+                "label": "Anmerkung im Header",
+                "name": "note",
+                "type": "textarea",
+                "instructions": "Diese Anmerkung wird mit einem Pfeil der zur Überschrift verbunden ist, im Header einer Seite angezigt.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": 50,
+                "rows": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_5f560e5e8f678",
+                "label": "Inhalt der Seitenleiste",
+                "name": "sidebar_note",
+                "type": "wysiwyg",
+                "instructions": "Wenn leer, wird der Inhalt der Elternseite übernommen. In mobiler Ansicht unterhalb dem Seiteninhalts.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                }
+            ],
+            [
+                {
+                    "param": "taxonomy",
+                    "operator": "==",
+                    "value": "post_format"
+                }
+            ],
+            [
+                {
+                    "param": "taxonomy",
+                    "operator": "==",
+                    "value": "post_tag"
+                }
+            ],
+            [
+                {
+                    "param": "taxonomy",
+                    "operator": "==",
+                    "value": "category"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "side",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": true
+    }
+]

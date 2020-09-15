@@ -1,0 +1,54 @@
+[
+    {
+        "ID": false,
+        "key": "group_5f55f33bb3108",
+        "title": "Erweitertes Aussehen",
+        "fields": [
+            {
+                "key": "field_5f55f34590109",
+                "label": "Layout der roten Kästchen",
+                "name": "background_boxes",
+                "type": "radio",
+                "instructions": "Stellt den Hintergrund einer Seite ein. Die verschiedenen Layouts sind im Code des Themes festgelegt und können nur manuell angepasst werden.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "box-layout-00": "Box Layout 01",
+                    "box-layout-01": "Box Layout 02",
+                    "box-layout-02": "Box Layout 03",
+                    "box-layout-03": "Box Layout 04",
+                    "no-boxes": "Ohne Boxen"
+                },
+                "allow_null": 0,
+                "other_choice": 0,
+                "default_value": "box-layout-00",
+                "layout": "vertical",
+                "return_format": "value",
+                "save_other_choice": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "side",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": true
+    }
+]

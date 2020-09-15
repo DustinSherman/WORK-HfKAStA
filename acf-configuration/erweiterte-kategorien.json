@@ -1,0 +1,46 @@
+[
+    {
+        "ID": false,
+        "key": "group_5f6093f838d0a",
+        "title": "Erweiterte Kategorien",
+        "fields": [
+            {
+                "key": "field_5f6094dd70f72",
+                "label": "Titel auf der Kateogieseite",
+                "name": "custom_title",
+                "type": "text",
+                "instructions": "Dieser Titel wird auf der Kategorieseite angezeigt.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "taxonomy",
+                    "operator": "==",
+                    "value": "category"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": true
+    }
+]
