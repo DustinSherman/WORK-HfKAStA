@@ -43,4 +43,33 @@
         wp_add_inline_script( 'nav-menu', 'wpNavMenu.options.globalMaxDepth = 1;', 'after' );
     }
     add_action( 'admin_enqueue_scripts', 'limit_menu_depth' );
+
+    /**
+     * Add support for custom color palettes in Gutenberg.
+     */
+    function tabor_gutenberg_color_palette() {
+        // Disable Custom Colors
+        add_theme_support( 'disable-custom-colors' );
+        // Editor Color Palette
+        add_theme_support(
+            'editor-color-palette', array(
+                array(
+                    'name'  => esc_html__( 'Lila', '@@textdomain' ),
+                    'slug' => 'pruple',
+                    'color' => '#5A00BE',
+                ),
+                array(
+                    'name'  => esc_html__( 'Rot', '@@textdomain' ),
+                    'slug' => 'red',
+                    'color' => '#D50E31',
+                ),
+                array(
+                    'name'  => esc_html__( 'Türkis', '@@textdomain' ),
+                    'slug' => 'turquoise',
+                    'color' => '#64F5DC',
+                )
+            )
+        );
+    }
+    add_action( 'after_setup_theme', 'tabor_gutenberg_color_palette' );
 ?>
