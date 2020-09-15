@@ -1,8 +1,3 @@
-$search-bar-height: 40px;
-$icon-height: 18px;
-$nav-width: 350px;
-$search-form-padding: 5px;
-
 .hamburger.hamburger--squeeze {
     position: fixed;
     right: 0;
@@ -43,7 +38,7 @@ nav {
             background: #fff;
             color: $brand-primary-color;
             border: $border-weight solid $brand-primary-color;
-            font-size: 1.6rem;
+            font-size: $mobile-large-font-size;
 
             &:focus {
                 outline: none;
@@ -52,7 +47,7 @@ nav {
             &::placeholder,
             &::-webkit-input-placeholder {
                 color: $brand-primary-color;
-                font-size: 1.6rem;
+                font-size: $mobile-large-font-size;
                 line-height: $search-bar-height;
                 vertical-align: middle;
             }
@@ -107,7 +102,7 @@ nav {
             a {
                 color: $brand-primary-color;
                 font-weight: normal;
-                font-size: 1.8rem;
+                font-size: $mobile-large-font-size;
                 word-break: break-word;
                 text-decoration: none;
                 color: $brand-primary-color;
@@ -153,7 +148,7 @@ nav {
 
             li {
                 a {
-                    font-size: 1.2rem;
+                    font-size: $mobile-medium-font-size;
                 }
 
                 &.current-menu-item {
@@ -165,9 +160,6 @@ nav {
         }
     }
 }
-
-// Language Switch
-$language-menu-rotation: 12deg;
 
 .language-switch {
     border: $border-weight solid $brand-primary-color;
@@ -227,6 +219,8 @@ nav {
     }
 }
 
+/* ----------------------------------------------- DESKTOP ----------------------------------------------- */
+
 @media (min-width: 768px) {
     .hamburger.hamburger--squeeze {
         display: none;
@@ -241,8 +235,16 @@ nav {
         ul {
             li {
                 a {
-                    font-size: 2rem;
+                    font-size: $desktop-large-font-size;
                 }
+            }
+        }
+
+        .search-form .search-field {
+
+            &::placeholder,
+            &::-webkit-input-placeholder {
+                font-size: $desktop-large-font-size;
             }
         }
 

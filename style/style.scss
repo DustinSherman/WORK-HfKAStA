@@ -1,12 +1,5 @@
-// Variables
-$brand-primary-color: #5a00be;
-$brand-secondary-color: #d50e31;
-$transition-time: .5s;
-$footer-height: 60px;
-$ticker-height: 40px;
-$border-weight: 2px;
-
 // Imports
+@import "./variables";
 @import "./fonts";
 @import "./nav";
 @import "./footer";

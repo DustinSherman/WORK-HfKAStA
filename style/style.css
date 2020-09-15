@@ -63,7 +63,7 @@ nav .search-form .search-field {
   background: #fff;
   color: #5a00be;
   border: 2px solid #5a00be;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   /* clears the 'X' from Internet Explorer */
   /* clears the 'X' from Chrome */
 }
@@ -74,14 +74,14 @@ nav .search-form .search-field:focus {
 
 nav .search-form .search-field::-webkit-input-placeholder, nav .search-form .search-field::-webkit-input-placeholder {
   color: #5a00be;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 40px;
   vertical-align: middle;
 }
 
 nav .search-form .search-field::placeholder, nav .search-form .search-field::-webkit-input-placeholder {
   color: #5a00be;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 40px;
   vertical-align: middle;
 }
@@ -235,6 +235,7 @@ nav .sidebar_note {
   display: none;
 }
 
+/* ----------------------------------------------- DESKTOP ----------------------------------------------- */
 @media (min-width: 768px) {
   .hamburger.hamburger--squeeze {
     display: none;
@@ -246,6 +247,12 @@ nav .sidebar_note {
     right: auto;
   }
   nav ul li a {
+    font-size: 2rem;
+  }
+  nav .search-form .search-field::-webkit-input-placeholder, nav .search-form .search-field::-webkit-input-placeholder {
+    font-size: 2rem;
+  }
+  nav .search-form .search-field::placeholder, nav .search-form .search-field::-webkit-input-placeholder {
     font-size: 2rem;
   }
   nav .sidebar_note {
