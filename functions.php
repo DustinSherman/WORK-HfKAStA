@@ -13,7 +13,7 @@
     // Add Element to Menu Items with children
     function prefix_add_button_after_menu_item_children( $item_output, $item, $depth, $args ) {
         if ( in_array( 'menu-item-has-children', $item->classes ) || in_array( 'page_item_has_children', $item->classes ) ) {
-            $item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><div class="dropdown"></div>', $item_output );
+            $item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><div class="dropdown-btn"></div>', $item_output );
         }
     
         return $item_output;

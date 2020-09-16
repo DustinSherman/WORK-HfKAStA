@@ -68,7 +68,7 @@
         };
 
         // Open Sub-Menus
-        var navParents = document.querySelectorAll(".dropdown");
+        var navParents = document.querySelectorAll(".dropdown-btn");
 
         if (navParents.length > 0) {
             forEach(navParents, function(navParent) {
