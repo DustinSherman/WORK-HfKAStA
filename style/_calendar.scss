@@ -1,0 +1,74 @@
+@import "./variables";
+
+.ics-calendar {
+
+  margin: auto !important;
+
+  *, .ics-calendar-month-grid ul.events li {
+    font-size: 18px; // TODO 1rem;
+  }
+
+  .ics-calendar-title {
+    display: none;
+  }
+
+  .ics-calendar-label {
+    display: none;
+  }
+
+  .ics-calendar-select {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-size: 1em;
+  }
+
+  .ics-calendar-color-key-item {
+    display: inline;
+    background: transparent !important;
+    border-left: none !important;
+
+    label {
+      cursor: pointer;
+    }
+  }
+
+  .ics-calendar-month-grid {
+
+    .events {
+      .time {
+        font-weight: normal;
+      }
+      .title {
+        font-weight: bold;
+      }
+      .descloc {
+        font-size: 1em;
+      }
+    }
+
+    .events .event {
+      border: none;
+      background: transparent !important;
+      border-left: none !important;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      border-bottom: $border-weight solid $brand-primary-color;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    .day {
+      background-color: $brand-primary-color;
+
+      span {
+        color: $contrast-primary-color;
+        font-weight: normal;
+      }
+    }
+
+  }
+
+}
