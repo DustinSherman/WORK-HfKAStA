@@ -1,3 +1,11 @@
+            <?php get_template_part( 'template-parts/elevator' ); ?>
+
+        </main>
+
+        <?php get_template_part( 'template-parts/main-navigation' ); ?>
+
+    </div>
+
     <div id="overlay"></div>
 
     <footer id="footer">
@@ -84,12 +92,23 @@
 
         function setTickerValues() {
             let ticker = document.getElementById('ticker');
-            let tickerWidth = -ticker.clientWidth/3;
+            let tickerWidth = -ticker.clientWidth/4;
 
             document.documentElement.style.setProperty('--tickerWidth', tickerWidth + 'px');
+
+            let tickerDuration = ticker.clientWidth * .01;
+
+            console.log(tickerDuration);
+
+            document.documentElement.style.setProperty('--tickerDuration', tickerDuration + 's');
         }
     </script>
     <style>
+        .ticker-wrap .ticker {
+            -webkit-animation-duration: var(--tickerDuration);
+            animation-duration: var(--tickerDuration);
+        }
+
         @-webkit-keyframes ticker {
             0% {
                 -webkit-transform: translate3d(0, 0, 0);

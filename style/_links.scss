@@ -28,29 +28,67 @@ footer .menu {
     }
 }
 
-// Several Links
-
-
-main .content,
+// Links
 nav .sidebar_note {
 
-    // Link intern
     a {
+        height: $font-size-regular * 2;
+        display: flex;
+        vertical-align: middle;
+
         &::before {
-            width: 1rem;
-            height: 1rem;
-            margin: 0 2px -2px 4px;
+            content: '';
+            display: inline-block;
+            width: $font-size-regular * 2;
+            height: $font-size-regular * 2;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin-right: $font-size-regular/2;
+        }
+    }
+
+    // Link intern
+    a:not[href*='http://'] {
+        &::before {
+            background-image: url('../assets/hfkasta-stack.svg#m_link_internal-red');
+        }
+
+        &:hover::before {
+            background-image: url('../assets/hfkasta-stack.svg#m_link_internal');
         }
     }
 
     // External Link
-    a[href*='http://'] {
-        &::before {}
+    a[href*='http://'],
+    a[href*='https://'] {
+        &::before {
+            background-image: url('../assets/hfkasta-stack.svg#m_link_external-red');
+        }
+
+        &:hover::before {
+            background-image: url('../assets/hfkasta-stack.svg#m_link_external');
+        }
     }
 
     // File Link
-    a[href*='.pdf'],
-    a[href*='.txt'] {
-        &::before {}
+    a[href*='.pdf'] {
+        &::before {
+            background-image: url('../assets/hfkasta-stack.svg#m_link_download-red');
+        }
+
+        &:hover::before {
+            background-image: url('../assets/hfkasta-stack.svg#m_link_download');
+        }
+    }
+
+    // Link to Drive / Sharepoint
+    a[href*='hfkbremen.sharepoint'] {
+        &::before {
+            background-image: url('../assets/hfkasta-stack.svg#m_link_drive-red');
+        }
+
+        &:hover::before {
+            background-image: url('../assets/hfkasta-stack.svg#m_link_drive');
+        }
     }
 }

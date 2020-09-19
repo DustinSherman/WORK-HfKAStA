@@ -1,6 +1,5 @@
 $search-bar-height: 40px;
 $icon-height: 18px;
-$nav-width: 460px;
 $search-form-padding: 5px;
 $transition-time: 0s;
 
@@ -13,16 +12,15 @@ $transition-time: 0s;
 
 nav {
     position: absolute;
-    width: $nav-width;
+    width: $sidebar-width;
     min-height: 100%;
-    right: -$nav-width;
+    right: -$sidebar-width;
     top: 0;
     background: #fff;
     color: $brand-primary-color;
     border-left: $border-weight solid $brand-primary-color;
     z-index: 30;
     transition: right $transition-time ease;
-    //padding: (60px + $ticker-height) 20px 20px 20px;
     padding: 2rem;
     box-sizing: border-box;
 
@@ -171,7 +169,7 @@ nav {
 
 .language-switch {
     border: $border-weight solid $brand-primary-color;
-    position: absolute;
+    position: fixed;
     z-index: 30;
     padding: 15px 10px 15px 20px;
     top: 70px;
@@ -206,6 +204,13 @@ nav {
     }
 }
 
+// Home Button
+.home-link {
+    position: fixed;
+    top: 95px;
+    left: 0;
+}
+
 // Page Elevator
 .page-elevator {
     display: none;
@@ -227,16 +232,13 @@ nav {
     }
 }
 
-/* ----------------------------------------------- DESKTOP ----------------------------------------------- */
-
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .hamburger.hamburger--squeeze {
         display: none;
     }
 
     nav {
         position: relative;
-        //padding-top: 20px;
         margin: 0;
         right: auto;
 
@@ -286,5 +288,11 @@ nav {
         &:hover {
             cursor: pointer;
         }
+    }
+}
+
+@media screen and (min-width: 1680px) {
+    nav {
+        width: 30%;
     }
 }

@@ -1,23 +1,13 @@
-<?php
-/**
- * Displays header
- */
-
-?>
-
 <header class="entry-header has-text-align-center">
 
 	<div class="entry-header-inner section-inner">
 
-        <?php
-        /**
-         * Background images / blocks.
-         * TODO should be moved to CSS
-         *
-         **/
+        <?php 
+            $term = get_queried_object();
 
-        if (get_field('background_boxes') !== 'no-boxes') : ?>
-            <div class="<?php the_field('background_boxes') ?>">
+            if (get_field('background_boxes', $term) !== 'no-boxes') : ?>
+
+            <div class="boxes <?php the_field('background_boxes', $term) ?>">
                 <div class="backgroundbox backgroundbox_01"></div>
                 <div class="backgroundbox backgroundbox_02"></div>
                 <div class="backgroundbox backgroundbox_03"></div>
@@ -25,41 +15,50 @@
             </div>
         <?php endif; ?>
 
-        <?php
+        <?php if (is_category() ) : ?>
 
-		if ( is_singular() ) {
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		} else {
-			the_title( '<h2 class="entry-title heading-size-1"><a href="' . esc_url( get_permalink() ) . '">', '</a></h2>' );
-		}
+            <?php 
+                // Display Custom Title or Title of category
+                if (get_field('custom_title', $term)) : ?>
+                <h1><?php the_field('custom_title', $term); ?></h1>
+            <?php else : ?>
+                <h1><?php echo single_cat_title(); ?></h1>
+            <?php endif; ?>
 
-        if (has_category() ) {
-        ?>
+            
+            <?php 
+                // Display Category Description
+                if (category_description($term)) : ?>
+                
+                <div class="category-description">
+                    <?php echo category_description($term); ?>
+                </div>
 
-        <div class="entry-meta">
-            <div class="entry-meta-inner">
-                <p class="entry-meta-date"><? the_date() ?></p>
-                <p class="entry-meta-categories"</p><?php the_category( ' ' ); ?></p>
-            </div><!-- .entry-meta-inner -->
-        </div><!-- .meta-categories -->
+            <?php endif; ?>
 
-        <?php
-		}
+        <?php else : ?>
 
-        if ( is_singular() ) {
+            <h1><?php echo the_title(); ?></h1>
 
-        $note = get_field('note');
-        if ( $note ) :
-            ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/note_line.svg" class="note-line">
+        <?php endif; ?>
+
+        <?php 
+            // Display note-line and note
+            if (get_field('note', $term)) : ?>
+
+            <div class="note-line">
+                <?php $note_line = random_int(0, 3); ?>
+                <object type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/assets/note_line_<?php echo $note_line; ?>.svg" class="svg-object"></object>
+            </div>
+
             <div class="note">
                 <p>
-                    <?php the_field('note'); ?>
+                    <?php the_field('note', $term); ?>
                 </p>
             </div>
+
         <?php endif; ?>
-        <?php } ?>
 
-    </div><!-- .entry-header-inner -->
+    </div>
 
-</header><!-- .entry-header -->
+</header>

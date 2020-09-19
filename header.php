@@ -35,6 +35,27 @@
 
 <body <?php body_class(); ?>>
 
-    <?php
-    wp_body_open();
+    <?php wp_body_open(); ?>
+
+    <?php 
+        // Ticker in Header
+        get_template_part( 'template-parts/ticker' ); 
     ?>
+    
+    <div class="wrapper">
+
+        <?php 
+            // Language Switch
+            get_template_part( 'template-parts/language-switcher' ); 
+        ?>
+
+        <?php
+            // Home Button
+            if (!is_front_page()) : ?>
+                <a href="<?php home_url(); ?>" class="home-link">
+                    <object type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/assets/arrow.svg" class="svg-object"></object>
+                </a>
+
+        <?php endif; ?>
+
+        <main id="site-content" role="main">

@@ -7,11 +7,12 @@ $ticker-height: 40px;
 $border-weight: 2px;
 
 // Imports
+@import "./variables";
 @import "./fonts";
 @import "./nav";
 @import "./footer";
 @import "./search";
-@import "./boxes";
+@import "./entry-header";
 @import "./ticker";
 @import "./links";
 
@@ -35,7 +36,7 @@ body {
     min-width: 100%;
     min-height: 100%;
     height: 100%;
-    font-size: 16px;
+    font-size: $font-size-base;
 }
 
 h1,
@@ -78,11 +79,6 @@ h5,
 h6 {
     font-family: 'GT Haptik Regular', sans-serif;
     font-weight: normal;
-}
-
-h1 {
-    margin-top: 0;
-    font-size: 1.4rem;
 }
 
 a {
@@ -175,13 +171,6 @@ pre {
             }
         }
 
-        h1 {
-            width: 80%;
-            margin: 0 auto;
-            text-align: center;
-            font-size: 42px;
-        }
-
         .note-line,
         .note {
             display: none;
@@ -212,10 +201,6 @@ body.search-results {
             .content {
                 padding: 100px 0 0 0;
 
-                h1 {
-                    font-size: 32px;
-                }
-
                 section {
                     margin: 60px auto 0 auto;
                 }
@@ -224,18 +209,13 @@ body.search-results {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .wrapper {
         width: 100%;
         display: flex;
 
         main {
-            flex-basis: 70%;
-
-            h1 {
-                width: 60%;
-                font-size: 72px;
-            }
+            width: calc(100% - #{$sidebar-width});
 
             .note-line {
                 display: inline-block;
@@ -269,11 +249,6 @@ body.search-results {
                 display: none;
             }
         }
-
-/*        nav {
-            flex-basis: 30%;
-            min-width: 300px;
-        }*/
     }
 
     body.search-results {
@@ -283,6 +258,14 @@ body.search-results {
                     margin: 130px auto 0 auto;
                 }
             }
+        }
+    }
+}
+
+@media screen and (min-width: 1680px) {
+    .wrapper {
+        main {
+            width: 70%;
         }
     }
 }

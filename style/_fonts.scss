@@ -4,8 +4,8 @@
   font-style: normal;
   font-weight: normal;
   src: url(../assets/font/gt-haptik-regular.otf),
-  url(../assets/font/gt-haptik-regular.woff),
-  url(../assets/font/gt-haptik-regular.woff2);
+    url(../assets/font/gt-haptik-regular.woff),
+    url(../assets/font/gt-haptik-regular.woff2);
 }
 
 @font-face {
@@ -13,8 +13,8 @@
   font-style: normal;
   font-weight: bold;
   src: url(../assets/font/gt-haptik-bold.otf),
-  url(../assets/font/gt-haptik-bold.woff),
-  url(../assets/font/gt-haptik-bold.woff2);
+    url(../assets/font/gt-haptik-bold.woff),
+    url(../assets/font/gt-haptik-bold.woff2);
 }
 
 @font-face {
@@ -22,6 +22,17 @@
   font-style: italic;
   font-weight: normal;
   src: url(../assets/font/gt-haptik-regular-oblique.otf),
-  url(../assets/font/gt-haptik-regular-oblique.woff),
-  url(../assets/font/gt-haptik-regular-oblique.woff2);
+    url(../assets/font/gt-haptik-regular-oblique.woff),
+    url(../assets/font/gt-haptik-regular-oblique.woff2);
 }
+
+$font-size-base: 16px;
+
+$font-size-small: .875rem; // 14px
+$font-size-regular: 1.125rem; // 18px
+$font-size-large: 1.5625rem; // 25px
+$font-size-big: 2.1875rem; // 35px
+
+$font-size-headline-small: 3.125rem; // 50px
+// $font-size-headline-regular: 
+$font-size-headline-large: 8.125rem // 130px
