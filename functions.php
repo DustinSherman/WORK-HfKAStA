@@ -100,4 +100,25 @@
             'core-embed/mixcloud',
         );
     }
+
+    // [desktoponly] shortcode
+    add_shortcode('desktoponly', 'shailan_desktop_only_shortcode');
+    function shailan_desktop_only_shortcode($atts, $content = null){
+        if( !wp_is_mobile() ){
+            return wpautop( do_shortcode( $content ) );
+        } else {
+            return null;
+        }
+    }
+
+    // [mobileonly] shortcode
+    add_shortcode('mobileonly', 'shailan_mobile_only_shortcode');
+    function shailan_mobile_only_shortcode($atts, $content = null){
+        if( wp_is_mobile() ){
+            return  wpautop( do_shortcode( $content ) );
+        } else {
+            return null;
+        }
+    }
+
 ?>

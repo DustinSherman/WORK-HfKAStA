@@ -581,37 +581,37 @@ nav .sidebar_note a::before {
 }
 
 nav .sidebar_note a:not[href*='http://']::before {
-  background-image: url("../assets/link_internal-red.svg");
+  background-image: url("../assets/hfkasta-stack.svg#m_link_internal-red");
 }
 
 nav .sidebar_note a:not[href*='http://']:hover::before {
-  background-image: url("../assets/link_internal.svg");
+  background-image: url("../assets/hfkasta-stack.svg#m_link_internal");
 }
 
 nav .sidebar_note a[href*='http://']::before,
 nav .sidebar_note a[href*='https://']::before {
-  background-image: url("../assets/link_external-red.svg");
+  background-image: url("../assets/hfkasta-stack.svg#m_link_external-red");
 }
 
 nav .sidebar_note a[href*='http://']:hover::before,
 nav .sidebar_note a[href*='https://']:hover::before {
-  background-image: url("../assets/link_external.svg");
+  background-image: url("../assets/hfkasta-stack.svg#m_link_external");
 }
 
 nav .sidebar_note a[href*='.pdf']::before {
-  background-image: url("../assets/link_download-red.svg");
+  background-image: url("../assets/hfkasta-stack.svg#m_link_download-red");
 }
 
 nav .sidebar_note a[href*='.pdf']:hover::before {
-  background-image: url("../assets/link_download.svg");
+  background-image: url("../assets/hfkasta-stack.svg#m_link_download");
 }
 
 nav .sidebar_note a[href*='hfkbremen.sharepoint']::before {
-  background-image: url("../assets/link_drive-red.svg");
+  background-image: url("../assets/hfkasta-stack.svg#m_link_drive-red");
 }
 
 nav .sidebar_note a[href*='hfkbremen.sharepoint']:hover::before {
-  background-image: url("../assets/link_drive.svg");
+  background-image: url("../assets/hfkasta-stack.svg#m_link_drive");
 }
 
 *,
