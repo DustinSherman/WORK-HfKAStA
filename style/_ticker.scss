@@ -10,7 +10,7 @@
     position: relative;
 
     .ticker {
-        font-size: 1.4rem;
+        font-size: $font-size-regular;
         white-space: nowrap;
         box-sizing: content-box;
         position: absolute;
@@ -25,7 +25,7 @@
         animation-name: ticker;
 
         div {
-            display: inline-block;
+            display: inline-flex;
             color: $brand-primary-color;
             font-weight: bold;
             line-height: 0;
@@ -42,6 +42,31 @@
         // Pause ticker on hover
         &:hover {
             animation-play-state: paused;
+        }
+
+        .news {
+
+            a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']) {
+                padding-right: $font-size-regular * 2.5;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    float: left;
+                    width: $font-size-regular * 2;
+                    min-width: $font-size-regular * 2;
+                    flex-basis: $font-size-regular * 2;
+                    height: $font-size-regular * 2;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    padding: 0 $font-size-regular/4;
+                    background-image: url('../assets/hfkasta_stack.svg#m_link_external');
+                }
+
+                &:hover::before {
+                    background-image: url('../assets/hfkasta_stack.svg#m_link_external-red');
+                }
+            }
         }
     }
 }

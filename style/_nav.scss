@@ -53,12 +53,15 @@ nav {
                     margin: 0 0 4px 6px;
                     height: $icon-height;
                     width: $icon-height + 2;
-                    background: url('../assets/dropdown.svg') no-repeat center center;
+                    background-image: url('../assets/hfkasta_stack.svg#m_arrow_nav');
+                    background-repeat: no-repeat;
+                    background-position: center center;
                     transform: rotate(0deg);
                     transition: transform $transition-time;
 
                     &:hover {
                         cursor: pointer;
+                        background-image: url('../assets/hfkasta_stack.svg#m_arrow_nav-red');
                     }
                 }
 
@@ -69,9 +72,9 @@ nav {
 
                     .sub-menu {
                         margin-top: 12px;
-                        //max-height: 150px;
+                        // max-height: 150px;
                         height: auto;
-                        //transition: max-height $transition-time;
+                        // transition: max-height $transition-time;
                     }
                 }
             }
@@ -145,24 +148,36 @@ nav {
         }
 
         .search-submit {
+            border: 0;
             z-index: 32;
             height: $search-bar-height;
             width: $search-bar-height;
+            background: none;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
         }
 
         .search-icon {
             z-index: 31;
-            margin: 11px 0 4px 8px;
-            height: $icon-height;
-            width: $icon-height;
+            margin: 8px;
+            width: 23.29px;
+            height: 23.29px;
+            background-image: url('../assets/hfkasta_stack.svg#m_search');
+            background-repeat: no-repeat;
+            background-position: center center;
         }
 
         .search-submit,
         .search-icon {
-            background: none;
-            border: 0;
             position: absolute;
-            right: 10px;
+            right: 0;
+            top: 0;
         }
     }
 }

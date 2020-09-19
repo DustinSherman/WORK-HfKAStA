@@ -31,30 +31,24 @@ footer .menu {
 // Links
 nav .sidebar_note {
 
-    a {
+    // Exclude mail- and telefon-links
+    a:not([href*='mailto:']),
+    a:not([href*='tel:']) {
         height: $font-size-regular * 2;
         display: flex;
-        vertical-align: middle;
+        align-items: center;
 
         &::before {
             content: '';
-            display: inline-block;
+            display: block;
+            float: left;
             width: $font-size-regular * 2;
+            min-width: $font-size-regular * 2;
+            flex-basis: $font-size-regular * 2;
             height: $font-size-regular * 2;
             background-repeat: no-repeat;
-            background-position: center center;
+            background-position: left center;
             margin-right: $font-size-regular/2;
-        }
-    }
-
-    // Link intern
-    a:not[href*='http://'] {
-        &::before {
-            background-image: url('../assets/hfkasta-stack.svg#m_link_internal-red');
-        }
-
-        &:hover::before {
-            background-image: url('../assets/hfkasta-stack.svg#m_link_internal');
         }
     }
 
@@ -62,33 +56,57 @@ nav .sidebar_note {
     a[href*='http://'],
     a[href*='https://'] {
         &::before {
-            background-image: url('../assets/hfkasta-stack.svg#m_link_external-red');
+            background-image: url('../assets/hfkasta_stack.svg#m_link_external-red');
         }
 
         &:hover::before {
-            background-image: url('../assets/hfkasta-stack.svg#m_link_external');
+            background-image: url('../assets/hfkasta_stack.svg#m_link_external');
+        }
+    }
+
+    // Link intern
+    a[href*='localhost'],
+    a[href*='hfkasta'],
+    a[href*='asta.hfk-bremen'] {
+        &::before {
+            background-image: url('../assets/hfkasta_stack.svg#m_link_internal-red');
+        }
+
+        &:hover::before {
+            background-image: url('../assets/hfkasta_stack.svg#m_link_internal');
         }
     }
 
     // File Link
     a[href*='.pdf'] {
         &::before {
-            background-image: url('../assets/hfkasta-stack.svg#m_link_download-red');
+            background-image: url('../assets/hfkasta_stack.svg#m_link_download-red');
         }
 
         &:hover::before {
-            background-image: url('../assets/hfkasta-stack.svg#m_link_download');
+            background-image: url('../assets/hfkasta_stack.svg#m_link_download');
         }
     }
 
     // Link to Drive / Sharepoint
     a[href*='hfkbremen.sharepoint'] {
         &::before {
-            background-image: url('../assets/hfkasta-stack.svg#m_link_drive-red');
+            background-image: url('../assets/hfkasta_stack.svg#m_link_drive-red');
         }
 
         &:hover::before {
-            background-image: url('../assets/hfkasta-stack.svg#m_link_drive');
+            background-image: url('../assets/hfkasta_stack.svg#m_link_drive');
+        }
+    }
+
+    // Link to portal
+    a[href*='portal.hfk-bremen.de'] {
+        &::before {
+            background-image: url('../assets/hfkasta_stack.svg#m_link_portal-red');
+        }
+
+        &:hover::before {
+            background-image: url('../assets/hfkasta_stack.svg#m_link_portal');
         }
     }
 }

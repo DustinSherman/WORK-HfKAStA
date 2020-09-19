@@ -6,7 +6,8 @@ $contrast-secondary-color: #fff;
 $text-color: $brand-primary-color;
 $transition-time: .5s;
 $border-weight: 2px;
-$base-font: 'GT Haptik', sans-serif;
+$base-font: 'GT Haptik',
+sans-serif;
 
 // Font Sizes
 $mobile-h1-font-size: 2.625rem; // Used for top heading
@@ -19,12 +20,20 @@ $desktop-large-font-size: 2rem;
 $desktop-medium-font-size: 1.2rem;
 $desktop-paragraph-font-size: 1.6rem;
 
+// Breakpoints
+$breakpoint-tablet: 768px;
+$breakpoint-tablet-landscape: 1024px;
+$breakpoint-laptop: 1345px;
+$breakpoint-screen: 1680px;
+
 // Footer
 $footer-height: 60px;
 $footer-icon-size: 40px;
 
 // Ticker
-$ticker-height: 40px;
+$ticker-height-s: 40px;
+$ticker-height-m: 40px;
+$ticker-height-l: 40px;
 
 // Language Switch
 $language-menu-rotation: 12deg;

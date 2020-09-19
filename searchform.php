@@ -3,5 +3,5 @@
         <input type="search" id="search-bar" class="search-field" placeholder="Suche" value="<?php echo get_search_query(); ?>" name="s" />
 	</label>
 	<input type="submit" class="search-submit" value="" />
-	<img src="<?php echo get_template_directory_uri(); ?>/assets/search.svg" class="search-icon">
+	<div class="search-icon"></div>
 </form>

@@ -73,7 +73,9 @@ nav ul li.menu-item-has-children .dropdown-btn {
   margin: 0 0 4px 6px;
   height: 18px;
   width: 20px;
-  background: url("../assets/dropdown.svg") no-repeat center center;
+  background-image: url("../assets/hfkasta_stack.svg#m_arrow_nav");
+  background-repeat: no-repeat;
+  background-position: center center;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transition: -webkit-transform 0s;
@@ -84,6 +86,7 @@ nav ul li.menu-item-has-children .dropdown-btn {
 
 nav ul li.menu-item-has-children .dropdown-btn:hover {
   cursor: pointer;
+  background-image: url("../assets/hfkasta_stack.svg#m_arrow_nav-red");
 }
 
 nav ul li.menu-item-has-children.is-open .dropdown {
@@ -164,24 +167,36 @@ nav .search-form .search-field::-webkit-search-decoration, nav .search-form .sea
 }
 
 nav .search-form .search-submit {
+  border: 0;
   z-index: 32;
   height: 40px;
   width: 40px;
+  background: none;
+}
+
+nav .search-form .search-submit:focus {
+  outline: none;
+}
+
+nav .search-form .search-submit:hover {
+  cursor: pointer;
 }
 
 nav .search-form .search-icon {
   z-index: 31;
-  margin: 11px 0 4px 8px;
-  height: 18px;
-  width: 18px;
+  margin: 8px;
+  width: 23.29px;
+  height: 23.29px;
+  background-image: url("../assets/hfkasta_stack.svg#m_search");
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 nav .search-form .search-submit,
 nav .search-form .search-icon {
-  background: none;
-  border: 0;
   position: absolute;
-  right: 10px;
+  right: 0;
+  top: 0;
 }
 
 .language-switch {
@@ -316,15 +331,6 @@ footer ul li {
 .search-results .wrapper .search-result-link {
   padding: 20px 0;
   display: block;
-}
-
-.search-results .wrapper .search-result-link h3 {
-  margin: 0;
-}
-
-.search-results .wrapper .search-result-link span {
-  font-size: 0.7rem;
-  font-style: italic;
 }
 
 .search-results .wrapper .search-result-link:not(:first-child) {
@@ -502,7 +508,7 @@ body.page-child h1 {
 }
 
 .ticker-wrap .ticker {
-  font-size: 1.4rem;
+  font-size: 1.125rem;
   white-space: nowrap;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -516,7 +522,9 @@ body.page-child h1 {
 }
 
 .ticker-wrap .ticker div {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   color: #5a00be;
   font-weight: bold;
   line-height: 0;
@@ -533,6 +541,29 @@ body.page-child h1 {
 .ticker-wrap .ticker:hover {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
+}
+
+.ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']) {
+  padding-right: 2.8125rem;
+}
+
+.ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen'])::before {
+  content: '';
+  display: block;
+  float: left;
+  width: 2.25rem;
+  min-width: 2.25rem;
+  -ms-flex-preferred-size: 2.25rem;
+      flex-basis: 2.25rem;
+  height: 2.25rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 0 0.28125rem;
+  background-image: url("../assets/hfkasta_stack.svg#m_link_external");
+}
+
+.ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):hover::before {
+  background-image: url("../assets/hfkasta_stack.svg#m_link_external-red");
 }
 
 main .content a,
@@ -562,56 +593,76 @@ footer .menu a:hover {
   color: #d50e31;
 }
 
-nav .sidebar_note a {
+nav .sidebar_note a:not([href*='mailto:']),
+nav .sidebar_note a:not([href*='tel:']) {
   height: 2.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  vertical-align: middle;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-nav .sidebar_note a::before {
+nav .sidebar_note a:not([href*='mailto:'])::before,
+nav .sidebar_note a:not([href*='tel:'])::before {
   content: '';
-  display: inline-block;
+  display: block;
+  float: left;
   width: 2.25rem;
+  min-width: 2.25rem;
+  -ms-flex-preferred-size: 2.25rem;
+      flex-basis: 2.25rem;
   height: 2.25rem;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: left center;
   margin-right: 0.5625rem;
-}
-
-nav .sidebar_note a:not[href*='http://']::before {
-  background-image: url("../assets/hfkasta-stack.svg#m_link_internal-red");
-}
-
-nav .sidebar_note a:not[href*='http://']:hover::before {
-  background-image: url("../assets/hfkasta-stack.svg#m_link_internal");
 }
 
 nav .sidebar_note a[href*='http://']::before,
 nav .sidebar_note a[href*='https://']::before {
-  background-image: url("../assets/hfkasta-stack.svg#m_link_external-red");
+  background-image: url("../assets/hfkasta_stack.svg#m_link_external-red");
 }
 
 nav .sidebar_note a[href*='http://']:hover::before,
 nav .sidebar_note a[href*='https://']:hover::before {
-  background-image: url("../assets/hfkasta-stack.svg#m_link_external");
+  background-image: url("../assets/hfkasta_stack.svg#m_link_external");
+}
+
+nav .sidebar_note a[href*='localhost']::before,
+nav .sidebar_note a[href*='hfkasta']::before,
+nav .sidebar_note a[href*='asta.hfk-bremen']::before {
+  background-image: url("../assets/hfkasta_stack.svg#m_link_internal-red");
+}
+
+nav .sidebar_note a[href*='localhost']:hover::before,
+nav .sidebar_note a[href*='hfkasta']:hover::before,
+nav .sidebar_note a[href*='asta.hfk-bremen']:hover::before {
+  background-image: url("../assets/hfkasta_stack.svg#m_link_internal");
 }
 
 nav .sidebar_note a[href*='.pdf']::before {
-  background-image: url("../assets/hfkasta-stack.svg#m_link_download-red");
+  background-image: url("../assets/hfkasta_stack.svg#m_link_download-red");
 }
 
 nav .sidebar_note a[href*='.pdf']:hover::before {
-  background-image: url("../assets/hfkasta-stack.svg#m_link_download");
+  background-image: url("../assets/hfkasta_stack.svg#m_link_download");
 }
 
 nav .sidebar_note a[href*='hfkbremen.sharepoint']::before {
-  background-image: url("../assets/hfkasta-stack.svg#m_link_drive-red");
+  background-image: url("../assets/hfkasta_stack.svg#m_link_drive-red");
 }
 
 nav .sidebar_note a[href*='hfkbremen.sharepoint']:hover::before {
-  background-image: url("../assets/hfkasta-stack.svg#m_link_drive");
+  background-image: url("../assets/hfkasta_stack.svg#m_link_drive");
+}
+
+nav .sidebar_note a[href*='portal.hfk-bremen.de']::before {
+  background-image: url("../assets/hfkasta_stack.svg#m_link_portal-red");
+}
+
+nav .sidebar_note a[href*='portal.hfk-bremen.de']:hover::before {
+  background-image: url("../assets/hfkasta_stack.svg#m_link_portal");
 }
 
 *,
