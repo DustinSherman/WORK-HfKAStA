@@ -17,17 +17,18 @@
   }
 
   .ics-calendar-select {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
     font-size: 1em;
+  }
+
+  .ics-calendar-color-key {
+    max-width: 100%;
   }
 
   .ics-calendar-color-key-item {
     display: inline;
     background: transparent !important;
     border-left: none !important;
+    white-space: nowrap;
 
     label {
       cursor: pointer;
@@ -63,10 +64,14 @@
     .day {
       background-color: $brand-primary-color;
 
-      span {
+      span { // day title like Dienstag, 22. September 2020
         color: $contrast-primary-color;
         font-weight: normal;
       }
+    }
+
+    .today .day span { // TODAY day title like Dienstag, 22. September 2020
+      font-weight: bold;
     }
 
   }

@@ -31,4 +31,20 @@
     .content_note {
         padding: 20px;
     }
+
+    .is-style-centered-mobile {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (min-width: $breakpoint-tablet) {
+            & {
+                margin-left: $padding_s;
+                margin-right: 0;
+                text-align: left;
+            }
+        }
+    }
+
+
 }
