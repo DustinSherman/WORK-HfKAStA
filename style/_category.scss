@@ -1,0 +1,46 @@
+/*
+    # Styling for the category-overview-page
+
+    The markup is located in the index.php.
+*/
+
+body.category {
+    .content {
+        padding: 0;
+
+        .post-preview {
+            padding: 0 $padding_s $padding_s $padding_s;
+
+            &:not(:last-child) {
+                border-bottom: $border-weight_m solid $brand-primary-color;
+            }
+
+            h3 {
+                margin-bottom: 0;
+            }
+
+            .post-preview-categories {
+                display: block;
+
+                a {
+                    color: $brand-primary-color;
+                    display: inline-block;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+
+            .post-preview-arrow {
+                display: inline-block;
+                width: 28.1px;
+                height: 20.5px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                background-image: url('../assets/hfkasta_stack.svg#m_link_internal-red');
+            }
+        }
+    }
+}

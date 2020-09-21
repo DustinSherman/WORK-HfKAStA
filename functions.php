@@ -55,7 +55,7 @@
             'editor-color-palette', array(
                 array(
                     'name'  => esc_html__( 'Lila', '@@textdomain' ),
-                    'slug' => 'pruple',
+                    'slug' => 'purple',
                     'color' => '#5A00BE',
                 ),
                 array(

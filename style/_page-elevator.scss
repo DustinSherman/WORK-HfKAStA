@@ -1,0 +1,35 @@
+/*
+    # Styling for the page-elevator
+
+    The Style for the page-elevator
+*/
+
+.page-elevator {
+    width: 38.56px;
+    height: 56.75px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url('../assets/hfkasta_stack.svg#m_arrow_elevator');
+    margin: 20px auto;
+}
+
+@media (min-width: $breakpoint-tablet-landscape) {
+
+    // Page Elevator
+    .page-elevator {
+        position: fixed;
+        display: block;
+        left: -40px;
+        bottom: $footer-height + 20px;
+        transition: left .5s ease;
+
+        &.show {
+            left: 1%;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

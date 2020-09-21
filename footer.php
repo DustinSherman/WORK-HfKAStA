@@ -27,6 +27,7 @@
         var overlay = document.getElementById("overlay");
         let footerHeight = document.getElementById('footer').clientHeight;
         let hamburger = document.getElementById('hamburger');
+        let languageSwitch = document.getElementById('language-switch');
 
         let documentHeight = document.body.clientHeight;
 
@@ -52,18 +53,24 @@
         })
 
         window.onscroll = function() {
-            // Move Hamburger Menu
+            scroll();
+        };
+
+        function scroll() {
+            let elementTop = 0;
+
+            // Move Hamburger Menu & language switch
             if (window.pageYOffset <= 100) {
-                let hamburgerTop = 0;
 
                 if (window.pageYOffset <= 40) {
-                    hamburgerTop = (40 - window.pageYOffset);
+                    elementTop = (40 - window.pageYOffset);
                 } else {
-                    hamburgerTop = 0;
+                    elementTop = 0;
                 }
-
-                hamburger.style.top = hamburgerTop + 'px';
             }
+
+            hamburger.style.top = elementTop + 'px';
+            languageSwitch.style.top = elementTop + 'px';
 
             // Show / Hide Page-Elevator
             if (window.innerWidth >= 768) {
@@ -73,7 +80,7 @@
                     pageElevator.classList.remove('show');
                 }
             }
-        };
+        }
 
         // Open Sub-Menus
         var navParents = document.querySelectorAll(".dropdown-btn");
@@ -97,8 +104,6 @@
             document.documentElement.style.setProperty('--tickerWidth', tickerWidth + 'px');
 
             let tickerDuration = ticker.clientWidth * .01;
-
-            console.log(tickerDuration);
 
             document.documentElement.style.setProperty('--tickerDuration', tickerDuration + 's');
         }

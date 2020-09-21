@@ -4,20 +4,167 @@
     This styling takes care of regular content pages coming from wordpress pages.
 */
 
+.content h1,
+.sidebar_note h1,
+h2 {
+    font-family: 'GT-Haptik-Bold', sans-serif;
+    font-size: $font-size-large;
+    margin: 1.6rem 0;
+}
+
+h3 {
+    font-family: 'GT-Haptik-Bold', sans-serif;
+    font-size: $font-size-regular;
+    margin: 1rem 0;
+}
+
+h4,
+h5,
+h6 {
+    font-family: 'GT-Haptik-Regular', sans-serif;
+    font-size: $font-size-regular;
+    margin: .8rem 0;
+}
+
 .wrapper main {
 
     .content {
-        max-width: 560px;
+        max-width: $content-width_s;
         width: 100%;
-        margin: 0 auto;
+        margin: 0 auto 40px auto;
         position: relative;
+        padding: 0 $padding_s;
 
+        // Regular Text
+        &>p,
+        &>h1,
+        &>h2,
+        &>h3,
+        &>h4,
+        &>h5,
+        &>h6,
+        &>ul,
+        &>ol {
+            max-width: $content-text-width_s;
+            margin: 1rem auto;
+        }
+
+        &>ul,
+        &>ol {
+            padding-left: 20px;
+        }
+
+        // Links in regular text
+        p a {
+            display: inline-block;
+            height: auto;
+        }
+
+        // Reset styling of buttons
+        .wp-block-button {
+            margin: 0;
+
+            &__link {
+                background: none;
+                padding: 0;
+                font-size: $font-size-regular;
+                color: $brand-secondary-color;
+
+                &:hover {
+                    color: $brand-primary-color;
+                }
+            }
+        }
+
+        // Download Button
         .wp-block-file__button {
             display: inline-block;
             background: none;
-            border: $border-weight solid $brand-secondary-color;
+            border: $border-weight_m solid $brand-secondary-color;
             font-size: 1rem;
             padding: 5px 10px;
+        }
+
+        // Image-Element
+        figure.wp-block-image {
+            margin: 0;
+
+            img {
+                height: auto;
+            }
+
+            figcaption {
+                font-family: 'GT-Haptik-Italic', sans-serif;
+            }
+        }
+
+        // Gallery
+        figure.wp-block-gallery {
+            li.blocks-gallery-item {
+                display: block;
+
+                figure {
+                    display: inline-block;
+                    flex-wrap: wrap;
+
+                    img {
+                        height: 200px;
+                    }
+
+                    figcaption {
+                        position: relative;
+                        background: none;
+                        color: $brand-primary-color;
+                        font-size: $font-size-regular;
+                        font-family: 'GT-Haptik-Italic', sans-serif;
+                        text-align: left;
+                        padding: 0;
+                        margin-top: .5em;
+                        margin-bottom: 0;
+                        flex-basis: 100%;
+                    }
+                }
+            }
+        }
+
+        // Youtube Element
+        .wp-block-embed {
+            margin: 0;
+
+            &__wrapper {
+                width: 100%;
+                padding-top: 56.25%; // 16:9 Ratio
+                position: relative;
+
+                iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        // Seperator
+        .wp-block-separator {
+            border-width: $border-weight_m;
+            border-bottom: 0;
+            border-style: solid;
+
+            &.has-purple-background-color {
+                border-color: $brand-primary-color;
+            }
+
+            &.has-red-background-color {
+                border-color: $brand-secondary-color;
+            }
+
+            &.has-turquoise-background-color {
+                border-color: $brand-turquoise-color;
+            }
         }
     }
 
@@ -28,8 +175,78 @@
         box-sizing: border-box;
     }
 
-    .content_note {
-        padding: 20px;
+    .content_sidebar-note {
+        border-top: $border-weight_m solid $brand-primary-color;
+        padding: $padding_s;
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+
+    .content h1,
+    .sidebar_note h1,
+    h2 {
+        font-size: $font-size-headline-small;
+        margin: 2rem 0;
+    }
+
+    h3 {
+        font-size: $font-size-big;
+        margin: 1.4rem 0;
+    }
+
+    h4,
+    h5,
+    h6 {
+        font-size: $font-size-big;
+        margin: 1.2rem 0;
+    }
+
+    .wrapper main {
+
+        .content {
+            max-width: $content-width_m;
+
+            // Regular Text
+            &>p,
+            &>h1,
+            &>h2,
+            &>h3,
+            &>h4,
+            &>h5,
+            &>h6,
+            &>ul,
+            &>ol {
+                max-width: $content-text-width_m;
+            }
+
+            // Gallery
+            figure.wp-block-gallery li.blocks-gallery-item figure {
+                img {
+                    height: 480px;
+                }
+            }
+        }
+
+
+
+        .content_sidebar-note {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-screen) {
+    .wrapper main {
+        .content {
+
+            // Gallery
+            figure.wp-block-gallery li.blocks-gallery-item figure {
+                figcaption {
+                    font-size: $font-size-big;
+                }
+            }
+        }
     }
 
     .is-style-centered-mobile {

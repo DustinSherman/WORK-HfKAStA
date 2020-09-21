@@ -21,7 +21,7 @@ input + label + button
 
 input {
   background:$contrast-primary-color;
-  border: $border-weight solid $brand-primary-color;
+  border: $border-weight_m solid $brand-primary-color;
   border-radius: 0;
 }
 
@@ -32,7 +32,7 @@ input, select, textarea, button {
   border-radius: 0;
   box-sizing: border-box;
   background:$contrast-primary-color;
-  border: $border-weight solid $brand-primary-color;
+  border: $border-weight_m solid $brand-primary-color;
 }
 
 input[type="submit"], .tnp-field input[type="submit"], button {
@@ -41,7 +41,7 @@ input[type="submit"], .tnp-field input[type="submit"], button {
   color: $contrast-primary-color;
   border-radius: 0;
   cursor: pointer;
-  border: $border-weight solid $brand-primary-color;
+  border: $border-weight_m solid $brand-primary-color;
 
   &:focus, &:hover {
     background-color: $contrast-primary-color;
@@ -83,8 +83,8 @@ input[type="checkbox"] + label, input[type="checkbox"] + .wpcf7-list-item-label 
     width:20px;
     height:20px;
     background:$contrast-primary-color;
-    border: $border-weight solid $contrast-primary-color;
-    outline: $border-weight solid $brand-primary-color;
+    border: $border-weight_m solid $contrast-primary-color;
+    outline: $border-weight_m solid $brand-primary-color;
   }
   &:hover:before{
     //background:blue;
@@ -133,7 +133,7 @@ select {
   -webkit-appearance: none;
   appearance: none;
   background-color:$contrast-primary-color;
-  border: $border-weight solid $brand-primary-color;
+  border: $border-weight_m solid $brand-primary-color;
 
   /* arrow icon */
   background-image: url('../assets/arrow_purple.svg');

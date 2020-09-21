@@ -10,4 +10,8 @@
         <?php the_content(); ?>
     </div>
 
+    <div class="content_sidebar-note" id="content_sidebar-note_anchor">
+        <?php get_template_part( 'template-parts/sidebar-content' ); ?>
+    </div>
+
 <?php get_footer(); ?>

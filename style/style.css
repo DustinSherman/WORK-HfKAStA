@@ -264,9 +264,6 @@ nav {
   top: 95px;
   left: 0; }
 
-.page-elevator {
-  display: none; }
-
 body.search-result .content .sidebar_note {
   display: none; }
 
@@ -275,10 +272,10 @@ nav .sidebar_note {
 
 @media (min-width: 768px) {
   .hamburger.hamburger--squeeze {
-    top: 50px; }
+    top: 40px; }
 
   nav {
-    padding: 109px 20px 80px 20px; }
+    padding: 99px 20px 80px 20px; }
     nav ul li a,
     nav .search-form .search-field,
     nav .search-form .search-field::placeholder,
@@ -295,25 +292,11 @@ nav .sidebar_note {
     margin: 0;
     right: auto;
     padding: 20px; }
-
-  .sidebar_note {
-    display: inline-block; }
+    nav .sidebar_note {
+      display: inline-block; }
 
   .content .content_note {
-    display: none; }
-
-  .page-elevator {
-    position: fixed;
-    display: block;
-    left: -40px;
-    bottom: 80px;
-    width: 20px;
-    height: auto;
-    transition: left .5s ease; }
-    .page-elevator.show {
-      left: 20px; }
-    .page-elevator:hover {
-      cursor: pointer; } }
+    display: none; } }
 @media screen and (min-width: 1680px) {
   nav {
     width: 30%; }
@@ -324,6 +307,14 @@ nav .sidebar_note {
       font-size: 2.1875rem; }
     nav ul li.sub-menu li a {
       font-size: 1.5625rem; }
+    nav ul li.menu-item-has-children .dropdown-btn {
+      margin: 0 0 0 6px;
+      width: 22.79px;
+      height: 14.34px;
+      background-image: url("../assets/hfkasta_stack.svg#l_arrow_nav"); }
+      nav ul li.menu-item-has-children .dropdown-btn:hover {
+        cursor: pointer;
+        background-image: url("../assets/hfkasta_stack.svg#l_arrow_nav-red"); }
     nav .search-form {
       height: 50px; }
       nav .search-form .search-icon {
@@ -344,7 +335,8 @@ footer {
   height: 62px;
   padding: 10px 20px;
   display: flex;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin-top: -60px; }
   footer ul {
     margin: 10px 0;
     padding: 0; }
@@ -372,11 +364,12 @@ footer {
 .entry-header h1 {
   margin-top: 0;
   font-size: 3.125rem;
-  text-align: center; }
+  text-align: center;
+  font-family: 'GT-Haptik-Regular', sans-serif; }
 
 body.category:not(.category-allgemein):not(.category-uncategorized-en) .entry-header h1,
 body.page-child .entry-header h1 {
-  font-size: 2.1875rem; }
+  font-size: 1.5625rem; }
 
 .entry-header {
   padding: 8rem 15px 4rem; }
@@ -476,7 +469,7 @@ body.page-child .entry-header h1 {
     width: 271px;
     height: 223px; }
   .entry-header .note {
-    font-size: 1.5625rem;
+    font-size: 2.1875rem;
     width: 240px; }
   .entry-header .note-swoosh-1 {
     background-image: url("../assets/hfkasta_stack.svg#l_swoosh_1"); }
@@ -637,8 +630,6 @@ body.page-child .entry-header h1 {
       line-height: 0; }
       .ticker-wrap .ticker div a:hover p {
         color: #d50e31; }
-    .ticker-wrap .ticker .news_seperator {
-      font-family: 'GT-Haptik-Bold', sans-serif; }
     .ticker-wrap .ticker:hover {
       animation-play-state: paused; }
     .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']) {
@@ -660,23 +651,12 @@ body.page-child .entry-header h1 {
 
 @media (min-width: 768px) {
   .ticker-wrap {
-    height: 50px;
-    margin-bottom: -52px; }
+    height: 40px;
+    margin-bottom: -42px; }
     .ticker-wrap .ticker {
       font-size: 1.5625rem; }
-      .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']) {
-        padding-right: 3.90625rem; }
-        .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen'])::before {
-          width: 3.125rem;
-          min-width: 3.125rem;
-          flex-basis: 3.125rem;
-          height: 3.125rem; } }
-@media (min-width: 1680px) {
-  .ticker-wrap {
-    height: 65px;
-    margin-bottom: -67px; }
-    .ticker-wrap .ticker {
-      font-size: 2.1875rem; }
+      .ticker-wrap .ticker a p {
+        font-size: 1.5625rem; }
       .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']) {
         padding-right: 5.46875rem; }
         .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen'])::before {
@@ -684,6 +664,21 @@ body.page-child .entry-header h1 {
           min-width: 4.375rem;
           flex-basis: 4.375rem;
           height: 4.375rem; } }
+@media (min-width: 1680px) {
+  .ticker-wrap {
+    height: 65px;
+    margin-bottom: -67px; }
+    .ticker-wrap .ticker {
+      font-size: 1.5625rem; }
+      .ticker-wrap .ticker .news a p {
+        font-size: 1.5625rem; }
+      .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']) {
+        padding-right: 3.90625rem; }
+        .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen'])::before {
+          width: 3.125rem;
+          min-width: 3.125rem;
+          flex-basis: 3.125rem;
+          height: 3.125rem; } }
 /*
     # Styling for general Links
 
@@ -708,50 +703,165 @@ footer .menu a {
   footer .menu a:hover {
     color: #d50e31; }
 
+main .content a:not([href*='mailto:']),
+main .content a:not([href*='tel:']),
 nav .sidebar_note a:not([href*='mailto:']),
-nav .sidebar_note a:not([href*='tel:']) {
+nav .sidebar_note a:not([href*='tel:']),
+main .content_sidebar-note a:not([href*='mailto:']),
+main .content_sidebar-note a:not([href*='tel:']) {
   height: 2.25rem;
   display: flex;
   align-items: center; }
+  main .content a:not([href*='mailto:'])::before,
+  main .content a:not([href*='tel:'])::before,
   nav .sidebar_note a:not([href*='mailto:'])::before,
-  nav .sidebar_note a:not([href*='tel:'])::before {
+  nav .sidebar_note a:not([href*='tel:'])::before,
+  main .content_sidebar-note a:not([href*='mailto:'])::before,
+  main .content_sidebar-note a:not([href*='tel:'])::before {
     content: '';
     display: block;
     float: left;
-    width: 2.25rem;
-    min-width: 2.25rem;
-    flex-basis: 2.25rem;
-    height: 2.25rem;
+    width: 28.1px;
+    min-width: 28.1px;
+    flex-basis: 28.1px;
+    height: 20.5px;
     background-repeat: no-repeat;
-    background-position: left center;
-    margin-right: 0.5625rem; }
+    background-position: left center; }
+main .content a[href*='http://']::before,
+main .content a[href*='https://']::before,
 nav .sidebar_note a[href*='http://']::before,
-nav .sidebar_note a[href*='https://']::before {
+nav .sidebar_note a[href*='https://']::before,
+main .content_sidebar-note a[href*='http://']::before,
+main .content_sidebar-note a[href*='https://']::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_external-red"); }
+main .content a[href*='http://']:hover::before,
+main .content a[href*='https://']:hover::before,
 nav .sidebar_note a[href*='http://']:hover::before,
-nav .sidebar_note a[href*='https://']:hover::before {
+nav .sidebar_note a[href*='https://']:hover::before,
+main .content_sidebar-note a[href*='http://']:hover::before,
+main .content_sidebar-note a[href*='https://']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_external"); }
+main .content a[href*='localhost']::before,
+main .content a[href*='hfkasta']::before,
+main .content a[href*='asta.hfk-bremen']::before,
 nav .sidebar_note a[href*='localhost']::before,
 nav .sidebar_note a[href*='hfkasta']::before,
-nav .sidebar_note a[href*='asta.hfk-bremen']::before {
+nav .sidebar_note a[href*='asta.hfk-bremen']::before,
+main .content_sidebar-note a[href*='localhost']::before,
+main .content_sidebar-note a[href*='hfkasta']::before,
+main .content_sidebar-note a[href*='asta.hfk-bremen']::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_internal-red"); }
+main .content a[href*='localhost']:hover::before,
+main .content a[href*='hfkasta']:hover::before,
+main .content a[href*='asta.hfk-bremen']:hover::before,
 nav .sidebar_note a[href*='localhost']:hover::before,
 nav .sidebar_note a[href*='hfkasta']:hover::before,
-nav .sidebar_note a[href*='asta.hfk-bremen']:hover::before {
+nav .sidebar_note a[href*='asta.hfk-bremen']:hover::before,
+main .content_sidebar-note a[href*='localhost']:hover::before,
+main .content_sidebar-note a[href*='hfkasta']:hover::before,
+main .content_sidebar-note a[href*='asta.hfk-bremen']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_internal"); }
-nav .sidebar_note a[href*='.pdf']::before {
+main .content a[href*='.pdf']::before,
+nav .sidebar_note a[href*='.pdf']::before,
+main .content_sidebar-note a[href*='.pdf']::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_download-red"); }
-nav .sidebar_note a[href*='.pdf']:hover::before {
+main .content a[href*='.pdf']:hover::before,
+nav .sidebar_note a[href*='.pdf']:hover::before,
+main .content_sidebar-note a[href*='.pdf']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_download"); }
-nav .sidebar_note a[href*='hfkbremen.sharepoint']::before {
+main .content a[href*='hfkbremen.sharepoint']::before,
+nav .sidebar_note a[href*='hfkbremen.sharepoint']::before,
+main .content_sidebar-note a[href*='hfkbremen.sharepoint']::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_drive-red"); }
-nav .sidebar_note a[href*='hfkbremen.sharepoint']:hover::before {
+main .content a[href*='hfkbremen.sharepoint']:hover::before,
+nav .sidebar_note a[href*='hfkbremen.sharepoint']:hover::before,
+main .content_sidebar-note a[href*='hfkbremen.sharepoint']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_drive"); }
-nav .sidebar_note a[href*='portal.hfk-bremen.de']::before {
+main .content a[href*='portal.hfk-bremen.de']::before,
+nav .sidebar_note a[href*='portal.hfk-bremen.de']::before,
+main .content_sidebar-note a[href*='portal.hfk-bremen.de']::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_portal-red"); }
-nav .sidebar_note a[href*='portal.hfk-bremen.de']:hover::before {
+main .content a[href*='portal.hfk-bremen.de']:hover::before,
+nav .sidebar_note a[href*='portal.hfk-bremen.de']:hover::before,
+main .content_sidebar-note a[href*='portal.hfk-bremen.de']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_portal"); }
 
+@media (min-width: 1680px) {
+  main .content a:not([href*='mailto:']),
+  main .content a:not([href*='tel:']),
+  nav .sidebar_note a:not([href*='mailto:']),
+  nav .sidebar_note a:not([href*='tel:']),
+  main .content_sidebar-note a:not([href*='mailto:']),
+  main .content_sidebar-note a:not([href*='tel:']) {
+    height: 3.125rem; }
+    main .content a:not([href*='mailto:'])::before,
+    main .content a:not([href*='tel:'])::before,
+    nav .sidebar_note a:not([href*='mailto:'])::before,
+    nav .sidebar_note a:not([href*='tel:'])::before,
+    main .content_sidebar-note a:not([href*='mailto:'])::before,
+    main .content_sidebar-note a:not([href*='tel:'])::before {
+      width: 36px;
+      height: 26px;
+      min-width: 36px;
+      flex-basis: 36px; }
+  main .content a[href*='http://']::before,
+  main .content a[href*='https://']::before,
+  nav .sidebar_note a[href*='http://']::before,
+  nav .sidebar_note a[href*='https://']::before,
+  main .content_sidebar-note a[href*='http://']::before,
+  main .content_sidebar-note a[href*='https://']::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_external-red"); }
+  main .content a[href*='http://']:hover::before,
+  main .content a[href*='https://']:hover::before,
+  nav .sidebar_note a[href*='http://']:hover::before,
+  nav .sidebar_note a[href*='https://']:hover::before,
+  main .content_sidebar-note a[href*='http://']:hover::before,
+  main .content_sidebar-note a[href*='https://']:hover::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_external"); }
+  main .content a[href*='localhost']::before,
+  main .content a[href*='hfkasta']::before,
+  main .content a[href*='asta.hfk-bremen']::before,
+  nav .sidebar_note a[href*='localhost']::before,
+  nav .sidebar_note a[href*='hfkasta']::before,
+  nav .sidebar_note a[href*='asta.hfk-bremen']::before,
+  main .content_sidebar-note a[href*='localhost']::before,
+  main .content_sidebar-note a[href*='hfkasta']::before,
+  main .content_sidebar-note a[href*='asta.hfk-bremen']::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_internal-red"); }
+  main .content a[href*='localhost']:hover::before,
+  main .content a[href*='hfkasta']:hover::before,
+  main .content a[href*='asta.hfk-bremen']:hover::before,
+  nav .sidebar_note a[href*='localhost']:hover::before,
+  nav .sidebar_note a[href*='hfkasta']:hover::before,
+  nav .sidebar_note a[href*='asta.hfk-bremen']:hover::before,
+  main .content_sidebar-note a[href*='localhost']:hover::before,
+  main .content_sidebar-note a[href*='hfkasta']:hover::before,
+  main .content_sidebar-note a[href*='asta.hfk-bremen']:hover::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_internal"); }
+  main .content a[href*='.pdf']::before,
+  nav .sidebar_note a[href*='.pdf']::before,
+  main .content_sidebar-note a[href*='.pdf']::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_download-red"); }
+  main .content a[href*='.pdf']:hover::before,
+  nav .sidebar_note a[href*='.pdf']:hover::before,
+  main .content_sidebar-note a[href*='.pdf']:hover::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_download"); }
+  main .content a[href*='hfkbremen.sharepoint']::before,
+  nav .sidebar_note a[href*='hfkbremen.sharepoint']::before,
+  main .content_sidebar-note a[href*='hfkbremen.sharepoint']::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_drive-red"); }
+  main .content a[href*='hfkbremen.sharepoint']:hover::before,
+  nav .sidebar_note a[href*='hfkbremen.sharepoint']:hover::before,
+  main .content_sidebar-note a[href*='hfkbremen.sharepoint']:hover::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_drive"); }
+  main .content a[href*='portal.hfk-bremen.de']::before,
+  nav .sidebar_note a[href*='portal.hfk-bremen.de']::before,
+  main .content_sidebar-note a[href*='portal.hfk-bremen.de']::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_portal-red"); }
+  main .content a[href*='portal.hfk-bremen.de']:hover::before,
+  nav .sidebar_note a[href*='portal.hfk-bremen.de']:hover::before,
+  main .content_sidebar-note a[href*='portal.hfk-bremen.de']:hover::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_portal"); } }
 /*
     # Styling for the language-switch
 
@@ -763,9 +873,10 @@ nav .sidebar_note a[href*='portal.hfk-bremen.de']:hover::before {
   position: fixed;
   z-index: 30;
   padding: 15px 10px 15px 20px;
-  top: 60px;
+  margin-top: 20px;
   left: -13px;
-  transform: rotate(12deg); }
+  transform: rotate(12deg);
+  font-size: 0.875rem; }
   .language-switch ul {
     margin: 0;
     padding: 0;
@@ -784,39 +895,181 @@ nav .sidebar_note a[href*='portal.hfk-bremen.de']:hover::before {
 
 @media (min-width: 768px) {
   .language-switch {
-    top: 70px; } }
+    font-size: 1.125rem;
+    margin-top: 40px; } }
 @media (min-width: 1680px) {
   .language-switch {
-    top: 85px; } }
+    margin-top: 65px; } }
+/*
+    # Styling for the page-elevator
+
+    The Style for the page-elevator
+*/
+.page-elevator {
+  width: 38.56px;
+  height: 56.75px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("../assets/hfkasta_stack.svg#m_arrow_elevator");
+  margin: 20px auto; }
+
+@media (min-width: 1024px) {
+  .page-elevator {
+    position: fixed;
+    display: block;
+    left: -40px;
+    bottom: 80px;
+    transition: left .5s ease; }
+    .page-elevator.show {
+      left: 1%; }
+    .page-elevator:hover {
+      cursor: pointer; } }
 /*
     # Styling for the content area
 
     This styling takes care of regular content pages coming from wordpress pages.
 */
+.content h1,
+.sidebar_note h1,
+h2 {
+  font-family: 'GT-Haptik-Bold', sans-serif;
+  font-size: 2.1875rem;
+  margin: 1.6rem 0; }
+
+h3 {
+  font-family: 'GT-Haptik-Bold', sans-serif;
+  font-size: 1.125rem;
+  margin: 1rem 0; }
+
+h4,
+h5,
+h6 {
+  font-family: 'GT-Haptik-Regular', sans-serif;
+  font-size: 1.125rem;
+  margin: .8rem 0; }
+
 .wrapper main .content {
-  max-width: 560px;
+  max-width: 680px;
   width: 100%;
-  margin: 0 auto;
-  position: relative; }
+  margin: 0 auto 40px auto;
+  position: relative;
+  padding: 0 15px; }
+  .wrapper main .content > p, .wrapper main .content > h1, .wrapper main .content > h2, .wrapper main .content > h3, .wrapper main .content > h4, .wrapper main .content > h5, .wrapper main .content > h6, .wrapper main .content > ul, .wrapper main .content > ol {
+    max-width: 540px;
+    margin: 1rem auto; }
+  .wrapper main .content > ul, .wrapper main .content > ol {
+    padding-left: 20px; }
+  .wrapper main .content p a {
+    display: inline-block;
+    height: auto; }
+  .wrapper main .content .wp-block-button {
+    margin: 0; }
+    .wrapper main .content .wp-block-button__link {
+      background: none;
+      padding: 0;
+      font-size: 1.125rem;
+      color: #d50e31; }
+      .wrapper main .content .wp-block-button__link:hover {
+        color: #5a00be; }
   .wrapper main .content .wp-block-file__button {
     display: inline-block;
     background: none;
     border: 2px solid #d50e31;
     font-size: 1rem;
     padding: 5px 10px; }
+  .wrapper main .content figure.wp-block-image {
+    margin: 0; }
+    .wrapper main .content figure.wp-block-image img {
+      height: auto; }
+    .wrapper main .content figure.wp-block-image figcaption {
+      font-family: 'GT-Haptik-Italic', sans-serif; }
+  .wrapper main .content figure.wp-block-gallery li.blocks-gallery-item {
+    display: block; }
+    .wrapper main .content figure.wp-block-gallery li.blocks-gallery-item figure {
+      display: inline-block;
+      flex-wrap: wrap; }
+      .wrapper main .content figure.wp-block-gallery li.blocks-gallery-item figure img {
+        height: 200px; }
+      .wrapper main .content figure.wp-block-gallery li.blocks-gallery-item figure figcaption {
+        position: relative;
+        background: none;
+        color: #5a00be;
+        font-size: 1.125rem;
+        font-family: 'GT-Haptik-Italic', sans-serif;
+        text-align: left;
+        padding: 0;
+        margin-top: .5em;
+        margin-bottom: 0;
+        flex-basis: 100%; }
+  .wrapper main .content .wp-block-embed {
+    margin: 0; }
+    .wrapper main .content .wp-block-embed__wrapper {
+      width: 100%;
+      padding-top: 56.25%;
+      position: relative; }
+      .wrapper main .content .wp-block-embed__wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%; }
+  .wrapper main .content .wp-block-separator {
+    border-width: 2px;
+    border-bottom: 0;
+    border-style: solid; }
+    .wrapper main .content .wp-block-separator.has-purple-background-color {
+      border-color: #5a00be; }
+    .wrapper main .content .wp-block-separator.has-red-background-color {
+      border-color: #d50e31; }
+    .wrapper main .content .wp-block-separator.has-turquoise-background-color {
+      border-color: #64F5DC; }
 .wrapper main section {
   width: 100%;
   margin: 100px auto 0 auto;
   padding: 0 20px 60px 20px;
   box-sizing: border-box; }
-.wrapper main .content_note {
-  padding: 20px; }
-.wrapper main .is-style-centered-mobile {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto; }
-  @media (min-width: 768px) {
-    .wrapper main .is-style-centered-mobile {
+.wrapper main .content_sidebar-note {
+  border-top: 2px solid #5a00be;
+  padding: 15px; }
+
+@media (min-width: 768px) {
+  .content h1,
+  .sidebar_note h1,
+  h2 {
+    font-size: 3.125rem;
+    margin: 2rem 0; }
+
+  h3 {
+    font-size: 1.5625rem;
+    margin: 1.4rem 0; }
+
+  h4,
+  h5,
+  h6 {
+    font-size: 1.5625rem;
+    margin: 1.2rem 0; }
+
+  .wrapper main .content {
+    max-width: 85%; }
+    .wrapper main .content > p, .wrapper main .content > h1, .wrapper main .content > h2, .wrapper main .content > h3, .wrapper main .content > h4, .wrapper main .content > h5, .wrapper main .content > h6, .wrapper main .content > ul, .wrapper main .content > ol {
+      max-width: 80%; }
+    .wrapper main .content figure.wp-block-gallery li.blocks-gallery-item figure img {
+      height: 480px; }
+  .wrapper main .content_sidebar-note {
+    display: none; } }
+@media (min-width: 1680px) {
+  .wrapper main .content figure.wp-block-gallery li.blocks-gallery-item figure figcaption {
+    font-size: 1.5625rem; }
+
+  .is-style-centered-mobile {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto; } }
+  @media (min-width: 1680px) and (min-width: 768px) {
+    .is-style-centered-mobile {
       margin-left: 15px;
       margin-right: 0;
       text-align: left; } }
@@ -1007,6 +1260,35 @@ select {
   select:disabled:hover, select[aria-disabled=true] {
     border-color: #aaa; }
 
+/*
+    # Styling for the category-overview-page
+
+    The markup is located in the index.php.
+*/
+body.category .content {
+  padding: 0; }
+  body.category .content .post-preview {
+    padding: 0 15px 15px 15px; }
+    body.category .content .post-preview:not(:last-child) {
+      border-bottom: 2px solid #5a00be; }
+    body.category .content .post-preview h3 {
+      margin-bottom: 0; }
+    body.category .content .post-preview .post-preview-categories {
+      display: block; }
+      body.category .content .post-preview .post-preview-categories a {
+        color: #5a00be;
+        display: inline-block; }
+        body.category .content .post-preview .post-preview-categories a::before {
+          display: none; }
+    body.category .content .post-preview .post-preview-arrow {
+      display: inline-block;
+      width: 28.1px;
+      height: 20.5px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-image: url("../assets/hfkasta_stack.svg#m_link_internal-red"); }
+
 *,
 *::before,
 *::after {
@@ -1059,23 +1341,24 @@ textarea {
 label, textarea {
   font-size: 0.8em; }
 
-cite {
-  font-family: "GT-Haptik-Regular", sans-serif;
-  font-size: .9em; }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+figcaption {
   font-family: 'GT-Haptik-Regular', sans-serif;
-  font-weight: normal; }
+  font-size: 1.125rem; }
+
+figcaption {
+  color: #5a00be; }
+
+cite {
+  font-family: 'GT-Haptik-Italic', sans-serif;
+  font-size: 0.875rem; }
 
 a {
   text-decoration: none;
-  color: #d50e31;
-  font-weight: bold; }
+  color: #d50e31; }
+
+em {
+  font-style: normal;
+  font-family: 'GT-Haptik-Italic', sans-serif; }
 
 pre {
   white-space: break-spaces; }
@@ -1122,35 +1405,29 @@ pre {
   z-index: 20; }
   .wrapper main {
     position: relative; }
-    .wrapper main .to_content_note {
-      width: 40px;
-      height: auto;
-      margin: 20px auto; }
-
-footer {
-  margin-top: -60px; }
-
-body.search-results .wrapper main .content {
-  padding: 100px 0 0 0; }
-  body.search-results .wrapper main .content section {
-    margin: 60px auto 0 auto; }
 
 @media (min-width: 768px) {
   .wrapper {
-    padding: 52px 0 60px 0; } }
+    padding: 42px 0 60px 0; } }
 @media (min-width: 1024px) {
   .wrapper {
     width: 100%;
     display: flex; }
     .wrapper main {
-      width: calc(100% - 320px); }
-
-  body.search-results .wrapper main .content section {
-    margin: 130px auto 0 auto; } }
+      width: calc(100% - 320px); } }
 @media (min-width: 1680px) {
   .wrapper {
     padding: 67px 0 60px 0; }
     .wrapper main {
-      width: 70%; } }
+      width: 70%; }
+
+  p,
+  span,
+  a,
+  li,
+  input,
+  button,
+  figcaption {
+    font-size: 1.5625rem; } }
 
 /*# sourceMappingURL=style.css.map */

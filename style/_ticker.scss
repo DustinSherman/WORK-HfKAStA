@@ -7,7 +7,7 @@
 .ticker-wrap {
     width: 100%;
     overflow: hidden;
-    border-bottom: $border-weight solid $brand-primary-color;
+    border-bottom: $border-weight_m solid $brand-primary-color;
     background: #fff;
     z-index: 30;
     height: $ticker-height-s;
@@ -42,7 +42,7 @@
         }
 
         .news_seperator {
-            font-family: 'GT-Haptik-Bold', sans-serif;
+            //font-family: 'GT-Haptik-Bold', sans-serif;
         }
 
         // Pause ticker on hover
@@ -83,7 +83,11 @@
         margin-bottom: -($ticker-height-m + 2px);
 
         .ticker {
-            font-size: $font-size-large;
+            font-size: $font-size-big;
+
+            a p {
+                font-size: $font-size-big;
+            }
 
             .news {
 
@@ -111,6 +115,10 @@
             font-size: $font-size-big;
 
             .news {
+
+                a p {
+                    font-size: $font-size-big;
+                }
 
                 a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']) {
                     padding-right: $font-size-big * 2.5;
