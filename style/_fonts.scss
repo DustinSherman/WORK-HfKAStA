@@ -5,28 +5,129 @@
 */
 
 @font-face {
-	font-family: 'GT Haptik Regular';
-	font-style: normal;
+	font-family: 'GT-Haptik-Lazer';
+	src: url("../assets/font/gt-haptik/GT-Haptik-Lazer.eot");
+	src: url("../assets/font/gt-haptik/GT-Haptik-Lazer.eot?#iefix") format("embedded-opentype"), url("../assets/font/gt-haptik/GT-Haptik-Lazer.woff2") format("woff2"), url("../assets/font/gt-haptik/GT-Haptik-Lazer.woff") format("woff"), url("../assets/font/gt-haptik/GT-Haptik-Lazer.ttf") format("truetype");
 	font-weight: normal;
-	src: url(../assets/font/gt-haptik-regular.otf),
-		url(../assets/font/gt-haptik-regular.woff),
-		url(../assets/font/gt-haptik-regular.woff2);
-}
-
+	font-style: normal; }
 @font-face {
-	font-family: 'GT Haptik Bold';
-	font-style: normal;
-	font-weight: bold;
-	src: url(../assets/font/gt-haptik-bold.otf),
-		url(../assets/font/gt-haptik-bold.woff),
-		url(../assets/font/gt-haptik-bold.woff2);
-}
-
-@font-face {
-	font-family: 'GT Haptik Italic';
-	font-style: italic;
+	font-family: 'GT-Haptik-Lazer-Oblique';
+	src: url("../assets/font/gt-haptik/GT-Haptik-Lazer-Oblique.eot");
+	src: url("../assets/font/gt-haptik/GT-Haptik-Lazer-Oblique.eot?#iefix") format("embedded-opentype"), url("../assets/font/gt-haptik/GT-Haptik-Lazer-Oblique.woff2") format("woff2"), url("../assets/font/gt-haptik/GT-Haptik-Lazer-Oblique.woff") format("woff"), url("../assets/font/gt-haptik/GT-Haptik-Lazer-Oblique.ttf") format("truetype");
 	font-weight: normal;
-	src: url(../assets/font/gt-haptik-regular-oblique.otf),
-		url(../assets/font/gt-haptik-regular-oblique.woff),
-		url(../assets/font/gt-haptik-regular-oblique.woff2);
+	font-style: normal; }
+@font-face {
+	font-family: 'GT-Haptik-Lazer-Rotalic';
+	src: url("../assets/font/gt-haptik/GT-Haptik-Lazer-Rotalic.eot");
+	src: url("../assets/font/gt-haptik/GT-Haptik-Lazer-Rotalic.eot?#iefix") format("embedded-opentype"), url("../assets/font/gt-haptik/GT-Haptik-Lazer-Rotalic.woff2") format("woff2"), url("../assets/font/gt-haptik/GT-Haptik-Lazer-Rotalic.woff") format("woff"), url("../assets/font/gt-haptik/GT-Haptik-Lazer-Rotalic.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'GT-Haptik-Thin';
+	src: url("../assets/font/gt-haptik/GT-Haptik-Thin.eot");
+	src: url("../assets/font/gt-haptik/GT-Haptik-Thin.eot?#iefix") format("embedded-opentype"), url("../assets/font/gt-haptik/GT-Haptik-Thin.woff2") format("woff2"), url("../assets/font/gt-haptik/GT-Haptik-Thin.woff") format("woff"), url("../assets/font/gt-haptik/GT-Haptik-Thin.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'GT-Haptik-Thin-Oblique';
+	src: url("../assets/font/gt-haptik/GT-Haptik-Thin-Oblique.eot");
+	src: url("../assets/font/gt-haptik/GT-Haptik-Thin-Oblique.eot?#iefix") format("embedded-opentype"), url("../assets/font/gt-haptik/GT-Haptik-Thin-Oblique.woff2") format("woff2"), url("../assets/font/gt-haptik/GT-Haptik-Thin-Oblique.woff") format("woff"), url("../assets/font/gt-haptik/GT-Haptik-Thin-Oblique.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'GT-Haptik-Thin-Rotalic';
+	src: url("../assets/font/gt-haptik/GT-Haptik-Thin-Rotalic.eot");
+	src: url("../assets/font/gt-haptik/GT-Haptik-Thin-Rotalic.eot?#iefix") format("embedded-opentype"), url("../assets/font/gt-haptik/GT-Haptik-Thin-Rotalic.woff2") format("woff2"), url("../assets/font/gt-haptik/GT-Haptik-Thin-Rotalic.woff") format("woff"), url("../assets/font/gt-haptik/GT-Haptik-Thin-Rotalic.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'GT-Haptik-Light';
+	src: url("../assets/font/gt-haptik/GT-Haptik-Light.eot");
+	src: url("../assets/font/gt-haptik/GT-Haptik-Light.eot?#iefix") format("embedded-opentype"), url("../assets/font/gt-haptik/GT-Haptik-Light.woff2") format("woff2"), url("../assets/font/gt-haptik/GT-Haptik-Light.woff") format("woff"), url("../assets/font/gt-haptik/GT-Haptik-Light.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'GT-Haptik-Light-Oblique';
+	src: url("../assets/font/gt-haptik/GT-Haptik-Light-Oblique.eot");
+	src: url("../assets/font/gt-haptik/GT-Haptik-Light-Oblique.eot?#iefix") format("embedded-opentype"), url("../assets/font/gt-haptik/GT-Haptik-Light-Oblique.woff2") format("woff2"), url("../assets/font/gt-haptik/GT-Haptik-Light-Oblique.woff") format("woff"), url("../assets/font/gt-haptik/GT-Haptik-Light-Oblique.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'GT-Haptik-Light-Rotalic';
+	src: url("../assets/font/gt-haptik/GT-Haptik-Light-Rotalic.eot");
+	src: url("../assets/font/gt-haptik/GT-Haptik-Light-Rotalic.eot?#iefix") format("embedded-opentype"), url("../assets/font/gt-haptik/GT-Haptik-Light-Rotalic.woff2") format("woff2"), url("../assets/font/gt-haptik/GT-Haptik-Light-Rotalic.woff") format("woff"), url("../assets/font/gt-haptik/GT-Haptik-Light-Rotalic.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'GT-Haptik-Regular';
+	src: url("../assets/font/gt-haptik/GT-Haptik-Regular.eot");
+	src: url("../assets/font/gt-haptik/GT-Haptik-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/font/gt-haptik/GT-Haptik-Regular.woff2") format("woff2"), url("../assets/font/gt-haptik/GT-Haptik-Regular.woff") format("woff"), url("../assets/font/gt-haptik/GT-Haptik-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'GT-Haptik-Regular-Oblique';
+	src: url("../assets/font/gt-haptik/GT-Haptik-Regular-Oblique.eot");
+	src: url("../assets/font/gt-haptik/GT-Haptik-Regular-Oblique.eot?#iefix") format("embedded-opentype"), url("../assets/font/gt-haptik/GT-Haptik-Regular-Oblique.woff2") format("woff2"), url("../assets/font/gt-haptik/GT-Haptik-Regular-Oblique.woff") format("woff"), url("../assets/font/gt-haptik/GT-Haptik-Regular-Oblique.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'GT-Haptik-Regular-Rotalic';
+	src: url("../assets/font/gt-haptik/GT-Haptik-Regular-Rotalic.eot");
+	src: url("../assets/font/gt-haptik/GT-Haptik-Regular-Rotalic.eot?#iefix") format("embedded-opentype"), url("../assets/font/gt-haptik/GT-Haptik-Regular-Rotalic.woff2") format("woff2"), url("../assets/font/gt-haptik/GT-Haptik-Regular-Rotalic.woff") format("woff"), url("../assets/font/gt-haptik/GT-Haptik-Regular-Rotalic.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'GT-Haptik-Medium';
+	src: url("../assets/font/gt-haptik/GT-Haptik-Medium.eot");
+	src: url("../assets/font/gt-haptik/GT-Haptik-Medium.eot?#iefix") format("embedded-opentype"), url("../assets/font/gt-haptik/GT-Haptik-Medium.woff2") format("woff2"), url("../assets/font/gt-haptik/GT-Haptik-Medium.woff") format("woff"), url("../assets/font/gt-haptik/GT-Haptik-Medium.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'GT-Haptik-Medium-Oblique';
+	src: url("../assets/font/gt-haptik/GT-Haptik-Medium-Oblique.eot");
+	src: url("../assets/font/gt-haptik/GT-Haptik-Medium-Oblique.eot?#iefix") format("embedded-opentype"), url("../assets/font/gt-haptik/GT-Haptik-Medium-Oblique.woff2") format("woff2"), url("../assets/font/gt-haptik/GT-Haptik-Medium-Oblique.woff") format("woff"), url("../assets/font/gt-haptik/GT-Haptik-Medium-Oblique.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'GT-Haptik-Medium-Rotalic';
+	src: url("../assets/font/gt-haptik/GT-Haptik-Medium-Rotalic.eot");
+	src: url("../assets/font/gt-haptik/GT-Haptik-Medium-Rotalic.eot?#iefix") format("embedded-opentype"), url("../assets/font/gt-haptik/GT-Haptik-Medium-Rotalic.woff2") format("woff2"), url("../assets/font/gt-haptik/GT-Haptik-Medium-Rotalic.woff") format("woff"), url("../assets/font/gt-haptik/GT-Haptik-Medium-Rotalic.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'GT-Haptik-Bold';
+	src: url("../assets/font/gt-haptik/GT-Haptik-Bold.eot");
+	src: url("../assets/font/gt-haptik/GT-Haptik-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/font/gt-haptik/GT-Haptik-Bold.woff2") format("woff2"), url("../assets/font/gt-haptik/GT-Haptik-Bold.woff") format("woff"), url("../assets/font/gt-haptik/GT-Haptik-Bold.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'GT-Haptik-Bold-Oblique';
+	src: url("../assets/font/gt-haptik/GT-Haptik-Bold-Oblique.eot");
+	src: url("../assets/font/gt-haptik/GT-Haptik-Bold-Oblique.eot?#iefix") format("embedded-opentype"), url("../assets/font/gt-haptik/GT-Haptik-Bold-Oblique.woff2") format("woff2"), url("../assets/font/gt-haptik/GT-Haptik-Bold-Oblique.woff") format("woff"), url("../assets/font/gt-haptik/GT-Haptik-Bold-Oblique.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'GT-Haptik-Bold-Rotalic';
+	src: url("../assets/font/gt-haptik/GT-Haptik-Bold-Rotalic.eot");
+	src: url("../assets/font/gt-haptik/GT-Haptik-Bold-Rotalic.eot?#iefix") format("embedded-opentype"), url("../assets/font/gt-haptik/GT-Haptik-Bold-Rotalic.woff2") format("woff2"), url("../assets/font/gt-haptik/GT-Haptik-Bold-Rotalic.woff") format("woff"), url("../assets/font/gt-haptik/GT-Haptik-Bold-Rotalic.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'GT-Haptik-Black';
+	src: url("../assets/font/gt-haptik/GT-Haptik-Black.eot");
+	src: url("../assets/font/gt-haptik/GT-Haptik-Black.eot?#iefix") format("embedded-opentype"), url("../assets/font/gt-haptik/GT-Haptik-Black.woff2") format("woff2"), url("../assets/font/gt-haptik/GT-Haptik-Black.woff") format("woff"), url("../assets/font/gt-haptik/GT-Haptik-Black.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'GT-Haptik-Black-Oblique';
+	src: url("../assets/font/gt-haptik/GT-Haptik-Black-Oblique.eot");
+	src: url("../assets/font/gt-haptik/GT-Haptik-Black-Oblique.eot?#iefix") format("embedded-opentype"), url("../assets/font/gt-haptik/GT-Haptik-Black-Oblique.woff2") format("woff2"), url("../assets/font/gt-haptik/GT-Haptik-Black-Oblique.woff") format("woff"), url("../assets/font/gt-haptik/GT-Haptik-Black-Oblique.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'GT-Haptik-Black-Rotalic';
+	src: url("../assets/font/gt-haptik/GT-Haptik-Black-Rotalic.eot");
+	src: url("../assets/font/gt-haptik/GT-Haptik-Black-Rotalic.eot?#iefix") format("embedded-opentype"), url("../assets/font/gt-haptik/GT-Haptik-Black-Rotalic.woff2") format("woff2"), url("../assets/font/gt-haptik/GT-Haptik-Black-Rotalic.woff") format("woff"), url("../assets/font/gt-haptik/GT-Haptik-Black-Rotalic.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
 }
