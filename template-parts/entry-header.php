@@ -68,13 +68,17 @@
 
         <div class="sidebar_note_link">
 
-            <div class="sidebar_note_arrow"></div>
+            <a href="#content_sidebar-note_anchor" onclick="scroll()">
 
-            <?php if (get_field('hint_to_sidebar_note', $term)) : ?>
+                <div class="sidebar_note_arrow"></div>
 
-                <span><?php the_field('hint_to_sidebar_note', $term); ?></span>
+                <?php if (get_field('hint_to_sidebar_note', $term)) : ?>
 
-            <?php endif; ?>
+                    <span><?php the_field('hint_to_sidebar_note', $term); ?></span>
+
+                <?php endif; ?>
+
+            </a>
 
         </div>
 

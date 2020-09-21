@@ -7,11 +7,13 @@
 // Variables
 $brand-primary-color: #5a00be;
 $brand-secondary-color: #d50e31;
+$brand-turquoise-color: #64F5DC;
 $contrast-primary-color: #fff;
 $contrast-secondary-color: #fff;
 $text-color: $brand-primary-color;
 $transition-time: .5s;
-$border-weight: 2px;
+$border-weight_m: 2px;
+$border-weight_l: 3px;
 $base-font: 'GT Haptik',
 sans-serif;
 
@@ -20,8 +22,8 @@ $font-size-base: 16px;
 
 $font-size-small: .875rem; // 14px
 $font-size-regular: 1.125rem; // 18px
-$font-size-large: 1.5625rem; // 25px
-$font-size-big: 2.1875rem; // 35px
+$font-size-big: 1.5625rem; // 25px
+$font-size-large: 2.1875rem; // 35px
 
 $font-size-headline-small: 3.125rem; // 50px
 $font-size-headline-regular: 4.375rem; // 70px
@@ -34,8 +36,12 @@ $breakpoint-tablet-landscape: 1024px;
 $breakpoint-laptop: 1345px;
 $breakpoint-screen: 1680px;
 
-// Content-Padding
+// Content
 $padding_s: 15px;
+$content-width_s: 680px;
+$content-text-width_s: 540px;
+$content-width_m: 85%;
+$content-text-width_m: 80%;
 
 // Footer
 $footer-height: 60px;
@@ -43,7 +49,7 @@ $footer-icon-size: 40px;
 
 // Ticker
 $ticker-height_s: 40px;
-$ticker-height_m: 50px;
+$ticker-height_m: 40px;
 $ticker-height_l: 65px;
 
 // Language Switch

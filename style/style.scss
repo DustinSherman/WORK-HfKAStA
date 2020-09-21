@@ -9,7 +9,9 @@
 @import "./ticker";
 @import "./links";
 @import "./language-switch";
+@import "./page-elevator";
 @import "./content";
+@import "./category";
 
 *,
 *::before,
@@ -58,28 +60,26 @@ input,
 button,
 figcaption {
     font-family: 'GT Haptik Regular', sans-serif;
-    font-size: 1em;
+    font-size: $font-size-regular;
+}
+
+figcaption {
+    color: $brand-primary-color;
 }
 
 cite {
     font-family: 'GT Haptik Italic', sans-serif;
-    font-size: .9em;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'GT Haptik Regular', sans-serif;
-    font-weight: normal;
+    font-size: $font-size-small;
 }
 
 a {
     text-decoration: none;
     color: $brand-secondary-color;
-    font-weight: bold;
+}
+
+em {
+    font-style: normal;
+    font-family: 'GT Haptik Italic', sans-serif;
 }
 
 pre {
@@ -106,7 +106,7 @@ pre {
 }
 
 .post {
-    border: $border-weight solid;
+    border: $border-weight_m solid;
     border-color: $brand-primary-color;
     margin-left: auto;
     margin-right: auto;
@@ -129,32 +129,6 @@ pre {
 
     main {
         position: relative;
-
-        .to_content_note {
-            width: 40px;
-            height: auto;
-            margin: 20px auto;
-        }
-    }
-}
-
-// Sticky Footer
-footer {
-    margin-top: -$footer-height;
-}
-
-// Search Result Page
-body.search-results {
-    .wrapper {
-        main {
-            .content {
-                padding: 100px 0 0 0;
-
-                section {
-                    margin: 60px auto 0 auto;
-                }
-            }
-        }
     }
 }
 
@@ -173,16 +147,6 @@ body.search-results {
             width: calc(100% - #{$sidebar-width});
         }
     }
-
-    body.search-results {
-        .wrapper main {
-            .content {
-                section {
-                    margin: 130px auto 0 auto;
-                }
-            }
-        }
-    }
 }
 
 @media (min-width: $breakpoint-screen) {
@@ -192,5 +156,15 @@ body.search-results {
         main {
             width: 70%;
         }
+    }
+
+    p,
+    span,
+    a,
+    li,
+    input,
+    button,
+    figcaption {
+        font-size: $font-size-big;
     }
 }

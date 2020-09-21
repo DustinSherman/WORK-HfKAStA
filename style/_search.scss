@@ -11,7 +11,7 @@
             display: block;
 
             &:not(:first-child) {
-                border-top: $border-weight solid $brand-primary-color;
+                border-top: $border-weight_m solid $brand-primary-color;
             }
         }
     }

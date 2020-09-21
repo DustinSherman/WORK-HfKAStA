@@ -19,7 +19,7 @@ nav {
     top: 0;
     background: #fff;
     color: $brand-primary-color;
-    border-left: $border-weight solid $brand-primary-color;
+    border-left: $border-weight_m solid $brand-primary-color;
     z-index: 30;
     transition: right $transition-time ease;
     padding: ($ticker-height_s + 20px + 15px + 24px) 20px ($footer-height + 20px) 20px;
@@ -123,7 +123,7 @@ nav {
             border-radius: 0;
             background: #fff;
             color: $brand-primary-color;
-            border: $border-weight solid $brand-primary-color;
+            border: $border-weight_m solid $brand-primary-color;
 
             &:focus {
                 outline: none;
@@ -195,11 +195,6 @@ nav {
     left: 0;
 }
 
-// Page Elevator
-.page-elevator {
-    display: none;
-}
-
 // Hide Sidebar Note on search-result site
 body.search-result {
     .content {
@@ -229,7 +224,7 @@ nav {
         .search-form .search-field,
         .search-form .search-field::placeholder,
         .search-form .search-field::-webkit-input-placeholder {
-            font-size: $font-size-large;
+            font-size: $font-size-big;
         }
 
         ul li.sub-menu li a {
@@ -248,35 +243,16 @@ nav {
         margin: 0;
         right: auto;
         padding: 20px;
-    }
 
-    // Show Sidebar Notes on > 768px
-    .sidebar_note {
-        display: inline-block;
+        // Show Sidebar Notes on > 768px
+        .sidebar_note {
+            display: inline-block;
+        }
     }
 
     // Hide Sidebar Notes in Content on < 768px
     .content .content_note {
         display: none;
-    }
-
-    // Page Elevator
-    .page-elevator {
-        position: fixed;
-        display: block;
-        left: -40px;
-        bottom: $footer-height + 20px;
-        width: 20px;
-        height: auto;
-        transition: left .5s ease;
-
-        &.show {
-            left: 20px;
-        }
-
-        &:hover {
-            cursor: pointer;
-        }
     }
 }
 
@@ -289,11 +265,27 @@ nav {
         .search-form .search-field,
         .search-form .search-field::placeholder,
         .search-form .search-field::-webkit-input-placeholder {
-            font-size: $font-size-big;
+            font-size: $font-size-large;
         }
 
-        ul li.sub-menu li a {
-            font-size: $font-size-large;
+        ul li {
+            &.sub-menu li a {
+                font-size: $font-size-big;
+            }
+
+            &.menu-item-has-children {
+                .dropdown-btn {
+                    margin: 0 0 0 6px;
+                    width: 22.79px;
+                    height: 14.34px;
+                    background-image: url('../assets/hfkasta_stack.svg#l_arrow_nav');
+
+                    &:hover {
+                        cursor: pointer;
+                        background-image: url('../assets/hfkasta_stack.svg#l_arrow_nav-red');
+                    }
+                }
+            }
         }
 
         .search-form {

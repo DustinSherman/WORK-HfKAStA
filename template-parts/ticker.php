@@ -12,16 +12,11 @@
             <?php for ($i = 0 ; $i < 4; $i++) : ?>
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                     <?php 
-                        $message = get_field('ticker_message') ? get_field('ticker_message') : get_the_title();
+                        $ticker_max_words = 10;
 
-                        $ticker_max_length = 80;
+                        $message = wp_trim_words(get_field('ticker_message') ? get_field('ticker_message') : get_the_title(), $ticker_max_words);
 
-                        if (strlen($message) > $ticker_max_length) {
-                            $message_str_pos = strpos($message, ' ', $ticker_max_length);
-
-                            $message = substr($message, 0, $message_str_pos);
-                            $message = $message . ' ... ';
-                        }
+                        $message = wp_strip_all_tags($message);
                     ?>
                     <div class="news">
                         <?php /* Link wenn, der post keinen Inhalt hat oder der externe Link gesetzt ist. */ ?>

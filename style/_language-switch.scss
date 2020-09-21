@@ -5,14 +5,15 @@
 */
 
 .language-switch {
-    border: $border-weight solid $brand-primary-color;
+    border: $border-weight_m solid $brand-primary-color;
     background: $contrast-primary-color;
     position: fixed;
     z-index: 30;
     padding: 15px 10px 15px 20px;
-    top: $ticker-height_s + 20px;
+    margin-top: $ticker-height_s - 20px;
     left: -13px;
     transform: rotate($language-menu-rotation);
+    font-size: $font-size-small;
 
     ul {
         margin: 0;
@@ -44,12 +45,13 @@
 
 @media (min-width: $breakpoint-tablet) {
     .language-switch {
-        top: $ticker-height_m + 20px;
+        font-size: $font-size-regular;
+        margin-top: $ticker-height_m;
     }
 }
 
 @media (min-width: $breakpoint-screen) {
     .language-switch {
-        top: $ticker-height_l + 20px;
+        margin-top: $ticker-height_l;
     }
 }

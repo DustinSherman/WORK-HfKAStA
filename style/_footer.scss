@@ -5,7 +5,7 @@
 */
 
 footer {
-    border-top: $border-weight solid $brand-primary-color;
+    border-top: $border-weight_m solid $brand-primary-color;
     background: #fff;
     z-index: 20;
     position: relative;
@@ -14,6 +14,9 @@ footer {
     padding: 10px 20px;
     display: flex;
     box-sizing: border-box;
+
+    // Sticky Footer
+    margin-top: -$footer-height;
 
     ul {
         margin: 10px 0;
