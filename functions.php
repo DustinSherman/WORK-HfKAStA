@@ -120,4 +120,9 @@
             return null;
         }
     }
+
+    // exclude styling (css) from "The newsletter plugin"
+    // see: https://www.thenewsletterplugin.com/documentation/customization/subscription-forms-style/
+    add_filter('newsletter_enqueue_style', '__return_false');
+
 ?>
