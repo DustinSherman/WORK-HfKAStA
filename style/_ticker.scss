@@ -1,12 +1,18 @@
+/*
+    # Styling for the ticker
+
+    The Style for the ticker.
+*/
+
 .ticker-wrap {
     width: 100%;
     overflow: hidden;
     border-bottom: $border-weight solid $brand-primary-color;
     background: #fff;
     z-index: 30;
-    height: $ticker-height;
+    height: $ticker-height-s;
     box-sizing: border-box;
-    margin-bottom: -($ticker-height + 2px);
+    margin-bottom: -($ticker-height-s + 2px);
     position: relative;
 
     .ticker {
@@ -65,6 +71,56 @@
 
                 &:hover::before {
                     background-image: url('../assets/hfkasta_stack.svg#m_link_external-red');
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .ticker-wrap {
+        height: $ticker-height-m;
+        margin-bottom: -($ticker-height-m + 2px);
+
+        .ticker {
+            font-size: $font-size-large;
+
+            .news {
+
+                a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']) {
+                    padding-right: $font-size-large * 2.5;
+
+                    &::before {
+                        width: $font-size-large * 2;
+                        min-width: $font-size-large * 2;
+                        flex-basis: $font-size-large * 2;
+                        height: $font-size-large * 2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoint-screen) {
+    .ticker-wrap {
+        height: $ticker-height-l;
+        margin-bottom: -($ticker-height-l + 2px);
+
+        .ticker {
+            font-size: $font-size-big;
+
+            .news {
+
+                a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']) {
+                    padding-right: $font-size-big * 2.5;
+
+                    &::before {
+                        width: $font-size-big * 2;
+                        min-width: $font-size-big * 2;
+                        flex-basis: $font-size-big * 2;
+                        height: $font-size-big * 2;
+                    }
                 }
             }
         }

@@ -1,12 +1,13 @@
-$search-bar-height: 40px;
-$icon-height: 18px;
-$search-form-padding: 5px;
-$transition-time: 0s;
+/*
+    # Styling for the navigation
+
+    The Style for the navigation. The mobile Navigation switches position after 1024px screen-width.
+*/
 
 .hamburger.hamburger--squeeze {
     position: fixed;
     right: 0;
-    top: $ticker-height;
+    top: $ticker-height_s;
     z-index: 32;
 }
 
@@ -21,11 +22,23 @@ nav {
     border-left: $border-weight solid $brand-primary-color;
     z-index: 30;
     transition: right $transition-time ease;
-    padding: 2rem;
+    padding: ($ticker-height_s + 20px + 15px + 24px) 20px ($footer-height + 20px) 20px;
     box-sizing: border-box;
 
     &.is-open {
         right: 0;
+    }
+
+    // font-size
+    ul li a,
+    .search-form .search-field,
+    .search-form .search-field::placeholder,
+    .search-form .search-field::-webkit-input-placeholder {
+        font-size: $font-size-regular;
+    }
+
+    ul li.sub-menu li a {
+        font-size: $font-size-small;
     }
 
     ul {
@@ -34,12 +47,14 @@ nav {
         li {
             list-style-type: none;
             position: relative;
-            margin-bottom: 10px;
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
 
             a {
                 color: $brand-primary-color;
                 font-weight: normal;
-                font-size: $mobile-large-font-size;
                 word-break: break-word;
                 text-decoration: none;
                 color: $brand-primary-color;
@@ -50,14 +65,13 @@ nav {
                     content: '';
                     position: relative;
                     display: inline-block;
-                    margin: 0 0 4px 6px;
-                    height: $icon-height;
-                    width: $icon-height + 2;
+                    margin: 0 0 0 6px;
+                    width: 16.2px;
+                    height: 10.1px;
                     background-image: url('../assets/hfkasta_stack.svg#m_arrow_nav');
                     background-repeat: no-repeat;
                     background-position: center center;
                     transform: rotate(0deg);
-                    transition: transform $transition-time;
 
                     &:hover {
                         cursor: pointer;
@@ -66,15 +80,13 @@ nav {
                 }
 
                 &.is-open {
-                    .dropdown {
+                    .dropdown-btn {
                         transform: rotate(-180deg);
                     }
 
                     .sub-menu {
                         margin-top: 12px;
-                        // max-height: 150px;
                         height: auto;
-                        // transition: max-height $transition-time;
                     }
                 }
             }
@@ -88,10 +100,6 @@ nav {
             padding-left: 20px;
 
             li {
-                a {
-                    font-size: $mobile-medium-font-size;
-                }
-
                 &.current-menu-item {
                     a {
                         font-family: 'GT Haptik Bold', sans-serif;
@@ -102,7 +110,7 @@ nav {
     }
 
     .search-form {
-        height: $search-bar-height;
+        height: $search-bar-height_m;
         width: 100%;
         position: relative;
         margin-left: -$search-form-padding;
@@ -116,7 +124,6 @@ nav {
             background: #fff;
             color: $brand-primary-color;
             border: $border-weight solid $brand-primary-color;
-            font-size: $mobile-large-font-size;
 
             &:focus {
                 outline: none;
@@ -125,8 +132,7 @@ nav {
             &::placeholder,
             &::-webkit-input-placeholder {
                 color: $brand-primary-color;
-                font-size: $mobile-large-font-size;
-                line-height: $search-bar-height;
+                line-height: $search-bar-height_m;
                 vertical-align: middle;
             }
 
@@ -150,8 +156,8 @@ nav {
         .search-submit {
             border: 0;
             z-index: 32;
-            height: $search-bar-height;
-            width: $search-bar-height;
+            height: $search-bar-height_m;
+            width: $search-bar-height_m;
             background: none;
 
             &:focus {
@@ -178,43 +184,6 @@ nav {
             position: absolute;
             right: 0;
             top: 0;
-        }
-    }
-}
-
-.language-switch {
-    border: $border-weight solid $brand-primary-color;
-    position: fixed;
-    z-index: 30;
-    padding: 15px 10px 15px 20px;
-    top: 70px;
-    left: -13px;
-    transform: rotate($language-menu-rotation);
-
-    ul {
-        margin: 0;
-        padding: 0;
-        transform: rotate(-$language-menu-rotation);
-
-        li {
-            list-style-type: none;
-            display: inline;
-
-            a {
-                color: $brand-secondary-color;
-            }
-
-            &.current-lang {
-                a {
-                    font-family: 'GT Haptik Bold', sans-serif;
-                }
-            }
-
-            &:not(:first-child)::before {
-                content: '/';
-                margin: 0 4px;
-                color: $brand-secondary-color;
-            }
         }
     }
 }
@@ -247,7 +216,29 @@ nav {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $breakpoint-tablet) {
+    .hamburger.hamburger--squeeze {
+        top: $ticker-height-m;
+    }
+
+    nav {
+        padding: ($ticker-height-m + 20px + 15px + 24px) 20px ($footer-height + 20px) 20px;
+
+        // font-size
+        ul li a,
+        .search-form .search-field,
+        .search-form .search-field::placeholder,
+        .search-form .search-field::-webkit-input-placeholder {
+            font-size: $font-size-large;
+        }
+
+        ul li.sub-menu li a {
+            font-size: $font-size-regular;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-tablet-landscape) {
     .hamburger.hamburger--squeeze {
         display: none;
     }
@@ -256,34 +247,17 @@ nav {
         position: relative;
         margin: 0;
         right: auto;
+        padding: 20px;
+    }
 
-        ul {
-            li {
-                a {
-                    font-size: $desktop-large-font-size;
-                }
-            }
-        }
-
-        .search-form .search-field {
-
-            &::placeholder,
-            &::-webkit-input-placeholder {
-                font-size: $desktop-large-font-size;
-            }
-        }
-
-        // Show Sidebar Notes on > 768px
-        .sidebar_note {
-            display: inline-block;
-        }
+    // Show Sidebar Notes on > 768px
+    .sidebar_note {
+        display: inline-block;
     }
 
     // Hide Sidebar Notes in Content on < 768px
-    .content {
-        .content_note {
-            display: none;
-        }
+    .content .content_note {
+        display: none;
     }
 
     // Page Elevator
@@ -306,8 +280,31 @@ nav {
     }
 }
 
-@media screen and (min-width: 1680px) {
+@media screen and (min-width: $breakpoint-screen) {
     nav {
         width: 30%;
+
+        // font-size
+        ul li a,
+        .search-form .search-field,
+        .search-form .search-field::placeholder,
+        .search-form .search-field::-webkit-input-placeholder {
+            font-size: $font-size-big;
+        }
+
+        ul li.sub-menu li a {
+            font-size: $font-size-large;
+        }
+
+        .search-form {
+
+            height: $search-bar-height_l;
+
+            .search-icon {
+                width: 30.99px;
+                height: 30.99px;
+                background-image: url('../assets/hfkasta_stack.svg#l_search');
+            }
+        }
     }
 }

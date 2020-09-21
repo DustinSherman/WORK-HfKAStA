@@ -1,0 +1,34 @@
+/*
+    # Styling for the content area
+
+    This styling takes care of regular content pages coming from wordpress pages.
+*/
+
+.wrapper main {
+
+    .content {
+        max-width: 560px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+
+        .wp-block-file__button {
+            display: inline-block;
+            background: none;
+            border: $border-weight solid $brand-secondary-color;
+            font-size: 1rem;
+            padding: 5px 10px;
+        }
+    }
+
+    section {
+        width: 100%;
+        margin: 100px auto 0 auto;
+        padding: 0 20px 60px 20px;
+        box-sizing: border-box;
+    }
+
+    .content_note {
+        padding: 20px;
+    }
+}

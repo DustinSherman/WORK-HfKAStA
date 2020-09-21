@@ -1,11 +1,3 @@
-// Variables
-$brand-primary-color: #5a00be;
-$brand-secondary-color: #d50e31;
-$transition-time: .5s;
-$footer-height: 60px;
-$ticker-height: 40px;
-$border-weight: 2px;
-
 // Imports
 @import "./variables";
 @import "./fonts";
@@ -13,8 +5,11 @@ $border-weight: 2px;
 @import "./footer";
 @import "./search";
 @import "./entry-header";
+@import "./boxes";
 @import "./ticker";
 @import "./links";
+@import "./language-switch";
+@import "./content";
 
 *,
 *::before,
@@ -98,14 +93,6 @@ pre {
     width: calc(100% - 4rem);
 }
 
-.entry-header {
-    font-size: 1.5rem;
-}
-
-.entry-header {
-    padding: 6rem 0;
-}
-
 .entry-content>* {
     margin-left: auto;
     margin-right: auto;
@@ -130,14 +117,8 @@ pre {
     width: calc(100% - 2rem);
 }
 
-.entry-content p,
-.entry-content li {
-    line-height: 1.4;
-    font-size: 1.6rem;
-}
-
 .wrapper {
-    padding: ($ticker-height + 2px) 0 $footer-height 0;
+    padding: ($ticker-height_s + 2px) 0 $footer-height 0;
     height: auto;
     min-height: 100%;
     max-width: 100%;
@@ -153,38 +134,6 @@ pre {
             width: 40px;
             height: auto;
             margin: 20px auto;
-        }
-
-        .content {
-            max-width: 560px;
-            width: 100%;
-            margin: 0 auto;
-            position: relative;
-            padding: 150px 0 0 0;
-
-            .wp-block-file__button {
-                display: inline-block;
-                background: none;
-                border: $border-weight solid $brand-secondary-color;
-                font-size: 1rem;
-                padding: 5px 10px;
-            }
-        }
-
-        .note-line,
-        .note {
-            display: none;
-        }
-
-        section {
-            width: 100%;
-            margin: 100px auto 0 auto;
-            padding: 0 20px 60px 20px;
-            box-sizing: border-box;
-        }
-
-        .content_note {
-            padding: 20px;
         }
     }
 }
@@ -209,45 +158,19 @@ body.search-results {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $breakpoint-tablet) {
+    .wrapper {
+        padding: ($ticker-height-m + 2px) 0 $footer-height 0;
+    }
+}
+
+@media (min-width: $breakpoint-tablet-landscape) {
     .wrapper {
         width: 100%;
         display: flex;
 
         main {
             width: calc(100% - #{$sidebar-width});
-
-            .note-line {
-                display: inline-block;
-                width: 160px;
-                height: auto;
-                left: calc(50% - 180px);
-                position: absolute;
-                top: 240px;
-            }
-
-            .note {
-                display: inline-block;
-                width: 120px;
-                height: 100px;
-                left: calc(50% - 250px);
-                top: 185px;
-                text-align: center;
-                vertical-align: bottom;
-                font-size: 1rem;
-                position: absolute;
-                transform: rotate(-14deg);
-
-                p {
-                    position: absolute;
-                    bottom: 0;
-                    margin: 0;
-                }
-            }
-
-            .to_note {
-                display: none;
-            }
         }
     }
 
@@ -262,8 +185,10 @@ body.search-results {
     }
 }
 
-@media screen and (min-width: 1680px) {
+@media (min-width: $breakpoint-screen) {
     .wrapper {
+        padding: ($ticker-height-l + 2px) 0 $footer-height 0;
+
         main {
             width: 70%;
         }

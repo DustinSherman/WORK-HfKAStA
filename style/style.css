@@ -1,3 +1,13 @@
+/*
+    # Variables
+
+    All global variables are declared here.
+*/
+/*
+    # Font Familys
+
+    Just the import of the fonts. Nothing more should be declared here.
+*/
 @font-face {
   font-family: 'GT Haptik Regular';
   font-style: normal;
@@ -19,6 +29,11 @@
   src: url(../assets/font/gt-haptik-regular-oblique.otf), url(../assets/font/gt-haptik-regular-oblique.woff), url(../assets/font/gt-haptik-regular-oblique.woff2);
 }
 
+/*
+    # Styling for the navigation
+
+    The Style for the navigation. The mobile Navigation switches position after 1024px screen-width.
+*/
 .hamburger.hamburger--squeeze {
   position: fixed;
   right: 0;
@@ -36,15 +51,33 @@ nav {
   color: #5a00be;
   border-left: 2px solid #5a00be;
   z-index: 30;
-  -webkit-transition: right 0s ease;
-  transition: right 0s ease;
-  padding: 2rem;
+  -webkit-transition: right 0.5s ease;
+  transition: right 0.5s ease;
+  padding: 99px 20px 80px 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 nav.is-open {
   right: 0;
+}
+
+nav ul li a,
+nav .search-form .search-field,
+nav .search-form .search-field::-webkit-input-placeholder,
+nav .search-form .search-field::-webkit-input-placeholder {
+  font-size: 1.125rem;
+}
+
+nav ul li a,
+nav .search-form .search-field,
+nav .search-form .search-field::placeholder,
+nav .search-form .search-field::-webkit-input-placeholder {
+  font-size: 1.125rem;
+}
+
+nav ul li.sub-menu li a {
+  font-size: 0.875rem;
 }
 
 nav ul {
@@ -54,13 +87,15 @@ nav ul {
 nav ul li {
   list-style-type: none;
   position: relative;
+}
+
+nav ul li:not(:last-child) {
   margin-bottom: 10px;
 }
 
 nav ul li a {
   color: #5a00be;
   font-weight: normal;
-  font-size: 1.8rem;
   word-break: break-word;
   text-decoration: none;
   color: #5a00be;
@@ -70,18 +105,14 @@ nav ul li.menu-item-has-children .dropdown-btn {
   content: '';
   position: relative;
   display: inline-block;
-  margin: 0 0 4px 6px;
-  height: 18px;
-  width: 20px;
+  margin: 0 0 0 6px;
+  width: 16.2px;
+  height: 10.1px;
   background-image: url("../assets/hfkasta_stack.svg#m_arrow_nav");
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: -webkit-transform 0s;
-  transition: -webkit-transform 0s;
-  transition: transform 0s;
-  transition: transform 0s, -webkit-transform 0s;
 }
 
 nav ul li.menu-item-has-children .dropdown-btn:hover {
@@ -89,7 +120,7 @@ nav ul li.menu-item-has-children .dropdown-btn:hover {
   background-image: url("../assets/hfkasta_stack.svg#m_arrow_nav-red");
 }
 
-nav ul li.menu-item-has-children.is-open .dropdown {
+nav ul li.menu-item-has-children.is-open .dropdown-btn {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
 }
@@ -101,16 +132,12 @@ nav ul li.menu-item-has-children.is-open .sub-menu {
 
 nav ul.sub-menu {
   height: 0px;
-  -webkit-transition: max-height 0s;
-  transition: max-height 0s;
+  -webkit-transition: max-height 0.5s;
+  transition: max-height 0.5s;
   overflow: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-left: 20px;
-}
-
-nav ul.sub-menu li a {
-  font-size: 1.2rem;
 }
 
 nav ul.sub-menu li.current-menu-item a {
@@ -133,7 +160,6 @@ nav .search-form .search-field {
   background: #fff;
   color: #5a00be;
   border: 2px solid #5a00be;
-  font-size: 1.8rem;
   /* clears the 'X' from Internet Explorer */
   /* clears the 'X' from Chrome */
 }
@@ -144,14 +170,12 @@ nav .search-form .search-field:focus {
 
 nav .search-form .search-field::-webkit-input-placeholder, nav .search-form .search-field::-webkit-input-placeholder {
   color: #5a00be;
-  font-size: 1.8rem;
   line-height: 40px;
   vertical-align: middle;
 }
 
 nav .search-form .search-field::placeholder, nav .search-form .search-field::-webkit-input-placeholder {
   color: #5a00be;
-  font-size: 1.8rem;
   line-height: 40px;
   vertical-align: middle;
 }
@@ -199,43 +223,6 @@ nav .search-form .search-icon {
   top: 0;
 }
 
-.language-switch {
-  border: 2px solid #5a00be;
-  position: fixed;
-  z-index: 30;
-  padding: 15px 10px 15px 20px;
-  top: 70px;
-  left: -13px;
-  -webkit-transform: rotate(12deg);
-          transform: rotate(12deg);
-}
-
-.language-switch ul {
-  margin: 0;
-  padding: 0;
-  -webkit-transform: rotate(-12deg);
-          transform: rotate(-12deg);
-}
-
-.language-switch ul li {
-  list-style-type: none;
-  display: inline;
-}
-
-.language-switch ul li a {
-  color: #d50e31;
-}
-
-.language-switch ul li.current-lang a {
-  font-family: 'GT Haptik Bold', sans-serif;
-}
-
-.language-switch ul li:not(:first-child)::before {
-  content: '/';
-  margin: 0 4px;
-  color: #d50e31;
-}
-
 .home-link {
   position: fixed;
   top: 95px;
@@ -254,6 +241,30 @@ nav .sidebar_note {
   display: none;
 }
 
+@media (min-width: 768px) {
+  .hamburger.hamburger--squeeze {
+    top: 50px;
+  }
+  nav {
+    padding: 109px 20px 80px 20px;
+  }
+  nav ul li a,
+  nav .search-form .search-field,
+  nav .search-form .search-field::-webkit-input-placeholder,
+  nav .search-form .search-field::-webkit-input-placeholder {
+    font-size: 1.5625rem;
+  }
+  nav ul li a,
+  nav .search-form .search-field,
+  nav .search-form .search-field::placeholder,
+  nav .search-form .search-field::-webkit-input-placeholder {
+    font-size: 1.5625rem;
+  }
+  nav ul li.sub-menu li a {
+    font-size: 1.125rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .hamburger.hamburger--squeeze {
     display: none;
@@ -262,17 +273,9 @@ nav .sidebar_note {
     position: relative;
     margin: 0;
     right: auto;
+    padding: 20px;
   }
-  nav ul li a {
-    font-size: 2rem;
-  }
-  nav .search-form .search-field::-webkit-input-placeholder, nav .search-form .search-field::-webkit-input-placeholder {
-    font-size: 2rem;
-  }
-  nav .search-form .search-field::placeholder, nav .search-form .search-field::-webkit-input-placeholder {
-    font-size: 2rem;
-  }
-  nav .sidebar_note {
+  .sidebar_note {
     display: inline-block;
   }
   .content .content_note {
@@ -300,8 +303,36 @@ nav .sidebar_note {
   nav {
     width: 30%;
   }
+  nav ul li a,
+  nav .search-form .search-field,
+  nav .search-form .search-field::-webkit-input-placeholder,
+  nav .search-form .search-field::-webkit-input-placeholder {
+    font-size: 2.1875rem;
+  }
+  nav ul li a,
+  nav .search-form .search-field,
+  nav .search-form .search-field::placeholder,
+  nav .search-form .search-field::-webkit-input-placeholder {
+    font-size: 2.1875rem;
+  }
+  nav ul li.sub-menu li a {
+    font-size: 1.5625rem;
+  }
+  nav .search-form {
+    height: 50px;
+  }
+  nav .search-form .search-icon {
+    width: 30.99px;
+    height: 30.99px;
+    background-image: url("../assets/hfkasta_stack.svg#l_search");
+  }
 }
 
+/*
+    # Footer Styling
+
+    The styling for the footer.
+*/
 footer {
   border-top: 2px solid #5a00be;
   background: #fff;
@@ -328,6 +359,11 @@ footer ul li {
   margin-right: 20px;
 }
 
+/*
+    # Styling for the search-result page
+
+    This styling is for the search result page. Since it got changed several times, the necessity of this file has to be checked.
+*/
 .search-results .wrapper .search-result-link {
   padding: 20px 0;
   display: block;
@@ -337,163 +373,338 @@ footer ul li {
   border-top: 2px solid #5a00be;
 }
 
-.boxes {
+/*
+    # Entry Header Styling
+
+    Since all pages (except posts) are visually similar in the entry section the styling is declared here at one place.
+*/
+.entry-header h1 {
+  margin-top: 0;
+  font-size: 3.125rem;
+  text-align: center;
+}
+
+body.category:not(.category-allgemein):not(.category-uncategorized-en) .entry-header h1,
+body.page-child .entry-header h1 {
+  font-size: 2.1875rem;
+}
+
+.entry-header {
+  padding: 8rem 15px 4rem;
+}
+
+.entry-header .boxes {
   display: none;
 }
 
-h1 {
-  margin-top: 0;
-  font-size: 8.125rem;
-}
-
-body.category:not(.category-allgemein):not(.category-uncategorized-en) h1,
-body.page-child h1 {
-  font-size: 3.125rem;
-}
-
-.category-description p {
+.entry-header .category-description p,
+.entry-header .note,
+.entry-header .sidebar_note_link span {
   font-size: 1.125rem;
+  text-align: center;
+}
+
+.entry-header .note {
+  width: 50%;
+  margin: 0 auto 3rem auto;
+}
+
+.entry-header .sidebar_note_link .sidebar_note_arrow {
+  width: 52.86px;
+  height: 91.54px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-image: url("../assets/hfkasta_stack.svg#m_arrow_elevator_burger");
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin: 0 auto;
+}
+
+.entry-header .sidebar_note_link span {
+  display: block;
+  width: 100%;
+  color: #d50e31;
+  font-family: 'GT Haptik Bold', sans-serif;
+  font-weight: bold;
 }
 
 @media all and (min-width: 768px) {
-  .boxes {
-    display: inline-block;
+  .entry-header h1 {
+    font-size: 4.375rem;
   }
-  .backgroundbox {
-    background: #d50e31;
+  body.category:not(.category-allgemein):not(.category-uncategorized-en) .entry-header h1,
+  body.page-child .entry-header h1 {
+    font-size: 3.125rem;
+  }
+  .entry-header {
+    position: relative;
+    padding: 2rem 15px 4rem;
+  }
+  .entry-header .boxes {
+    position: relative;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .entry-header h1 {
+    width: 80%;
+    margin: 0 auto 10px auto;
+  }
+  .entry-header .note-line {
+    margin-left: calc(50% - 267.4px);
+    width: 267.4px;
+    height: 220.7px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+  }
+  .entry-header .note {
     position: absolute;
-    z-index: -1;
+    margin: 0;
+    width: 120px;
+    height: 200px;
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
   }
-  .box-layout-00 .backgroundbox_01 {
-    width: 220px;
-    height: 85px;
-    -webkit-transform: rotate(30deg);
-            transform: rotate(30deg);
-    top: 60px;
-    right: 5%;
+  .entry-header .note p {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
   }
-  .box-layout-00 .backgroundbox_02 {
-    width: 200px;
-    height: 65px;
-    -webkit-transform: rotate(15deg);
-            transform: rotate(15deg);
-    top: 160px;
-    left: 10%;
+  .entry-header .note-swoosh-1 {
+    background-image: url("../assets/hfkasta_stack.svg#m_swoosh_1");
   }
-  .box-layout-00 .backgroundbox_03 {
-    width: 130px;
-    height: 25px;
-    -webkit-transform: rotate(-20deg);
-            transform: rotate(-20deg);
-    top: 270px;
-    left: 2%;
+  .entry-header .note-swoosh-1 .note {
+    top: -127px;
+    left: -84px;
   }
-  .box-layout-00 .backgroundbox_04 {
-    width: 200px;
-    height: 50px;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    top: 300px;
-    right: 15%;
+  .entry-header .note-swoosh-2 {
+    background-image: url("../assets/hfkasta_stack.svg#m_swoosh_2");
   }
-  .box-layout-01 .backgroundbox_01 {
-    width: 150px;
-    height: 60px;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    top: 60px;
-    right: 5px;
+  .entry-header .note-swoosh-2 .note {
+    top: -85px;
+    left: -87px;
   }
-  .box-layout-01 .backgroundbox_02 {
-    width: 160px;
-    height: 37px;
-    -webkit-transform: rotate(-35deg);
-            transform: rotate(-35deg);
-    top: 125px;
-    left: 15px;
+  .entry-header .note-swoosh-3 {
+    background-image: url("../assets/hfkasta_stack.svg#m_swoosh_3");
   }
-  .box-layout-01 .backgroundbox_03 {
-    width: 230px;
-    height: 36px;
-    -webkit-transform: rotate(7deg);
-            transform: rotate(7deg);
-    top: 205px;
-    right: 10px;
+  .entry-header .note-swoosh-3 .note {
+    top: -62px;
+    left: -57px;
   }
-  .box-layout-01 .backgroundbox_04 {
-    width: 184px;
-    height: 25px;
-    -webkit-transform: rotate(-7deg);
-            transform: rotate(-7deg);
-    top: 266px;
-    left: 50px;
-  }
-  .box-layout-02 .backgroundbox_01 {
-    width: 150px;
-    height: 30px;
-    -webkit-transform: rotate(-38deg);
-            transform: rotate(-38deg);
-    top: 60px;
-    left: 20px;
-  }
-  .box-layout-02 .backgroundbox_02 {
-    width: 240px;
-    height: 37px;
-    -webkit-transform: rotate(-105deg);
-            transform: rotate(-105deg);
-    top: 125px;
-    right: -44px;
-  }
-  .box-layout-02 .backgroundbox_03 {
-    width: 160px;
-    height: 44px;
-    -webkit-transform: rotate(-14deg);
-            transform: rotate(-14deg);
-    top: 120px;
-    right: 109px;
-  }
-  .box-layout-02 .backgroundbox_04 {
-    width: 159px;
-    height: 60px;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    top: 230px;
-    left: 10px;
-  }
-  .box-layout-03 .backgroundbox_01 {
-    width: 207px;
-    height: 30px;
-    -webkit-transform: rotate(17deg);
-            transform: rotate(17deg);
-    top: 60px;
-    right: 20px;
-  }
-  .box-layout-03 .backgroundbox_02 {
-    width: 130px;
-    height: 47px;
-    -webkit-transform: rotate(-20deg);
-            transform: rotate(-20deg);
-    top: 125px;
-    left: 20px;
-  }
-  .box-layout-03 .backgroundbox_03 {
-    width: 108px;
-    height: 33px;
-    -webkit-transform: rotate(5deg);
-            transform: rotate(5deg);
-    top: 169px;
-    right: 38px;
-  }
-  .box-layout-03 .backgroundbox_04 {
-    width: 220px;
-    height: 25px;
-    -webkit-transform: rotate(0deg);
-    transform: rotate(-5deg);
-    top: 230px;
-    left: 10px;
+  .entry-header .note-line .swoosh-l {
+    display: none;
   }
 }
 
+@media (min-width: 1024px) {
+  .entry-header .sidebar_note_link {
+    display: none;
+  }
+}
+
+@media (min-width: 1680px) {
+  .entry-header h1 {
+    font-size: 8.125rem;
+  }
+  body.category:not(.category-allgemein):not(.category-uncategorized-en) .entry-header h1,
+  body.page-child .entry-header h1 {
+    font-size: 6.25rem;
+  }
+  .entry-header .note-line {
+    margin-left: calc(50% - 271px);
+    width: 271px;
+    height: 223px;
+  }
+  .entry-header .note {
+    font-size: 1.5625rem;
+    width: 240px;
+  }
+  .entry-header .note-swoosh-1 {
+    background-image: url("../assets/hfkasta_stack.svg#l_swoosh_1");
+  }
+  .entry-header .note-swoosh-1 .note {
+    top: -126px;
+    left: -134px;
+  }
+  .entry-header .note-swoosh-2 {
+    background-image: url("../assets/hfkasta_stack.svg#l_swoosh_2");
+  }
+  .entry-header .note-swoosh-2 .note {
+    top: -89px;
+    left: -136px;
+  }
+  .entry-header .note-swoosh-3 {
+    background-image: url("../assets/hfkasta_stack.svg#l_swoosh_3");
+  }
+  .entry-header .note-swoosh-3 .note {
+    top: -69px;
+    left: -104px;
+  }
+}
+
+/*
+    # Boxes Styling
+
+    Position, size and rotation of teh different boxes.
+*/
+.backgroundbox {
+  background: #d50e31;
+  position: absolute;
+  z-index: -1;
+}
+
+.box-layout-00 .backgroundbox_01 {
+  width: 220px;
+  height: 85px;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  top: 60px;
+  right: 5%;
+}
+
+.box-layout-00 .backgroundbox_02 {
+  width: 200px;
+  height: 65px;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+  top: 160px;
+  left: 10%;
+}
+
+.box-layout-00 .backgroundbox_03 {
+  width: 130px;
+  height: 25px;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  top: 270px;
+  left: 2%;
+}
+
+.box-layout-00 .backgroundbox_04 {
+  width: 200px;
+  height: 50px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  top: 300px;
+  right: 15%;
+}
+
+.box-layout-01 .backgroundbox_01 {
+  width: 150px;
+  height: 60px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 60px;
+  right: 5px;
+}
+
+.box-layout-01 .backgroundbox_02 {
+  width: 160px;
+  height: 37px;
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+  top: 125px;
+  left: 15px;
+}
+
+.box-layout-01 .backgroundbox_03 {
+  width: 230px;
+  height: 36px;
+  -webkit-transform: rotate(7deg);
+          transform: rotate(7deg);
+  top: 205px;
+  right: 10px;
+}
+
+.box-layout-01 .backgroundbox_04 {
+  width: 184px;
+  height: 25px;
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+  top: 266px;
+  left: 50px;
+}
+
+.box-layout-02 .backgroundbox_01 {
+  width: 150px;
+  height: 30px;
+  -webkit-transform: rotate(-38deg);
+          transform: rotate(-38deg);
+  top: 60px;
+  left: 20px;
+}
+
+.box-layout-02 .backgroundbox_02 {
+  width: 240px;
+  height: 37px;
+  -webkit-transform: rotate(-105deg);
+          transform: rotate(-105deg);
+  top: 125px;
+  right: -44px;
+}
+
+.box-layout-02 .backgroundbox_03 {
+  width: 160px;
+  height: 44px;
+  -webkit-transform: rotate(-14deg);
+          transform: rotate(-14deg);
+  top: 120px;
+  right: 109px;
+}
+
+.box-layout-02 .backgroundbox_04 {
+  width: 159px;
+  height: 60px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  top: 230px;
+  left: 10px;
+}
+
+.box-layout-03 .backgroundbox_01 {
+  width: 207px;
+  height: 30px;
+  -webkit-transform: rotate(17deg);
+          transform: rotate(17deg);
+  top: 60px;
+  right: 20px;
+}
+
+.box-layout-03 .backgroundbox_02 {
+  width: 130px;
+  height: 47px;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  top: 125px;
+  left: 20px;
+}
+
+.box-layout-03 .backgroundbox_03 {
+  width: 108px;
+  height: 33px;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+  top: 169px;
+  right: 38px;
+}
+
+.box-layout-03 .backgroundbox_04 {
+  width: 220px;
+  height: 25px;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(-5deg);
+  top: 230px;
+  left: 10px;
+}
+
+/*
+    # Styling for the ticker
+
+    The Style for the ticker.
+*/
 .ticker-wrap {
   width: 100%;
   overflow: hidden;
@@ -566,6 +777,51 @@ body.page-child h1 {
   background-image: url("../assets/hfkasta_stack.svg#m_link_external-red");
 }
 
+@media (min-width: 768px) {
+  .ticker-wrap {
+    height: 50px;
+    margin-bottom: -52px;
+  }
+  .ticker-wrap .ticker {
+    font-size: 1.5625rem;
+  }
+  .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']) {
+    padding-right: 3.90625rem;
+  }
+  .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen'])::before {
+    width: 3.125rem;
+    min-width: 3.125rem;
+    -ms-flex-preferred-size: 3.125rem;
+        flex-basis: 3.125rem;
+    height: 3.125rem;
+  }
+}
+
+@media (min-width: 1680px) {
+  .ticker-wrap {
+    height: 65px;
+    margin-bottom: -67px;
+  }
+  .ticker-wrap .ticker {
+    font-size: 2.1875rem;
+  }
+  .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']) {
+    padding-right: 5.46875rem;
+  }
+  .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen'])::before {
+    width: 4.375rem;
+    min-width: 4.375rem;
+    -ms-flex-preferred-size: 4.375rem;
+        flex-basis: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+/*
+    # Styling for general Links
+
+    The theme differs between links that are external, internal, drive-links, portal-links and file-links.
+*/
 main .content a,
 nav .sidebar_note a {
   color: #d50e31;
@@ -665,6 +921,93 @@ nav .sidebar_note a[href*='portal.hfk-bremen.de']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_portal");
 }
 
+/*
+    # Styling for the language-switch
+
+    The Style for the language switch.
+*/
+.language-switch {
+  border: 2px solid #5a00be;
+  background: #fff;
+  position: fixed;
+  z-index: 30;
+  padding: 15px 10px 15px 20px;
+  top: 60px;
+  left: -13px;
+  -webkit-transform: rotate(12deg);
+          transform: rotate(12deg);
+}
+
+.language-switch ul {
+  margin: 0;
+  padding: 0;
+  -webkit-transform: rotate(-12deg);
+          transform: rotate(-12deg);
+}
+
+.language-switch ul li {
+  list-style-type: none;
+  display: inline;
+}
+
+.language-switch ul li a {
+  color: #d50e31;
+}
+
+.language-switch ul li.current-lang a {
+  font-family: 'GT Haptik Bold', sans-serif;
+}
+
+.language-switch ul li:not(:first-child)::before {
+  content: '/';
+  margin: 0 4px;
+  color: #d50e31;
+}
+
+@media (min-width: 768px) {
+  .language-switch {
+    top: 70px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .language-switch {
+    top: 85px;
+  }
+}
+
+/*
+    # Styling for the content area
+
+    This styling takes care of regular content pages coming from wordpress pages.
+*/
+.wrapper main .content {
+  max-width: 560px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wrapper main .content .wp-block-file__button {
+  display: inline-block;
+  background: none;
+  border: 2px solid #d50e31;
+  font-size: 1rem;
+  padding: 5px 10px;
+}
+
+.wrapper main section {
+  width: 100%;
+  margin: 100px auto 0 auto;
+  padding: 0 20px 60px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrapper main .content_note {
+  padding: 20px;
+}
+
 *,
 *::before,
 *::after {
@@ -748,14 +1091,6 @@ pre {
   width: calc(100% - 4rem);
 }
 
-.entry-header {
-  font-size: 1.5rem;
-}
-
-.entry-header {
-  padding: 6rem 0;
-}
-
 .entry-content > * {
   margin-left: auto;
   margin-right: auto;
@@ -780,12 +1115,6 @@ pre {
   width: calc(100% - 2rem);
 }
 
-.entry-content p,
-.entry-content li {
-  line-height: 1.4;
-  font-size: 1.6rem;
-}
-
 .wrapper {
   padding: 42px 0 60px 0;
   height: auto;
@@ -808,39 +1137,6 @@ pre {
   margin: 20px auto;
 }
 
-.wrapper main .content {
-  max-width: 560px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  padding: 150px 0 0 0;
-}
-
-.wrapper main .content .wp-block-file__button {
-  display: inline-block;
-  background: none;
-  border: 2px solid #d50e31;
-  font-size: 1rem;
-  padding: 5px 10px;
-}
-
-.wrapper main .note-line,
-.wrapper main .note {
-  display: none;
-}
-
-.wrapper main section {
-  width: 100%;
-  margin: 100px auto 0 auto;
-  padding: 0 20px 60px 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.wrapper main .content_note {
-  padding: 20px;
-}
-
 footer {
   margin-top: -60px;
 }
@@ -853,6 +1149,12 @@ body.search-results .wrapper main .content section {
   margin: 60px auto 0 auto;
 }
 
+@media (min-width: 768px) {
+  .wrapper {
+    padding: 52px 0 60px 0;
+  }
+}
+
 @media (min-width: 1024px) {
   .wrapper {
     width: 100%;
@@ -863,41 +1165,15 @@ body.search-results .wrapper main .content section {
   .wrapper main {
     width: calc(100% - 320px);
   }
-  .wrapper main .note-line {
-    display: inline-block;
-    width: 160px;
-    height: auto;
-    left: calc(50% - 180px);
-    position: absolute;
-    top: 240px;
-  }
-  .wrapper main .note {
-    display: inline-block;
-    width: 120px;
-    height: 100px;
-    left: calc(50% - 250px);
-    top: 185px;
-    text-align: center;
-    vertical-align: bottom;
-    font-size: 1rem;
-    position: absolute;
-    -webkit-transform: rotate(-14deg);
-            transform: rotate(-14deg);
-  }
-  .wrapper main .note p {
-    position: absolute;
-    bottom: 0;
-    margin: 0;
-  }
-  .wrapper main .to_note {
-    display: none;
-  }
   body.search-results .wrapper main .content section {
     margin: 130px auto 0 auto;
   }
 }
 
-@media screen and (min-width: 1680px) {
+@media (min-width: 1680px) {
+  .wrapper {
+    padding: 67px 0 60px 0;
+  }
   .wrapper main {
     width: 70%;
   }

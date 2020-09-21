@@ -1,0 +1,55 @@
+/*
+    # Styling for the language-switch
+
+    The Style for the language switch.
+*/
+
+.language-switch {
+    border: $border-weight solid $brand-primary-color;
+    background: $contrast-primary-color;
+    position: fixed;
+    z-index: 30;
+    padding: 15px 10px 15px 20px;
+    top: $ticker-height_s + 20px;
+    left: -13px;
+    transform: rotate($language-menu-rotation);
+
+    ul {
+        margin: 0;
+        padding: 0;
+        transform: rotate(-$language-menu-rotation);
+
+        li {
+            list-style-type: none;
+            display: inline;
+
+            a {
+                color: $brand-secondary-color;
+            }
+
+            &.current-lang {
+                a {
+                    font-family: 'GT Haptik Bold', sans-serif;
+                }
+            }
+
+            &:not(:first-child)::before {
+                content: '/';
+                margin: 0 4px;
+                color: $brand-secondary-color;
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .language-switch {
+        top: $ticker-height_m + 20px;
+    }
+}
+
+@media (min-width: $breakpoint-screen) {
+    .language-switch {
+        top: $ticker-height_l + 20px;
+    }
+}

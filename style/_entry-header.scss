@@ -1,185 +1,219 @@
-// Boxes
+/*
+    # Entry Header Styling
 
-// Hide boxes on small viewports
-.boxes {
-    display: none;
-}
+    Since all pages (except posts) are visually similar in the entry section the styling is declared here at one place.
+*/
 
 // Headline
 // Big Headline for Start and top-level items
-h1 {
+.entry-header h1 {
     margin-top: 0;
-    font-size: $font-size-headline-large;
+    font-size: $font-size-headline-small;
+    text-align: center;
 }
 
 // Small Headline for child-items
 body.category:not(.category-allgemein):not(.category-uncategorized-en),
 body.page-child {
-    h1 {
-        font-size: $font-size-headline-small;
+    .entry-header h1 {
+        font-size: $font-size-big;
     }
 }
 
-// Description for category items
-.category-description {
-    p {
-        font-size: $font-size-regular;
-    }
-}
+.entry-header {
+    padding: 8rem $padding_s 4rem;
 
-
-@media all and (min-width: 768px) {
+    // Hide boxes on small viewports
     .boxes {
-        display: inline-block;
+        display: none;
     }
 
-    .backgroundbox {
-        background: $brand-secondary-color;
-        position: absolute;
-        z-index: -1;
+    // Description for category items and note
+    .category-description p,
+    .note,
+    .sidebar_note_link span {
+        font-size: $font-size-regular;
+        text-align: center;
     }
 
-    .box-layout-00 {
-        .backgroundbox {
-            &_01 {
-                width: 220px;
-                height: 85px;
-                transform: rotate(30deg);
-                top: 60px;
-                right: 5%;
-            }
+    .note {
+        width: 50%;
+        margin: 0 auto 3rem auto;
+    }
 
-            &_02 {
-                width: 200px;
-                height: 65px;
-                transform: rotate(15deg);
-                top: 160px;
-                left: 10%;
-            }
+    // Sidebar not hint for mobile
+    .sidebar_note_link {
+        .sidebar_note_arrow {
+            width: 26.43px * 2;
+            height: 45.77px * 2;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            background-image: url('../assets/hfkasta_stack.svg#m_arrow_elevator_burger');
+            transform: rotate(180deg);
+            margin: 0 auto;
+        }
 
-            &_03 {
-                width: 130px;
-                height: 25px;
-                transform: rotate(-20deg);
-                top: 270px;
-                left: 2%;
-            }
+        span {
+            display: block;
+            width: 100%;
+            color: $brand-secondary-color;
+            font-family: 'GT Haptik Bold', sans-serif;
+            font-weight: bold;
+        }
+    }
+}
 
-            &_04 {
-                width: 200px;
-                height: 50px;
-                transform: rotate(0deg);
-                top: 300px;
-                right: 15%;
-            }
+@media all and (min-width: $breakpoint-tablet) {
+
+    // Headline
+    // Big Headline for Start and top-level items
+    .entry-header h1 {
+        font-size: $font-size-headline-regular;
+    }
+
+    // Small Headline for child-items
+    body.category:not(.category-allgemein):not(.category-uncategorized-en),
+    body.page-child {
+        .entry-header h1 {
+            font-size: $font-size-headline-small;
         }
     }
 
-    .box-layout-01 {
-        .backgroundbox {
-            &_01 {
-                width: 150px;
-                height: 60px;
-                transform: rotate(45deg);
-                top: 60px;
-                right: 5px;
-            }
+    .entry-header {
+        position: relative;
+        padding: 2rem $padding_s 4rem;
 
-            &_02 {
-                width: 160px;
-                height: 37px;
-                transform: rotate(-35deg);
-                top: 125px;
-                left: 15px;
-            }
+        .boxes {
+            position: relative;
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+        }
 
-            &_03 {
-                width: 230px;
-                height: 36px;
-                transform: rotate(7deg);
-                top: 205px;
-                right: 10px;
-            }
+        h1 {
+            width: 80%;
+            margin: 0 auto 10px auto;
+        }
 
-            &_04 {
-                width: 184px;
-                height: 25px;
-                transform: rotate(-7deg);
-                top: 266px;
-                left: 50px;
+        .note-line {
+            margin-left: calc(50% - 267.4px);
+            width: 267.4px;
+            height: 220.7px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .note {
+            position: absolute;
+            margin: 0;
+            width: 120px;
+            height: 200px;
+            transform: rotate(-15deg);
+
+            p {
+                position: absolute;
+                bottom: 0;
+                margin: 0;
             }
+        }
+
+        .note-swoosh-1 {
+            background-image: url('../assets/hfkasta_stack.svg#m_swoosh_1');
+
+            .note {
+                top: -127px;
+                left: -84px;
+            }
+        }
+
+        .note-swoosh-2 {
+            background-image: url('../assets/hfkasta_stack.svg#m_swoosh_2');
+
+            .note {
+                top: -85px;
+                left: -87px;
+            }
+        }
+
+        .note-swoosh-3 {
+            background-image: url('../assets/hfkasta_stack.svg#m_swoosh_3');
+
+            .note {
+                top: -62px;
+                left: -57px;
+            }
+        }
+
+        .note-line .swoosh-l {
+            display: none;
         }
     }
 
-    .box-layout-02 {
-        .backgroundbox {
-            &_01 {
-                width: 150px;
-                height: 30px;
-                transform: rotate(-38deg);
-                top: 60px;
-                left: 20px;
-            }
+}
 
-            &_02 {
-                width: 240px;
-                height: 37px;
-                transform: rotate(-105deg);
-                top: 125px;
-                right: -44px;
-            }
+@media (min-width: $breakpoint-tablet-landscape) {
+    .entry-header {
+        .sidebar_note_link {
+            display: none;
+        }
+    }
+}
 
-            &_03 {
-                width: 160px;
-                height: 44px;
-                transform: rotate(-14deg);
-                top: 120px;
-                right: 109px;
-            }
+@media (min-width: $breakpoint-screen) {
 
-            &_04 {
-                width: 159px;
-                height: 60px;
-                transform: rotate(0deg);
-                top: 230px;
-                left: 10px;
-            }
+    // Headline
+    // Big Headline for Start and top-level items
+    .entry-header h1 {
+        font-size: $font-size-headline-large;
+    }
+
+    // Small Headline for child-items
+    body.category:not(.category-allgemein):not(.category-uncategorized-en),
+    body.page-child {
+        .entry-header h1 {
+            font-size: $font-size-headline-big;
         }
     }
 
-    .box-layout-03 {
-        .backgroundbox {
-            &_01 {
-                width: 207px;
-                height: 30px;
-                transform: rotate(17deg);
-                top: 60px;
-                right: 20px;
-            }
+    .entry-header {
+        .note-line {
+            margin-left: calc(50% - 271px);
+            width: 271px;
+            height: 223px;
+        }
 
-            &_02 {
-                width: 130px;
-                height: 47px;
-                transform: rotate(-20deg);
-                top: 125px;
-                left: 20px;
-            }
+        .note {
+            font-size: $font-size-large;
+            width: 240px;
+        }
 
-            &_03 {
-                width: 108px;
-                height: 33px;
-                transform: rotate(5deg);
-                top: 169px;
-                right: 38px;
-            }
+        .note-swoosh-1 {
+            background-image: url('../assets/hfkasta_stack.svg#l_swoosh_1');
 
-            &_04 {
-                width: 220px;
-                height: 25px;
-                -webkit-transform: rotate(0deg);
-                transform: rotate(-5deg);
-                top: 230px;
-                left: 10px;
+            .note {
+                top: -126px;
+                left: -134px;
+            }
+        }
+
+        .note-swoosh-2 {
+            background-image: url('../assets/hfkasta_stack.svg#l_swoosh_2');
+
+            .note {
+                top: -89px;
+                left: -136px;
+            }
+        }
+
+        .note-swoosh-3 {
+            background-image: url('../assets/hfkasta_stack.svg#l_swoosh_3');
+
+            .note {
+                top: -69px;
+                left: -104px;
             }
         }
     }
