@@ -492,7 +492,7 @@ body.page-child .entry-header h1 {
     Position, size and rotation of teh different boxes.
 */
 .backgroundbox {
-  background: #d50e31;
+  background: #64F5DC;
   position: absolute;
   z-index: -1; }
 
@@ -1102,6 +1102,195 @@ body.category .content {
       background-position: center center;
       background-size: cover;
       background-image: url("../assets/hfkasta_stack.svg#m_link_internal-red"); }
+
+/*
+    # Variables
+
+    All global variables are declared here.
+*/
+.ics-calendar {
+  margin: auto !important; }
+  .ics-calendar *, .ics-calendar .ics-calendar-month-grid ul.events li {
+    font-size: 18px; }
+  .ics-calendar .ics-calendar-title {
+    display: none; }
+  .ics-calendar .ics-calendar-label {
+    display: none; }
+  .ics-calendar .ics-calendar-select {
+    font-size: 1em; }
+  .ics-calendar .ics-calendar-color-key {
+    max-width: 100%; }
+  .ics-calendar .ics-calendar-color-key-item {
+    display: inline;
+    background: transparent !important;
+    border-left: none !important;
+    white-space: nowrap; }
+    .ics-calendar .ics-calendar-color-key-item label {
+      cursor: pointer; }
+  .ics-calendar .ics-calendar-month-grid .events .time {
+    font-weight: normal; }
+  .ics-calendar .ics-calendar-month-grid .events .title {
+    font-weight: bold; }
+  .ics-calendar .ics-calendar-month-grid .events .descloc {
+    font-size: 1em; }
+  .ics-calendar .ics-calendar-month-grid .events .event {
+    border: none;
+    background: transparent !important;
+    border-left: none !important;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #5a00be; }
+    .ics-calendar .ics-calendar-month-grid .events .event:last-child {
+      border-bottom: none; }
+  .ics-calendar .ics-calendar-month-grid .day {
+    background-color: #5a00be; }
+    .ics-calendar .ics-calendar-month-grid .day span {
+      color: #fff;
+      font-weight: normal; }
+  .ics-calendar .ics-calendar-month-grid .today .day span {
+    font-weight: bold; }
+
+/*
+    # Variables
+
+    All global variables are declared here.
+*/
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden, input[type="radio"],
+input[type="checkbox"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+input + label + button
+ */
+input {
+  background: #fff;
+  border: 2px solid #5a00be;
+  border-radius: 0; }
+
+input, select, textarea, button {
+  width: 100%;
+  padding: .2em;
+  margin: .4em 0;
+  border-radius: 0;
+  box-sizing: border-box;
+  background: #fff;
+  border: 2px solid #5a00be; }
+
+input[type="submit"], .tnp-field input[type="submit"], button {
+  width: 100%;
+  background-color: #5a00be;
+  color: #fff;
+  border-radius: 0;
+  cursor: pointer;
+  border: 2px solid #5a00be; }
+  input[type="submit"]:focus, input[type="submit"]:hover, .tnp-field input[type="submit"]:focus, .tnp-field input[type="submit"]:hover, button:focus, button:hover {
+    background-color: #fff;
+    color: #5a00be; }
+
+input:focus, textarea:focus {
+  color: #d50e31;
+  border-color: #d50e31;
+  border-radius: 0;
+  -moz-outline-radius: 0;
+  outline: none; }
+
+label {
+  font-size: 1em; }
+  label span {
+    font-size: 1em;
+    font-style: italic; }
+
+/*
+radio + check
+ */
+input[type="radio"] + label, input[type="radio"] + .wpcf7-list-item-label,
+input[type="checkbox"] + label, input[type="checkbox"] + .wpcf7-list-item-label {
+  position: relative;
+  padding-left: 25px; }
+  input[type="radio"] + label:before, input[type="radio"] + .wpcf7-list-item-label:before,
+  input[type="checkbox"] + label:before, input[type="checkbox"] + .wpcf7-list-item-label:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: " ";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid #fff;
+    outline: 2px solid #5a00be; }
+
+input[type="radio"]:focus + label,
+input[type="checkbox"]:focus + label {
+  text-decoration: none; }
+
+input[type="radio"]:checked + label:before {
+  background: #5a00be; }
+
+input[type="checkbox"]:checked + label:before {
+  background: #5a00be; }
+
+/*
+select
+ */
+select {
+  /* class applies to select element itself, not a wrapper element */
+  display: block;
+  font-family: "GT-Haptik-Regular", sans-serif;
+  color: #5a00be !important;
+  padding: .6em 1.4em .5em .8em;
+  width: 100%;
+  max-width: 100%;
+  /* useful when width is set to anything other than 100% */
+  box-sizing: border-box;
+  margin: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  border: 2px solid #5a00be;
+  /* arrow icon */
+  background-image: url("../assets/arrow_purple.svg");
+  background-repeat: no-repeat;
+  /* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
+  background-position: right .7em top 50%, 0 0;
+  /* icon size, then gradient */
+  background-size: 1em auto, 100%;
+  /* Hide arrow icon in IE browsers */
+  /* Hover style */
+  /* Focus style */
+  /* Set options to normal weight */
+  /* Support for rtl text, explicit support for Arabic and Hebrew */
+  /* Disabled styles */ }
+  select::-ms-expand {
+    display: none; }
+  select:hover {
+    border-color: #d50e31; }
+  select:focus {
+    border-color: #d50e31;
+    color: #d50e31;
+    outline: none; }
+  select option {
+    font-weight: normal; }
+  *[dir="rtl"] select, :root:lang(ar) select, :root:lang(iw) select {
+    background-position: left .7em top 50%, 0 0;
+    padding: .6em .8em .5em 1.4em; }
+  select:disabled, select[aria-disabled=true] {
+    color: graytext;
+    border-color: #aaa;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22graytext%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E"); }
+  select:disabled:hover, select[aria-disabled=true] {
+    border-color: #aaa; }
 
 *,
 *::before,

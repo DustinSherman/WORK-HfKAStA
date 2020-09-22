@@ -58,7 +58,13 @@ input:focus, textarea:focus {
 }
 
 label {
-  font-size: 0.6em;
+  font-size: 1em;
+
+  span { // Help Text
+    font-size: 1em;
+    //color: $brand-turquoise-color;
+    font-style: italic;
+  }
 }
 
 /*
