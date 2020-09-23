@@ -814,86 +814,86 @@ main .content_sidebar-note p a[href*='portal.hfk-bremen.de']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_portal"); }
 
 @media (min-width: 1680px) {
-  main .content a:not([href*='mailto:']),
-  main .content a:not([href*='tel:']),
-  nav .sidebar_note a:not([href*='mailto:']),
-  nav .sidebar_note a:not([href*='tel:']),
-  main .content_sidebar-note a:not([href*='mailto:']),
-  main .content_sidebar-note a:not([href*='tel:']) {
+  main .content p a:not([href*='mailto:']),
+  main .content p a:not([href*='tel:']),
+  nav .sidebar_note p a:not([href*='mailto:']),
+  nav .sidebar_note p a:not([href*='tel:']),
+  main .content_sidebar-note p a:not([href*='mailto:']),
+  main .content_sidebar-note p a:not([href*='tel:']) {
     height: 3.125rem; }
-    main .content a:not([href*='mailto:'])::before,
-    main .content a:not([href*='tel:'])::before,
-    nav .sidebar_note a:not([href*='mailto:'])::before,
-    nav .sidebar_note a:not([href*='tel:'])::before,
-    main .content_sidebar-note a:not([href*='mailto:'])::before,
-    main .content_sidebar-note a:not([href*='tel:'])::before {
+    main .content p a:not([href*='mailto:'])::before,
+    main .content p a:not([href*='tel:'])::before,
+    nav .sidebar_note p a:not([href*='mailto:'])::before,
+    nav .sidebar_note p a:not([href*='tel:'])::before,
+    main .content_sidebar-note p a:not([href*='mailto:'])::before,
+    main .content_sidebar-note p a:not([href*='tel:'])::before {
       width: 36px;
       height: 26px;
       min-width: 36px;
       flex-basis: 36px; }
-  main .content a[href*='http://']::before,
-  main .content a[href*='https://']::before,
-  nav .sidebar_note a[href*='http://']::before,
-  nav .sidebar_note a[href*='https://']::before,
-  main .content_sidebar-note a[href*='http://']::before,
-  main .content_sidebar-note a[href*='https://']::before {
+  main .content p a[href*='http://']::before,
+  main .content p a[href*='https://']::before,
+  nav .sidebar_note p a[href*='http://']::before,
+  nav .sidebar_note p a[href*='https://']::before,
+  main .content_sidebar-note p a[href*='http://']::before,
+  main .content_sidebar-note p a[href*='https://']::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_external-red"); }
-  main .content a[href*='http://']:hover::before,
-  main .content a[href*='https://']:hover::before,
-  nav .sidebar_note a[href*='http://']:hover::before,
-  nav .sidebar_note a[href*='https://']:hover::before,
-  main .content_sidebar-note a[href*='http://']:hover::before,
-  main .content_sidebar-note a[href*='https://']:hover::before {
+  main .content p a[href*='http://']:hover::before,
+  main .content p a[href*='https://']:hover::before,
+  nav .sidebar_note p a[href*='http://']:hover::before,
+  nav .sidebar_note p a[href*='https://']:hover::before,
+  main .content_sidebar-note p a[href*='http://']:hover::before,
+  main .content_sidebar-note p a[href*='https://']:hover::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_external"); }
-  main .content a[href*='localhost']::before,
-  main .content a[href*='hfkasta']::before,
-  main .content a[href*='asta.hfk-bremen']::before,
-  main .content a[href*='asta.uiuiui.digital']::before,
-  nav .sidebar_note a[href*='localhost']::before,
-  nav .sidebar_note a[href*='hfkasta']::before,
-  nav .sidebar_note a[href*='asta.hfk-bremen']::before,
-  nav .sidebar_note a[href*='asta.uiuiui.digital']::before,
-  main .content_sidebar-note a[href*='localhost']::before,
-  main .content_sidebar-note a[href*='hfkasta']::before,
-  main .content_sidebar-note a[href*='asta.hfk-bremen']::before,
-  main .content_sidebar-note a[href*='asta.uiuiui.digital']::before {
+  main .content p a[href*='localhost']::before,
+  main .content p a[href*='hfkasta']::before,
+  main .content p a[href*='asta.hfk-bremen']::before,
+  main .content p a[href*='asta.uiuiui.digital']::before,
+  nav .sidebar_note p a[href*='localhost']::before,
+  nav .sidebar_note p a[href*='hfkasta']::before,
+  nav .sidebar_note p a[href*='asta.hfk-bremen']::before,
+  nav .sidebar_note p a[href*='asta.uiuiui.digital']::before,
+  main .content_sidebar-note p a[href*='localhost']::before,
+  main .content_sidebar-note p a[href*='hfkasta']::before,
+  main .content_sidebar-note p a[href*='asta.hfk-bremen']::before,
+  main .content_sidebar-note p a[href*='asta.uiuiui.digital']::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_internal-red"); }
-  main .content a[href*='localhost']:hover::before,
-  main .content a[href*='hfkasta']:hover::before,
-  main .content a[href*='asta.hfk-bremen']:hover::before,
-  main .content a[href*='asta.uiuiui.digital']:hover::before,
-  nav .sidebar_note a[href*='localhost']:hover::before,
-  nav .sidebar_note a[href*='hfkasta']:hover::before,
-  nav .sidebar_note a[href*='asta.hfk-bremen']:hover::before,
-  nav .sidebar_note a[href*='asta.uiuiui.digital']:hover::before,
-  main .content_sidebar-note a[href*='localhost']:hover::before,
-  main .content_sidebar-note a[href*='hfkasta']:hover::before,
-  main .content_sidebar-note a[href*='asta.hfk-bremen']:hover::before,
-  main .content_sidebar-note a[href*='asta.uiuiui.digital']:hover::before {
+  main .content p a[href*='localhost']:hover::before,
+  main .content p a[href*='hfkasta']:hover::before,
+  main .content p a[href*='asta.hfk-bremen']:hover::before,
+  main .content p a[href*='asta.uiuiui.digital']:hover::before,
+  nav .sidebar_note p a[href*='localhost']:hover::before,
+  nav .sidebar_note p a[href*='hfkasta']:hover::before,
+  nav .sidebar_note p a[href*='asta.hfk-bremen']:hover::before,
+  nav .sidebar_note p a[href*='asta.uiuiui.digital']:hover::before,
+  main .content_sidebar-note p a[href*='localhost']:hover::before,
+  main .content_sidebar-note p a[href*='hfkasta']:hover::before,
+  main .content_sidebar-note p a[href*='asta.hfk-bremen']:hover::before,
+  main .content_sidebar-note p a[href*='asta.uiuiui.digital']:hover::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_internal"); }
-  main .content a[href*='.pdf']::before,
-  nav .sidebar_note a[href*='.pdf']::before,
-  main .content_sidebar-note a[href*='.pdf']::before {
+  main .content p a[href*='.pdf']::before,
+  nav .sidebar_note p a[href*='.pdf']::before,
+  main .content_sidebar-note p a[href*='.pdf']::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_download-red"); }
-  main .content a[href*='.pdf']:hover::before,
-  nav .sidebar_note a[href*='.pdf']:hover::before,
-  main .content_sidebar-note a[href*='.pdf']:hover::before {
+  main .content p a[href*='.pdf']:hover::before,
+  nav .sidebar_note p a[href*='.pdf']:hover::before,
+  main .content_sidebar-note p a[href*='.pdf']:hover::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_download"); }
-  main .content a[href*='hfkbremen.sharepoint']::before,
-  nav .sidebar_note a[href*='hfkbremen.sharepoint']::before,
-  main .content_sidebar-note a[href*='hfkbremen.sharepoint']::before {
+  main .content p a[href*='hfkbremen.sharepoint']::before,
+  nav .sidebar_note p a[href*='hfkbremen.sharepoint']::before,
+  main .content_sidebar-note p a[href*='hfkbremen.sharepoint']::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_drive-red"); }
-  main .content a[href*='hfkbremen.sharepoint']:hover::before,
-  nav .sidebar_note a[href*='hfkbremen.sharepoint']:hover::before,
-  main .content_sidebar-note a[href*='hfkbremen.sharepoint']:hover::before {
+  main .content p a[href*='hfkbremen.sharepoint']:hover::before,
+  nav .sidebar_note p a[href*='hfkbremen.sharepoint']:hover::before,
+  main .content_sidebar-note p a[href*='hfkbremen.sharepoint']:hover::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_drive"); }
-  main .content a[href*='portal.hfk-bremen.de']::before,
-  nav .sidebar_note a[href*='portal.hfk-bremen.de']::before,
-  main .content_sidebar-note a[href*='portal.hfk-bremen.de']::before {
+  main .content p a[href*='portal.hfk-bremen.de']::before,
+  nav .sidebar_note p a[href*='portal.hfk-bremen.de']::before,
+  main .content_sidebar-note p a[href*='portal.hfk-bremen.de']::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_portal-red"); }
-  main .content a[href*='portal.hfk-bremen.de']:hover::before,
-  nav .sidebar_note a[href*='portal.hfk-bremen.de']:hover::before,
-  main .content_sidebar-note a[href*='portal.hfk-bremen.de']:hover::before {
+  main .content p a[href*='portal.hfk-bremen.de']:hover::before,
+  nav .sidebar_note p a[href*='portal.hfk-bremen.de']:hover::before,
+  main .content_sidebar-note p a[href*='portal.hfk-bremen.de']:hover::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_portal"); } }
 /*
     # Styling for the language-switch
