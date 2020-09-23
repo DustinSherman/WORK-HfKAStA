@@ -52,17 +52,17 @@
 
         .news {
 
-            a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']) {
-                padding-right: $font-size-18 * 2.5;
+            a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']) {
+                padding-right: $font-size-18;
 
                 &::before {
                     content: '';
                     display: block;
                     float: left;
-                    width: $font-size-18 * 2;
-                    min-width: $font-size-18 * 2;
-                    flex-basis: $font-size-18 * 2;
-                    height: $font-size-18 * 2;
+                    width: $font-size-18;
+                    min-width: $font-size-18;
+                    flex-basis: $font-size-18;
+                    height: $font-size-18;
                     background-repeat: no-repeat;
                     background-position: center center;
                     padding: 0 $font-size-18/4;
@@ -91,14 +91,14 @@
 
             .news {
 
-                a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']) {
-                    padding-right: $font-size-35 * 2.5;
+                a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']) {
+                    padding-right: $font-size-35;
 
                     &::before {
-                        width: $font-size-35 * 2;
-                        min-width: $font-size-35 * 2;
-                        flex-basis: $font-size-35 * 2;
-                        height: $font-size-35 * 2;
+                        width: $font-size-35;
+                        min-width: $font-size-35;
+                        flex-basis: $font-size-35;
+                        height: $font-size-35;
                     }
                 }
             }
@@ -120,14 +120,14 @@
                     font-size: $font-size-35;
                 }
 
-                a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']) {
-                    padding-right: $font-size-35 * 2.5;
+                a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']) {
+                    padding-right: $font-size-35;
 
                     &::before {
-                        width: $font-size-35 * 2;
-                        min-width: $font-size-35 * 2;
-                        flex-basis: $font-size-35 * 2;
-                        height: $font-size-35 * 2;
+                        width: $font-size-35;
+                        min-width: $font-size-35;
+                        flex-basis: $font-size-35;
+                        height: $font-size-35;
                     }
                 }
             }

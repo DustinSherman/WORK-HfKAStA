@@ -154,7 +154,8 @@ main .content_sidebar-note {
         // Link intern
         a[href*='localhost'],
         a[href*='hfkasta'],
-        a[href*='asta.hfk-bremen'] {
+        a[href*='asta.hfk-bremen'],
+        a[href*='asta.uiuiui.digital'] {
             &::before {
                 background-image: url('../assets/hfkasta_stack.svg#l_link_internal-red');
             }
