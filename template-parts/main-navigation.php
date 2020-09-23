@@ -6,6 +6,14 @@
 
 <nav id="nav">
 
+    <?php if (get_field('sidebar_note_top')) : ?>
+        <div class="sidebar_note_top">
+            <p>
+                <?php the_field('sidebar_note_top'); ?>
+            </p>
+        </div>
+    <?php endif; ?>
+
     <?php get_search_form(); ?>
 
     <?php

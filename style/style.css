@@ -357,6 +357,10 @@ nav .search-form .search-submit:hover {
   cursor: pointer;
 }
 
+nav .search-form .search-submit:hover, nav .search-form .search-submit:focus, nav .search-form .search-submit:active {
+  background: none;
+}
+
 nav .search-form .search-icon {
   z-index: 31;
   margin: 8px;
@@ -393,7 +397,8 @@ body.search-result .content .sidebar_note {
   display: none;
 }
 
-nav .sidebar_note {
+nav .sidebar_note,
+nav .sidebar_note_top {
   display: none;
 }
 
@@ -428,8 +433,21 @@ nav .sidebar_note {
     right: auto;
     padding: 20px;
   }
-  nav .sidebar_note {
+  nav .sidebar_note,
+  nav .sidebar_note_top {
     display: inline-block;
+  }
+  nav .sidebar_note_top {
+    border-bottom: 2px solid #5a00be;
+    width: calc(100% + 42px);
+    margin: 0 -21px 20px;
+    padding: 0 20px 20px 20px;
+  }
+  nav .sidebar_note_top p {
+    margin: 0;
+  }
+  nav.is-open {
+    margin-left: 0;
   }
   .content .content_note {
     display: none;
@@ -464,6 +482,10 @@ nav .sidebar_note {
   nav ul li.menu-item-has-children .dropdown-btn:hover {
     cursor: pointer;
     background-image: url("../assets/hfkasta_stack.svg#l_arrow_nav-red");
+  }
+  nav .sidebar_note_top,
+  nav .search-form .search-field {
+    border-bottom: 3px solid #5a00be;
   }
   nav .search-form {
     height: 50px;
@@ -948,7 +970,7 @@ body.page-child .entry-header h1 {
   }
   .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital'])::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_external");
-    margin-top: 12px;
+    margin-top: 8px;
     width: 36px;
     height: 32px;
     min-width: 36px;
@@ -1298,6 +1320,10 @@ main .content_sidebar-note a[href*='portal.hfk-bremen.de']:hover::before {
   margin: 20px auto;
 }
 
+body.error404 .page-elevator {
+  display: none;
+}
+
 @media (min-width: 1024px) {
   .page-elevator {
     position: fixed;
@@ -1322,6 +1348,7 @@ main .content_sidebar-note a[href*='portal.hfk-bremen.de']:hover::before {
 */
 .content h1,
 .sidebar_note h1,
+.sidebar_note_top h1,
 h2 {
   font-family: 'GT-Haptik-Bold', sans-serif;
   font-size: 2.1875rem;
@@ -1492,6 +1519,7 @@ h6 {
 @media (min-width: 768px) {
   .content h1,
   .sidebar_note h1,
+  .sidebar_note_top h1,
   h2 {
     font-size: 3.125rem;
     margin: 2rem 0;
@@ -1973,7 +2001,7 @@ figcaption {
 }
 
 cite {
-  font-family: 'GT-Haptik-Italic', sans-serif;
+  font-family: 'GT-Haptik-Regular-Oblique', sans-serif;
   font-size: 0.875rem;
 }
 
@@ -1984,7 +2012,7 @@ a {
 
 em {
   font-style: normal;
-  font-family: 'GT-Haptik-Italic', sans-serif;
+  font-family: 'GT-Haptik-Regular-Oblique', sans-serif;
 }
 
 pre {
@@ -2042,6 +2070,11 @@ pre {
   display: inline-block;
   width: 100%;
   min-width: 100%;
+}
+
+.image-404 {
+  width: 100%;
+  height: auto;
 }
 
 @media (min-width: 768px) {
