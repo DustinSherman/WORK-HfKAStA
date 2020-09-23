@@ -71,7 +71,7 @@ figcaption {
 }
 
 cite {
-    font-family: 'GT-Haptik-Italic', sans-serif;
+    font-family: 'GT-Haptik-Regular-Oblique', sans-serif;
     font-size: $font-size-14;
 }
 
@@ -82,7 +82,7 @@ a {
 
 em {
     font-style: normal;
-    font-family: 'GT-Haptik-Italic', sans-serif;
+    font-family: 'GT-Haptik-Regular-Oblique', sans-serif;
 }
 
 pre {
@@ -143,6 +143,12 @@ table {
         width: 100%;
         min-width: 100%;
     }
+}
+
+// 404-Page
+.image-404 {
+    width: 100%;
+    height: auto;
 }
 
 @media (min-width: $breakpoint-tablet) {

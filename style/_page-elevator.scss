@@ -14,6 +14,12 @@
     margin: 20px auto;
 }
 
+body.error404 {
+    .page-elevator {
+        display: none;
+    }
+}
+
 @media (min-width: $breakpoint-tablet-landscape) {
 
     // Page Elevator

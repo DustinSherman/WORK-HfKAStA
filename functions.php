@@ -146,5 +146,4 @@
     add_action( 'admin_init', 'remove_dashboard_meta' );
 
     include_once 'organigramm.php';
-
 ?>
