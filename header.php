@@ -2,7 +2,7 @@
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title><?php bloginfo( 'name' ); wp_title($sep = ' - '); ?></title>
+    <title><?php wp_title($sep = ' - ', true, $seplocation = 'right'); bloginfo( 'name' ); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta charset="<?php bloginfo( 'charset' ); ?>">
 
