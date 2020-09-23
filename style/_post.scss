@@ -1,0 +1,38 @@
+/*
+    # Styling for post sites
+
+*/
+
+body.single {
+    .wrapper main .content {
+        padding-top: 100px;
+
+        h4 {
+            margin: 0 auto;
+        }
+
+        .post-subline {
+            margin: 0 auto 1rem auto;
+
+            .post-subline-seperator {
+                display: none;
+            }
+
+            .post-date,
+            .post-categories {
+                display: block;
+            }
+
+            .post-categories {
+                a {
+                    color: $brand-primary-color;
+                    display: inline-block;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -52,9 +52,7 @@
         <?php
             // Home Button
             if (!is_front_page()) : ?>
-                <a href="<?php home_url(); ?>" class="home-link">
-                    <object type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/assets/arrow.svg" class="svg-object"></object>
-                </a>
+                <a href="<?php echo get_home_url(); ?>" class="home-link" id="home-link"></a>
 
         <?php endif; ?>
 

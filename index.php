@@ -1,20 +1,34 @@
 <?php 
     // Template for category-pages
 
-    get_header(); 
+    get_header();
+
+    // Excluded categories
+    $ticker_cat_id = get_cat_id('ticker');
 ?>
 
     <?php get_template_part( 'template-parts/entry-header' ); ?>
 
     <div class="content">
+
+        <div class="category-menu">
+
+            <h4><?php pll_e('Was möchtest du sehen?'); ?></h4>
+
+            <?php wp_list_categories(array(
+                'title_li' => '',
+                'exclude' => array(
+                    $ticker_cat_id
+                ),
+            )); ?>
+        </div>
+
         <?php
             // Post Loop
             $args = array(
                 'post_type' => 'post',
                 'posts_per_page' => 15
             );
-
-            echo get_the_category();
 
             $post_query = new WP_Query($args);
             $preview_title_max_words = 10;
@@ -26,7 +40,9 @@
                 ?>
                     
                     <div class="post-preview">
-                        <h3><?php echo wp_trim_words(get_the_title(), $preview_title_max_words); ?></h3>
+                        <a href="<?php the_permalink(); ?>">
+                            <h3><?php echo wp_trim_words(get_the_title(), $preview_title_max_words); ?></h3>
+                        </a>
                         <span><?php the_date(); ?></span>
                         <span class="post-preview-categories">
                             <?php 
@@ -56,7 +72,9 @@
                                 echo wp_strip_all_tags($preview_content);
                             ?>
                         </p>
-                        <div class="post-preview-arrow"></div><span>...</span>
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="post-preview-arrow"></div><span>...</span>
+                        </a>
                     </div>
                 <?php
                 }

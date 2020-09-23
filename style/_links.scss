@@ -42,7 +42,7 @@ main .content_sidebar-note p {
     // Exclude mail- and telefon-links
     a:not([href*='mailto:']),
     a:not([href*='tel:']) {
-        height: $font-size-regular * 2;
+        height: $font-size-18 * 2;
         display: flex;
         align-items: center;
 
@@ -74,7 +74,8 @@ main .content_sidebar-note p {
     // Link intern
     a[href*='localhost'],
     a[href*='hfkasta'],
-    a[href*='asta.hfk-bremen'] {
+    a[href*='asta.hfk-bremen'],
+    a[href*='asta.uiuiui.digital'] {
         &::before {
             background-image: url('../assets/hfkasta_stack.svg#m_link_internal-red');
         }
@@ -128,7 +129,7 @@ main .content_sidebar-note p {
         // Exclude mail- and telefon-links
         a:not([href*='mailto:']),
         a:not([href*='tel:']) {
-            height: $font-size-big * 2;
+            height: $font-size-25 * 2;
 
             &::before {
                 width: 36px;
@@ -153,7 +154,8 @@ main .content_sidebar-note p {
         // Link intern
         a[href*='localhost'],
         a[href*='hfkasta'],
-        a[href*='asta.hfk-bremen'] {
+        a[href*='asta.hfk-bremen'],
+        a[href*='asta.uiuiui.digital'] {
             &::before {
                 background-image: url('../assets/hfkasta_stack.svg#l_link_internal-red');
             }

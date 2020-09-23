@@ -12,21 +12,25 @@
 }
 
 nav {
-    position: absolute;
-    width: $sidebar-width;
-    min-height: 100%;
-    right: -$sidebar-width;
+    position: relative;
+    float: right;
     top: 0;
+    margin-left: 0;
+    margin-right: -$sidebar-width;
+    min-width: $sidebar-width;
+    min-height: 100%;
     background: #fff;
     color: $brand-primary-color;
     border-left: $border-weight_m solid $brand-primary-color;
     z-index: 30;
-    transition: right $transition-time ease;
-    padding: ($ticker-height_s + 20px + 15px + 24px) 20px ($footer-height + 20px) 20px;
+    transition: margin-right $transition-time ease, margin-left $transition-time ease;
+    padding: (20px + 15px + 24px) 20px ($footer-height + 20px) 20px;
     box-sizing: border-box;
 
     &.is-open {
-        right: 0;
+        // right: 0;
+        margin-right: 0;
+        margin-left: -$sidebar-width;
     }
 
     // font-size
@@ -34,11 +38,11 @@ nav {
     .search-form .search-field,
     .search-form .search-field::placeholder,
     .search-form .search-field::-webkit-input-placeholder {
-        font-size: $font-size-regular;
+        font-size: $font-size-18;
     }
 
-    ul li.sub-menu li a {
-        font-size: $font-size-small;
+    ul.sub-menu li a {
+        font-size: $font-size-14;
     }
 
     ul {
@@ -124,6 +128,7 @@ nav {
             background: #fff;
             color: $brand-primary-color;
             border: $border-weight_m solid $brand-primary-color;
+            margin: 0;
 
             &:focus {
                 outline: none;
@@ -191,8 +196,16 @@ nav {
 // Home Button
 .home-link {
     position: fixed;
-    top: 95px;
+    margin-top: 70px;
+    margin-left: 20px;
+    z-index: 30;
+    transform: rotate(-75deg);
     left: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('../assets/hfkasta_stack.svg#m_arrow_elevator_red');
+    width: 38.56px;
+    height: 56.75px;
 }
 
 // Hide Sidebar Note on search-result site
@@ -213,22 +226,21 @@ nav {
 
 @media (min-width: $breakpoint-tablet) {
     .hamburger.hamburger--squeeze {
-        top: $ticker-height-m;
+        top: $ticker-height_m;
     }
 
     nav {
-        padding: ($ticker-height-m + 20px + 15px + 24px) 20px ($footer-height + 20px) 20px;
 
         // font-size
         ul li a,
         .search-form .search-field,
         .search-form .search-field::placeholder,
         .search-form .search-field::-webkit-input-placeholder {
-            font-size: $font-size-big;
+            font-size: $font-size-25;
         }
 
-        ul li.sub-menu li a {
-            font-size: $font-size-regular;
+        ul.sub-menu li a {
+            font-size: $font-size-18;
         }
     }
 }
@@ -265,14 +277,14 @@ nav {
         .search-form .search-field,
         .search-form .search-field::placeholder,
         .search-form .search-field::-webkit-input-placeholder {
-            font-size: $font-size-large;
+            font-size: $font-size-35;
+        }
+
+        ul.sub-menu li a {
+            font-size: $font-size-25;
         }
 
         ul li {
-            &.sub-menu li a {
-                font-size: $font-size-big;
-            }
-
             &.menu-item-has-children {
                 .dropdown-btn {
                     margin: 0 0 0 6px;

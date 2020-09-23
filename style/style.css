@@ -146,26 +146,29 @@
   z-index: 32; }
 
 nav {
-  position: absolute;
-  width: 320px;
-  min-height: 100%;
-  right: -320px;
+  position: relative;
+  float: right;
   top: 0;
+  margin-left: 0;
+  margin-right: -320px;
+  min-width: 320px;
+  min-height: 100%;
   background: #fff;
   color: #5a00be;
   border-left: 2px solid #5a00be;
   z-index: 30;
-  transition: right 0.5s ease;
-  padding: 99px 20px 80px 20px;
+  transition: margin-right 0.5s ease, margin-left 0.5s ease;
+  padding: 59px 20px 80px 20px;
   box-sizing: border-box; }
   nav.is-open {
-    right: 0; }
+    margin-right: 0;
+    margin-left: -320px; }
   nav ul li a,
   nav .search-form .search-field,
   nav .search-form .search-field::placeholder,
   nav .search-form .search-field::-webkit-input-placeholder {
     font-size: 1.125rem; }
-  nav ul li.sub-menu li a {
+  nav ul.sub-menu li a {
     font-size: 0.875rem; }
   nav ul {
     padding: 0; }
@@ -221,6 +224,7 @@ nav {
       background: #fff;
       color: #5a00be;
       border: 2px solid #5a00be;
+      margin: 0;
       /* clears the 'X' from Internet Explorer */
       /* clears the 'X' from Chrome */ }
       nav .search-form .search-field:focus {
@@ -261,8 +265,16 @@ nav {
 
 .home-link {
   position: fixed;
-  top: 95px;
-  left: 0; }
+  margin-top: 70px;
+  margin-left: 20px;
+  z-index: 30;
+  transform: rotate(-75deg);
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../assets/hfkasta_stack.svg#m_arrow_elevator_red");
+  width: 38.56px;
+  height: 56.75px; }
 
 body.search-result .content .sidebar_note {
   display: none; }
@@ -272,17 +284,15 @@ nav .sidebar_note {
 
 @media (min-width: 768px) {
   .hamburger.hamburger--squeeze {
-    top: 40px; }
+    top: 50px; }
 
-  nav {
-    padding: 99px 20px 80px 20px; }
-    nav ul li a,
-    nav .search-form .search-field,
-    nav .search-form .search-field::placeholder,
-    nav .search-form .search-field::-webkit-input-placeholder {
-      font-size: 1.5625rem; }
-    nav ul li.sub-menu li a {
-      font-size: 1.125rem; } }
+  nav ul li a,
+  nav .search-form .search-field,
+  nav .search-form .search-field::placeholder,
+  nav .search-form .search-field::-webkit-input-placeholder {
+    font-size: 1.5625rem; }
+  nav ul.sub-menu li a {
+    font-size: 1.125rem; } }
 @media (min-width: 1024px) {
   .hamburger.hamburger--squeeze {
     display: none; }
@@ -305,7 +315,7 @@ nav .sidebar_note {
     nav .search-form .search-field::placeholder,
     nav .search-form .search-field::-webkit-input-placeholder {
       font-size: 2.1875rem; }
-    nav ul li.sub-menu li a {
+    nav ul.sub-menu li a {
       font-size: 1.5625rem; }
     nav ul li.menu-item-has-children .dropdown-btn {
       margin: 0 0 0 6px;
@@ -352,7 +362,10 @@ footer {
 */
 .search-results .wrapper .search-result-link {
   padding: 20px 0;
-  display: block; }
+  display: block;
+  height: auto; }
+  .search-results .wrapper .search-result-link::before {
+    display: none; }
   .search-results .wrapper .search-result-link:not(:first-child) {
     border-top: 2px solid #5a00be; }
 
@@ -416,7 +429,7 @@ body.page-child .entry-header h1 {
       width: 80%;
       margin: 0 auto; }
     .entry-header h1 {
-      width: 80%;
+      width: 70%;
       margin: 0 auto 10px auto; }
     .entry-header .note-line {
       margin-left: calc(50% - 267.4px);
@@ -457,6 +470,9 @@ body.page-child .entry-header h1 {
   .entry-header .sidebar_note_link {
     display: none; } }
 @media (min-width: 1680px) {
+  .home-link {
+    margin-top: 100px; }
+
   .entry-header h1 {
     font-size: 8.125rem; }
 
@@ -632,53 +648,58 @@ body.page-child .entry-header h1 {
         color: #d50e31; }
     .ticker-wrap .ticker:hover {
       animation-play-state: paused; }
-    .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']) {
-      padding-right: 2.8125rem; }
-      .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen'])::before {
+    .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']) {
+      padding-right: 28.1px; }
+      .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital'])::before {
         content: '';
         display: block;
         float: left;
-        width: 2.25rem;
-        min-width: 2.25rem;
-        flex-basis: 2.25rem;
-        height: 2.25rem;
+        width: 28.1px;
+        height: 20.5px;
+        min-width: 28.1px;
+        flex-basis: 28.1px;
+        margin-top: 8px;
         background-repeat: no-repeat;
         background-position: center center;
-        padding: 0 0.28125rem;
+        background-size: cover;
+        padding: 0;
         background-image: url("../assets/hfkasta_stack.svg#m_link_external"); }
-      .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):hover::before {
+      .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']):hover::before {
         background-image: url("../assets/hfkasta_stack.svg#m_link_external-red"); }
 
 @media (min-width: 768px) {
   .ticker-wrap {
-    height: 40px;
-    margin-bottom: -42px; }
+    height: 50px;
+    margin-bottom: -52px; }
     .ticker-wrap .ticker {
       font-size: 1.5625rem; }
       .ticker-wrap .ticker a p {
         font-size: 1.5625rem; }
-      .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']) {
-        padding-right: 5.46875rem; }
-        .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen'])::before {
-          width: 4.375rem;
-          min-width: 4.375rem;
-          flex-basis: 4.375rem;
-          height: 4.375rem; } }
+      .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']) {
+        padding-right: 40px; }
+        .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital'])::before {
+          background-image: url("../assets/hfkasta_stack.svg#l_link_external");
+          margin-top: 12px;
+          width: 36px;
+          height: 32px;
+          min-width: 36px;
+          flex-basis: 36px;
+          padding: 0 4px 0 0; }
+        .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']):hover::before {
+          background-image: url("../assets/hfkasta_stack.svg#l_link_external-red"); } }
 @media (min-width: 1680px) {
   .ticker-wrap {
     height: 65px;
     margin-bottom: -67px; }
     .ticker-wrap .ticker {
-      font-size: 1.5625rem; }
+      font-size: 2.1875rem; }
       .ticker-wrap .ticker .news a p {
-        font-size: 1.5625rem; }
-      .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']) {
-        padding-right: 3.90625rem; }
-        .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen'])::before {
-          width: 3.125rem;
-          min-width: 3.125rem;
-          flex-basis: 3.125rem;
-          height: 3.125rem; } }
+        font-size: 2.1875rem; }
+      .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']) {
+        padding-right: 44px; }
+        .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital'])::before {
+          margin-top: 18px;
+          padding: 0 8px 0 0; } }
 /*
     # Styling for general Links
 
@@ -703,21 +724,21 @@ footer .menu a {
   footer .menu a:hover {
     color: #d50e31; }
 
-main .content a:not([href*='mailto:']),
-main .content a:not([href*='tel:']),
-nav .sidebar_note a:not([href*='mailto:']),
-nav .sidebar_note a:not([href*='tel:']),
-main .content_sidebar-note a:not([href*='mailto:']),
-main .content_sidebar-note a:not([href*='tel:']) {
+main .content p a:not([href*='mailto:']),
+main .content p a:not([href*='tel:']),
+nav .sidebar_note p a:not([href*='mailto:']),
+nav .sidebar_note p a:not([href*='tel:']),
+main .content_sidebar-note p a:not([href*='mailto:']),
+main .content_sidebar-note p a:not([href*='tel:']) {
   height: 2.25rem;
   display: flex;
   align-items: center; }
-  main .content a:not([href*='mailto:'])::before,
-  main .content a:not([href*='tel:'])::before,
-  nav .sidebar_note a:not([href*='mailto:'])::before,
-  nav .sidebar_note a:not([href*='tel:'])::before,
-  main .content_sidebar-note a:not([href*='mailto:'])::before,
-  main .content_sidebar-note a:not([href*='tel:'])::before {
+  main .content p a:not([href*='mailto:'])::before,
+  main .content p a:not([href*='tel:'])::before,
+  nav .sidebar_note p a:not([href*='mailto:'])::before,
+  nav .sidebar_note p a:not([href*='tel:'])::before,
+  main .content_sidebar-note p a:not([href*='mailto:'])::before,
+  main .content_sidebar-note p a:not([href*='tel:'])::before {
     content: '';
     display: block;
     float: left;
@@ -727,63 +748,69 @@ main .content_sidebar-note a:not([href*='tel:']) {
     height: 20.5px;
     background-repeat: no-repeat;
     background-position: left center; }
-main .content a[href*='http://']::before,
-main .content a[href*='https://']::before,
-nav .sidebar_note a[href*='http://']::before,
-nav .sidebar_note a[href*='https://']::before,
-main .content_sidebar-note a[href*='http://']::before,
-main .content_sidebar-note a[href*='https://']::before {
+main .content p a[href*='http://']::before,
+main .content p a[href*='https://']::before,
+nav .sidebar_note p a[href*='http://']::before,
+nav .sidebar_note p a[href*='https://']::before,
+main .content_sidebar-note p a[href*='http://']::before,
+main .content_sidebar-note p a[href*='https://']::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_external-red"); }
-main .content a[href*='http://']:hover::before,
-main .content a[href*='https://']:hover::before,
-nav .sidebar_note a[href*='http://']:hover::before,
-nav .sidebar_note a[href*='https://']:hover::before,
-main .content_sidebar-note a[href*='http://']:hover::before,
-main .content_sidebar-note a[href*='https://']:hover::before {
+main .content p a[href*='http://']:hover::before,
+main .content p a[href*='https://']:hover::before,
+nav .sidebar_note p a[href*='http://']:hover::before,
+nav .sidebar_note p a[href*='https://']:hover::before,
+main .content_sidebar-note p a[href*='http://']:hover::before,
+main .content_sidebar-note p a[href*='https://']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_external"); }
-main .content a[href*='localhost']::before,
-main .content a[href*='hfkasta']::before,
-main .content a[href*='asta.hfk-bremen']::before,
-nav .sidebar_note a[href*='localhost']::before,
-nav .sidebar_note a[href*='hfkasta']::before,
-nav .sidebar_note a[href*='asta.hfk-bremen']::before,
-main .content_sidebar-note a[href*='localhost']::before,
-main .content_sidebar-note a[href*='hfkasta']::before,
-main .content_sidebar-note a[href*='asta.hfk-bremen']::before {
+main .content p a[href*='localhost']::before,
+main .content p a[href*='hfkasta']::before,
+main .content p a[href*='asta.hfk-bremen']::before,
+main .content p a[href*='asta.uiuiui.digital']::before,
+nav .sidebar_note p a[href*='localhost']::before,
+nav .sidebar_note p a[href*='hfkasta']::before,
+nav .sidebar_note p a[href*='asta.hfk-bremen']::before,
+nav .sidebar_note p a[href*='asta.uiuiui.digital']::before,
+main .content_sidebar-note p a[href*='localhost']::before,
+main .content_sidebar-note p a[href*='hfkasta']::before,
+main .content_sidebar-note p a[href*='asta.hfk-bremen']::before,
+main .content_sidebar-note p a[href*='asta.uiuiui.digital']::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_internal-red"); }
-main .content a[href*='localhost']:hover::before,
-main .content a[href*='hfkasta']:hover::before,
-main .content a[href*='asta.hfk-bremen']:hover::before,
-nav .sidebar_note a[href*='localhost']:hover::before,
-nav .sidebar_note a[href*='hfkasta']:hover::before,
-nav .sidebar_note a[href*='asta.hfk-bremen']:hover::before,
-main .content_sidebar-note a[href*='localhost']:hover::before,
-main .content_sidebar-note a[href*='hfkasta']:hover::before,
-main .content_sidebar-note a[href*='asta.hfk-bremen']:hover::before {
+main .content p a[href*='localhost']:hover::before,
+main .content p a[href*='hfkasta']:hover::before,
+main .content p a[href*='asta.hfk-bremen']:hover::before,
+main .content p a[href*='asta.uiuiui.digital']:hover::before,
+nav .sidebar_note p a[href*='localhost']:hover::before,
+nav .sidebar_note p a[href*='hfkasta']:hover::before,
+nav .sidebar_note p a[href*='asta.hfk-bremen']:hover::before,
+nav .sidebar_note p a[href*='asta.uiuiui.digital']:hover::before,
+main .content_sidebar-note p a[href*='localhost']:hover::before,
+main .content_sidebar-note p a[href*='hfkasta']:hover::before,
+main .content_sidebar-note p a[href*='asta.hfk-bremen']:hover::before,
+main .content_sidebar-note p a[href*='asta.uiuiui.digital']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_internal"); }
-main .content a[href*='.pdf']::before,
-nav .sidebar_note a[href*='.pdf']::before,
-main .content_sidebar-note a[href*='.pdf']::before {
+main .content p a[href*='.pdf']::before,
+nav .sidebar_note p a[href*='.pdf']::before,
+main .content_sidebar-note p a[href*='.pdf']::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_download-red"); }
-main .content a[href*='.pdf']:hover::before,
-nav .sidebar_note a[href*='.pdf']:hover::before,
-main .content_sidebar-note a[href*='.pdf']:hover::before {
+main .content p a[href*='.pdf']:hover::before,
+nav .sidebar_note p a[href*='.pdf']:hover::before,
+main .content_sidebar-note p a[href*='.pdf']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_download"); }
-main .content a[href*='hfkbremen.sharepoint']::before,
-nav .sidebar_note a[href*='hfkbremen.sharepoint']::before,
-main .content_sidebar-note a[href*='hfkbremen.sharepoint']::before {
+main .content p a[href*='hfkbremen.sharepoint']::before,
+nav .sidebar_note p a[href*='hfkbremen.sharepoint']::before,
+main .content_sidebar-note p a[href*='hfkbremen.sharepoint']::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_drive-red"); }
-main .content a[href*='hfkbremen.sharepoint']:hover::before,
-nav .sidebar_note a[href*='hfkbremen.sharepoint']:hover::before,
-main .content_sidebar-note a[href*='hfkbremen.sharepoint']:hover::before {
+main .content p a[href*='hfkbremen.sharepoint']:hover::before,
+nav .sidebar_note p a[href*='hfkbremen.sharepoint']:hover::before,
+main .content_sidebar-note p a[href*='hfkbremen.sharepoint']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_drive"); }
-main .content a[href*='portal.hfk-bremen.de']::before,
-nav .sidebar_note a[href*='portal.hfk-bremen.de']::before,
-main .content_sidebar-note a[href*='portal.hfk-bremen.de']::before {
+main .content p a[href*='portal.hfk-bremen.de']::before,
+nav .sidebar_note p a[href*='portal.hfk-bremen.de']::before,
+main .content_sidebar-note p a[href*='portal.hfk-bremen.de']::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_portal-red"); }
-main .content a[href*='portal.hfk-bremen.de']:hover::before,
-nav .sidebar_note a[href*='portal.hfk-bremen.de']:hover::before,
-main .content_sidebar-note a[href*='portal.hfk-bremen.de']:hover::before {
+main .content p a[href*='portal.hfk-bremen.de']:hover::before,
+nav .sidebar_note p a[href*='portal.hfk-bremen.de']:hover::before,
+main .content_sidebar-note p a[href*='portal.hfk-bremen.de']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_portal"); }
 
 @media (min-width: 1680px) {
@@ -821,22 +848,28 @@ main .content_sidebar-note a[href*='portal.hfk-bremen.de']:hover::before {
   main .content a[href*='localhost']::before,
   main .content a[href*='hfkasta']::before,
   main .content a[href*='asta.hfk-bremen']::before,
+  main .content a[href*='asta.uiuiui.digital']::before,
   nav .sidebar_note a[href*='localhost']::before,
   nav .sidebar_note a[href*='hfkasta']::before,
   nav .sidebar_note a[href*='asta.hfk-bremen']::before,
+  nav .sidebar_note a[href*='asta.uiuiui.digital']::before,
   main .content_sidebar-note a[href*='localhost']::before,
   main .content_sidebar-note a[href*='hfkasta']::before,
-  main .content_sidebar-note a[href*='asta.hfk-bremen']::before {
+  main .content_sidebar-note a[href*='asta.hfk-bremen']::before,
+  main .content_sidebar-note a[href*='asta.uiuiui.digital']::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_internal-red"); }
   main .content a[href*='localhost']:hover::before,
   main .content a[href*='hfkasta']:hover::before,
   main .content a[href*='asta.hfk-bremen']:hover::before,
+  main .content a[href*='asta.uiuiui.digital']:hover::before,
   nav .sidebar_note a[href*='localhost']:hover::before,
   nav .sidebar_note a[href*='hfkasta']:hover::before,
   nav .sidebar_note a[href*='asta.hfk-bremen']:hover::before,
+  nav .sidebar_note a[href*='asta.uiuiui.digital']:hover::before,
   main .content_sidebar-note a[href*='localhost']:hover::before,
   main .content_sidebar-note a[href*='hfkasta']:hover::before,
-  main .content_sidebar-note a[href*='asta.hfk-bremen']:hover::before {
+  main .content_sidebar-note a[href*='asta.hfk-bremen']:hover::before,
+  main .content_sidebar-note a[href*='asta.uiuiui.digital']:hover::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_internal"); }
   main .content a[href*='.pdf']::before,
   nav .sidebar_note a[href*='.pdf']::before,
@@ -895,11 +928,10 @@ main .content_sidebar-note a[href*='portal.hfk-bremen.de']:hover::before {
 
 @media (min-width: 768px) {
   .language-switch {
-    font-size: 1.125rem;
-    margin-top: 40px; } }
+    font-size: 1.125rem; } }
 @media (min-width: 1680px) {
   .language-switch {
-    margin-top: 65px; } }
+    margin-top: 30px; } }
 /*
     # Styling for the page-elevator
 
@@ -1019,6 +1051,8 @@ h6 {
   .wrapper main .content .wp-block-separator {
     border-width: 2px;
     border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
     border-style: solid; }
     .wrapper main .content .wp-block-separator.has-purple-background-color {
       border-color: #5a00be; }
@@ -1026,7 +1060,7 @@ h6 {
       border-color: #d50e31; }
     .wrapper main .content .wp-block-separator.has-turquoise-background-color {
       border-color: #64F5DC; }
-.wrapper main section {
+.wrapper main > section {
   width: 100%;
   margin: 100px auto 0 auto;
   padding: 0 20px 60px 20px;
@@ -1081,27 +1115,61 @@ h6 {
 */
 body.category .content {
   padding: 0; }
+  body.category .content .category-menu,
   body.category .content .post-preview {
     padding: 0 15px 15px 15px; }
-    body.category .content .post-preview:not(:last-child) {
-      border-bottom: 2px solid #5a00be; }
-    body.category .content .post-preview h3 {
-      margin-bottom: 0; }
-    body.category .content .post-preview .post-preview-categories {
-      display: block; }
-      body.category .content .post-preview .post-preview-categories a {
-        color: #5a00be;
-        display: inline-block; }
-        body.category .content .post-preview .post-preview-categories a::before {
-          display: none; }
-    body.category .content .post-preview .post-preview-arrow {
+  body.category .content .category-menu {
+    text-align: center; }
+    body.category .content .category-menu li {
+      list-style-type: none;
       display: inline-block;
-      width: 28.1px;
-      height: 20.5px;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      background-image: url("../assets/hfkasta_stack.svg#m_link_internal-red"); }
+      margin: 0 10px; }
+      body.category .content .category-menu li.current-cat a {
+        font-family: 'GT Haptik Bold', sans-serif; }
+      body.category .content .category-menu li a {
+        color: #5a00be; }
+        body.category .content .category-menu li a::before {
+          display: none; }
+  body.category .content .post-preview:not(:last-child) {
+    border-bottom: 2px solid #5a00be; }
+  body.category .content .post-preview h3 {
+    margin-bottom: 0; }
+  body.category .content .post-preview .post-preview-categories {
+    display: block; }
+    body.category .content .post-preview .post-preview-categories a {
+      color: #5a00be;
+      display: inline-block; }
+      body.category .content .post-preview .post-preview-categories a::before {
+        display: none; }
+  body.category .content .post-preview .post-preview-arrow {
+    display: inline-block;
+    width: 28.1px;
+    height: 20.5px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url("../assets/hfkasta_stack.svg#m_link_internal-red"); }
+
+/*
+    # Styling for post sites
+
+*/
+body.single .wrapper main .content {
+  padding-top: 100px; }
+  body.single .wrapper main .content h4 {
+    margin: 0 auto; }
+  body.single .wrapper main .content .post-subline {
+    margin: 0 auto 1rem auto; }
+    body.single .wrapper main .content .post-subline .post-subline-seperator {
+      display: none; }
+    body.single .wrapper main .content .post-subline .post-date,
+    body.single .wrapper main .content .post-subline .post-categories {
+      display: block; }
+    body.single .wrapper main .content .post-subline .post-categories a {
+      color: #5a00be;
+      display: inline-block; }
+      body.single .wrapper main .content .post-subline .post-categories a::before {
+        display: none; }
 
 /*
     # Variables
@@ -1177,7 +1245,10 @@ input {
   border: 2px solid #5a00be;
   border-radius: 0; }
 
-input, select, textarea, button {
+input,
+select,
+textarea,
+button {
   width: 100%;
   padding: .2em;
   margin: .4em 0;
@@ -1186,18 +1257,25 @@ input, select, textarea, button {
   background: #fff;
   border: 2px solid #5a00be; }
 
-input[type="submit"], .tnp-field input[type="submit"], button {
+input[type="submit"],
+.tnp-field input[type="submit"],
+button {
   width: 100%;
   background-color: #5a00be;
   color: #fff;
   border-radius: 0;
   cursor: pointer;
   border: 2px solid #5a00be; }
-  input[type="submit"]:focus, input[type="submit"]:hover, .tnp-field input[type="submit"]:focus, .tnp-field input[type="submit"]:hover, button:focus, button:hover {
+  input[type="submit"]:focus, input[type="submit"]:hover,
+  .tnp-field input[type="submit"]:focus,
+  .tnp-field input[type="submit"]:hover,
+  button:focus,
+  button:hover {
     background-color: #fff;
     color: #5a00be; }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   color: #d50e31;
   border-color: #d50e31;
   border-radius: 0;
@@ -1213,12 +1291,16 @@ label {
 /*
 radio + check
  */
-input[type="radio"] + label, input[type="radio"] + .wpcf7-list-item-label,
-input[type="checkbox"] + label, input[type="checkbox"] + .wpcf7-list-item-label {
+input[type="radio"] + label,
+input[type="radio"] + .wpcf7-list-item-label,
+input[type="checkbox"] + label,
+input[type="checkbox"] + .wpcf7-list-item-label {
   position: relative;
   padding-left: 25px; }
-  input[type="radio"] + label:before, input[type="radio"] + .wpcf7-list-item-label:before,
-  input[type="checkbox"] + label:before, input[type="checkbox"] + .wpcf7-list-item-label:before {
+  input[type="radio"] + label:before,
+  input[type="radio"] + .wpcf7-list-item-label:before,
+  input[type="checkbox"] + label:before,
+  input[type="checkbox"] + .wpcf7-list-item-label:before {
     position: absolute;
     left: 0;
     top: 0;
@@ -1324,7 +1406,7 @@ a,
 li,
 input,
 button,
-cite {
+cite, td {
   color: #5a00be; }
 
 p,
@@ -1333,7 +1415,7 @@ a,
 li,
 input,
 button,
-figcaption {
+figcaption, td {
   font-family: 'GT-Haptik-Regular', sans-serif;
   font-size: 1.125rem; }
 
@@ -1354,6 +1436,9 @@ em {
 
 pre {
   white-space: break-spaces; }
+
+table td {
+  vertical-align: baseline; }
 
 .section-inner {
   margin-left: auto;
@@ -1389,24 +1474,29 @@ pre {
   overflow: hidden;
   box-sizing: border-box;
   position: relative;
-  z-index: 20; }
+  z-index: 20;
+  display: flex; }
   .wrapper main {
-    position: relative; }
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    min-width: 100%; }
 
 @media (min-width: 768px) {
   .wrapper {
-    padding: 42px 0 60px 0; } }
+    padding: 52px 0 60px 0; } }
 @media (min-width: 1024px) {
   .wrapper {
     width: 100%;
     display: flex; }
     .wrapper main {
-      width: calc(100% - 320px); } }
+      min-width: calc(100% - 320px); } }
 @media (min-width: 1680px) {
   .wrapper {
     padding: 67px 0 60px 0; }
     .wrapper main {
-      width: 70%; }
+      width: 70%;
+      min-width: auto; }
 
   p,
   span,
