@@ -8,8 +8,34 @@ body.category {
     .content {
         padding: 0;
 
+        .category-menu,
         .post-preview {
             padding: 0 $padding_s $padding_s $padding_s;
+        }
+
+        .category-menu {
+            text-align: center;
+
+            li {
+                list-style-type: none;
+                display: inline-block;
+                margin: 0 10px;
+
+                &.current-cat a {
+                    font-family: 'GT Haptik Bold', sans-serif;
+                }
+
+                a {
+                    color: $brand-primary-color;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .post-preview {
 
             &:not(:last-child) {
                 border-bottom: $border-weight_m solid $brand-primary-color;

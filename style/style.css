@@ -1360,8 +1360,31 @@ body.category .content {
   padding: 0;
 }
 
+body.category .content .category-menu,
 body.category .content .post-preview {
   padding: 0 15px 15px 15px;
+}
+
+body.category .content .category-menu {
+  text-align: center;
+}
+
+body.category .content .category-menu li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+body.category .content .category-menu li.current-cat a {
+  font-family: 'GT Haptik Bold', sans-serif;
+}
+
+body.category .content .category-menu li a {
+  color: #5a00be;
+}
+
+body.category .content .category-menu li a::before {
+  display: none;
 }
 
 body.category .content .post-preview:not(:last-child) {
@@ -1393,6 +1416,36 @@ body.category .content .post-preview .post-preview-arrow {
   background-position: center center;
   background-size: cover;
   background-image: url("../assets/hfkasta_stack.svg#m_link_internal-red");
+}
+
+/*
+    # Styling for post sites
+
+*/
+body.single .wrapper main .content {
+  padding-top: 100px;
+}
+
+body.single .wrapper main .content h4 {
+  margin: 0;
+}
+
+body.single .wrapper main .content .post-subline .post-subline-seperator {
+  display: none;
+}
+
+body.single .wrapper main .content .post-subline .post-date,
+body.single .wrapper main .content .post-subline .post-categories {
+  display: block;
+}
+
+body.single .wrapper main .content .post-subline .post-categories a {
+  color: #5a00be;
+  display: inline-block;
+}
+
+body.single .wrapper main .content .post-subline .post-categories a::before {
+  display: none;
 }
 
 *,

@@ -120,4 +120,7 @@
             return null;
         }
     }
+
+    // Register strings
+    pll_register_string('Category Menu Title', 'Was möchtest du sehen?', 'Wordpress');
 ?>

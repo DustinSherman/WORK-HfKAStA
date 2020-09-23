@@ -20,22 +20,27 @@ input + label + button
  */
 
 input {
-  background:$contrast-primary-color;
+  background: $contrast-primary-color;
   border: $border-weight solid $brand-primary-color;
   border-radius: 0;
 }
 
-input, select, textarea, button {
+input,
+select,
+textarea,
+button {
   width: 100%;
   padding: .2em;
   margin: .4em 0;
   border-radius: 0;
   box-sizing: border-box;
-  background:$contrast-primary-color;
+  background: $contrast-primary-color;
   border: $border-weight solid $brand-primary-color;
 }
 
-input[type="submit"], .tnp-field input[type="submit"], button {
+input[type="submit"],
+.tnp-field input[type="submit"],
+button {
   width: 100%;
   background-color: $brand-primary-color;
   color: $contrast-primary-color;
@@ -43,18 +48,20 @@ input[type="submit"], .tnp-field input[type="submit"], button {
   cursor: pointer;
   border: $border-weight solid $brand-primary-color;
 
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     background-color: $contrast-primary-color;
     color: $brand-primary-color;
   }
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   color: $brand-secondary-color;
   border-color: $brand-secondary-color;
   border-radius: 0;
   -moz-outline-radius: 0;
-  outline:none;
+  outline: none;
 }
 
 label {
@@ -66,50 +73,57 @@ radio + check
  */
 
 input[type="radio"],
-input[type="checkbox"]{
+input[type="checkbox"] {
   @extend .visuallyhidden;
 }
 
-input[type="radio"] + label, input[type="radio"] + .wpcf7-list-item-label,
-input[type="checkbox"] + label, input[type="checkbox"] + .wpcf7-list-item-label {
-  position:relative;
-  padding-left:25px;
-  &:before{
-    position:absolute;
-    left:0;
-    top:0;
-    content:" ";
-    display:block;
-    width:20px;
-    height:20px;
-    background:$contrast-primary-color;
-    border: $border-weight solid $contrast-primary-color;
-    outline: $border-weight solid $brand-primary-color;
+input[type="radio"]+label,
+input[type="radio"]+.wpcf7-list-item-label,
+input[type="checkbox"]+label,
+input[type="checkbox"]+.wpcf7-list-item-label {
+  position: relative;
+  padding-left: 25px;
+
+  &:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: " ";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: $contrast-primary-color;
+    border: $border-weight_m solid $contrast-primary-color;
+    outline: $border-weight_m solid $brand-primary-color;
   }
-  &:hover:before{
+
+  &:hover::before {
     //background:blue;
   }
 }
-input[type="radio"] + label{
-  &:before{}
-}
-input[type="checkbox"] + label{
-  &:before{}
+
+input[type="radio"]+label {
+  &:before {}
 }
 
-input[type="radio"]:focus + label,
-input[type="checkbox"]:focus + label{
+input[type="checkbox"]+label {
+  &:before {}
+}
+
+input[type="radio"]:focus+label,
+input[type="checkbox"]:focus+label {
   text-decoration: none;
 }
 
-input[type="radio"]:checked + label{
-  &:before{
-    background:$brand-primary-color;
+input[type="radio"]:checked+label {
+  &:before {
+    background: $brand-primary-color;
   }
 }
-input[type="checkbox"]:checked + label{
-  &:before{
-    background:$brand-primary-color;
+
+input[type="checkbox"]:checked+label {
+  &:before {
+    background: $brand-primary-color;
   }
 }
 
@@ -126,13 +140,14 @@ select {
   color: $brand-primary-color !important;
   padding: .6em 1.4em .5em .8em;
   width: 100%;
-  max-width: 100%; /* useful when width is set to anything other than 100% */
+  max-width: 100%;
+  /* useful when width is set to anything other than 100% */
   box-sizing: border-box;
   margin: 0;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background-color:$contrast-primary-color;
+  background-color: $contrast-primary-color;
   border: $border-weight solid $brand-primary-color;
 
   /* arrow icon */
@@ -166,19 +181,23 @@ select {
   }
 
   /* Support for rtl text, explicit support for Arabic and Hebrew */
-  *[dir="rtl"] &, :root:lang(ar) &, :root:lang(iw) & {
+  *[dir="rtl"] &,
+  :root:lang(ar) &,
+  :root:lang(iw) & {
     background-position: left .7em top 50%, 0 0;
     padding: .6em .8em .5em 1.4em;
   }
 
   /* Disabled styles */
-  &:disabled, &[aria-disabled=true] {
+  &:disabled,
+  &[aria-disabled=true] {
     color: graytext;
     border-color: #aaa;
     background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22graytext%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
   }
 
-  &:disabled:hover, &[aria-disabled=true] {
+  &:disabled:hover,
+  &[aria-disabled=true] {
     border-color: #aaa;
   }
 }
