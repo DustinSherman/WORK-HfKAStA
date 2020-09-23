@@ -122,9 +122,9 @@ main .content_sidebar-note p {
 @media (min-width: $breakpoint-screen) {
 
     // Links
-    main .content,
-    nav .sidebar_note,
-    main .content_sidebar-note {
+    main .content p,
+    nav .sidebar_note p,
+    main .content_sidebar-note p {
 
         // Exclude mail- and telefon-links
         a:not([href*='mailto:']),
