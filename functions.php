@@ -73,7 +73,7 @@
     }
     add_action( 'after_setup_theme', 'tabor_gutenberg_color_palette' );
 
-    add_filter( 'allowed_block_types', 'misha_allowed_block_types' );
+    // add_filter( 'allowed_block_types', 'misha_allowed_block_types' );
     function misha_allowed_block_types( $allowed_blocks ) {
         return array(
             'core/image',
@@ -138,5 +138,7 @@
         // remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');
     }
     add_action( 'admin_init', 'remove_dashboard_meta' );
+
+    include_once 'organigramm.php';
 
 ?>
