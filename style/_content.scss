@@ -171,7 +171,7 @@ h6 {
         }
     }
 
-    section {
+    >section {
         width: 100%;
         margin: 100px auto 0 auto;
         padding: 0 20px 60px 20px;
@@ -250,20 +250,18 @@ h6 {
             }
         }
     }
+}
 
-    .is-style-centered-mobile {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
+.is-style-centered-mobile {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 
-        @media (min-width: $breakpoint-tablet) {
-            & {
-                margin-left: $padding_s;
-                margin-right: 0;
-                text-align: left;
-            }
+    @media (min-width: $breakpoint-tablet) {
+        & {
+            margin-left: $padding_s;
+            margin-right: 0;
+            text-align: left;
         }
     }
-
-
 }
