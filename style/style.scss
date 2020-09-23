@@ -50,7 +50,7 @@ a,
 li,
 input,
 button,
-cite {
+cite, td {
     color: $brand-primary-color;
 }
 
@@ -60,7 +60,7 @@ a,
 li,
 input,
 button,
-figcaption {
+figcaption, td {
     font-family: 'GT-Haptik-Regular', sans-serif;
     font-size: $font-size-regular;
 }
@@ -86,6 +86,12 @@ em {
 
 pre {
     white-space: break-spaces;
+}
+
+table {
+    td {
+        vertical-align: baseline;
+    }
 }
 
 .section-inner {
