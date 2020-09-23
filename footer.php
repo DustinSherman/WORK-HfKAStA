@@ -37,7 +37,8 @@
             this.classList.toggle("is-active");
             nav.classList.toggle("is-open");
             overlay.classList.toggle("open");
-            document.body.classList.toggle("nav-is-open");
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }, false);
 
         overlay.addEventListener("click", function() {

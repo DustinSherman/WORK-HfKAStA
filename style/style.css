@@ -1062,24 +1062,30 @@ main .content_sidebar-note a[href*='https://']:hover::before {
 main .content a[href*='localhost']::before,
 main .content a[href*='hfkasta']::before,
 main .content a[href*='asta.hfk-bremen']::before,
+main .content a[href*='asta.uiuiui.digital']::before,
 nav .sidebar_note a[href*='localhost']::before,
 nav .sidebar_note a[href*='hfkasta']::before,
 nav .sidebar_note a[href*='asta.hfk-bremen']::before,
+nav .sidebar_note a[href*='asta.uiuiui.digital']::before,
 main .content_sidebar-note a[href*='localhost']::before,
 main .content_sidebar-note a[href*='hfkasta']::before,
-main .content_sidebar-note a[href*='asta.hfk-bremen']::before {
+main .content_sidebar-note a[href*='asta.hfk-bremen']::before,
+main .content_sidebar-note a[href*='asta.uiuiui.digital']::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_internal-red");
 }
 
 main .content a[href*='localhost']:hover::before,
 main .content a[href*='hfkasta']:hover::before,
 main .content a[href*='asta.hfk-bremen']:hover::before,
+main .content a[href*='asta.uiuiui.digital']:hover::before,
 nav .sidebar_note a[href*='localhost']:hover::before,
 nav .sidebar_note a[href*='hfkasta']:hover::before,
 nav .sidebar_note a[href*='asta.hfk-bremen']:hover::before,
+nav .sidebar_note a[href*='asta.uiuiui.digital']:hover::before,
 main .content_sidebar-note a[href*='localhost']:hover::before,
 main .content_sidebar-note a[href*='hfkasta']:hover::before,
-main .content_sidebar-note a[href*='asta.hfk-bremen']:hover::before {
+main .content_sidebar-note a[href*='asta.hfk-bremen']:hover::before,
+main .content_sidebar-note a[href*='asta.uiuiui.digital']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_internal");
 }
 
