@@ -123,6 +123,8 @@
 
     // Register strings
     pll_register_string('Category Menu Title', 'Was möchtest du sehen?', 'Wordpress');
+    pll_register_string('Search Result Success', 'Suchergebnis für', 'Wordpress');
+    pll_register_string('Search Result Fail', 'Kein Suchergebnis für', 'Wordpress');
 
     // exclude styling (css) from "The newsletter plugin"
     // see: https://www.thenewsletterplugin.com/documentation/customization/subscription-forms-style/

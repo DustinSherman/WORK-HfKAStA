@@ -8,7 +8,7 @@
 // Big Headline for Start and top-level items
 .entry-header h1 {
     margin-top: 0;
-    font-size: $font-size-headline-small;
+    font-size: $font-size-headline-50;
     text-align: center;
     font-family: 'GT-Haptik-Regular', sans-serif;
 }
@@ -17,7 +17,7 @@
 body.category:not(.category-allgemein):not(.category-uncategorized-en),
 body.page-child {
     .entry-header h1 {
-        font-size: $font-size-big;
+        font-size: $font-size-25;
     }
 }
 
@@ -33,7 +33,7 @@ body.page-child {
     .category-description p,
     .note,
     .sidebar_note_link span {
-        font-size: $font-size-regular;
+        font-size: $font-size-18;
         text-align: center;
     }
 
@@ -70,14 +70,14 @@ body.page-child {
     // Headline
     // Big Headline for Start and top-level items
     .entry-header h1 {
-        font-size: $font-size-headline-regular;
+        font-size: $font-size-headline-70;
     }
 
     // Small Headline for child-items
     body.category:not(.category-allgemein):not(.category-uncategorized-en),
     body.page-child {
         .entry-header h1 {
-            font-size: $font-size-headline-small;
+            font-size: $font-size-headline-50;
         }
     }
 
@@ -93,7 +93,7 @@ body.page-child {
         }
 
         h1 {
-            width: 80%;
+            width: 70%;
             margin: 0 auto 10px auto;
         }
 
@@ -168,14 +168,14 @@ body.page-child {
     // Headline
     // Big Headline for Start and top-level items
     .entry-header h1 {
-        font-size: $font-size-headline-large;
+        font-size: $font-size-headline-130;
     }
 
     // Small Headline for child-items
     body.category:not(.category-allgemein):not(.category-uncategorized-en),
     body.page-child {
         .entry-header h1 {
-            font-size: $font-size-headline-big;
+            font-size: $font-size-headline-100;
         }
     }
 
@@ -187,7 +187,7 @@ body.page-child {
         }
 
         .note {
-            font-size: $font-size-large;
+            font-size: $font-size-35;
             width: 240px;
         }
 

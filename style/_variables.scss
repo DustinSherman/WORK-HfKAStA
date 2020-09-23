@@ -12,22 +12,23 @@ $contrast-primary-color: #fff;
 $contrast-secondary-color: #fff;
 $text-color: $brand-primary-color;
 $transition-time: .5s;
-$base-font: 'GT-Haptik-Regular', sans-serif;
+$base-font: 'GT-Haptik-Regular',
+sans-serif;
 $border-weight_m: 2px;
 $border-weight_l: 3px;
 
 // Font Sizes
 $font-size-base: 16px;
 
-$font-size-small: .875rem; // 14px
-$font-size-regular: 1.125rem; // 18px
-$font-size-big: 1.5625rem; // 25px
-$font-size-large: 2.1875rem; // 35px
+$font-size-14: .875rem; // 14px
+$font-size-18: 1.125rem; // 18px
+$font-size-25: 1.5625rem; // 25px
+$font-size-35: 2.1875rem; // 35px
 
-$font-size-headline-small: 3.125rem; // 50px
-$font-size-headline-regular: 4.375rem; // 70px
-$font-size-headline-big: 6.25rem; // 100px;
-$font-size-headline-large: 8.125rem; // 130px
+$font-size-headline-50: 3.125rem; // 50px
+$font-size-headline-70: 4.375rem; // 70px
+$font-size-headline-100: 6.25rem; // 100px;
+$font-size-headline-130: 8.125rem; // 130px
 
 // Breakpoints
 $breakpoint-tablet: 768px;
@@ -48,7 +49,7 @@ $footer-icon-size: 40px;
 
 // Ticker
 $ticker-height_s: 40px;
-$ticker-height_m: 40px;
+$ticker-height_m: 50px;
 $ticker-height_l: 65px;
 
 // Language Switch

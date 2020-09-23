@@ -12,12 +12,9 @@
 @import "./page-elevator";
 @import "./content";
 @import "./category";
-<<<<<<< HEAD
 @import "./post";
-=======
 @import "./calendar";
 @import "./forms";
->>>>>>> 292b58918844922ca4b85734c74282990fe3f0f7
 
 *,
 *::before,
@@ -66,7 +63,7 @@ input,
 button,
 figcaption {
     font-family: 'GT-Haptik-Regular', sans-serif;
-    font-size: $font-size-regular;
+    font-size: $font-size-18;
 }
 
 figcaption {
@@ -75,7 +72,7 @@ figcaption {
 
 cite {
     font-family: 'GT-Haptik-Italic', sans-serif;
-    font-size: $font-size-small;
+    font-size: $font-size-14;
 }
 
 a {
@@ -132,15 +129,18 @@ pre {
     box-sizing: border-box;
     position: relative;
     z-index: 20;
+    display: flex;
 
     main {
         position: relative;
+        display: inline-block;
+        width: 100%;
     }
 }
 
 @media (min-width: $breakpoint-tablet) {
     .wrapper {
-        padding: ($ticker-height-m + 2px) 0 $footer-height 0;
+        padding: ($ticker-height_m + 2px) 0 $footer-height 0;
     }
 }
 
@@ -150,7 +150,7 @@ pre {
         display: flex;
 
         main {
-            width: calc(100% - #{$sidebar-width});
+            min-width: calc(100% - #{$sidebar-width});
         }
     }
 }
@@ -171,6 +171,6 @@ pre {
     input,
     button,
     figcaption {
-        font-size: $font-size-big;
+        font-size: $font-size-25;
     }
 }

@@ -13,7 +13,7 @@
     margin-top: $ticker-height_s - 20px;
     left: -13px;
     transform: rotate($language-menu-rotation);
-    font-size: $font-size-small;
+    font-size: $font-size-14;
 
     ul {
         margin: 0;
@@ -45,8 +45,7 @@
 
 @media (min-width: $breakpoint-tablet) {
     .language-switch {
-        font-size: $font-size-regular;
-        margin-top: $ticker-height_m;
+        font-size: $font-size-18;
     }
 }
 

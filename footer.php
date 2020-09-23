@@ -28,6 +28,7 @@
         let footerHeight = document.getElementById('footer').clientHeight;
         let hamburger = document.getElementById('hamburger');
         let languageSwitch = document.getElementById('language-switch');
+        let homeLink = document.getElementById('home-link');
 
         let documentHeight = document.body.clientHeight;
 
@@ -36,6 +37,7 @@
             this.classList.toggle("is-active");
             nav.classList.toggle("is-open");
             overlay.classList.toggle("open");
+            document.body.classList.toggle("nav-is-open");
         }, false);
 
         overlay.addEventListener("click", function() {
@@ -58,12 +60,17 @@
 
         function scroll() {
             let elementTop = 0;
+            let tickerHeight = 40;
+
+            if (window.innerWidth >= 768) {
+                tickerHeight = 50;
+            }
 
             // Move Hamburger Menu & language switch
             if (window.pageYOffset <= 100) {
 
-                if (window.pageYOffset <= 40) {
-                    elementTop = (40 - window.pageYOffset);
+                if (window.pageYOffset <= tickerHeight) {
+                    elementTop = (tickerHeight - window.pageYOffset);
                 } else {
                     elementTop = 0;
                 }
@@ -71,6 +78,7 @@
 
             hamburger.style.top = elementTop + 'px';
             languageSwitch.style.top = elementTop + 'px';
+            homeLink.style.top = elementTop + 'px';
 
             // Show / Hide Page-Elevator
             if (window.innerWidth >= 768) {
@@ -88,6 +96,13 @@
         if (navParents.length > 0) {
             forEach(navParents, function(navParent) {
                 navParent.addEventListener("click", function() {
+                    let me = this;
+
+                    forEach(navParents, function(navParent) {
+                        if (navParent != me) {
+                            navParent.parentNode.classList.remove("is-open");
+                        }
+                    });
                     this.parentNode.classList.toggle("is-open");
                 }, false);
             });

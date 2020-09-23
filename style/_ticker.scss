@@ -10,13 +10,13 @@
     border-bottom: $border-weight_m solid $brand-primary-color;
     background: #fff;
     z-index: 30;
-    height: $ticker-height-s;
+    height: $ticker-height_s;
     box-sizing: border-box;
-    margin-bottom: -($ticker-height-s + 2px);
+    margin-bottom: -($ticker-height_s + 2px);
     position: relative;
 
     .ticker {
-        font-size: $font-size-regular;
+        font-size: $font-size-18;
         white-space: nowrap;
         box-sizing: content-box;
         position: absolute;
@@ -53,19 +53,19 @@
         .news {
 
             a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']) {
-                padding-right: $font-size-regular * 2.5;
+                padding-right: $font-size-18 * 2.5;
 
                 &::before {
                     content: '';
                     display: block;
                     float: left;
-                    width: $font-size-regular * 2;
-                    min-width: $font-size-regular * 2;
-                    flex-basis: $font-size-regular * 2;
-                    height: $font-size-regular * 2;
+                    width: $font-size-18 * 2;
+                    min-width: $font-size-18 * 2;
+                    flex-basis: $font-size-18 * 2;
+                    height: $font-size-18 * 2;
                     background-repeat: no-repeat;
                     background-position: center center;
-                    padding: 0 $font-size-regular/4;
+                    padding: 0 $font-size-18/4;
                     background-image: url('../assets/hfkasta_stack.svg#m_link_external');
                 }
 
@@ -79,26 +79,26 @@
 
 @media (min-width: $breakpoint-tablet) {
     .ticker-wrap {
-        height: $ticker-height-m;
-        margin-bottom: -($ticker-height-m + 2px);
+        height: $ticker-height_m;
+        margin-bottom: -($ticker-height_m + 2px);
 
         .ticker {
-            font-size: $font-size-big;
+            font-size: $font-size-25;
 
             a p {
-                font-size: $font-size-big;
+                font-size: $font-size-25;
             }
 
             .news {
 
                 a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']) {
-                    padding-right: $font-size-large * 2.5;
+                    padding-right: $font-size-35 * 2.5;
 
                     &::before {
-                        width: $font-size-large * 2;
-                        min-width: $font-size-large * 2;
-                        flex-basis: $font-size-large * 2;
-                        height: $font-size-large * 2;
+                        width: $font-size-35 * 2;
+                        min-width: $font-size-35 * 2;
+                        flex-basis: $font-size-35 * 2;
+                        height: $font-size-35 * 2;
                     }
                 }
             }
@@ -112,22 +112,22 @@
         margin-bottom: -($ticker-height-l + 2px);
 
         .ticker {
-            font-size: $font-size-big;
+            font-size: $font-size-35;
 
             .news {
 
                 a p {
-                    font-size: $font-size-big;
+                    font-size: $font-size-35;
                 }
 
                 a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']) {
-                    padding-right: $font-size-big * 2.5;
+                    padding-right: $font-size-35 * 2.5;
 
                     &::before {
-                        width: $font-size-big * 2;
-                        min-width: $font-size-big * 2;
-                        flex-basis: $font-size-big * 2;
-                        height: $font-size-big * 2;
+                        width: $font-size-35 * 2;
+                        min-width: $font-size-35 * 2;
+                        flex-basis: $font-size-35 * 2;
+                        height: $font-size-35 * 2;
                     }
                 }
             }

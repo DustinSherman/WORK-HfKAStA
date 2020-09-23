@@ -6,7 +6,7 @@
 
     <div class="content">
         <h4><?php the_title(); ?></h4>
-        <div class="post-subline">
+        <p class="post-subline">
             <span class="post-date"><?php the_date(); ?></span>
             <span class="post-subline-seperator">&nbsp;|&nbsp;</span>
             <span class="post-categories">
@@ -30,7 +30,7 @@
                     }
                 ?>
             </span>
-        </div>
+        </p>
 
         <?php the_content(); ?>
     </div>

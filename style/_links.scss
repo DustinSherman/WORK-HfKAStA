@@ -42,7 +42,7 @@ main .content_sidebar-note {
     // Exclude mail- and telefon-links
     a:not([href*='mailto:']),
     a:not([href*='tel:']) {
-        height: $font-size-regular * 2;
+        height: $font-size-18 * 2;
         display: flex;
         align-items: center;
 
@@ -128,7 +128,7 @@ main .content_sidebar-note {
         // Exclude mail- and telefon-links
         a:not([href*='mailto:']),
         a:not([href*='tel:']) {
-            height: $font-size-big * 2;
+            height: $font-size-25 * 2;
 
             &::before {
                 width: 36px;

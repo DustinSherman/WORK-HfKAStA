@@ -8,10 +8,12 @@ body.single {
         padding-top: 100px;
 
         h4 {
-            margin: 0;
+            margin: 0 auto;
         }
 
         .post-subline {
+            margin: 0 auto 1rem auto;
+
             .post-subline-seperator {
                 display: none;
             }

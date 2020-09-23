@@ -9,6 +9,11 @@
         .search-result-link {
             padding: 20px 0;
             display: block;
+            height: auto;
+
+            &::before {
+                display: none;
+            }
 
             &:not(:first-child) {
                 border-top: $border-weight_m solid $brand-primary-color;
