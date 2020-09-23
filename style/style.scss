@@ -12,7 +12,12 @@
 @import "./page-elevator";
 @import "./content";
 @import "./category";
+<<<<<<< HEAD
 @import "./post";
+=======
+@import "./calendar";
+@import "./forms";
+>>>>>>> 292b58918844922ca4b85734c74282990fe3f0f7
 
 *,
 *::before,
@@ -60,7 +65,7 @@ li,
 input,
 button,
 figcaption {
-    font-family: 'GT Haptik Regular', sans-serif;
+    font-family: 'GT-Haptik-Regular', sans-serif;
     font-size: $font-size-regular;
 }
 
@@ -69,7 +74,7 @@ figcaption {
 }
 
 cite {
-    font-family: 'GT Haptik Italic', sans-serif;
+    font-family: 'GT-Haptik-Italic', sans-serif;
     font-size: $font-size-small;
 }
 
@@ -80,7 +85,7 @@ a {
 
 em {
     font-style: normal;
-    font-family: 'GT Haptik Italic', sans-serif;
+    font-family: 'GT-Haptik-Italic', sans-serif;
 }
 
 pre {

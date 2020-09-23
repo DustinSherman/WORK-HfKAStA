@@ -20,8 +20,13 @@ input + label + button
  */
 
 input {
+<<<<<<< HEAD
   background: $contrast-primary-color;
   border: $border-weight solid $brand-primary-color;
+=======
+  background:$contrast-primary-color;
+  border: $border-weight_m solid $brand-primary-color;
+>>>>>>> 292b58918844922ca4b85734c74282990fe3f0f7
   border-radius: 0;
 }
 
@@ -34,8 +39,13 @@ button {
   margin: .4em 0;
   border-radius: 0;
   box-sizing: border-box;
+<<<<<<< HEAD
   background: $contrast-primary-color;
   border: $border-weight solid $brand-primary-color;
+=======
+  background:$contrast-primary-color;
+  border: $border-weight_m solid $brand-primary-color;
+>>>>>>> 292b58918844922ca4b85734c74282990fe3f0f7
 }
 
 input[type="submit"],
@@ -46,7 +56,7 @@ button {
   color: $contrast-primary-color;
   border-radius: 0;
   cursor: pointer;
-  border: $border-weight solid $brand-primary-color;
+  border: $border-weight_m solid $brand-primary-color;
 
   &:focus,
   &:hover {
@@ -65,7 +75,13 @@ textarea:focus {
 }
 
 label {
-  font-size: 0.6em;
+  font-size: 1em;
+
+  span { // Help Text
+    font-size: 1em;
+    //color: $brand-turquoise-color;
+    font-style: italic;
+  }
 }
 
 /*
@@ -77,6 +93,7 @@ input[type="checkbox"] {
   @extend .visuallyhidden;
 }
 
+<<<<<<< HEAD
 input[type="radio"]+label,
 input[type="radio"]+.wpcf7-list-item-label,
 input[type="checkbox"]+label,
@@ -93,6 +110,21 @@ input[type="checkbox"]+.wpcf7-list-item-label {
     width: 20px;
     height: 20px;
     background: $contrast-primary-color;
+=======
+input[type="radio"] + label, input[type="radio"] + .wpcf7-list-item-label,
+input[type="checkbox"] + label, input[type="checkbox"] + .wpcf7-list-item-label {
+  position:relative;
+  padding-left:25px;
+  &:before{
+    position:absolute;
+    left:0;
+    top:0;
+    content:" ";
+    display:block;
+    width:20px;
+    height:20px;
+    background:$contrast-primary-color;
+>>>>>>> 292b58918844922ca4b85734c74282990fe3f0f7
     border: $border-weight_m solid $contrast-primary-color;
     outline: $border-weight_m solid $brand-primary-color;
   }
@@ -147,8 +179,13 @@ select {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+<<<<<<< HEAD
   background-color: $contrast-primary-color;
   border: $border-weight solid $brand-primary-color;
+=======
+  background-color:$contrast-primary-color;
+  border: $border-weight_m solid $brand-primary-color;
+>>>>>>> 292b58918844922ca4b85734c74282990fe3f0f7
 
   /* arrow icon */
   background-image: url('../assets/arrow_purple.svg');
