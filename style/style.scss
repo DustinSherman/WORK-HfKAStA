@@ -135,6 +135,7 @@ pre {
         position: relative;
         display: inline-block;
         width: 100%;
+        min-width: 100%;
     }
 }
 
@@ -161,6 +162,7 @@ pre {
 
         main {
             width: 70%;
+            min-width: auto;
         }
     }
 

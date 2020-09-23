@@ -53,19 +53,21 @@
         .news {
 
             a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']) {
-                padding-right: $font-size-18;
+                padding-right: 28.1px;
 
                 &::before {
                     content: '';
                     display: block;
                     float: left;
-                    width: $font-size-18;
-                    min-width: $font-size-18;
-                    flex-basis: $font-size-18;
-                    height: $font-size-18;
+                    width: 28.1px;
+                    height: 20.5px;
+                    min-width: 28.1px;
+                    flex-basis: 28.1px;
+                    margin-top: 8px;
                     background-repeat: no-repeat;
                     background-position: center center;
-                    padding: 0 $font-size-18/4;
+                    background-size: cover;
+                    padding: 0;
                     background-image: url('../assets/hfkasta_stack.svg#m_link_external');
                 }
 
@@ -92,13 +94,20 @@
             .news {
 
                 a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']) {
-                    padding-right: $font-size-35;
+                    padding-right: 40px;
 
                     &::before {
-                        width: $font-size-35;
-                        min-width: $font-size-35;
-                        flex-basis: $font-size-35;
-                        height: $font-size-35;
+                        background-image: url('../assets/hfkasta_stack.svg#l_link_external');
+                        margin-top: 12px;
+                        width: 36px;
+                        height: 32px;
+                        min-width: 36px;
+                        flex-basis: 36px;
+                        padding: 0 4px 0 0;
+                    }
+
+                    &:hover::before {
+                        background-image: url('../assets/hfkasta_stack.svg#l_link_external-red');
                     }
                 }
             }
@@ -121,13 +130,11 @@
                 }
 
                 a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']) {
-                    padding-right: $font-size-35;
+                    padding-right: 44px;
 
                     &::before {
-                        width: $font-size-35;
-                        min-width: $font-size-35;
-                        flex-basis: $font-size-35;
-                        height: $font-size-35;
+                        margin-top: 18px;
+                        padding: 0 8px 0 0;
                     }
                 }
             }

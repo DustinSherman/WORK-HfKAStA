@@ -115,7 +115,7 @@
 
         function setTickerValues() {
             let ticker = document.getElementById('ticker');
-            let tickerWidth = -ticker.clientWidth/4;
+            let tickerWidth = -ticker.clientWidth/tickerNewsCount;
 
             document.documentElement.style.setProperty('--tickerWidth', tickerWidth + 'px');
 

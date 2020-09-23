@@ -165,6 +165,10 @@ body.page-child {
 
 @media (min-width: $breakpoint-screen) {
 
+    .home-link {
+        margin-top: 100px;
+    }
+
     // Headline
     // Big Headline for Start and top-level items
     .entry-header h1 {
