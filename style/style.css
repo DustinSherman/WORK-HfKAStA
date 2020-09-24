@@ -1229,12 +1229,9 @@ footer .menu a:hover {
   color: #d50e31;
 }
 
-main .content p a:not([href*='mailto:']),
-main .content p a:not([href*='tel:']),
-nav .sidebar_note p a:not([href*='mailto:']),
-nav .sidebar_note p a:not([href*='tel:']),
-main .content_sidebar-note p a:not([href*='mailto:']),
-main .content_sidebar-note p a:not([href*='tel:']) {
+main .content p a,
+nav .sidebar_note p a,
+main .content_sidebar-note p a {
   height: 2.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1244,12 +1241,9 @@ main .content_sidebar-note p a:not([href*='tel:']) {
           align-items: center;
 }
 
-main .content p a:not([href*='mailto:'])::before,
-main .content p a:not([href*='tel:'])::before,
-nav .sidebar_note p a:not([href*='mailto:'])::before,
-nav .sidebar_note p a:not([href*='tel:'])::before,
-main .content_sidebar-note p a:not([href*='mailto:'])::before,
-main .content_sidebar-note p a:not([href*='tel:'])::before {
+main .content p a::before,
+nav .sidebar_note p a::before,
+main .content_sidebar-note p a::before {
   content: '';
   display: block;
   float: left;
@@ -1260,6 +1254,24 @@ main .content_sidebar-note p a:not([href*='tel:'])::before {
   height: 20.5px;
   background-repeat: no-repeat;
   background-position: left center;
+}
+
+main .content p a[href*='mailto'],
+main .content p a[href*='tel'],
+nav .sidebar_note p a[href*='mailto'],
+nav .sidebar_note p a[href*='tel'],
+main .content_sidebar-note p a[href*='mailto'],
+main .content_sidebar-note p a[href*='tel'] {
+  height: auto;
+}
+
+main .content p a[href*='mailto']::before,
+main .content p a[href*='tel']::before,
+nav .sidebar_note p a[href*='mailto']::before,
+nav .sidebar_note p a[href*='tel']::before,
+main .content_sidebar-note p a[href*='mailto']::before,
+main .content_sidebar-note p a[href*='tel']::before {
+  display: none;
 }
 
 main .content p a[href*='http://']::before,
