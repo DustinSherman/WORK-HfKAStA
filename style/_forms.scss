@@ -209,12 +209,28 @@ select {
 }
 
 // Error Messages
-.wpcf7 form.invalid .wpcf7-response-output,
-.wpcf7 form.unaccepted .wpcf7-response-output {
-	margin: 0;
-	border: $border-weight_m solid $brand-secondary-color;
-	border-color: $brand-secondary-color;
-	font-family: 'GT-Haptik-Regular-Oblique', sans-serif;
-	color: $brand-secondary-color;
-	padding: 20px;
+body {
+
+	.wpcf7 form.invalid .wpcf7-response-output,
+	.wpcf7 form.unaccepted .wpcf7-response-output {
+		margin: 0;
+		border: $border-weight_m solid $brand-secondary-color;
+		font-family: 'GT-Haptik-Regular-Oblique', sans-serif;
+		font-size: $font-size-18;
+		color: $brand-secondary-color;
+		padding: 20px;
+	}
+}
+
+@media (min-width: $breakpoint-screen) {
+
+	// Error Messages
+	body {
+
+		.wpcf7 form.invalid .wpcf7-response-output,
+		.wpcf7 form.unaccepted .wpcf7-response-output {
+			border: $border-weight_l solid $brand-secondary-color;
+			font-size: $font-size-25;
+		}
+	}
 }

@@ -2163,14 +2163,22 @@ select:disabled:hover, select[aria-disabled=true] {
   border-color: #aaa;
 }
 
-.wpcf7 form.invalid .wpcf7-response-output,
-.wpcf7 form.unaccepted .wpcf7-response-output {
+body .wpcf7 form.invalid .wpcf7-response-output,
+body .wpcf7 form.unaccepted .wpcf7-response-output {
   margin: 0;
   border: 2px solid #d50e31;
-  border-color: #d50e31;
   font-family: 'GT-Haptik-Regular-Oblique', sans-serif;
+  font-size: 1.125rem;
   color: #d50e31;
   padding: 20px;
+}
+
+@media (min-width: 1680px) {
+  body .wpcf7 form.invalid .wpcf7-response-output,
+  body .wpcf7 form.unaccepted .wpcf7-response-output {
+    border: 3px solid #d50e31;
+    font-size: 1.5625rem;
+  }
 }
 
 *,
