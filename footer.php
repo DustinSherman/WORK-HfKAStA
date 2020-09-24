@@ -123,18 +123,6 @@
 
             document.documentElement.style.setProperty('--tickerDuration', tickerDuration + 's');
         }
-
-        // Prevent empty searches
-        /*
-        let searchBar = document.getElementById('search-bar');
-        let searchSubmit = document.getElementById('search-submit');
-
-        searchSubmit.addEventListener("click", function() {
-            if (searchBar.value == '') {
-                return false;
-            }   
-        });
-        */
     </script>
     <style>
         .ticker-wrap .ticker {
