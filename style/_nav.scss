@@ -157,7 +157,7 @@ nav {
             &::-webkit-input-placeholder {
                 color: $brand-primary-color;
                 // line-height: $search-bar-height_m;
-                line-height: $font-size-18;
+                line-height: $font-size-18 + .1rem;
                 vertical-align: middle;
             }
 
