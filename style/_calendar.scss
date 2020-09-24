@@ -49,6 +49,10 @@
       }
     }
 
+    ul.events li {
+      padding: 0;
+    }
+
     .events .event {
       border: none;
       background: transparent !important;
@@ -61,8 +65,14 @@
       }
     }
 
+    .today .day {
+      background-color: $brand-primary-color;
+    }
+
     .day {
       background-color: $brand-primary-color;
+      padding: 0.5em 0.8em;
+      margin: 0 -0.8em;
 
       span { // day title like Dienstag, 22. September 2020
         color: $contrast-primary-color;
