@@ -561,6 +561,10 @@ footer {
   margin-top: -60px;
 }
 
+footer .menu-footer-de-en-container {
+  width: 100%;
+}
+
 footer ul {
   margin: 10px 0;
   padding: 0;
@@ -569,7 +573,17 @@ footer ul {
 footer ul li {
   list-style-type: none;
   display: inline-block;
-  margin-right: 20px;
+  margin-bottom: 6px;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  footer ul li {
+    width: auto;
+    margin: 0 20px 0 0;
+    text-align: left;
+  }
 }
 
 /*
