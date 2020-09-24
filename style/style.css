@@ -1291,14 +1291,17 @@ main .content p a[href*='localhost']::before,
 main .content p a[href*='hfkasta']::before,
 main .content p a[href*='asta.hfk-bremen']::before,
 main .content p a[href*='asta.uiuiui.digital']::before,
+main .content p a[href*='mailto:']::before,
 nav .sidebar_note p a[href*='localhost']::before,
 nav .sidebar_note p a[href*='hfkasta']::before,
 nav .sidebar_note p a[href*='asta.hfk-bremen']::before,
 nav .sidebar_note p a[href*='asta.uiuiui.digital']::before,
+nav .sidebar_note p a[href*='mailto:']::before,
 main .content_sidebar-note p a[href*='localhost']::before,
 main .content_sidebar-note p a[href*='hfkasta']::before,
 main .content_sidebar-note p a[href*='asta.hfk-bremen']::before,
-main .content_sidebar-note p a[href*='asta.uiuiui.digital']::before {
+main .content_sidebar-note p a[href*='asta.uiuiui.digital']::before,
+main .content_sidebar-note p a[href*='mailto:']::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_internal-red");
 }
 
@@ -1306,14 +1309,17 @@ main .content p a[href*='localhost']:hover::before,
 main .content p a[href*='hfkasta']:hover::before,
 main .content p a[href*='asta.hfk-bremen']:hover::before,
 main .content p a[href*='asta.uiuiui.digital']:hover::before,
+main .content p a[href*='mailto:']:hover::before,
 nav .sidebar_note p a[href*='localhost']:hover::before,
 nav .sidebar_note p a[href*='hfkasta']:hover::before,
 nav .sidebar_note p a[href*='asta.hfk-bremen']:hover::before,
 nav .sidebar_note p a[href*='asta.uiuiui.digital']:hover::before,
+nav .sidebar_note p a[href*='mailto:']:hover::before,
 main .content_sidebar-note p a[href*='localhost']:hover::before,
 main .content_sidebar-note p a[href*='hfkasta']:hover::before,
 main .content_sidebar-note p a[href*='asta.hfk-bremen']:hover::before,
-main .content_sidebar-note p a[href*='asta.uiuiui.digital']:hover::before {
+main .content_sidebar-note p a[href*='asta.uiuiui.digital']:hover::before,
+main .content_sidebar-note p a[href*='mailto:']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_internal");
 }
 
@@ -1388,28 +1394,34 @@ main .content_sidebar-note p a[href*='portal.hfk-bremen.de']:hover::before {
   main .content p a[href*='hfkasta']::before,
   main .content p a[href*='asta.hfk-bremen']::before,
   main .content p a[href*='asta.uiuiui.digital']::before,
+  main .content p a[href*='mailto:']::before,
   nav .sidebar_note p a[href*='localhost']::before,
   nav .sidebar_note p a[href*='hfkasta']::before,
   nav .sidebar_note p a[href*='asta.hfk-bremen']::before,
   nav .sidebar_note p a[href*='asta.uiuiui.digital']::before,
+  nav .sidebar_note p a[href*='mailto:']::before,
   main .content_sidebar-note p a[href*='localhost']::before,
   main .content_sidebar-note p a[href*='hfkasta']::before,
   main .content_sidebar-note p a[href*='asta.hfk-bremen']::before,
-  main .content_sidebar-note p a[href*='asta.uiuiui.digital']::before {
+  main .content_sidebar-note p a[href*='asta.uiuiui.digital']::before,
+  main .content_sidebar-note p a[href*='mailto:']::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_internal-red");
   }
   main .content p a[href*='localhost']:hover::before,
   main .content p a[href*='hfkasta']:hover::before,
   main .content p a[href*='asta.hfk-bremen']:hover::before,
   main .content p a[href*='asta.uiuiui.digital']:hover::before,
+  main .content p a[href*='mailto:']:hover::before,
   nav .sidebar_note p a[href*='localhost']:hover::before,
   nav .sidebar_note p a[href*='hfkasta']:hover::before,
   nav .sidebar_note p a[href*='asta.hfk-bremen']:hover::before,
   nav .sidebar_note p a[href*='asta.uiuiui.digital']:hover::before,
+  nav .sidebar_note p a[href*='mailto:']:hover::before,
   main .content_sidebar-note p a[href*='localhost']:hover::before,
   main .content_sidebar-note p a[href*='hfkasta']:hover::before,
   main .content_sidebar-note p a[href*='asta.hfk-bremen']:hover::before,
-  main .content_sidebar-note p a[href*='asta.uiuiui.digital']:hover::before {
+  main .content_sidebar-note p a[href*='asta.uiuiui.digital']:hover::before,
+  main .content_sidebar-note p a[href*='mailto:']:hover::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_internal");
   }
   main .content p a[href*='.pdf']::before,
@@ -1587,9 +1599,22 @@ h6 {
   margin: 1rem auto;
 }
 
-.wrapper main .content > ul,
 .wrapper main .content > ol {
-  padding-left: 20px;
+  padding-left: 24.1px;
+}
+
+.wrapper main .content > ul {
+  padding-left: 0;
+}
+
+.wrapper main .content > ul li {
+  list-style-type: none;
+}
+
+.wrapper main .content > ul li::before {
+  content: '-';
+  width: 24.1px;
+  display: inline-block;
 }
 
 .wrapper main .content p a {
@@ -1689,6 +1714,7 @@ h6 {
   border-style: solid;
   border-color: #5a00be;
   max-width: 40%;
+  margin: 35px auto;
 }
 
 .wrapper main .content .wp-block-separator.has-purple-background-color {
@@ -1761,6 +1787,20 @@ h6 {
   h5,
   h6 {
     font-size: 1.5625rem;
+  }
+  .wrapper main .content > ol {
+    padding-left: 24.1px;
+  }
+  .wrapper main .content > ul {
+    padding-left: 0;
+  }
+  .wrapper main .content > ul li {
+    list-style-type: none;
+  }
+  .wrapper main .content > ul li::before {
+    content: '-';
+    width: 24.1px;
+    display: inline-block;
   }
   .wrapper main .content figure.wp-block-gallery li.blocks-gallery-item figure figcaption {
     font-size: 1.5625rem;

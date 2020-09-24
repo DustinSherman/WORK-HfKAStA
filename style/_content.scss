@@ -51,9 +51,23 @@ h6 {
             margin: 1rem auto;
         }
 
-        &>ul,
+        // Lists
         &>ol {
-            padding-left: 20px;
+            padding-left: 24.1px;
+        }
+
+        &>ul {
+            padding-left: 0;
+
+            li {
+                list-style-type: none;
+
+                &::before {
+                    content: '-';
+                    width: 24.1px;
+                    display: inline-block;
+                }
+            }
         }
 
         // Links in regular text
@@ -160,6 +174,7 @@ h6 {
             border-style: solid;
             border-color: $brand-primary-color;
             max-width: 40%;
+            margin: 35px auto;
 
             &.has-purple-background-color {
                 border-color: $brand-primary-color;
@@ -252,6 +267,15 @@ h6 {
 
     .wrapper main {
         .content {
+
+            // Lists
+            &>ol {
+                padding-left: 36px;
+            }
+
+            &>ul li&::before {
+                width: 36px;
+            }
 
             // Gallery
             figure.wp-block-gallery li.blocks-gallery-item figure {

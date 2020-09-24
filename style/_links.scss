@@ -83,7 +83,8 @@ main .content_sidebar-note p {
     a[href*='localhost'],
     a[href*='hfkasta'],
     a[href*='asta.hfk-bremen'],
-    a[href*='asta.uiuiui.digital'] {
+    a[href*='asta.uiuiui.digital'],
+    a[href*='mailto:'] {
         &::before {
             background-image: url('../assets/hfkasta_stack.svg#m_link_internal-red');
         }
@@ -162,7 +163,8 @@ main .content_sidebar-note p {
         a[href*='localhost'],
         a[href*='hfkasta'],
         a[href*='asta.hfk-bremen'],
-        a[href*='asta.uiuiui.digital'] {
+        a[href*='asta.uiuiui.digital'],
+        a[href*='mailto:'] {
             &::before {
                 background-image: url('../assets/hfkasta_stack.svg#l_link_internal-red');
             }
