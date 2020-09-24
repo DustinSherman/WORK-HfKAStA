@@ -118,7 +118,7 @@ nav {
     }
 
     .search-form {
-        height: $search-bar-height_m;
+        height: $search-bar-height_m !important;
         width: 100%;
         position: relative;
         margin-left: -$search-form-padding;
@@ -128,10 +128,10 @@ nav {
             height: 100%;
             padding: $search-form-padding;
             border: 0;
-            border-radius: 0;
+            border-radius: 0 !important;
             background: #fff;
             color: $brand-primary-color;
-            border: $border-weight_m solid $brand-primary-color;
+            border: $border-weight_m solid $brand-primary-color !important;
             margin: 0;
 
             &:focus {
