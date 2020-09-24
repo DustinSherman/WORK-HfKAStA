@@ -230,6 +230,8 @@ body div.wpcf7 .ajax-loader {
 	animation-iteration-count: infinite;
 	-webkit-animation-timing-function: linear;
 	animation-timing-function: linear;
+	-webkit-animation-duration: 4s;
+	animation-duration: 4s;
 	-webkit-animation-name: loading;
 	animation-name: loading;
 }
