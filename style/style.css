@@ -342,12 +342,14 @@ nav .search-form .search-field:focus {
 nav .search-form .search-field::-webkit-input-placeholder, nav .search-form .search-field::-webkit-input-placeholder {
   color: #5a00be;
   line-height: 1.325rem;
+  opacity: 1;
   vertical-align: middle;
 }
 
 nav .search-form .search-field::placeholder, nav .search-form .search-field::-webkit-input-placeholder {
   color: #5a00be;
   line-height: 1.325rem;
+  opacity: 1;
   vertical-align: middle;
 }
 
