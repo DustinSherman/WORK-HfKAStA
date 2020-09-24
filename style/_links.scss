@@ -57,8 +57,7 @@ main .content_sidebar-note p {
         }
     }
 
-    // Exclude mail- and telefon-links
-    a[href*='mailto'],
+    // Exclude telefon-links
     a[href*='tel'] {
         height: auto;
         display: inline;
@@ -135,8 +134,7 @@ main .content_sidebar-note p {
     nav .sidebar_note p,
     main .content_sidebar-note p {
 
-        // Exclude mail- and telefon-links
-        a:not([href*='mailto:']),
+        // Exclude telefon-links
         a:not([href*='tel:']) {
             height: $font-size-25 * 2;
 
