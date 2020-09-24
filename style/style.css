@@ -1489,6 +1489,7 @@ h6 {
   border-left: 0;
   border-right: 0;
   border-style: solid;
+  border-color: #5a00be;
 }
 
 .wrapper main .content .wp-block-separator.has-purple-background-color {
@@ -1601,7 +1602,7 @@ body.category .content .category-menu li {
 }
 
 body.category .content .category-menu li.current-cat a {
-  font-family: 'GT Haptik Bold', sans-serif;
+  font-family: 'GT-Haptik-Bold', sans-serif;
 }
 
 body.category .content .category-menu li a {
@@ -1641,6 +1642,31 @@ body.category .content .post-preview .post-preview-arrow {
   background-position: center center;
   background-size: cover;
   background-image: url("../assets/hfkasta_stack.svg#m_link_internal-red");
+}
+
+body.category .content .pagination {
+  padding: 20px 15px 10px 15px;
+}
+
+body.category .content .pagination-link {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 38.56px;
+  height: 56.75px;
+  background-image: url("../assets/hfkasta_stack.svg#m_arrow_elevator_red");
+}
+
+body.category .content .pagination-link.next {
+  float: right;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+body.category .content .pagination-link.prev {
+  float: left;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 /*
@@ -1982,7 +2008,10 @@ a,
 li,
 input,
 button,
-cite, td {
+cite,
+td,
+label,
+dt {
   color: #5a00be;
 }
 
@@ -1992,7 +2021,9 @@ a,
 li,
 input,
 button,
-figcaption, td {
+figcaption,
+td,
+label {
   font-family: 'GT-Haptik-Regular', sans-serif;
   font-size: 1.125rem;
 }
@@ -2114,7 +2145,8 @@ table td {
   li,
   input,
   button,
-  figcaption {
+  figcaption,
+  label {
     font-size: 1.5625rem;
   }
 }

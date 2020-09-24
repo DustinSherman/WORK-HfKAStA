@@ -146,4 +146,16 @@
     add_action( 'admin_init', 'remove_dashboard_meta' );
 
     include_once 'organigramm.php';
+
+    // Add Class to prev and next link
+    add_filter('next_posts_link_attributes', 'next_posts_link_attributes');
+    function next_posts_link_attributes() {
+        return 'class="pagination-link next"';
+    }
+
+    add_filter('previous_posts_link_attributes', 'prev_posts_link_attributes');
+    function prev_posts_link_attributes() {
+        return 'class="pagination-link prev"';
+    }
+
 ?>

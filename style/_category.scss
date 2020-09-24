@@ -4,69 +4,90 @@
     The markup is located in the index.php.
 */
 
-body.category {
-    .content {
-        padding: 0;
+body.category .content {
+    padding: 0;
 
-        .category-menu,
-        .post-preview {
-            padding: 0 $padding_s $padding_s $padding_s;
-        }
+    .category-menu,
+    .post-preview {
+        padding: 0 $padding_s $padding_s $padding_s;
+    }
 
-        .category-menu {
-            text-align: center;
+    .category-menu {
+        text-align: center;
 
-            li {
-                list-style-type: none;
-                display: inline-block;
-                margin: 0 10px;
+        li {
+            list-style-type: none;
+            display: inline-block;
+            margin: 0 10px;
 
-                &.current-cat a {
-                    font-family: 'GT Haptik Bold', sans-serif;
-                }
+            &.current-cat a {
+                font-family: 'GT-Haptik-Bold', sans-serif;
+            }
 
-                a {
-                    color: $brand-primary-color;
+            a {
+                color: $brand-primary-color;
 
-                    &::before {
-                        display: none;
-                    }
+                &::before {
+                    display: none;
                 }
             }
         }
+    }
 
-        .post-preview {
+    .post-preview {
 
-            &:not(:last-child) {
-                border-bottom: $border-weight_m solid $brand-primary-color;
-            }
+        &:not(:last-child) {
+            border-bottom: $border-weight_m solid $brand-primary-color;
+        }
 
-            h3 {
-                margin-bottom: 0;
-            }
+        h3 {
+            margin-bottom: 0;
+        }
 
-            .post-preview-categories {
-                display: block;
+        .post-preview-categories {
+            display: block;
 
-                a {
-                    color: $brand-primary-color;
-                    display: inline-block;
+            a {
+                color: $brand-primary-color;
+                display: inline-block;
 
-                    &::before {
-                        display: none;
-                    }
+                &::before {
+                    display: none;
                 }
             }
+        }
 
-            .post-preview-arrow {
-                display: inline-block;
-                width: 28.1px;
-                height: 20.5px;
-                background-repeat: no-repeat;
-                background-position: center center;
-                background-size: cover;
-                background-image: url('../assets/hfkasta_stack.svg#m_link_internal-red');
-            }
+        .post-preview-arrow {
+            display: inline-block;
+            width: 28.1px;
+            height: 20.5px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-image: url('../assets/hfkasta_stack.svg#m_link_internal-red');
+        }
+    }
+
+    .pagination {
+        padding: 20px 15px 10px 15px;
+    }
+
+    .pagination-link {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 38.56px;
+        height: 56.75px;
+        background-image: url('../assets/hfkasta_stack.svg#m_arrow_elevator_red');
+
+        &.next {
+            float: right;
+            transform: rotate(90deg);
+        }
+
+        &.prev {
+            float: left;
+            transform: rotate(-90deg);
         }
     }
 }
