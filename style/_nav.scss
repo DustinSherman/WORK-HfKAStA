@@ -335,13 +335,17 @@ nav {
         .sidebar_note,
         .sidebar_note_top {
             display: inline-block;
+            width: calc(100% + 42px);
+            margin: 0 -21px 20px;
+            padding: 0 20px 20px 20px;
+        }
+
+        .sidebar_note {
+            border-top: $border-weight_m solid $brand-primary-color;
         }
 
         .sidebar_note_top {
             border-bottom: $border-weight_m solid $brand-primary-color;
-            width: calc(100% + 42px);
-            margin: 0 -21px 20px;
-            padding: 0 20px 20px 20px;
 
             p {
                 margin: 0;
@@ -412,6 +416,10 @@ nav {
                     }
                 }
             }
+        }
+
+        .sidebar_note {
+            border-top: $border-weight_l solid $brand-primary-color;
         }
 
         .sidebar_note_top {

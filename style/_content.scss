@@ -104,13 +104,14 @@ h6 {
         figure.wp-block-gallery {
             li.blocks-gallery-item {
                 display: block;
+                text-align: center;
 
                 figure {
                     display: inline-block;
                     flex-wrap: wrap;
 
                     img {
-                        height: 200px;
+                        max-height: 200px;
                     }
 
                     figcaption {
@@ -158,6 +159,7 @@ h6 {
             border-right: 0;
             border-style: solid;
             border-color: $brand-primary-color;
+            max-width: 40%;
 
             &.has-purple-background-color {
                 border-color: $brand-primary-color;
@@ -230,7 +232,7 @@ h6 {
             // Gallery
             figure.wp-block-gallery li.blocks-gallery-item figure {
                 img {
-                    height: 480px;
+                    max-height: 480px;
                 }
             }
         }

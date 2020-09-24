@@ -493,12 +493,15 @@ nav .sidebar_note_top {
   nav .sidebar_note,
   nav .sidebar_note_top {
     display: inline-block;
-  }
-  nav .sidebar_note_top {
-    border-bottom: 2px solid #5a00be;
     width: calc(100% + 42px);
     margin: 0 -21px 20px;
     padding: 0 20px 20px 20px;
+  }
+  nav .sidebar_note {
+    border-top: 2px solid #5a00be;
+  }
+  nav .sidebar_note_top {
+    border-bottom: 2px solid #5a00be;
   }
   nav .sidebar_note_top p {
     margin: 0;
@@ -555,6 +558,9 @@ nav .sidebar_note_top {
   nav ul li.menu-item-has-children .dropdown-btn:hover {
     cursor: pointer;
     background-image: url("../assets/hfkasta_stack.svg#l_arrow_nav-red");
+  }
+  nav .sidebar_note {
+    border-top: 3px solid #5a00be;
   }
   nav .sidebar_note_top {
     border-bottom: 3px solid #5a00be;
@@ -1627,6 +1633,7 @@ h6 {
 
 .wrapper main .content figure.wp-block-gallery li.blocks-gallery-item {
   display: block;
+  text-align: center;
 }
 
 .wrapper main .content figure.wp-block-gallery li.blocks-gallery-item figure {
@@ -1636,7 +1643,7 @@ h6 {
 }
 
 .wrapper main .content figure.wp-block-gallery li.blocks-gallery-item figure img {
-  height: 200px;
+  max-height: 200px;
 }
 
 .wrapper main .content figure.wp-block-gallery li.blocks-gallery-item figure figcaption {
@@ -1680,6 +1687,7 @@ h6 {
   border-right: 0;
   border-style: solid;
   border-color: #5a00be;
+  max-width: 40%;
 }
 
 .wrapper main .content .wp-block-separator.has-purple-background-color {
@@ -1741,7 +1749,7 @@ h6 {
     max-width: 80%;
   }
   .wrapper main .content figure.wp-block-gallery li.blocks-gallery-item figure img {
-    height: 480px;
+    max-height: 480px;
   }
   .wrapper main .content_sidebar-note {
     display: none;
