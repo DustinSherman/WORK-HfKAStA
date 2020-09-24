@@ -2299,6 +2299,9 @@ body div.wpcf7 .ajax-loader {
     top: -9999px;
     left: -9999px;
   }
+  .content .wp-block-table tr {
+    margin-bottom: 20px;
+  }
   .content .wp-block-table td {
     /* Behave  like a "row" */
     border: none;
