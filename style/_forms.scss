@@ -223,7 +223,7 @@ body {
 }
 
 // Loading Symbol
-div.wpcf7 .ajax-loader {
+body div.wpcf7 .ajax-loader {
 	background-image: none;
 	border: $border-weight_m solid $brand-primary-color;
 	-webkit-animation-iteration-count: infinite;

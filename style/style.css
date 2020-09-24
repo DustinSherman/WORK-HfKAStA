@@ -2173,7 +2173,7 @@ body .wpcf7 form.unaccepted .wpcf7-response-output {
   padding: 20px;
 }
 
-div.wpcf7 .ajax-loader {
+body div.wpcf7 .ajax-loader {
   background-image: none;
   border: 2px solid #5a00be;
   -webkit-animation-iteration-count: infinite;
