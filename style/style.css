@@ -440,6 +440,12 @@ nav .sidebar_note_top {
   nav .search-form .search-field::-webkit-input-placeholder {
     font-size: 1.5625rem;
   }
+  nav .search-form .search-field::-webkit-input-placeholder, nav .search-form .search-field::-webkit-input-placeholder {
+    line-height: 1.8625rem;
+  }
+  nav .search-form .search-field::placeholder, nav .search-form .search-field::-webkit-input-placeholder {
+    line-height: 1.8625rem;
+  }
   nav ul.sub-menu li a {
     font-size: 1.125rem;
   }
@@ -498,6 +504,12 @@ nav .sidebar_note_top {
   nav .search-form .search-field::placeholder,
   nav .search-form .search-field::-webkit-input-placeholder {
     font-size: 2.1875rem;
+  }
+  nav .search-form .search-field::-webkit-input-placeholder, nav .search-form .search-field::-webkit-input-placeholder {
+    line-height: 2.5875rem;
+  }
+  nav .search-form .search-field::placeholder, nav .search-form .search-field::-webkit-input-placeholder {
+    line-height: 2.5875rem;
   }
   nav ul.sub-menu li a {
     font-size: 1.5625rem;
