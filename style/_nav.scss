@@ -65,7 +65,10 @@ nav {
             }
 
             &.menu-item-has-children {
-                .dropdown-btn {
+
+                .dropdown-btn,
+                .dropdown-btn:active,
+                .dropdown-btn:focus {
                     content: '';
                     position: relative;
                     display: inline-block;

@@ -251,7 +251,9 @@ nav ul li a {
   color: #5a00be;
 }
 
-nav ul li.menu-item-has-children .dropdown-btn {
+nav ul li.menu-item-has-children .dropdown-btn,
+nav ul li.menu-item-has-children .dropdown-btn:active,
+nav ul li.menu-item-has-children .dropdown-btn:focus {
   content: '';
   position: relative;
   display: inline-block;
@@ -266,7 +268,9 @@ nav ul li.menu-item-has-children .dropdown-btn {
           transform: rotate(0deg);
 }
 
-nav ul li.menu-item-has-children .dropdown-btn:hover {
+nav ul li.menu-item-has-children .dropdown-btn:hover,
+nav ul li.menu-item-has-children .dropdown-btn:active:hover,
+nav ul li.menu-item-has-children .dropdown-btn:focus:hover {
   cursor: pointer;
   background-image: url("../assets/hfkasta_stack.svg#m_arrow_nav-red");
 }
