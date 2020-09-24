@@ -1594,7 +1594,8 @@ h6 {
 .wrapper main .content > h6,
 .wrapper main .content > ul,
 .wrapper main .content > ol,
-.wrapper main .content form {
+.wrapper main .content form,
+.wrapper main .content .wp-block-table {
   max-width: 540px;
   margin: 1rem auto;
 }
@@ -1729,6 +1730,10 @@ h6 {
   border-color: #64F5DC;
 }
 
+.wrapper main .content .wp-block-table {
+  margin: 0;
+}
+
 .wrapper main > section {
   width: 100%;
   margin: 100px auto 0 auto;
@@ -1770,7 +1775,8 @@ h6 {
   .wrapper main .content > h6,
   .wrapper main .content > ul,
   .wrapper main .content > ol,
-  .wrapper main .content form {
+  .wrapper main .content form,
+  .wrapper main .content .wp-block-table {
     max-width: 80%;
   }
   .wrapper main .content figure.wp-block-gallery li.blocks-gallery-item figure img {
@@ -1789,18 +1795,10 @@ h6 {
     font-size: 1.5625rem;
   }
   .wrapper main .content > ol {
-    padding-left: 24.1px;
-  }
-  .wrapper main .content > ul {
-    padding-left: 0;
-  }
-  .wrapper main .content > ul li {
-    list-style-type: none;
+    padding-left: 36px;
   }
   .wrapper main .content > ul li::before {
-    content: '-';
-    width: 24.1px;
-    display: inline-block;
+    width: 36px;
   }
   .wrapper main .content figure.wp-block-gallery li.blocks-gallery-item figure figcaption {
     font-size: 1.5625rem;
@@ -2266,6 +2264,45 @@ body div.wpcf7 .ajax-loader {
   body .wpcf7 form.unaccepted .wpcf7-response-output {
     border: 3px solid #d50e31;
     font-size: 1.5625rem;
+  }
+}
+
+/*
+    # Styling for content tables
+
+    This styling takes care of tables in the content rea.
+*/
+.content .wp-block-table {
+  margin: 0 auto;
+}
+
+.content .wp-block-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  .content .wp-block-table {
+    /* Force table to not be like tables anymore */
+    /* Hide table headers (but not display: none;, for accessibility) */
+  }
+  .content .wp-block-table table,
+  .content .wp-block-table thead,
+  .content .wp-block-table tbody,
+  .content .wp-block-table th,
+  .content .wp-block-table td,
+  .content .wp-block-table tr {
+    display: block;
+  }
+  .content .wp-block-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .content .wp-block-table td {
+    /* Behave  like a "row" */
+    border: none;
+    position: relative;
   }
 }
 

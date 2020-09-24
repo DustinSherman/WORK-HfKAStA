@@ -46,7 +46,8 @@ h6 {
         &>h6,
         &>ul,
         &>ol,
-        form {
+        form,
+        .wp-block-table {
             max-width: $content-text-width_s;
             margin: 1rem auto;
         }
@@ -188,6 +189,11 @@ h6 {
                 border-color: $brand-turquoise-color;
             }
         }
+
+        // Tables
+        .wp-block-table {
+            margin: 0;
+        }
     }
 
     >section {
@@ -238,7 +244,8 @@ h6 {
             &>h6,
             &>ul,
             &>ol,
-            form {
+            form,
+            .wp-block-table {
                 max-width: $content-text-width_m;
             }
 
@@ -273,7 +280,7 @@ h6 {
                 padding-left: 36px;
             }
 
-            &>ul li&::before {
+            &>ul li::before {
                 width: 36px;
             }
 
