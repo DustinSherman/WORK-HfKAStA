@@ -15,6 +15,7 @@
 @import "./post";
 @import "./calendar";
 @import "./forms";
+@import "./content-tables";
 
 *,
 *::before,
@@ -51,7 +52,10 @@ a,
 li,
 input,
 button,
-cite, td {
+cite,
+td,
+label,
+dt {
     color: $brand-primary-color;
 }
 
@@ -61,7 +65,9 @@ a,
 li,
 input,
 button,
-figcaption, td {
+figcaption,
+td,
+label {
     font-family: 'GT-Haptik-Regular', sans-serif;
     font-size: $font-size-18;
 }
@@ -184,7 +190,8 @@ table {
     li,
     input,
     button,
-    figcaption {
+    figcaption,
+    label {
         font-size: $font-size-25;
     }
 }

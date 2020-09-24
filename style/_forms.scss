@@ -157,7 +157,7 @@ select {
 	background-color: $contrast-primary-color;
 	border: $border-weight_m solid $brand-primary-color;
 	/* arrow icon */
-	background-image: url('../assets/arrow_purple.svg');
+	background-image: url('../assets/hfkasta_stack.svg#arrow_purple');
 	background-repeat: no-repeat;
 	/* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
 	background-position: right .7em top 50%, 0 0;
@@ -205,5 +205,70 @@ select {
 	&:disabled:hover,
 	&[aria-disabled=true] {
 		border-color: #aaa;
+	}
+}
+
+// Error Messages
+body {
+
+	.wpcf7 form.invalid .wpcf7-response-output,
+	.wpcf7 form.unaccepted .wpcf7-response-output {
+		margin: 0;
+		border: $border-weight_m solid $brand-secondary-color;
+		font-family: 'GT-Haptik-Regular-Oblique', sans-serif;
+		font-size: $font-size-18;
+		color: $brand-secondary-color;
+		padding: 20px;
+	}
+}
+
+// Loading Symbol
+body div.wpcf7 .ajax-loader {
+	background-image: none;
+	border: $border-weight_m solid $brand-primary-color;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-duration: 4s;
+	animation-duration: 4s;
+	-webkit-animation-name: loading;
+	animation-name: loading;
+}
+
+@-webkit-keyframes loading {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes loading {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(360deg);
+	}
+}
+
+@media (min-width: $breakpoint-screen) {
+
+	// Error Messages
+	body {
+
+		.wpcf7 form.invalid .wpcf7-response-output,
+		.wpcf7 form.unaccepted .wpcf7-response-output {
+			border: $border-weight_l solid $brand-secondary-color;
+			font-size: $font-size-25;
+		}
 	}
 }

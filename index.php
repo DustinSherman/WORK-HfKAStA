@@ -5,6 +5,10 @@
 
     // Excluded categories
     $ticker_cat_id = get_cat_id('ticker');
+    $preview_title_max_words = 10;
+    $preview_max_words = 40;
+
+    global $post;
 ?>
 
     <?php get_template_part( 'template-parts/entry-header' ); ?>
@@ -23,22 +27,19 @@
             )); ?>
         </div>
 
-        <?php
-            // Post Loop
-            $args = array(
-                'post_type' => 'post',
-                'posts_per_page' => 15
-            );
+        <?php 
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $default_posts_per_page = get_option( 'posts_per_page' );
 
-            $post_query = new WP_Query($args);
-            $preview_title_max_words = 10;
-            $preview_max_words = 40;
+            $data= new WP_Query(array(
+                'post_type'=>'post', // your post type name
+                'posts_per_page' => $default_posts_per_page, // post per page
+                'paged' => $paged,
+            ));
 
-            if($post_query->have_posts() ) {
-                while($post_query->have_posts() ) {
-                    $post_query->the_post();
-                ?>
-                    
+            if($data->have_posts()) : ?>
+                <div class="post-list">
+                <?php while($data->have_posts())  : $data->the_post(); ?>
                     <div class="post-preview">
                         <a href="<?php the_permalink(); ?>">
                             <h3><?php echo wp_trim_words(get_the_title(), $preview_title_max_words); ?></h3>
@@ -76,10 +77,21 @@
                             <div class="post-preview-arrow"></div><span>...</span>
                         </a>
                     </div>
-                <?php
-                }
-            }
-        ?>
+                <?php endwhile; ?>
+                </div>
+                <div class="pagination">
+                    <?php
+                        next_posts_link( '' );
+                        previous_posts_link( '' ); 
+                    ?>
+                </div>
+        <?php else :?>
+            <h3>
+                <?php _e('404 Error&#58; Not Found', ''); ?>
+            </h3>
+        <?php endif; ?>
+        <?php wp_reset_postdata();?>
     </div>
+
 
 <?php get_footer(); ?>

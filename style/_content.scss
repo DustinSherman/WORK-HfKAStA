@@ -45,19 +45,35 @@ h6 {
         &>h5,
         &>h6,
         &>ul,
-        &>ol {
+        &>ol,
+        form,
+        .wp-block-table {
             max-width: $content-text-width_s;
             margin: 1rem auto;
         }
 
-        &>ul,
+        // Lists
         &>ol {
-            padding-left: 20px;
+            padding-left: 24.1px;
+        }
+
+        &>ul {
+            padding-left: 0;
+
+            li {
+                list-style-type: none;
+
+                &::before {
+                    content: '-';
+                    width: 24.1px;
+                    display: inline-block;
+                }
+            }
         }
 
         // Links in regular text
         p a {
-            display: inline-block;
+            display: inline;
             height: auto;
         }
 
@@ -103,13 +119,14 @@ h6 {
         figure.wp-block-gallery {
             li.blocks-gallery-item {
                 display: block;
+                text-align: center;
 
                 figure {
                     display: inline-block;
                     flex-wrap: wrap;
 
                     img {
-                        height: 200px;
+                        max-height: 200px;
                     }
 
                     figcaption {
@@ -156,6 +173,9 @@ h6 {
             border-left: 0;
             border-right: 0;
             border-style: solid;
+            border-color: $brand-primary-color;
+            max-width: 40%;
+            margin: 35px auto;
 
             &.has-purple-background-color {
                 border-color: $brand-primary-color;
@@ -168,6 +188,11 @@ h6 {
             &.has-turquoise-background-color {
                 border-color: $brand-turquoise-color;
             }
+        }
+
+        // Tables
+        .wp-block-table {
+            margin: 0;
         }
     }
 
@@ -195,14 +220,12 @@ h6 {
     }
 
     h3 {
-        font-size: $font-size-25;
         margin: 1.4rem 0;
     }
 
     h4,
     h5,
     h6 {
-        font-size: $font-size-25;
         margin: 1.2rem 0;
     }
 
@@ -220,14 +243,16 @@ h6 {
             &>h5,
             &>h6,
             &>ul,
-            &>ol {
+            &>ol,
+            form,
+            .wp-block-table {
                 max-width: $content-text-width_m;
             }
 
             // Gallery
             figure.wp-block-gallery li.blocks-gallery-item figure {
                 img {
-                    height: 480px;
+                    max-height: 480px;
                 }
             }
         }
@@ -239,8 +264,25 @@ h6 {
 }
 
 @media (min-width: $breakpoint-screen) {
+
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: $font-size-25;
+    }
+
     .wrapper main {
         .content {
+
+            // Lists
+            &>ol {
+                padding-left: 36px;
+            }
+
+            &>ul li::before {
+                width: 36px;
+            }
 
             // Gallery
             figure.wp-block-gallery li.blocks-gallery-item figure {

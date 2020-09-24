@@ -27,7 +27,9 @@
                     <div class="news">
                         <a href="<?php echo get_permalink(); ?>"><p><?php echo $message; ?></p></a>
                     </div>
-                    <div class="news_seperator"> + + + </div>
+                    <div class="news_seperator">
+                        <p> +++ </p>
+                    </div>
                 <?php endwhile; ?>
             <?php endfor; ?>
             <?php wp_reset_postdata(); ?>

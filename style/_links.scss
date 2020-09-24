@@ -35,27 +35,35 @@ footer .menu {
 }
 
 // Links
-main .content p ,
-nav .sidebar_note p ,
+main .content p,
+nav .sidebar_note p,
 main .content_sidebar-note p {
 
-    // Exclude mail- and telefon-links
-    a:not([href*='mailto:']),
-    a:not([href*='tel:']) {
+    a {
         height: $font-size-18 * 2;
         display: flex;
         align-items: center;
 
         &::before {
             content: '';
-            display: block;
-            float: left;
-            width: 28.1px;
-            min-width: 28.1px;
-            flex-basis: 28.1px;
+            display: inline-block;
+            width: 24.1px;
+            min-width: 24.1px;
+            flex-basis: 24.1px;
             height: 20.5px;
+            margin-bottom: -3px;
             background-repeat: no-repeat;
             background-position: left center;
+        }
+    }
+
+    // Exclude telefon-links
+    a[href*='tel'] {
+        height: auto;
+        display: inline;
+
+        &::before {
+            display: none;
         }
     }
 
@@ -75,7 +83,8 @@ main .content_sidebar-note p {
     a[href*='localhost'],
     a[href*='hfkasta'],
     a[href*='asta.hfk-bremen'],
-    a[href*='asta.uiuiui.digital'] {
+    a[href*='asta.uiuiui.digital'],
+    a[href*='mailto:'] {
         &::before {
             background-image: url('../assets/hfkasta_stack.svg#m_link_internal-red');
         }
@@ -126,8 +135,7 @@ main .content_sidebar-note p {
     nav .sidebar_note p,
     main .content_sidebar-note p {
 
-        // Exclude mail- and telefon-links
-        a:not([href*='mailto:']),
+        // Exclude telefon-links
         a:not([href*='tel:']) {
             height: $font-size-25 * 2;
 
@@ -155,7 +163,8 @@ main .content_sidebar-note p {
         a[href*='localhost'],
         a[href*='hfkasta'],
         a[href*='asta.hfk-bremen'],
-        a[href*='asta.uiuiui.digital'] {
+        a[href*='asta.uiuiui.digital'],
+        a[href*='mailto:'] {
             &::before {
                 background-image: url('../assets/hfkasta_stack.svg#l_link_internal-red');
             }

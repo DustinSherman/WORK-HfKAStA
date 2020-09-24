@@ -62,19 +62,42 @@ nav {
                 word-break: break-word;
                 text-decoration: none;
                 color: $brand-primary-color;
+
+                // External Links
+                &:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']) {
+                    &::before {
+                        content: '';
+                        width: 28.1px;
+                        height: 23.5px;
+                        margin-bottom: -4.5px;
+                        display: inline-block;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: center center;
+                        background-image: url('../assets/hfkasta_stack.svg#m_link_external');
+                    }
+
+                    &:hover::before {
+                        background-image: url('../assets/hfkasta_stack.svg#m_link_external-red');
+                    }
+                }
             }
 
             &.menu-item-has-children {
-                .dropdown-btn {
+
+                .dropdown-btn,
+                .dropdown-btn:active,
+                .dropdown-btn:focus {
                     content: '';
                     position: relative;
                     display: inline-block;
-                    margin: 0 0 0 6px;
-                    width: 16.2px;
+                    margin: 0px 0px 1px 10px;
+                    width: 12.2px;
                     height: 10.1px;
                     background-image: url('../assets/hfkasta_stack.svg#m_arrow_nav');
                     background-repeat: no-repeat;
                     background-position: center center;
+                    background-size: cover;
                     transform: rotate(0deg);
 
                     &:hover {
@@ -114,20 +137,35 @@ nav {
     }
 
     .search-form {
-        height: $search-bar-height_m;
+        height: $search-bar-height_m !important;
         width: 100%;
         position: relative;
         margin-left: -$search-form-padding;
 
+        input {
+            border-radius: 0;
+        }
+
+        input[type="search"] {
+            -webkit-appearance: none;
+        }
+
+        .search-bar {
+            border: $border-weight_m solid $brand-primary-color !important;
+            height: 100%;
+            display: block;
+        }
+
         .search-field {
             width: 100%;
             height: 100%;
+            min-height: 100%;
             padding: $search-form-padding;
-            border: 0;
-            border-radius: 0;
+            border: 0 !important;
+            outline: none !important;
+            border-radius: 0 !important;
             background: #fff;
             color: $brand-primary-color;
-            border: $border-weight_m solid $brand-primary-color;
             margin: 0;
 
             &:focus {
@@ -137,7 +175,9 @@ nav {
             &::placeholder,
             &::-webkit-input-placeholder {
                 color: $brand-primary-color;
-                line-height: $search-bar-height_m;
+                // line-height: $search-bar-height_m;
+                line-height: $font-size-18 + .2rem;
+                opacity: 1;
                 vertical-align: middle;
             }
 
@@ -201,7 +241,7 @@ nav {
 
 // Home Button
 .home-link {
-    position: fixed;
+    position: absolute;
     margin-top: 70px;
     margin-left: 20px;
     z-index: 30;
@@ -247,9 +287,36 @@ nav {
             font-size: $font-size-25;
         }
 
+        .search-form .search-field::placeholder,
+        .search-form .search-field::-webkit-input-placeholder {
+            line-height: $font-size-25 + .3rem;
+        }
+
         ul.sub-menu li a {
             font-size: $font-size-18;
         }
+
+        ul li a {
+
+            // External Links
+            &:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']) {
+                &::before {
+                    height: 40px;
+                    width: 30px;
+                    margin-bottom: -10px;
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        ul li.menu-item-has-children .dropdown-btn {
+            margin: 0 0 2.5px 6px;
+            width: 16.2px;
+        }
+    }
+
+    .home-link {
+        position: fixed;
     }
 }
 
@@ -268,13 +335,17 @@ nav {
         .sidebar_note,
         .sidebar_note_top {
             display: inline-block;
+            width: calc(100% + 42px);
+            margin: 0 -21px 20px;
+            padding: 0 20px 20px 20px;
+        }
+
+        .sidebar_note {
+            border-top: $border-weight_m solid $brand-primary-color;
         }
 
         .sidebar_note_top {
             border-bottom: $border-weight_m solid $brand-primary-color;
-            width: calc(100% + 42px);
-            margin: 0 -21px 20px;
-            padding: 0 20px 20px 20px;
 
             p {
                 margin: 0;
@@ -304,14 +375,37 @@ nav {
             font-size: $font-size-35;
         }
 
+        .search-form .search-field::placeholder,
+        .search-form .search-field::-webkit-input-placeholder {
+            line-height: $font-size-35 + .4rem;
+        }
+
         ul.sub-menu li a {
             font-size: $font-size-25;
+        }
+
+        ul li a {
+
+            // External Links
+            &:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']) {
+                &::before {
+                    height: 54px;
+                    width: 45px;
+                    margin-bottom: -13px;
+                    margin-right: 8px;
+                    background-image: url('../assets/hfkasta_stack.svg#l_link_external');
+                }
+
+                &:hover::before {
+                    background-image: url('../assets/hfkasta_stack.svg#l_link_external-red');
+                }
+            }
         }
 
         ul li {
             &.menu-item-has-children {
                 .dropdown-btn {
-                    margin: 0 0 0 6px;
+                    margin: 0 0 2.5px 6px;
                     width: 22.79px;
                     height: 14.34px;
                     background-image: url('../assets/hfkasta_stack.svg#l_arrow_nav');
@@ -324,13 +418,20 @@ nav {
             }
         }
 
-        .sidebar_note_top,
-        .search-form .search-field {
+        .sidebar_note {
+            border-top: $border-weight_l solid $brand-primary-color;
+        }
+
+        .sidebar_note_top {
             border-bottom: $border-weight_l solid $brand-primary-color;
         }
 
         .search-form {
-            height: $search-bar-height_l;
+            height: $search-bar-height_l !important;
+
+            .search-bar {
+                border: $border-weight_l solid $brand-primary-color !important;
+            }
 
             .search-icon {
                 width: 30.99px;

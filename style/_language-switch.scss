@@ -7,7 +7,7 @@
 .language-switch {
     border: $border-weight_m solid $brand-primary-color;
     background: $contrast-primary-color;
-    position: fixed;
+    position: absolute;
     z-index: 30;
     padding: 15px 10px 15px 20px;
     margin-top: $ticker-height_s - 20px;
@@ -45,6 +45,7 @@
 
 @media (min-width: $breakpoint-tablet) {
     .language-switch {
+        position: fixed;
         font-size: $font-size-18;
     }
 }
