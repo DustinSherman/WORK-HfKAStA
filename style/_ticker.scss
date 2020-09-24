@@ -16,7 +16,9 @@
     position: relative;
 
     .ticker {
+        margin-top: 2px;
         font-size: $font-size-18;
+        font-weight: normal;
         white-space: nowrap;
         box-sizing: content-box;
         position: absolute;
@@ -33,7 +35,6 @@
         div {
             display: inline-flex;
             color: $brand-primary-color;
-            font-weight: bold;
             line-height: 0;
 
             a:hover p {
@@ -42,7 +43,8 @@
         }
 
         .news_seperator {
-            //font-family: 'GT-Haptik-Bold', sans-serif;
+            letter-spacing: 2px;
+            margin: 0 3px 0 6px;
         }
 
         // Pause ticker on hover
@@ -52,7 +54,7 @@
 
         .news {
 
-            a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']) {
+            a {
                 padding-right: 28.1px;
 
                 &::before {
@@ -63,16 +65,72 @@
                     height: 20.5px;
                     min-width: 28.1px;
                     flex-basis: 28.1px;
-                    margin-top: 8px;
+                    margin-top: 7px;
                     background-repeat: no-repeat;
                     background-position: center center;
-                    background-size: cover;
+                    background-size: contain;
                     padding: 0;
+                }
+
+            }
+
+            // External Links
+            a[href*='http://'],
+            a[href*='https://'] {
+                &::before {
                     background-image: url('../assets/hfkasta_stack.svg#m_link_external');
                 }
 
                 &:hover::before {
                     background-image: url('../assets/hfkasta_stack.svg#m_link_external-red');
+                }
+            }
+
+            // Link intern
+            a[href*='localhost'],
+            a[href*='hfkasta'],
+            a[href*='asta.hfk-bremen'],
+            a[href*='asta.uiuiui.digital'] {
+                &::before {
+                    background-image: url('../assets/hfkasta_stack.svg#m_link_internal');
+                }
+
+                &:hover::before {
+                    background-image: url('../assets/hfkasta_stack.svg#m_link_internal-red');
+                }
+            }
+
+            // File Link
+            a[href*='.pdf'] {
+                &::before {
+                    background-image: url('../assets/hfkasta_stack.svg#m_link_download');
+                }
+
+                &:hover::before {
+                    background-image: url('../assets/hfkasta_stack.svg#m_link_download-red');
+                }
+            }
+
+            // Link to Drive / Sharepoint
+            a[href*='hfkbremen.sharepoint'] {
+                &::before {
+                    margin-top: 6px;
+                    background-image: url('../assets/hfkasta_stack.svg#m_link_drive');
+                }
+
+                &:hover::before {
+                    background-image: url('../assets/hfkasta_stack.svg#m_link_drive-red');
+                }
+            }
+
+            // Link to portal
+            a[href*='portal.hfk-bremen.de'] {
+                &::before {
+                    background-image: url('../assets/hfkasta_stack.svg#m_link_portal');
+                }
+
+                &:hover::before {
+                    background-image: url('../assets/hfkasta_stack.svg#m_link_portal-red');
                 }
             }
         }
@@ -85,29 +143,36 @@
         margin-bottom: -($ticker-height_m + 2px);
 
         .ticker {
-            font-size: $font-size-25;
+            margin-top: 0px;
 
-            a p {
+            a p,
+            .news_seperator p {
                 font-size: $font-size-25;
+            }
+
+            .news-seperator {
+                margin: 0 4px 0 8px;
             }
 
             .news {
 
-                a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']) {
+                a {
                     padding-right: 40px;
 
                     &::before {
-                        background-image: url('../assets/hfkasta_stack.svg#l_link_external');
-                        margin-top: 8px;
+                        margin-top: 10px;
                         width: 36px;
-                        height: 32px;
+                        height: 30px;
                         min-width: 36px;
                         flex-basis: 36px;
                         padding: 0 4px 0 0;
                     }
+                }
 
-                    &:hover::before {
-                        background-image: url('../assets/hfkasta_stack.svg#l_link_external-red');
+                // Link to Drive / Sharepoint
+                a[href*='hfkbremen.sharepoint'] {
+                    &::before {
+                        margin-top: 9px;
                     }
                 }
             }
@@ -121,20 +186,84 @@
         margin-bottom: -($ticker-height-l + 2px);
 
         .ticker {
-            font-size: $font-size-35;
+            margin-top: -4px;
+
+            .news a p,
+            .news_seperator p {
+                font-size: $font-size-35;
+            }
 
             .news {
 
-                a p {
-                    font-size: $font-size-35;
-                }
-
-                a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']) {
+                a {
                     padding-right: 44px;
 
                     &::before {
-                        margin-top: 18px;
+                        margin-top: 15px;
                         padding: 0 8px 0 0;
+                        width: 46px;
+                        min-width: 46px;
+                        height: 40px;
+                    }
+                }
+
+                // External Links
+                a[href*='http://'],
+                a[href*='https://'] {
+                    &::before {
+                        background-image: url('../assets/hfkasta_stack.svg#l_link_external');
+                    }
+
+                    &:hover::before {
+                        background-image: url('../assets/hfkasta_stack.svg#l_link_external-red');
+                    }
+                }
+
+                // Link intern
+                a[href*='localhost'],
+                a[href*='hfkasta'],
+                a[href*='asta.hfk-bremen'],
+                a[href*='asta.uiuiui.digital'] {
+                    &::before {
+                        background-image: url('../assets/hfkasta_stack.svg#l_link_internal');
+                    }
+
+                    &:hover::before {
+                        background-image: url('../assets/hfkasta_stack.svg#l_link_internal-red');
+                    }
+                }
+
+                // File Link
+                a[href*='.pdf'] {
+                    &::before {
+                        background-image: url('../assets/hfkasta_stack.svg#l_link_download');
+                    }
+
+                    &:hover::before {
+                        background-image: url('../assets/hfkasta_stack.svg#l_link_download-red');
+                    }
+                }
+
+                // Link to Drive / Sharepoint
+                a[href*='hfkbremen.sharepoint'] {
+                    &::before {
+                        background-image: url('../assets/hfkasta_stack.svg#l_link_drive');
+                        margin-top: 14px;
+                    }
+
+                    &:hover::before {
+                        background-image: url('../assets/hfkasta_stack.svg#l_link_drive-red');
+                    }
+                }
+
+                // Link to portal
+                a[href*='portal.hfk-bremen.de'] {
+                    &::before {
+                        background-image: url('../assets/hfkasta_stack.svg#l_link_portal');
+                    }
+
+                    &:hover::before {
+                        background-image: url('../assets/hfkasta_stack.svg#l_link_portal-red');
                     }
                 }
             }

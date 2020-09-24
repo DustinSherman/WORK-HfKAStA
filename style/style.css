@@ -524,12 +524,14 @@ nav .sidebar_note_top {
     cursor: pointer;
     background-image: url("../assets/hfkasta_stack.svg#l_arrow_nav-red");
   }
-  nav .sidebar_note_top,
-  nav .search-form .search-field {
+  nav .sidebar_note_top {
     border-bottom: 3px solid #5a00be;
   }
   nav .search-form {
-    height: 50px;
+    height: 50px !important;
+  }
+  nav .search-form .search-bar {
+    border: 3px solid #5a00be !important;
   }
   nav .search-form .search-icon {
     width: 30.99px;
@@ -942,7 +944,9 @@ body.page-child .entry-header h1 {
 }
 
 .ticker-wrap .ticker {
+  margin-top: 2px;
   font-size: 1.125rem;
+  font-weight: normal;
   white-space: nowrap;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -960,7 +964,6 @@ body.page-child .entry-header h1 {
   display: -ms-inline-flexbox;
   display: inline-flex;
   color: #5a00be;
-  font-weight: bold;
   line-height: 0;
 }
 
@@ -968,16 +971,21 @@ body.page-child .entry-header h1 {
   color: #d50e31;
 }
 
+.ticker-wrap .ticker .news_seperator {
+  letter-spacing: 2px;
+  margin: 0 3px 0 6px;
+}
+
 .ticker-wrap .ticker:hover {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
 }
 
-.ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']) {
+.ticker-wrap .ticker .news a {
   padding-right: 28.1px;
 }
 
-.ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital'])::before {
+.ticker-wrap .ticker .news a::before {
   content: '';
   display: block;
   float: left;
@@ -986,16 +994,60 @@ body.page-child .entry-header h1 {
   min-width: 28.1px;
   -ms-flex-preferred-size: 28.1px;
       flex-basis: 28.1px;
-  margin-top: 8px;
+  margin-top: 7px;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
   padding: 0;
+}
+
+.ticker-wrap .ticker .news a[href*='http://']::before,
+.ticker-wrap .ticker .news a[href*='https://']::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_external");
 }
 
-.ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']):hover::before {
+.ticker-wrap .ticker .news a[href*='http://']:hover::before,
+.ticker-wrap .ticker .news a[href*='https://']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_external-red");
+}
+
+.ticker-wrap .ticker .news a[href*='localhost']::before,
+.ticker-wrap .ticker .news a[href*='hfkasta']::before,
+.ticker-wrap .ticker .news a[href*='asta.hfk-bremen']::before,
+.ticker-wrap .ticker .news a[href*='asta.uiuiui.digital']::before {
+  background-image: url("../assets/hfkasta_stack.svg#m_link_internal");
+}
+
+.ticker-wrap .ticker .news a[href*='localhost']:hover::before,
+.ticker-wrap .ticker .news a[href*='hfkasta']:hover::before,
+.ticker-wrap .ticker .news a[href*='asta.hfk-bremen']:hover::before,
+.ticker-wrap .ticker .news a[href*='asta.uiuiui.digital']:hover::before {
+  background-image: url("../assets/hfkasta_stack.svg#m_link_internal-red");
+}
+
+.ticker-wrap .ticker .news a[href*='.pdf']::before {
+  background-image: url("../assets/hfkasta_stack.svg#m_link_download");
+}
+
+.ticker-wrap .ticker .news a[href*='.pdf']:hover::before {
+  background-image: url("../assets/hfkasta_stack.svg#m_link_download-red");
+}
+
+.ticker-wrap .ticker .news a[href*='hfkbremen.sharepoint']::before {
+  margin-top: 6px;
+  background-image: url("../assets/hfkasta_stack.svg#m_link_drive");
+}
+
+.ticker-wrap .ticker .news a[href*='hfkbremen.sharepoint']:hover::before {
+  background-image: url("../assets/hfkasta_stack.svg#m_link_drive-red");
+}
+
+.ticker-wrap .ticker .news a[href*='portal.hfk-bremen.de']::before {
+  background-image: url("../assets/hfkasta_stack.svg#m_link_portal");
+}
+
+.ticker-wrap .ticker .news a[href*='portal.hfk-bremen.de']:hover::before {
+  background-image: url("../assets/hfkasta_stack.svg#m_link_portal-red");
 }
 
 @media (min-width: 768px) {
@@ -1004,26 +1056,29 @@ body.page-child .entry-header h1 {
     margin-bottom: -52px;
   }
   .ticker-wrap .ticker {
+    margin-top: 0px;
+  }
+  .ticker-wrap .ticker a p,
+  .ticker-wrap .ticker .news_seperator p {
     font-size: 1.5625rem;
   }
-  .ticker-wrap .ticker a p {
-    font-size: 1.5625rem;
+  .ticker-wrap .ticker .news-seperator {
+    margin: 0 4px 0 8px;
   }
-  .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']) {
+  .ticker-wrap .ticker .news a {
     padding-right: 40px;
   }
-  .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital'])::before {
-    background-image: url("../assets/hfkasta_stack.svg#l_link_external");
-    margin-top: 8px;
+  .ticker-wrap .ticker .news a::before {
+    margin-top: 10px;
     width: 36px;
-    height: 32px;
+    height: 30px;
     min-width: 36px;
     -ms-flex-preferred-size: 36px;
         flex-basis: 36px;
     padding: 0 4px 0 0;
   }
-  .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']):hover::before {
-    background-image: url("../assets/hfkasta_stack.svg#l_link_external-red");
+  .ticker-wrap .ticker .news a[href*='hfkbremen.sharepoint']::before {
+    margin-top: 9px;
   }
 }
 
@@ -1033,17 +1088,60 @@ body.page-child .entry-header h1 {
     margin-bottom: -67px;
   }
   .ticker-wrap .ticker {
+    margin-top: -4px;
+  }
+  .ticker-wrap .ticker .news a p,
+  .ticker-wrap .ticker .news_seperator p {
     font-size: 2.1875rem;
   }
-  .ticker-wrap .ticker .news a p {
-    font-size: 2.1875rem;
-  }
-  .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']) {
+  .ticker-wrap .ticker .news a {
     padding-right: 44px;
   }
-  .ticker-wrap .ticker .news a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital'])::before {
-    margin-top: 18px;
+  .ticker-wrap .ticker .news a::before {
+    margin-top: 15px;
     padding: 0 8px 0 0;
+    width: 46px;
+    min-width: 46px;
+    height: 40px;
+  }
+  .ticker-wrap .ticker .news a[href*='http://']::before,
+  .ticker-wrap .ticker .news a[href*='https://']::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_external");
+  }
+  .ticker-wrap .ticker .news a[href*='http://']:hover::before,
+  .ticker-wrap .ticker .news a[href*='https://']:hover::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_external-red");
+  }
+  .ticker-wrap .ticker .news a[href*='localhost']::before,
+  .ticker-wrap .ticker .news a[href*='hfkasta']::before,
+  .ticker-wrap .ticker .news a[href*='asta.hfk-bremen']::before,
+  .ticker-wrap .ticker .news a[href*='asta.uiuiui.digital']::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_internal");
+  }
+  .ticker-wrap .ticker .news a[href*='localhost']:hover::before,
+  .ticker-wrap .ticker .news a[href*='hfkasta']:hover::before,
+  .ticker-wrap .ticker .news a[href*='asta.hfk-bremen']:hover::before,
+  .ticker-wrap .ticker .news a[href*='asta.uiuiui.digital']:hover::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_internal-red");
+  }
+  .ticker-wrap .ticker .news a[href*='.pdf']::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_download");
+  }
+  .ticker-wrap .ticker .news a[href*='.pdf']:hover::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_download-red");
+  }
+  .ticker-wrap .ticker .news a[href*='hfkbremen.sharepoint']::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_drive");
+    margin-top: 14px;
+  }
+  .ticker-wrap .ticker .news a[href*='hfkbremen.sharepoint']:hover::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_drive-red");
+  }
+  .ticker-wrap .ticker .news a[href*='portal.hfk-bremen.de']::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_portal");
+  }
+  .ticker-wrap .ticker .news a[href*='portal.hfk-bremen.de']:hover::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_portal-red");
   }
 }
 

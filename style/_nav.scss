@@ -364,13 +364,16 @@ nav {
             }
         }
 
-        .sidebar_note_top,
-        .search-form .search-field {
+        .sidebar_note_top {
             border-bottom: $border-weight_l solid $brand-primary-color;
         }
 
         .search-form {
-            height: $search-bar-height_l;
+            height: $search-bar-height_l !important;
+
+            .search-bar {
+                border: $border-weight_l solid $brand-primary-color !important;
+            }
 
             .search-icon {
                 width: 30.99px;
