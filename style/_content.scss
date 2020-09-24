@@ -45,7 +45,8 @@ h6 {
         &>h5,
         &>h6,
         &>ul,
-        &>ol {
+        &>ol,
+        form {
             max-width: $content-text-width_s;
             margin: 1rem auto;
         }
@@ -221,7 +222,8 @@ h6 {
             &>h5,
             &>h6,
             &>ul,
-            &>ol {
+            &>ol,
+            form {
                 max-width: $content-text-width_m;
             }
 
