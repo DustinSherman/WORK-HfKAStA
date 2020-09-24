@@ -306,6 +306,14 @@ nav .search-form {
   margin-left: -5px;
 }
 
+nav .search-form input {
+  border-radius: 0;
+}
+
+nav .search-form input[type="search"] {
+  -webkit-appearance: none;
+}
+
 nav .search-form .search-bar {
   border: 2px solid #5a00be !important;
   height: 100%;

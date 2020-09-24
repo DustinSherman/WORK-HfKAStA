@@ -123,6 +123,14 @@ nav {
         position: relative;
         margin-left: -$search-form-padding;
 
+        input {
+            border-radius: 0;
+        }
+
+        input[type="search"] {
+            -webkit-appearance: none;
+        }
+
         .search-bar {
             border: $border-weight_m solid $brand-primary-color !important;
             height: 100%;
