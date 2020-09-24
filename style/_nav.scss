@@ -201,7 +201,7 @@ nav {
 
 // Home Button
 .home-link {
-    position: fixed;
+    position: absolute;
     margin-top: 70px;
     margin-left: 20px;
     z-index: 30;
@@ -250,6 +250,10 @@ nav {
         ul.sub-menu li a {
             font-size: $font-size-18;
         }
+    }
+
+    .home-link {
+        position: fixed;
     }
 }
 

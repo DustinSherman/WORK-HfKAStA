@@ -379,7 +379,7 @@ nav .search-form .search-icon {
 }
 
 .home-link {
-  position: fixed;
+  position: absolute;
   margin-top: 70px;
   margin-left: 20px;
   z-index: 30;
@@ -420,6 +420,9 @@ nav .sidebar_note_top {
   }
   nav ul.sub-menu li a {
     font-size: 1.125rem;
+  }
+  .home-link {
+    position: fixed;
   }
 }
 
@@ -1257,7 +1260,7 @@ main .content_sidebar-note p a[href*='portal.hfk-bremen.de']:hover::before {
 .language-switch {
   border: 2px solid #5a00be;
   background: #fff;
-  position: fixed;
+  position: absolute;
   z-index: 30;
   padding: 15px 10px 15px 20px;
   margin-top: 20px;
@@ -1295,6 +1298,7 @@ main .content_sidebar-note p a[href*='portal.hfk-bremen.de']:hover::before {
 
 @media (min-width: 768px) {
   .language-switch {
+    position: fixed;
     font-size: 1.125rem;
   }
 }
