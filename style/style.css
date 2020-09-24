@@ -2163,6 +2163,15 @@ select:disabled:hover, select[aria-disabled=true] {
   border-color: #aaa;
 }
 
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output {
+  margin: 0;
+  border: 2px solid #5a00be;
+  font-family: 'GT-Haptik-Regular', sans-serif;
+  color: #d50e31;
+  padding: 20px;
+}
+
 *,
 *::before,
 *::after {
