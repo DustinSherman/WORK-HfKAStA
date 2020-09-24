@@ -1725,13 +1725,11 @@ h6 {
     margin: 2rem 0;
   }
   h3 {
-    font-size: 1.5625rem;
     margin: 1.4rem 0;
   }
   h4,
   h5,
   h6 {
-    font-size: 1.5625rem;
     margin: 1.2rem 0;
   }
   .wrapper main .content {
@@ -1758,6 +1756,12 @@ h6 {
 }
 
 @media (min-width: 1680px) {
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.5625rem;
+  }
   .wrapper main .content figure.wp-block-gallery li.blocks-gallery-item figure figcaption {
     font-size: 1.5625rem;
   }
