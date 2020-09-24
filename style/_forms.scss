@@ -222,6 +222,42 @@ body {
 	}
 }
 
+// Loading Symbol
+div.wpcf7 .ajax-loader {
+	background-image: none;
+	border: $border-weight_m solid $brand-primary-color;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-name: loading;
+	animation-name: loading;
+}
+
+@-webkit-keyframes loading {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes loading {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(360deg);
+	}
+}
+
 @media (min-width: $breakpoint-screen) {
 
 	// Error Messages

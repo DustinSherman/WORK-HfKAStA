@@ -2173,6 +2173,39 @@ body .wpcf7 form.unaccepted .wpcf7-response-output {
   padding: 20px;
 }
 
+div.wpcf7 .ajax-loader {
+  background-image: none;
+  border: 2px solid #5a00be;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: loading;
+  animation-name: loading;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(360deg);
+  }
+}
+
 @media (min-width: 1680px) {
   body .wpcf7 form.invalid .wpcf7-response-output,
   body .wpcf7 form.unaccepted .wpcf7-response-output {
