@@ -255,12 +255,13 @@ nav ul li.menu-item-has-children .dropdown-btn {
   content: '';
   position: relative;
   display: inline-block;
-  margin: 0 0 0 6px;
-  width: 16.2px;
+  margin: 0px 0px 1px 10px;
+  width: 12.2px;
   height: 10.1px;
   background-image: url("../assets/hfkasta_stack.svg#m_arrow_nav");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
@@ -421,6 +422,10 @@ nav .sidebar_note_top {
   nav ul.sub-menu li a {
     font-size: 1.125rem;
   }
+  nav ul li.menu-item-has-children .dropdown-btn {
+    margin: 0 0 2.5px 6px;
+    width: 16.2px;
+  }
   .home-link {
     position: fixed;
   }
@@ -477,7 +482,7 @@ nav .sidebar_note_top {
     font-size: 1.5625rem;
   }
   nav ul li.menu-item-has-children .dropdown-btn {
-    margin: 0 0 0 6px;
+    margin: 0 0 2.5px 6px;
     width: 22.79px;
     height: 14.34px;
     background-image: url("../assets/hfkasta_stack.svg#l_arrow_nav");
