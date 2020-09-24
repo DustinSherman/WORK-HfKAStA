@@ -251,6 +251,22 @@ nav ul li a {
   color: #5a00be;
 }
 
+nav ul li a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital'])::before {
+  content: '';
+  width: 28.1px;
+  height: 23.5px;
+  margin-bottom: -4.5px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  background-image: url("../assets/hfkasta_stack.svg#m_link_external");
+}
+
+nav ul li a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']):hover::before {
+  background-image: url("../assets/hfkasta_stack.svg#m_link_external-red");
+}
+
 nav ul li.menu-item-has-children .dropdown-btn,
 nav ul li.menu-item-has-children .dropdown-btn:active,
 nav ul li.menu-item-has-children .dropdown-btn:focus {
@@ -449,6 +465,12 @@ nav .sidebar_note_top {
   nav ul.sub-menu li a {
     font-size: 1.125rem;
   }
+  nav ul li a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital'])::before {
+    height: 40px;
+    width: 30px;
+    margin-bottom: -10px;
+    margin-right: 5px;
+  }
   nav ul li.menu-item-has-children .dropdown-btn {
     margin: 0 0 2.5px 6px;
     width: 16.2px;
@@ -513,6 +535,16 @@ nav .sidebar_note_top {
   }
   nav ul.sub-menu li a {
     font-size: 1.5625rem;
+  }
+  nav ul li a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital'])::before {
+    height: 54px;
+    width: 45px;
+    margin-bottom: -13px;
+    margin-right: 8px;
+    background-image: url("../assets/hfkasta_stack.svg#l_link_external");
+  }
+  nav ul li a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']):hover::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_external-red");
   }
   nav ul li.menu-item-has-children .dropdown-btn {
     margin: 0 0 2.5px 6px;
@@ -698,7 +730,7 @@ body.page-child .entry-header h1 {
   .entry-header .note {
     position: absolute;
     margin: 0;
-    width: 120px;
+    width: 180px;
     height: 200px;
     -webkit-transform: rotate(-15deg);
             transform: rotate(-15deg);
@@ -712,22 +744,22 @@ body.page-child .entry-header h1 {
     background-image: url("../assets/hfkasta_stack.svg#m_swoosh_1");
   }
   .entry-header .note-swoosh-1 .note {
-    top: -127px;
-    left: -84px;
+    top: -125px;
+    left: -106px;
   }
   .entry-header .note-swoosh-2 {
     background-image: url("../assets/hfkasta_stack.svg#m_swoosh_2");
   }
   .entry-header .note-swoosh-2 .note {
     top: -85px;
-    left: -87px;
+    left: -116px;
   }
   .entry-header .note-swoosh-3 {
     background-image: url("../assets/hfkasta_stack.svg#m_swoosh_3");
   }
   .entry-header .note-swoosh-3 .note {
-    top: -62px;
-    left: -57px;
+    top: -66px;
+    left: -80px;
   }
   .entry-header .note-line .swoosh-l {
     display: none;
