@@ -1245,13 +1245,13 @@ main .content p a::before,
 nav .sidebar_note p a::before,
 main .content_sidebar-note p a::before {
   content: '';
-  display: block;
-  float: left;
-  width: 28.1px;
-  min-width: 28.1px;
-  -ms-flex-preferred-size: 28.1px;
-      flex-basis: 28.1px;
+  display: inline-block;
+  width: 24.1px;
+  min-width: 24.1px;
+  -ms-flex-preferred-size: 24.1px;
+      flex-basis: 24.1px;
   height: 20.5px;
+  margin-bottom: -3px;
   background-repeat: no-repeat;
   background-position: left center;
 }
@@ -1263,6 +1263,7 @@ nav .sidebar_note p a[href*='tel'],
 main .content_sidebar-note p a[href*='mailto'],
 main .content_sidebar-note p a[href*='tel'] {
   height: auto;
+  display: inline;
 }
 
 main .content p a[href*='mailto']::before,

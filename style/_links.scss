@@ -46,12 +46,12 @@ main .content_sidebar-note p {
 
         &::before {
             content: '';
-            display: block;
-            float: left;
-            width: 28.1px;
-            min-width: 28.1px;
-            flex-basis: 28.1px;
+            display: inline-block;
+            width: 24.1px;
+            min-width: 24.1px;
+            flex-basis: 24.1px;
             height: 20.5px;
+            margin-bottom: -3px;
             background-repeat: no-repeat;
             background-position: left center;
         }
@@ -61,6 +61,7 @@ main .content_sidebar-note p {
     a[href*='mailto'],
     a[href*='tel'] {
         height: auto;
+        display: inline;
 
         &::before {
             display: none;
