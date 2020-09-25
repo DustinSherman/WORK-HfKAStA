@@ -40,9 +40,7 @@ main .content p,
 main .content li,
 nav .sidebar_note p,
 nav .sidebar_note_top p,
-main .content_sidebar-note p,
-main .content figure:not(.wp-block-gallery),
-main .content figure:not(.wp-block-image) {
+main .content_sidebar-note p {
 
     a {
         min-height: $font-size-18 * 2;
@@ -145,6 +143,13 @@ main .content figure:not(.wp-block-image) {
     }
 }
 
+main .content .wp-block-gallery,
+main .content .wp-block-image {
+    a::before {
+        display: none;
+    }
+}
+
 @media (min-width: $breakpoint-screen) {
 
     // Links
@@ -152,9 +157,7 @@ main .content figure:not(.wp-block-image) {
     main .content li,
     nav .sidebar_note p,
     nav .sidebar_note_top p,
-    main .content_sidebar-note p,
-    main .content figure:not(.wp-block-gallery),
-    main .content figure:not(.wp-block-image) {
+    main .content_sidebar-note p {
 
         // Exclude telefon-links
         a:not([href*='tel:']) {
