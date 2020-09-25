@@ -11,7 +11,8 @@
     font-size: $font-size-headline-50;
     text-align: center;
     font-family: 'GT-Haptik-Regular', sans-serif;
-    font-weight: normal;
+    // Must be a number so line break looks normal in Safari
+    font-weight: 300;
     letter-spacing: 1px;
 }
 
