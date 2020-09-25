@@ -117,13 +117,21 @@
             let ticker = document.getElementById('ticker');
             let tickerWidth = -ticker.clientWidth/tickerNewsCount;
 
-            document.documentElement.style.setProperty('--ticker-width', tickerWidth + 'px');
+            // document.documentElement.style.setProperty('--ticker-width', tickerWidth + 'px');
 
             let tickerDuration = ticker.clientWidth * .01;
 
-            document.documentElement.style.setProperty('--ticker-duration', tickerDuration + 's');
+            // document.documentElement.style.setProperty('--ticker-duration', tickerDuration + 's');
+
+            let target = document.querySelector('#footer-style');
+
+            let style = document.createElement('style');
+
+            style.innerHTML = ('.ticker-wrap .ticker {-webkit-animation-duration: ' + tickerDuration + 's;animation-duration: ' + tickerDuration + 's;} @-webkit-keyframes ticker {0% {-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);visibility: visible;}100% {-webkit-transform: translate3d(' + tickerWidth + 'px, 0, 0);transform: translate3d(' + tickerWidth + 'px, 0, 0);}}@keyframes ticker {0% {-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0); visibility: visible;}100% {-webkit-transform: translate3d(' + tickerWidth + 'px, 0, 0);transform: translate3d(' + tickerWidth + 'px, 0, 0);}}')
         }
     </script>
+    <div id="ticker-style"></div>
+    <!--
     <style>
         .ticker-wrap .ticker {
             -webkit-animation-duration: var(--ticker-width);
@@ -156,6 +164,7 @@
             }
         }
     </style>
+    -->
     </body>
 
     <?php wp_footer(); ?>
