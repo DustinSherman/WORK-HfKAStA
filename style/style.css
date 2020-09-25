@@ -1714,6 +1714,7 @@ h6 {
 .wrapper main .content p a {
   display: inline-block;
   height: auto;
+  min-height: auto;
 }
 
 .wrapper main .content .wp-block-button {
