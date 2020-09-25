@@ -1726,6 +1726,7 @@ h6 {
   background-image: url("../assets/hfkasta_stack.svg#m_dash");
   background-position: top left;
   background-repeat: no-repeat;
+  background-size: 24.1px;
 }
 
 .wrapper main .content p a,
@@ -1917,6 +1918,7 @@ h6 {
   }
   .wrapper main .content > ul li {
     padding-left: 36px;
+    background-size: 36px;
     background-image: url("../assets/hfkasta_stack.svg#l_dash");
   }
   .wrapper main .content figure.wp-block-gallery li.blocks-gallery-item figure figcaption {
