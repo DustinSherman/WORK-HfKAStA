@@ -7,7 +7,7 @@ get_header();
 ?>
 
 <div class="content">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/404_animation.gif" class="image-404">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/404_animation_transparent.gif" class="image-404" alt="404 - Page not found">
 </div>
 
 <?php get_footer(); ?>
