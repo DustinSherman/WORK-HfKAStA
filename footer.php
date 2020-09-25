@@ -128,6 +128,8 @@
             let style = document.createElement('style');
 
             style.innerHTML = ('.ticker-wrap .ticker {-webkit-animation-duration: ' + tickerDuration + 's;animation-duration: ' + tickerDuration + 's;} @-webkit-keyframes ticker {0% {-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);visibility: visible;}100% {-webkit-transform: translate3d(' + tickerWidth + 'px, 0, 0);transform: translate3d(' + tickerWidth + 'px, 0, 0);}}@keyframes ticker {0% {-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0); visibility: visible;}100% {-webkit-transform: translate3d(' + tickerWidth + 'px, 0, 0);transform: translate3d(' + tickerWidth + 'px, 0, 0);}}')
+        
+            target.parentNode.insertBefore(style, target.nextSibling);
         }
     </script>
     <div id="ticker-style"></div>
