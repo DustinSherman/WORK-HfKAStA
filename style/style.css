@@ -1711,7 +1711,8 @@ h6 {
   background-repeat: no-repeat;
 }
 
-.wrapper main .content p a {
+.wrapper main .content p a,
+.wrapper main .content > ul li a {
   display: inline-block;
   height: auto;
   min-height: auto;

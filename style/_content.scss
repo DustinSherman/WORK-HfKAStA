@@ -70,8 +70,9 @@ h6 {
             }
         }
 
-        // Links in regular text
-        p a {
+        // Links in regular text and list elements
+        p a,
+        &>ul li a {
             display: inline-block;
             height: auto;
             min-height: auto;
