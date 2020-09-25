@@ -123,7 +123,7 @@
 
             // document.documentElement.style.setProperty('--ticker-duration', tickerDuration + 's');
 
-            let target = document.querySelector('#footer-style');
+            let target = document.querySelector('#ticker-style');
 
             let style = document.createElement('style');
 
