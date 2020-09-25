@@ -233,10 +233,13 @@ nav ul li:not(:last-child) {
 
 nav ul li a {
   color: #5a00be;
-  font-weight: normal;
+  font-weight: 300;
   word-break: break-word;
   text-decoration: none;
   color: #5a00be;
+  -webkit-hyphens: manual;
+  -ms-hyphens: manual;
+      hyphens: manual;
 }
 
 nav ul li a:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital'])::before {
@@ -404,6 +407,20 @@ nav .search-form .search-icon {
   top: 0;
 }
 
+/*
+// Fix try for correct nav
+
+body.nav-is-open {
+    main {
+        overflow: hidden;
+        max-height: 100%;
+    }
+
+    nav {
+        overflow: scroll;
+    }
+}
+*/
 .home-link {
   position: absolute;
   margin-top: 70px;

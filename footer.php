@@ -6,8 +6,6 @@
 
     </div>
 
-    <div id="overlay"></div>
-
     <footer id="footer">
         <?php
             wp_nav_menu( 
@@ -24,7 +22,6 @@
 
         var hamburgers = document.querySelectorAll(".hamburger");
         var nav = document.getElementById("nav");
-        var overlay = document.getElementById("overlay");
         let footerHeight = document.getElementById('footer').clientHeight;
         let hamburger = document.getElementById('hamburger');
         let languageSwitch = document.getElementById('language-switch');
@@ -36,17 +33,11 @@
         hamburger.addEventListener("click", function() {
             this.classList.toggle("is-active");
             nav.classList.toggle("is-open");
-            overlay.classList.toggle("open");
+            // Fix try for correct nav
+            // document.body.classList.toggle("nav-is-open");
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }, false);
-
-        overlay.addEventListener("click", function() {
-            hamburger.classList.toggle("is-active");
-            
-            mobileNav.classList.toggle("is-open");
-            overlay.classList.toggle("open");
-        });
  
         // Page Elevator
         let pageElevator = document.getElementById('page-elevator');

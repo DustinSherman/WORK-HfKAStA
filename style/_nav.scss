@@ -58,10 +58,13 @@ nav {
 
             a {
                 color: $brand-primary-color;
-                font-weight: normal;
+                // Must be a number to work in Safari
+                font-weight: 300;
                 word-break: break-word;
                 text-decoration: none;
                 color: $brand-primary-color;
+                -webkit-hyphens: manual;
+                hyphens: manual;
 
                 // External Links
                 &:not([href*='localhost']):not([href*='hfkasta']):not([href*='asta.hfk-bremen']):not([href*='asta.uiuiui.digital']) {
@@ -234,6 +237,21 @@ nav {
         }
     }
 }
+
+/*
+// Fix try for correct nav
+
+body.nav-is-open {
+    main {
+        overflow: hidden;
+        max-height: 100%;
+    }
+
+    nav {
+        overflow: scroll;
+    }
+}
+*/
 
 // Home Button
 .home-link {
