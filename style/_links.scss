@@ -97,10 +97,10 @@ main .content_sidebar-note p {
     }
 
     // Mail Link
-    a[href*='mailto:'] {
+    a[href*='mailto'] {
         &::before {
             background-image: url('../assets/hfkasta_stack.svg#m_link_mail-red');
-            margin-bottom: -6px;
+            margin-bottom: -4px;
             background-position: center center;
         }
 
@@ -198,7 +198,7 @@ main .content .wp-block-image {
         }
 
         // Mail Link
-        a[href*='mailto:'] {
+        a[href*='mailto'] {
             &::before {
                 background-image: url('../assets/hfkasta_stack.svg#l_link_mail-red');
             }

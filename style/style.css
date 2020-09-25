@@ -1351,21 +1351,21 @@ main .content_sidebar-note p a[href*='asta.uiuiui.digital']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_internal");
 }
 
-main .content p a[href*='mailto:']::before,
-main .content li a[href*='mailto:']::before,
-nav .sidebar_note p a[href*='mailto:']::before,
-nav .sidebar_note_top p a[href*='mailto:']::before,
-main .content_sidebar-note p a[href*='mailto:']::before {
+main .content p a[href*='mailto']::before,
+main .content li a[href*='mailto']::before,
+nav .sidebar_note p a[href*='mailto']::before,
+nav .sidebar_note_top p a[href*='mailto']::before,
+main .content_sidebar-note p a[href*='mailto']::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_mail-red");
-  margin-bottom: -6px;
+  margin-bottom: -4px;
   background-position: center center;
 }
 
-main .content p a[href*='mailto:']:hover::before,
-main .content li a[href*='mailto:']:hover::before,
-nav .sidebar_note p a[href*='mailto:']:hover::before,
-nav .sidebar_note_top p a[href*='mailto:']:hover::before,
-main .content_sidebar-note p a[href*='mailto:']:hover::before {
+main .content p a[href*='mailto']:hover::before,
+main .content li a[href*='mailto']:hover::before,
+nav .sidebar_note p a[href*='mailto']:hover::before,
+nav .sidebar_note_top p a[href*='mailto']:hover::before,
+main .content_sidebar-note p a[href*='mailto']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_mail");
 }
 
@@ -1509,18 +1509,18 @@ main .content .wp-block-image a::before {
   main .content_sidebar-note p a[href*='asta.uiuiui.digital']:hover::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_internal");
   }
-  main .content p a[href*='mailto:']::before,
-  main .content li a[href*='mailto:']::before,
-  nav .sidebar_note p a[href*='mailto:']::before,
-  nav .sidebar_note_top p a[href*='mailto:']::before,
-  main .content_sidebar-note p a[href*='mailto:']::before {
+  main .content p a[href*='mailto']::before,
+  main .content li a[href*='mailto']::before,
+  nav .sidebar_note p a[href*='mailto']::before,
+  nav .sidebar_note_top p a[href*='mailto']::before,
+  main .content_sidebar-note p a[href*='mailto']::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_mail-red");
   }
-  main .content p a[href*='mailto:']:hover::before,
-  main .content li a[href*='mailto:']:hover::before,
-  nav .sidebar_note p a[href*='mailto:']:hover::before,
-  nav .sidebar_note_top p a[href*='mailto:']:hover::before,
-  main .content_sidebar-note p a[href*='mailto:']:hover::before {
+  main .content p a[href*='mailto']:hover::before,
+  main .content li a[href*='mailto']:hover::before,
+  nav .sidebar_note p a[href*='mailto']:hover::before,
+  nav .sidebar_note_top p a[href*='mailto']:hover::before,
+  main .content_sidebar-note p a[href*='mailto']:hover::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_mail");
   }
   main .content p a[href*='.pdf']::before,
