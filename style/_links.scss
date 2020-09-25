@@ -41,7 +41,8 @@ main .content li,
 nav .sidebar_note p,
 nav .sidebar_note_top p,
 main .content_sidebar-note p,
-main .content :not(figure) {
+main .content figure:not(.wp-block-gallery),
+main .content figure:not(.wp-block-image) {
 
     a {
         min-height: $font-size-18 * 2;
@@ -152,7 +153,8 @@ main .content :not(figure) {
     nav .sidebar_note p,
     nav .sidebar_note_top p,
     main .content_sidebar-note p,
-    main .content :not(figure) {
+    main .content figure:not(.wp-block-gallery),
+    main .content figure:not(.wp-block-image) {
 
         // Exclude telefon-links
         a:not([href*='tel:']) {
