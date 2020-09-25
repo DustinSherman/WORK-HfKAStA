@@ -1218,7 +1218,8 @@ main .content p a,
 main .content li a,
 nav .sidebar_note p a,
 nav .sidebar_note_top p a,
-main .content_sidebar-note p a {
+main .content_sidebar-note p a,
+main .content :not(figure) a {
   min-height: 2.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1232,7 +1233,8 @@ main .content p a::before,
 main .content li a::before,
 nav .sidebar_note p a::before,
 nav .sidebar_note_top p a::before,
-main .content_sidebar-note p a::before {
+main .content_sidebar-note p a::before,
+main .content :not(figure) a::before {
   content: '';
   display: inline-block;
   width: 24.1px;
@@ -1249,7 +1251,8 @@ main .content p a[href*='tel:'],
 main .content li a[href*='tel:'],
 nav .sidebar_note p a[href*='tel:'],
 nav .sidebar_note_top p a[href*='tel:'],
-main .content_sidebar-note p a[href*='tel:'] {
+main .content_sidebar-note p a[href*='tel:'],
+main .content :not(figure) a[href*='tel:'] {
   height: auto;
   display: inline;
 }
@@ -1258,7 +1261,8 @@ main .content p a[href*='tel:']::before,
 main .content li a[href*='tel:']::before,
 nav .sidebar_note p a[href*='tel:']::before,
 nav .sidebar_note_top p a[href*='tel:']::before,
-main .content_sidebar-note p a[href*='tel:']::before {
+main .content_sidebar-note p a[href*='tel:']::before,
+main .content :not(figure) a[href*='tel:']::before {
   display: none;
 }
 
@@ -1271,7 +1275,9 @@ nav .sidebar_note p a[href*='https://']::before,
 nav .sidebar_note_top p a[href*='http://']::before,
 nav .sidebar_note_top p a[href*='https://']::before,
 main .content_sidebar-note p a[href*='http://']::before,
-main .content_sidebar-note p a[href*='https://']::before {
+main .content_sidebar-note p a[href*='https://']::before,
+main .content :not(figure) a[href*='http://']::before,
+main .content :not(figure) a[href*='https://']::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_external-red");
 }
 
@@ -1284,7 +1290,9 @@ nav .sidebar_note p a[href*='https://']:hover::before,
 nav .sidebar_note_top p a[href*='http://']:hover::before,
 nav .sidebar_note_top p a[href*='https://']:hover::before,
 main .content_sidebar-note p a[href*='http://']:hover::before,
-main .content_sidebar-note p a[href*='https://']:hover::before {
+main .content_sidebar-note p a[href*='https://']:hover::before,
+main .content :not(figure) a[href*='http://']:hover::before,
+main .content :not(figure) a[href*='https://']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_external");
 }
 
@@ -1307,7 +1315,11 @@ nav .sidebar_note_top p a[href*='asta.uiuiui.digital']::before,
 main .content_sidebar-note p a[href*='localhost']::before,
 main .content_sidebar-note p a[href*='hfkasta']::before,
 main .content_sidebar-note p a[href*='asta.hfk-bremen']::before,
-main .content_sidebar-note p a[href*='asta.uiuiui.digital']::before {
+main .content_sidebar-note p a[href*='asta.uiuiui.digital']::before,
+main .content :not(figure) a[href*='localhost']::before,
+main .content :not(figure) a[href*='hfkasta']::before,
+main .content :not(figure) a[href*='asta.hfk-bremen']::before,
+main .content :not(figure) a[href*='asta.uiuiui.digital']::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_internal-red");
 }
 
@@ -1330,7 +1342,11 @@ nav .sidebar_note_top p a[href*='asta.uiuiui.digital']:hover::before,
 main .content_sidebar-note p a[href*='localhost']:hover::before,
 main .content_sidebar-note p a[href*='hfkasta']:hover::before,
 main .content_sidebar-note p a[href*='asta.hfk-bremen']:hover::before,
-main .content_sidebar-note p a[href*='asta.uiuiui.digital']:hover::before {
+main .content_sidebar-note p a[href*='asta.uiuiui.digital']:hover::before,
+main .content :not(figure) a[href*='localhost']:hover::before,
+main .content :not(figure) a[href*='hfkasta']:hover::before,
+main .content :not(figure) a[href*='asta.hfk-bremen']:hover::before,
+main .content :not(figure) a[href*='asta.uiuiui.digital']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_internal");
 }
 
@@ -1338,7 +1354,8 @@ main .content p a[href*='mailto:']::before,
 main .content li a[href*='mailto:']::before,
 nav .sidebar_note p a[href*='mailto:']::before,
 nav .sidebar_note_top p a[href*='mailto:']::before,
-main .content_sidebar-note p a[href*='mailto:']::before {
+main .content_sidebar-note p a[href*='mailto:']::before,
+main .content :not(figure) a[href*='mailto:']::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_mail-red");
   margin-bottom: -6px;
   background-position: center center;
@@ -1348,7 +1365,8 @@ main .content p a[href*='mailto:']:hover::before,
 main .content li a[href*='mailto:']:hover::before,
 nav .sidebar_note p a[href*='mailto:']:hover::before,
 nav .sidebar_note_top p a[href*='mailto:']:hover::before,
-main .content_sidebar-note p a[href*='mailto:']:hover::before {
+main .content_sidebar-note p a[href*='mailto:']:hover::before,
+main .content :not(figure) a[href*='mailto:']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_mail");
 }
 
@@ -1356,7 +1374,8 @@ main .content p a[href*='.pdf']::before,
 main .content li a[href*='.pdf']::before,
 nav .sidebar_note p a[href*='.pdf']::before,
 nav .sidebar_note_top p a[href*='.pdf']::before,
-main .content_sidebar-note p a[href*='.pdf']::before {
+main .content_sidebar-note p a[href*='.pdf']::before,
+main .content :not(figure) a[href*='.pdf']::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_download-red");
 }
 
@@ -1364,7 +1383,8 @@ main .content p a[href*='.pdf']:hover::before,
 main .content li a[href*='.pdf']:hover::before,
 nav .sidebar_note p a[href*='.pdf']:hover::before,
 nav .sidebar_note_top p a[href*='.pdf']:hover::before,
-main .content_sidebar-note p a[href*='.pdf']:hover::before {
+main .content_sidebar-note p a[href*='.pdf']:hover::before,
+main .content :not(figure) a[href*='.pdf']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_download");
 }
 
@@ -1372,7 +1392,8 @@ main .content p a[href*='hfkbremen.sharepoint']::before,
 main .content li a[href*='hfkbremen.sharepoint']::before,
 nav .sidebar_note p a[href*='hfkbremen.sharepoint']::before,
 nav .sidebar_note_top p a[href*='hfkbremen.sharepoint']::before,
-main .content_sidebar-note p a[href*='hfkbremen.sharepoint']::before {
+main .content_sidebar-note p a[href*='hfkbremen.sharepoint']::before,
+main .content :not(figure) a[href*='hfkbremen.sharepoint']::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_drive-red");
 }
 
@@ -1380,7 +1401,8 @@ main .content p a[href*='hfkbremen.sharepoint']:hover::before,
 main .content li a[href*='hfkbremen.sharepoint']:hover::before,
 nav .sidebar_note p a[href*='hfkbremen.sharepoint']:hover::before,
 nav .sidebar_note_top p a[href*='hfkbremen.sharepoint']:hover::before,
-main .content_sidebar-note p a[href*='hfkbremen.sharepoint']:hover::before {
+main .content_sidebar-note p a[href*='hfkbremen.sharepoint']:hover::before,
+main .content :not(figure) a[href*='hfkbremen.sharepoint']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_drive");
 }
 
@@ -1388,7 +1410,8 @@ main .content p a[href*='portal.hfk-bremen.de']::before,
 main .content li a[href*='portal.hfk-bremen.de']::before,
 nav .sidebar_note p a[href*='portal.hfk-bremen.de']::before,
 nav .sidebar_note_top p a[href*='portal.hfk-bremen.de']::before,
-main .content_sidebar-note p a[href*='portal.hfk-bremen.de']::before {
+main .content_sidebar-note p a[href*='portal.hfk-bremen.de']::before,
+main .content :not(figure) a[href*='portal.hfk-bremen.de']::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_portal-red");
 }
 
@@ -1396,7 +1419,8 @@ main .content p a[href*='portal.hfk-bremen.de']:hover::before,
 main .content li a[href*='portal.hfk-bremen.de']:hover::before,
 nav .sidebar_note p a[href*='portal.hfk-bremen.de']:hover::before,
 nav .sidebar_note_top p a[href*='portal.hfk-bremen.de']:hover::before,
-main .content_sidebar-note p a[href*='portal.hfk-bremen.de']:hover::before {
+main .content_sidebar-note p a[href*='portal.hfk-bremen.de']:hover::before,
+main .content :not(figure) a[href*='portal.hfk-bremen.de']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_portal");
 }
 
@@ -1405,14 +1429,16 @@ main .content_sidebar-note p a[href*='portal.hfk-bremen.de']:hover::before {
   main .content li a:not([href*='tel:']),
   nav .sidebar_note p a:not([href*='tel:']),
   nav .sidebar_note_top p a:not([href*='tel:']),
-  main .content_sidebar-note p a:not([href*='tel:']) {
+  main .content_sidebar-note p a:not([href*='tel:']),
+  main .content :not(figure) a:not([href*='tel:']) {
     height: 3.125rem;
   }
   main .content p a:not([href*='tel:'])::before,
   main .content li a:not([href*='tel:'])::before,
   nav .sidebar_note p a:not([href*='tel:'])::before,
   nav .sidebar_note_top p a:not([href*='tel:'])::before,
-  main .content_sidebar-note p a:not([href*='tel:'])::before {
+  main .content_sidebar-note p a:not([href*='tel:'])::before,
+  main .content :not(figure) a:not([href*='tel:'])::before {
     width: 36px;
     height: 26px;
     min-width: 36px;
@@ -1428,7 +1454,9 @@ main .content_sidebar-note p a[href*='portal.hfk-bremen.de']:hover::before {
   nav .sidebar_note_top p a[href*='http://']::before,
   nav .sidebar_note_top p a[href*='https://']::before,
   main .content_sidebar-note p a[href*='http://']::before,
-  main .content_sidebar-note p a[href*='https://']::before {
+  main .content_sidebar-note p a[href*='https://']::before,
+  main .content :not(figure) a[href*='http://']::before,
+  main .content :not(figure) a[href*='https://']::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_external-red");
   }
   main .content p a[href*='http://']:hover::before,
@@ -1440,7 +1468,9 @@ main .content_sidebar-note p a[href*='portal.hfk-bremen.de']:hover::before {
   nav .sidebar_note_top p a[href*='http://']:hover::before,
   nav .sidebar_note_top p a[href*='https://']:hover::before,
   main .content_sidebar-note p a[href*='http://']:hover::before,
-  main .content_sidebar-note p a[href*='https://']:hover::before {
+  main .content_sidebar-note p a[href*='https://']:hover::before,
+  main .content :not(figure) a[href*='http://']:hover::before,
+  main .content :not(figure) a[href*='https://']:hover::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_external");
   }
   main .content p a[href*='localhost']::before,
@@ -1462,7 +1492,11 @@ main .content_sidebar-note p a[href*='portal.hfk-bremen.de']:hover::before {
   main .content_sidebar-note p a[href*='localhost']::before,
   main .content_sidebar-note p a[href*='hfkasta']::before,
   main .content_sidebar-note p a[href*='asta.hfk-bremen']::before,
-  main .content_sidebar-note p a[href*='asta.uiuiui.digital']::before {
+  main .content_sidebar-note p a[href*='asta.uiuiui.digital']::before,
+  main .content :not(figure) a[href*='localhost']::before,
+  main .content :not(figure) a[href*='hfkasta']::before,
+  main .content :not(figure) a[href*='asta.hfk-bremen']::before,
+  main .content :not(figure) a[href*='asta.uiuiui.digital']::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_internal-red");
   }
   main .content p a[href*='localhost']:hover::before,
@@ -1484,63 +1518,75 @@ main .content_sidebar-note p a[href*='portal.hfk-bremen.de']:hover::before {
   main .content_sidebar-note p a[href*='localhost']:hover::before,
   main .content_sidebar-note p a[href*='hfkasta']:hover::before,
   main .content_sidebar-note p a[href*='asta.hfk-bremen']:hover::before,
-  main .content_sidebar-note p a[href*='asta.uiuiui.digital']:hover::before {
+  main .content_sidebar-note p a[href*='asta.uiuiui.digital']:hover::before,
+  main .content :not(figure) a[href*='localhost']:hover::before,
+  main .content :not(figure) a[href*='hfkasta']:hover::before,
+  main .content :not(figure) a[href*='asta.hfk-bremen']:hover::before,
+  main .content :not(figure) a[href*='asta.uiuiui.digital']:hover::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_internal");
   }
   main .content p a[href*='mailto:']::before,
   main .content li a[href*='mailto:']::before,
   nav .sidebar_note p a[href*='mailto:']::before,
   nav .sidebar_note_top p a[href*='mailto:']::before,
-  main .content_sidebar-note p a[href*='mailto:']::before {
+  main .content_sidebar-note p a[href*='mailto:']::before,
+  main .content :not(figure) a[href*='mailto:']::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_mail-red");
   }
   main .content p a[href*='mailto:']:hover::before,
   main .content li a[href*='mailto:']:hover::before,
   nav .sidebar_note p a[href*='mailto:']:hover::before,
   nav .sidebar_note_top p a[href*='mailto:']:hover::before,
-  main .content_sidebar-note p a[href*='mailto:']:hover::before {
+  main .content_sidebar-note p a[href*='mailto:']:hover::before,
+  main .content :not(figure) a[href*='mailto:']:hover::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_mail");
   }
   main .content p a[href*='.pdf']::before,
   main .content li a[href*='.pdf']::before,
   nav .sidebar_note p a[href*='.pdf']::before,
   nav .sidebar_note_top p a[href*='.pdf']::before,
-  main .content_sidebar-note p a[href*='.pdf']::before {
+  main .content_sidebar-note p a[href*='.pdf']::before,
+  main .content :not(figure) a[href*='.pdf']::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_download-red");
   }
   main .content p a[href*='.pdf']:hover::before,
   main .content li a[href*='.pdf']:hover::before,
   nav .sidebar_note p a[href*='.pdf']:hover::before,
   nav .sidebar_note_top p a[href*='.pdf']:hover::before,
-  main .content_sidebar-note p a[href*='.pdf']:hover::before {
+  main .content_sidebar-note p a[href*='.pdf']:hover::before,
+  main .content :not(figure) a[href*='.pdf']:hover::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_download");
   }
   main .content p a[href*='hfkbremen.sharepoint']::before,
   main .content li a[href*='hfkbremen.sharepoint']::before,
   nav .sidebar_note p a[href*='hfkbremen.sharepoint']::before,
   nav .sidebar_note_top p a[href*='hfkbremen.sharepoint']::before,
-  main .content_sidebar-note p a[href*='hfkbremen.sharepoint']::before {
+  main .content_sidebar-note p a[href*='hfkbremen.sharepoint']::before,
+  main .content :not(figure) a[href*='hfkbremen.sharepoint']::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_drive-red");
   }
   main .content p a[href*='hfkbremen.sharepoint']:hover::before,
   main .content li a[href*='hfkbremen.sharepoint']:hover::before,
   nav .sidebar_note p a[href*='hfkbremen.sharepoint']:hover::before,
   nav .sidebar_note_top p a[href*='hfkbremen.sharepoint']:hover::before,
-  main .content_sidebar-note p a[href*='hfkbremen.sharepoint']:hover::before {
+  main .content_sidebar-note p a[href*='hfkbremen.sharepoint']:hover::before,
+  main .content :not(figure) a[href*='hfkbremen.sharepoint']:hover::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_drive");
   }
   main .content p a[href*='portal.hfk-bremen.de']::before,
   main .content li a[href*='portal.hfk-bremen.de']::before,
   nav .sidebar_note p a[href*='portal.hfk-bremen.de']::before,
   nav .sidebar_note_top p a[href*='portal.hfk-bremen.de']::before,
-  main .content_sidebar-note p a[href*='portal.hfk-bremen.de']::before {
+  main .content_sidebar-note p a[href*='portal.hfk-bremen.de']::before,
+  main .content :not(figure) a[href*='portal.hfk-bremen.de']::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_portal-red");
   }
   main .content p a[href*='portal.hfk-bremen.de']:hover::before,
   main .content li a[href*='portal.hfk-bremen.de']:hover::before,
   nav .sidebar_note p a[href*='portal.hfk-bremen.de']:hover::before,
   nav .sidebar_note_top p a[href*='portal.hfk-bremen.de']:hover::before,
-  main .content_sidebar-note p a[href*='portal.hfk-bremen.de']:hover::before {
+  main .content_sidebar-note p a[href*='portal.hfk-bremen.de']:hover::before,
+  main .content :not(figure) a[href*='portal.hfk-bremen.de']:hover::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_portal");
   }
 }
