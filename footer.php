@@ -124,6 +124,16 @@
         
             target.parentNode.insertBefore(style, target.nextSibling);
         }
+
+        // Dont send empty searches
+        const form = document.querySelector('#search-form');
+        const searchfield = document.querySelector('#search-field');
+
+        form.addEventListener('submit', evt => {
+            if (searchfield.value == '') {
+                evt.preventDefault();
+            }
+        })
     </script>
     <div id="ticker-style"></div>
     <!--
