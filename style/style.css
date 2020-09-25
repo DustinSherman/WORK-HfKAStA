@@ -1300,6 +1300,22 @@ main .content_sidebar-note p a[href*='https://']:hover::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_external");
 }
 
+main .content p a[href*='mailto:']::before,
+main .content li a[href*='mailto:']::before,
+nav .sidebar_note p a[href*='mailto:']::before,
+nav .sidebar_note_top p a[href*='mailto:']::before,
+main .content_sidebar-note p a[href*='mailto:']::before {
+  background-image: url("../assets/hfkasta_stack.svg#m_link_mail-red");
+}
+
+main .content p a[href*='mailto:']:hover::before,
+main .content li a[href*='mailto:']:hover::before,
+nav .sidebar_note p a[href*='mailto:']:hover::before,
+nav .sidebar_note_top p a[href*='mailto:']:hover::before,
+main .content_sidebar-note p a[href*='mailto:']:hover::before {
+  background-image: url("../assets/hfkasta_stack.svg#m_link_mail");
+}
+
 main .content p a[href*='localhost']::before,
 main .content p a[href*='hfkasta']::before,
 main .content p a[href*='asta.hfk-bremen']::before,
@@ -1446,6 +1462,20 @@ main .content_sidebar-note p a[href*='portal.hfk-bremen.de']:hover::before {
   main .content_sidebar-note p a[href*='http://']:hover::before,
   main .content_sidebar-note p a[href*='https://']:hover::before {
     background-image: url("../assets/hfkasta_stack.svg#l_link_external");
+  }
+  main .content p a[href*='mailto:']::before,
+  main .content li a[href*='mailto:']::before,
+  nav .sidebar_note p a[href*='mailto:']::before,
+  nav .sidebar_note_top p a[href*='mailto:']::before,
+  main .content_sidebar-note p a[href*='mailto:']::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_mail-red");
+  }
+  main .content p a[href*='mailto:']:hover::before,
+  main .content li a[href*='mailto:']:hover::before,
+  nav .sidebar_note p a[href*='mailto:']:hover::before,
+  nav .sidebar_note_top p a[href*='mailto:']:hover::before,
+  main .content_sidebar-note p a[href*='mailto:']:hover::before {
+    background-image: url("../assets/hfkasta_stack.svg#l_link_mail");
   }
   main .content p a[href*='localhost']::before,
   main .content p a[href*='hfkasta']::before,

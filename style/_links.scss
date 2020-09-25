@@ -82,6 +82,17 @@ main .content_sidebar-note p {
         }
     }
 
+    // Mail Link
+    a[href*='mailto:'] {
+        &::before {
+            background-image: url('../assets/hfkasta_stack.svg#m_link_mail-red');
+        }
+
+        &:hover::before {
+            background-image: url('../assets/hfkasta_stack.svg#m_link_mail');
+        }
+    }
+
     // Link intern
     a[href*='localhost'],
     a[href*='hfkasta'],
@@ -161,6 +172,17 @@ main .content_sidebar-note p {
 
             &:hover::before {
                 background-image: url('../assets/hfkasta_stack.svg#l_link_external');
+            }
+        }
+
+        // Mail Link
+        a[href*='mailto:'] {
+            &::before {
+                background-image: url('../assets/hfkasta_stack.svg#l_link_mail-red');
+            }
+
+            &:hover::before {
+                background-image: url('../assets/hfkasta_stack.svg#l_link_mail');
             }
         }
 
