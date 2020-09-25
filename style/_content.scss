@@ -62,13 +62,11 @@ h6 {
             padding-left: 0;
 
             li {
+                padding-left: 24.1px;
                 list-style-type: none;
-
-                &::before {
-                    content: '-';
-                    width: 24.1px;
-                    display: inline-block;
-                }
+                background-image: url('../assets/m_dash.png');
+                background-position: top left;
+                background-repeat: no-repeat;
             }
         }
 
@@ -284,8 +282,12 @@ h6 {
                 padding-left: 36px;
             }
 
-            &>ul li::before {
-                width: 36px;
+            &>ul {
+
+                li {
+                    padding-left: 36px;
+                    background-image: url('../assets/l_dash.png');
+                }
             }
 
             // Gallery
