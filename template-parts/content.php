@@ -36,9 +36,9 @@
             }
             ?>
 
-        </div><!-- .entry-content -->
+        </div>
 
-    </div><!-- .post-inner -->
+    </div>
 
     <?php
 
@@ -53,7 +53,7 @@
 
             <?php comments_template(); ?>
 
-        </div><!-- .comments-wrapper -->
+        </div>
 
         <?php
     }

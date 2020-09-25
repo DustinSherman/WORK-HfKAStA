@@ -1901,9 +1901,6 @@ h6 {
   .wrapper main .content figure.wp-block-gallery li.blocks-gallery-item figure img {
     max-height: 480px;
   }
-  .wrapper main .content_sidebar-note {
-    display: none;
-  }
 }
 
 @media (min-width: 1680px) {
@@ -1923,6 +1920,9 @@ h6 {
   }
   .wrapper main .content figure.wp-block-gallery li.blocks-gallery-item figure figcaption {
     font-size: 1.5625rem;
+  }
+  .wrapper main .content_sidebar-note {
+    display: none;
   }
 }
 
