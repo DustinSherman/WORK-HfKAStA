@@ -119,20 +119,20 @@ nav {
             }
         }
 
+        li {
+            &.current-menu-item {
+                a {
+                    font-family: 'GT-Haptik-Bold', sans-serif;
+                }
+            }
+        }
+
         &.sub-menu {
             height: 0px;
             transition: max-height $transition-time;
             overflow: hidden;
             box-sizing: border-box;
             padding-left: 20px;
-
-            li {
-                &.current-menu-item {
-                    a {
-                        font-family: 'GT-Haptik-Bold', sans-serif;
-                    }
-                }
-            }
         }
     }
 
@@ -404,7 +404,10 @@ nav {
 
         ul li {
             &.menu-item-has-children {
-                .dropdown-btn {
+
+                .dropdown-btn,
+                .dropdown-btn:active,
+                .dropdown-btn:focus {
                     margin: 0 0 2.5px 6px;
                     width: 22.79px;
                     height: 14.34px;

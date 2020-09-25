@@ -6,7 +6,8 @@
 
 // Content Links
 main .content,
-nav .sidebar_note {
+nav .sidebar_note,
+nav .sidebar_note_top {
     a {
         color: $brand-secondary-color;
 
@@ -36,11 +37,13 @@ footer .menu {
 
 // Links
 main .content p,
+main .content li,
 nav .sidebar_note p,
+nav .sidebar_note_top p,
 main .content_sidebar-note p {
 
     a {
-        height: $font-size-18 * 2;
+        min-height: $font-size-18 * 2;
         display: flex;
         align-items: center;
 
@@ -58,7 +61,7 @@ main .content_sidebar-note p {
     }
 
     // Exclude telefon-links
-    a[href*='tel'] {
+    a[href*='tel:'] {
         height: auto;
         display: inline;
 
@@ -132,7 +135,9 @@ main .content_sidebar-note p {
 
     // Links
     main .content p,
+    main .content li,
     nav .sidebar_note p,
+    nav .sidebar_note_top p,
     main .content_sidebar-note p {
 
         // Exclude telefon-links

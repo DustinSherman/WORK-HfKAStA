@@ -37,11 +37,7 @@
     <?php else : ?>
 
         <h1>
-            <?php 
-                // $page_title = str_replace('|', '-<wbr>', get_the_title());
-                // echo $page_title;
-                the_title();
-            ?>
+            <?php the_title(); ?>
         </h1>
 
     <?php endif; ?>
@@ -70,11 +66,11 @@
 
             <a href="#content_sidebar-note_anchor" onclick="scroll()">
 
-                <div class="sidebar_note_arrow"></div>
-
                 <?php if (get_field('hint_to_sidebar_note', $term)) : ?>
 
                     <span><?php the_field('hint_to_sidebar_note', $term); ?></span>
+
+                    <div class="sidebar_note_arrow"></div>
 
                 <?php endif; ?>
 

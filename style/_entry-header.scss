@@ -47,13 +47,13 @@ body.page-child {
     // Sidebar not hint for mobile
     .sidebar_note_link {
         .sidebar_note_arrow {
-            width: 26.43px * 2;
-            height: 45.77px * 2;
+            width: 28.1px * 1.5;
+            height: 20.5px * 1.5;
             background-repeat: no-repeat;
             background-position: center center;
             background-size: contain;
-            background-image: url('../assets/hfkasta_stack.svg#m_arrow_elevator_burger');
-            transform: rotate(180deg);
+            background-image: url('../assets/hfkasta_stack.svg#m_link_internal');
+            transform: rotate(90deg);
             margin: 0 auto;
         }
 
@@ -63,6 +63,7 @@ body.page-child {
             color: $brand-secondary-color;
             font-family: 'GT-Haptik-Bold', sans-serif;
             font-weight: bold;
+            margin-bottom: 10px;
         }
     }
 }
@@ -121,6 +122,7 @@ body.page-child {
                 position: absolute;
                 bottom: 0;
                 margin: 0;
+                width: 100%;
             }
         }
 
