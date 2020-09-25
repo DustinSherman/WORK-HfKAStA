@@ -100,6 +100,8 @@ main .content_sidebar-note p {
     a[href*='mailto:'] {
         &::before {
             background-image: url('../assets/hfkasta_stack.svg#m_link_mail-red');
+            margin-bottom: -6px;
+            background-position: center center;
         }
 
         &:hover::before {

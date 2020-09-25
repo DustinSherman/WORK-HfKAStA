@@ -1352,6 +1352,8 @@ nav .sidebar_note p a[href*='mailto:']::before,
 nav .sidebar_note_top p a[href*='mailto:']::before,
 main .content_sidebar-note p a[href*='mailto:']::before {
   background-image: url("../assets/hfkasta_stack.svg#m_link_mail-red");
+  margin-bottom: -6px;
+  background-position: center center;
 }
 
 main .content p a[href*='mailto:']:hover::before,
@@ -1717,7 +1719,7 @@ h6 {
 }
 
 .wrapper main .content p a {
-  display: inline;
+  display: inline-block;
   height: auto;
 }
 
