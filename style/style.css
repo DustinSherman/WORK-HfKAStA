@@ -193,8 +193,8 @@ nav {
   float: right;
   top: 0;
   margin-left: 0;
-  margin-right: -320px;
-  min-width: 320px;
+  margin-right: -325px;
+  min-width: 325px;
   min-height: 100%;
   background: #fff;
   color: #5a00be;
@@ -209,7 +209,7 @@ nav {
 
 nav.is-open {
   margin-right: 0;
-  margin-left: -320px;
+  margin-left: -325px;
 }
 
 nav ul li a,
@@ -2570,7 +2570,7 @@ table td {
     display: flex;
   }
   .wrapper main {
-    min-width: calc(100% - 320px);
+    min-width: calc(100% - 325px);
   }
 }
 
