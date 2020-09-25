@@ -66,7 +66,6 @@
 
             // Move Hamburger Menu & language switch
             if (window.pageYOffset <= 100) {
-
                 if (window.pageYOffset <= tickerHeight) {
                     elementTop = (tickerHeight - window.pageYOffset);
                 } else {
