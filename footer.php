@@ -117,17 +117,17 @@
             let ticker = document.getElementById('ticker');
             let tickerWidth = -ticker.clientWidth/tickerNewsCount;
 
-            document.documentElement.style.setProperty('--tickerWidth', tickerWidth + 'px');
+            document.documentElement.style.setProperty('--ticker-width', tickerWidth + 'px');
 
             let tickerDuration = ticker.clientWidth * .01;
 
-            document.documentElement.style.setProperty('--tickerDuration', tickerDuration + 's');
+            document.documentElement.style.setProperty('--ticker-duration', tickerDuration + 's');
         }
     </script>
     <style>
         .ticker-wrap .ticker {
-            -webkit-animation-duration: var(--tickerDuration);
-            animation-duration: var(--tickerDuration);
+            -webkit-animation-duration: var(--ticker-width);
+            animation-duration: var(--ticker-width);
         }
 
         @-webkit-keyframes ticker {
@@ -138,8 +138,8 @@
             }
 
             100% {
-                -webkit-transform: translate3d(var(--tickerWidth), 0, 0);
-                transform: translate3d(var(--tickerWidth), 0, 0);
+                -webkit-transform: translate3d(var(--ticker-width), 0, 0);
+                transform: translate3d(var(--ticker-width), 0, 0);
             }
         }
 
@@ -151,8 +151,8 @@
             }
 
             100% {
-                -webkit-transform: translate3d(var(--tickerWidth), 0, 0);
-                transform: translate3d(var(--tickerWidth), 0, 0);
+                -webkit-transform: translate3d(var(--ticker-width), 0, 0);
+                transform: translate3d(var(--ticker-width), 0, 0);
             }
         }
     </style>
