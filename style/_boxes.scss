@@ -10,36 +10,52 @@
     z-index: -1;
 }
 
+.boxes {
+    .backgroundbox {
+        &_01 {
+            width: 200px;
+            height: 90px;
+        }
+
+        &_02 {
+            width: 200px;
+            height: 65px;
+        }
+
+        &_03 {
+            width: 120px;
+            height: 35px;
+        }
+
+        &_04 {
+            width: 170px;
+            height: 45px;
+        }
+    }
+}
+
 .box-layout-00 {
     .backgroundbox {
         &_01 {
-            width: 220px;
-            height: 85px;
             transform: rotate(30deg);
             top: 60px;
             right: 5%;
         }
 
         &_02 {
-            width: 200px;
-            height: 65px;
             transform: rotate(15deg);
             top: 160px;
             left: 10%;
         }
 
         &_03 {
-            width: 130px;
-            height: 25px;
             transform: rotate(-20deg);
             top: 270px;
             left: 2%;
         }
 
         &_04 {
-            width: 200px;
-            height: 50px;
-            transform: rotate(0deg);
+            transform: rotate(-9deg);
             top: 300px;
             right: 15%;
         }
@@ -49,35 +65,27 @@
 .box-layout-01 {
     .backgroundbox {
         &_01 {
-            width: 150px;
-            height: 60px;
             transform: rotate(45deg);
             top: 60px;
-            right: 5px;
+            right: 5%;
         }
 
         &_02 {
-            width: 160px;
-            height: 37px;
             transform: rotate(-35deg);
             top: 125px;
-            left: 15px;
+            left: 7%;
         }
 
         &_03 {
-            width: 230px;
-            height: 36px;
             transform: rotate(7deg);
             top: 205px;
-            right: 10px;
+            right: 20%;
         }
 
         &_04 {
-            width: 184px;
-            height: 25px;
             transform: rotate(-7deg);
             top: 266px;
-            left: 50px;
+            left: 10%;
         }
     }
 }
@@ -85,35 +93,27 @@
 .box-layout-02 {
     .backgroundbox {
         &_01 {
-            width: 150px;
-            height: 30px;
             transform: rotate(-38deg);
             top: 60px;
-            left: 20px;
+            left: 5%;
         }
 
         &_02 {
-            width: 240px;
-            height: 37px;
             transform: rotate(-105deg);
             top: 125px;
-            right: -44px;
+            right: -1%;
         }
 
         &_03 {
-            width: 160px;
-            height: 44px;
             transform: rotate(-14deg);
-            top: 120px;
-            right: 109px;
+            top: 146px;
+            right: 20%;
         }
 
         &_04 {
-            width: 159px;
-            height: 60px;
-            transform: rotate(0deg);
+            transform: rotate(9deg);
             top: 230px;
-            left: 10px;
+            left: 2%;
         }
     }
 }
@@ -121,36 +121,27 @@
 .box-layout-03 {
     .backgroundbox {
         &_01 {
-            width: 207px;
-            height: 30px;
             transform: rotate(17deg);
             top: 60px;
-            right: 20px;
+            right: 8%;
         }
 
         &_02 {
-            width: 130px;
-            height: 47px;
             transform: rotate(-20deg);
             top: 125px;
-            left: 20px;
+            left: 8%;
         }
 
         &_03 {
-            width: 108px;
-            height: 33px;
             transform: rotate(5deg);
-            top: 169px;
-            right: 38px;
+            top: 188px;
+            right: 35%;
         }
 
         &_04 {
-            width: 220px;
-            height: 25px;
-            -webkit-transform: rotate(0deg);
             transform: rotate(-5deg);
             top: 230px;
-            left: 10px;
+            left: 4%;
         }
     }
 }

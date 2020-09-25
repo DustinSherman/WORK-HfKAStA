@@ -119,12 +119,8 @@ nav {
             }
         }
 
-        li {
-            &.current-menu-item {
-                a {
-                    font-family: 'GT-Haptik-Bold', sans-serif;
-                }
-            }
+        li.current-menu-item>a {
+            font-family: 'GT-Haptik-Bold', sans-serif;
         }
 
         &.sub-menu {
