@@ -24,7 +24,7 @@ body.page-child {
 }
 
 .entry-header {
-    padding: 8rem $padding_s 4rem;
+    padding: 8rem $padding_s 2rem;
 
     // Hide boxes on small viewports
     .boxes {
@@ -47,13 +47,13 @@ body.page-child {
     // Sidebar not hint for mobile
     .sidebar_note_link {
         .sidebar_note_arrow {
-            width: 28.1px * 1.5;
-            height: 20.5px * 1.5;
+            width: 38.56px;
+            height: 56.75px;
             background-repeat: no-repeat;
             background-position: center center;
             background-size: contain;
-            background-image: url('../assets/hfkasta_stack.svg#m_link_internal');
-            transform: rotate(90deg);
+            background-image: url('../assets/hfkasta_stack.svg#m_arrow_elevator_red');
+            transform: rotate(180deg);
             margin: 0 auto;
         }
 
@@ -87,7 +87,7 @@ body.page-child {
 
     .entry-header {
         position: relative;
-        padding: 2rem $padding_s 4rem;
+        padding: 2rem $padding_s 3rem;
 
         .boxes {
             position: relative;

@@ -667,7 +667,7 @@ body.page-child .entry-header h1 {
 }
 
 .entry-header {
-  padding: 8rem 15px 4rem;
+  padding: 8rem 15px 2rem;
 }
 
 .entry-header .boxes {
@@ -687,14 +687,14 @@ body.page-child .entry-header h1 {
 }
 
 .entry-header .sidebar_note_link .sidebar_note_arrow {
-  width: 42.15px;
-  height: 30.75px;
+  width: 38.56px;
+  height: 56.75px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  background-image: url("../assets/hfkasta_stack.svg#m_link_internal");
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  background-image: url("../assets/hfkasta_stack.svg#m_arrow_elevator_red");
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
   margin: 0 auto;
 }
 
@@ -717,7 +717,7 @@ body.page-child .entry-header h1 {
   }
   .entry-header {
     position: relative;
-    padding: 2rem 15px 4rem;
+    padding: 2rem 15px 3rem;
   }
   .entry-header .boxes {
     position: relative;
@@ -1756,7 +1756,8 @@ h6 {
   height: auto;
 }
 
-.wrapper main .content figure.wp-block-image figcaption {
+.wrapper main .content figure.wp-block-image figcaption,
+.wrapper main .content figure.wp-block-gallery figcaption {
   font-family: 'GT-Haptik-Regular-Oblique', sans-serif;
 }
 
@@ -1780,7 +1781,6 @@ h6 {
   background: none;
   color: #5a00be;
   font-size: 1.125rem;
-  font-family: 'GT-Haptik-Italic', sans-serif;
   text-align: left;
   padding: 0;
   margin-top: .5em;
@@ -2086,6 +2086,10 @@ body.single .wrapper main .content .post-subline .post-categories a::before {
 
 .ics-calendar .ics-calendar-color-key-item label {
   cursor: pointer;
+}
+
+.ics-calendar .ics-calendar-month-grid {
+  margin-bottom: 0 !important;
 }
 
 .ics-calendar .ics-calendar-month-grid .events .time {

@@ -44,7 +44,7 @@
 
     <?php 
         // Display note-line and note
-        $note_line = random_int(1, 3);
+        $note_line = random_int(1, 2);
         if (get_field('note', $term)) : ?>
 
         <div class="note-line note-swoosh-<?php echo $note_line; ?>">
@@ -57,26 +57,41 @@
 
     <?php endif; ?>
 
+    <?php
+    $sidebar_note = get_field('sidebar_note');
+    if (empty($sidebar_note)) {
+        if (is_page()){
+            $object_id = wp_get_post_parent_id($post);
+        } elseif(is_single()) {
+            $object_id = get_the_category() ? get_the_category()[0] : false;
+        } else{
+            $object_id = $wp_query->get_queried_object();
+        }
 
-    <?php 
-        // Display arrow to navigate to sidebar-notes
-        if (get_field('sidebar_note', $term)) : ?>
+        if ($object_id) {
+            $sidebar_note = get_field('sidebar_note', $object_id);
+        }
+    }
 
-        <div class="sidebar_note_link">
+    // Display arrow to navigate to sidebar-notes
+    if ($sidebar_note): ?>
 
-            <a href="#content_sidebar-note_anchor" onclick="scroll()">
+        <?php if (get_field('hint_to_sidebar_note', $term)) : ?>
 
-                <?php if (get_field('hint_to_sidebar_note', $term)) : ?>
+            <div class="sidebar_note_link">
+
+                <a href="#content_sidebar-note_anchor" onclick="scroll()">
 
                     <span><?php the_field('hint_to_sidebar_note', $term); ?></span>
 
                     <div class="sidebar_note_arrow"></div>
 
-                <?php endif; ?>
+                </a>
 
-            </a>
+            </div>
+        <?php endif; ?>
 
-        </div>
+
 
     <?php endif; ?>
 

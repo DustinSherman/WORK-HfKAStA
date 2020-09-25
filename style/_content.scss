@@ -110,7 +110,10 @@ h6 {
             img {
                 height: auto;
             }
+        }
 
+        figure.wp-block-image,
+        figure.wp-block-gallery {
             figcaption {
                 font-family: 'GT-Haptik-Regular-Oblique', sans-serif;
             }
@@ -135,7 +138,6 @@ h6 {
                         background: none;
                         color: $brand-primary-color;
                         font-size: $font-size-18;
-                        font-family: 'GT-Haptik-Italic', sans-serif;
                         text-align: left;
                         padding: 0;
                         margin-top: .5em;
