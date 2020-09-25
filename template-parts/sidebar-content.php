@@ -15,9 +15,12 @@
     }
 
     if ($sidebar_note): ?>
-    <div class="sidebar_note">
-        <p>
-            <?php echo $sidebar_note; ?>
-        </p>
+    
+    <div class="content_sidebar-note" id="content_sidebar-note_anchor">
+        <div class="sidebar_note">
+            <p>
+                <?php echo $sidebar_note; ?>
+            </p>
+        </div>
     </div>
 <?php endif; ?>

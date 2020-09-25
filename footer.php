@@ -1,4 +1,4 @@
-            <?php if (!is_home()) : ?>
+            <?php if (!is_front_page()) : ?>
                 <?php get_template_part( 'template-parts/elevator' ); ?>
             <?php endif; ?>
 
