@@ -8,7 +8,9 @@
 
     <div class="content">
         <?php the_content(); ?>
-        <p class="last-update-info"><i><small>Zuletzt geändert am: <?php echo get_the_modified_time( 'j. F Y' ); ?></small></i></p>
+        <?php if (!is_home()) : ?>
+            <p class="last-update-info"><i><small>Zuletzt geändert am: <?php echo get_the_modified_time( 'j. F Y' ); ?></small></i></p>
+        <?php endif; ?>
     </div>
 
     <div class="content_sidebar-note" id="content_sidebar-note_anchor">
