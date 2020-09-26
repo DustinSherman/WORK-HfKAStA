@@ -8,8 +8,8 @@
 
     <!-- Wordpress style.css & CSS -->
     <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style/style.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style/hamburgers.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style/style.css?v=<?php echo filemtime(get_template_directory(). '/style/style.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style/hamburgers.css?v=<?php echo filemtime(get_template_directory(). '/style/hamburgers.css'); ?>">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_template_directory_uri(); ?>/assets/favicon/apple-icon-57x57.png">
