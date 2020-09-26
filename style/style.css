@@ -1903,6 +1903,12 @@ h6 {
   }
 }
 
+@media (min-width: 1024px) {
+  .wrapper main .content_sidebar-note {
+    display: none;
+  }
+}
+
 @media (min-width: 1680px) {
   h3,
   h4,
@@ -1920,9 +1926,6 @@ h6 {
   }
   .wrapper main .content figure.wp-block-gallery li.blocks-gallery-item figure figcaption {
     font-size: 1.5625rem;
-  }
-  .wrapper main .content_sidebar-note {
-    display: none;
   }
 }
 
