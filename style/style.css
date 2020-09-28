@@ -1247,13 +1247,12 @@ main .content li a,
 nav .sidebar_note p a,
 nav .sidebar_note_top p a,
 main .content_sidebar-note p a {
-  min-height: 2.25rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 main .content p a::before,
@@ -1271,6 +1270,9 @@ main .content_sidebar-note p a::before {
   margin-bottom: -3px;
   background-repeat: no-repeat;
   background-position: left center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 main .content p a[href*='tel:'],
