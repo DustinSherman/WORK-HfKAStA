@@ -173,7 +173,13 @@
   position: fixed;
   right: 0;
   top: 40px;
+  top: 0;
   z-index: 32;
+}
+
+.hamburger.hamburger--squeeze.is-active {
+  position: absolute;
+  top: 0 !important;
 }
 
 nav {
@@ -188,10 +194,10 @@ nav {
   z-index: 30;
   -webkit-transition: right 0.5s ease;
   transition: right 0.5s ease;
-  padding: 59px 20px 20px 20px;
+  padding: 59px 20px 60px 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow-y: scroll;
+  overflow-y: overlay;
 }
 
 nav.is-open {
@@ -275,6 +281,10 @@ nav ul li.menu-item-has-children .dropdown-btn:focus {
   background-size: cover;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 nav ul li.menu-item-has-children .dropdown-btn:hover,
@@ -289,23 +299,22 @@ nav ul li.menu-item-has-children.is-open .dropdown-btn {
           transform: rotate(-180deg);
 }
 
-nav ul li.menu-item-has-children.is-open .sub-menu {
-  margin-top: 12px;
-  height: auto;
-}
-
 nav ul li.current-menu-item > a {
   font-family: 'GT-Haptik-Bold', sans-serif;
 }
 
 nav ul.sub-menu {
   height: 0px;
-  -webkit-transition: max-height 0.5s;
-  transition: max-height 0.5s;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
   overflow: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-left: 20px;
+}
+
+nav ul.sub-menu li:first-child {
+  margin-top: 12px;
 }
 
 nav .search-form {
@@ -409,20 +418,6 @@ nav .search-form .search-icon {
   top: 0;
 }
 
-/*
-// Fix try for correct nav
-
-body.nav-is-open {
-    main {
-        overflow: hidden;
-        max-height: 100%;
-    }
-
-    nav {
-        overflow: scroll;
-    }
-}
-*/
 .home-link {
   position: absolute;
   margin-top: 70px;
@@ -451,6 +446,9 @@ nav .sidebar_note_top {
   .hamburger.hamburger--squeeze {
     top: 50px;
   }
+  nav {
+    padding: 59px 20px 70px 20px;
+  }
   nav ul li a,
   nav .search-form .search-field,
   nav .search-form .search-field::-webkit-input-placeholder,
@@ -478,7 +476,9 @@ nav .sidebar_note_top {
     margin-bottom: -10px;
     margin-right: 5px;
   }
-  nav ul li.menu-item-has-children .dropdown-btn {
+  nav ul li.menu-item-has-children .dropdown-btn,
+  nav ul li.menu-item-has-children .dropdown-btn:active,
+  nav ul li.menu-item-has-children .dropdown-btn:focus {
     margin: 0 0 2.5px 6px;
     width: 16.2px;
   }
@@ -497,6 +497,8 @@ nav .sidebar_note_top {
     right: auto;
     top: 0 !important;
     padding: 20px;
+    overflow: visible;
+    height: auto;
   }
   nav .sidebar_note,
   nav .sidebar_note_top {
@@ -693,6 +695,11 @@ body.page-child .entry-header h1 {
 .entry-header .note {
   width: 50%;
   margin: 0 auto 3rem auto;
+}
+
+.entry-header .sidebar_note_link {
+  width: 240px;
+  margin: 0 auto;
 }
 
 .entry-header .sidebar_note_link .sidebar_note_arrow {

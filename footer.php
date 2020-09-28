@@ -21,7 +21,9 @@
     
     <script src="<?php echo get_template_directory_uri(); ?>/assets/smooth-scroll.min.js"></script>
     <script>
-        var scroll = new SmoothScroll('a[href*="#"]');
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 300
+        });
     </script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/script.js"></script>
     <div id="ticker-style"></div>

@@ -8,7 +8,13 @@
     position: fixed;
     right: 0;
     top: $ticker-height_s;
+    top: 0;
     z-index: 32;
+
+    &.is-active {
+        position: absolute;
+        top: 0 !important;
+    }
 }
 
 nav {
@@ -22,9 +28,9 @@ nav {
     border-left: $border-weight_m solid $brand-primary-color;
     z-index: 30;
     transition: right $transition-time ease;
-    padding: (20px + 15px + 24px) 20px 20px 20px;
+    padding: (20px + 15px + 24px) 20px (20px + $ticker-height_s) 20px;
     box-sizing: border-box;
-    overflow-y: scroll;
+    overflow-y: overlay;
 
     &.is-open {
         right: 0;
@@ -103,6 +109,7 @@ nav {
                     background-position: center center;
                     background-size: cover;
                     transform: rotate(0deg);
+                    transition: transform $transition-time;
 
                     &:hover {
                         cursor: pointer;
@@ -114,11 +121,6 @@ nav {
                     .dropdown-btn {
                         transform: rotate(-180deg);
                     }
-
-                    .sub-menu {
-                        margin-top: 12px;
-                        height: auto;
-                    }
                 }
             }
         }
@@ -129,10 +131,14 @@ nav {
 
         &.sub-menu {
             height: 0px;
-            transition: max-height $transition-time;
+            transition: height $transition-time;
             overflow: hidden;
             box-sizing: border-box;
             padding-left: 20px;
+
+            li:first-child {
+                margin-top: 12px;
+            }
         }
     }
 
@@ -239,21 +245,6 @@ nav {
     }
 }
 
-/*
-// Fix try for correct nav
-
-body.nav-is-open {
-    main {
-        overflow: hidden;
-        max-height: 100%;
-    }
-
-    nav {
-        overflow: scroll;
-    }
-}
-*/
-
 // Home Button
 .home-link {
     position: absolute;
@@ -293,6 +284,7 @@ nav {
     }
 
     nav {
+        padding: (20px + 15px + 24px) 20px (20px + $ticker-height_m) 20px;
 
         // font-size
         ul li a,
@@ -324,7 +316,9 @@ nav {
             }
         }
 
-        ul li.menu-item-has-children .dropdown-btn {
+        ul li.menu-item-has-children .dropdown-btn,
+        ul li.menu-item-has-children .dropdown-btn:active,
+        ul li.menu-item-has-children .dropdown-btn:focus {
             margin: 0 0 2.5px 6px;
             width: 16.2px;
         }
@@ -346,6 +340,8 @@ nav {
         right: auto;
         top: 0 !important;
         padding: 20px;
+        overflow: visible;
+        height: auto;
 
         // Show Sidebar Notes on > 768px
         .sidebar_note,

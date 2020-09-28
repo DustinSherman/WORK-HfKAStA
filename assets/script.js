@@ -13,34 +13,18 @@ let homeLink = document.getElementById('home-link');
 
 let wrapper = document.getElementById('wrapper');
 
+let pageElevator = document.getElementById('page-elevator');
+
 let footer = document.getElementById('footer');
 let footerHeight = document.getElementById('footer').offsetHeight;
 
 let documentHeight = document.body.clientHeight;
 
-// Toogle Classes on hamburger Menu
-hamburger.addEventListener("click", function () {
-    this.classList.toggle("is-active");
-    nav.classList.toggle("is-open");
-}, false);
-
-// Page Elevator
-
-let pageElevator = document.getElementById('page-elevator');
-
-/*
-if (pageElevator != null) {
-    pageElevator.addEventListener("click", function () {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    })
-}
-*/
-
 window.onload = function () {
     scroll();
     setTickerValues();
     setWrapperPadding();
+    getSubMenuHeights();
 };
 
 window.onscroll = function () {
@@ -54,6 +38,12 @@ window.onresize = function () {
     setTickerValues();
     setWrapperPadding();
 }
+
+// Toogle Classes on hamburger Menu
+hamburger.addEventListener("click", function () {
+    this.classList.toggle("is-active");
+    nav.classList.toggle("is-open");
+}, false);
 
 function scroll() {
     let elementTop = 0;
@@ -95,11 +85,8 @@ function scroll() {
 function setTickerValues() {
     let ticker = document.getElementById('ticker');
     let tickerWidth = -ticker.clientWidth / tickerNewsCount;
-
     let tickerDuration = ticker.clientWidth * .01;
-
     let target = document.querySelector('#ticker-style');
-
     let style = document.createElement('style');
 
     style.innerHTML = ('.ticker-wrap .ticker {-webkit-animation-duration: ' + tickerDuration + 's;animation-duration: ' + tickerDuration + 's;} @-webkit-keyframes ticker {0% {-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);visibility: visible;}100% {-webkit-transform: translate3d(' + tickerWidth + 'px, 0, 0);transform: translate3d(' + tickerWidth + 'px, 0, 0);}}@keyframes ticker {0% {-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0); visibility: visible;}100% {-webkit-transform: translate3d(' + tickerWidth + 'px, 0, 0);transform: translate3d(' + tickerWidth + 'px, 0, 0);}}')
@@ -140,3 +127,35 @@ form.addEventListener('submit', evt => {
         evt.preventDefault();
     }
 })
+
+// Get heights of sub-menus
+function getSubMenuHeights() {
+    let navPoints = nav.querySelectorAll(".menu > .menu-item");
+
+    let iterate = 1;
+    let css = '';
+
+    console.log(navPoints.length);
+
+    if (navPoints.length > 0) {
+        forEach(navPoints, function (navPoint) {
+            if (navPoint.classList.contains('menu-item-has-children')) {
+                let subMenu = navPoint.querySelector('.sub-menu');
+                subMenu.style.height = 'auto';
+                let tmpHeight = subMenu.offsetHeight;
+                subMenu.style.removeProperty('height');
+
+                css = css.concat('nav li:nth-child(' + iterate + ').is-open .sub-menu {height:' + tmpHeight + 'px}');
+            }
+
+            iterate++;
+        })
+    }
+
+    let target = document.querySelector('#ticker-style');
+    let style = document.createElement('style');
+
+    style.innerHTML = css;
+
+    target.parentNode.insertBefore(style, target.nextSibling);
+}
