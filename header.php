@@ -37,12 +37,14 @@
 
     <?php wp_body_open(); ?>
 
+    <div id="top_anchor"></div>
+
     <?php 
         // Ticker in Header
         get_template_part( 'template-parts/ticker' ); 
     ?>
     
-    <div class="wrapper">
+    <div class="wrapper" id="wrapper">
 
         <?php 
             // Language Switch

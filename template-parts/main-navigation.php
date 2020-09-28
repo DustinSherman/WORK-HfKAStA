@@ -13,17 +13,19 @@
             </p>
         </div>
     <?php endif; ?>
+    
+    <div class="nav_content">
+        <?php get_search_form(); ?>
 
-    <?php get_search_form(); ?>
-
-    <?php
-        wp_nav_menu( 
-            array(
-                'theme_location' => 'main',
-                'menu' => 'Main'
-            )
-        );
-    ?>
+        <?php
+            wp_nav_menu( 
+                array(
+                    'theme_location' => 'main',
+                    'menu' => 'Main'
+                )
+            );
+        ?>
+    </div>
 
     <?php get_template_part( 'template-parts/sidebar-content' ); ?>
 

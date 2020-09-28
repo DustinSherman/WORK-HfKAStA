@@ -12,25 +12,26 @@
 }
 
 nav {
-    position: relative;
-    float: right;
-    top: 0;
-    margin-left: 0;
-    margin-right: -$sidebar-width;
-    min-width: $sidebar-width;
-    min-height: 100%;
+    position: fixed;
+    top: $ticker-height_m;
+    right: -$sidebar-width;
+    width: $sidebar-width;
+    height: 100%;
     background: #fff;
     color: $brand-primary-color;
     border-left: $border-weight_m solid $brand-primary-color;
     z-index: 30;
-    transition: margin-right $transition-time ease, margin-left $transition-time ease;
-    padding: (20px + 15px + 24px) 20px ($footer-height + 20px) 20px;
+    transition: right $transition-time ease;
+    padding: (20px + 15px + 24px) 20px 20px 20px;
     box-sizing: border-box;
+    overflow-y: scroll;
 
     &.is-open {
-        // right: 0;
-        margin-right: 0;
-        margin-left: -$sidebar-width;
+        right: 0;
+    }
+
+    .nav_content {
+        height: auto;
     }
 
     // font-size
@@ -343,6 +344,7 @@ nav {
         position: relative;
         margin: 0;
         right: auto;
+        top: 0 !important;
         padding: 20px;
 
         // Show Sidebar Notes on > 768px

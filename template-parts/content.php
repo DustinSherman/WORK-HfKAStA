@@ -1,9 +1,7 @@
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
     <?php
-
-    get_template_part( 'template-parts/entry-header' );
-
+        get_template_part( 'template-parts/entry-header' );
     ?>
 
     <div class="post-inner <?php echo is_page_template( 'templates/template-full-width.php' ) ? '' : 'thin'; ?> ">
@@ -29,10 +27,6 @@
 
                 echo "<p>$result</p>";
 
-            } elseif (! is_singular() ) {
-                the_excerpt();
-            } else {
-                the_content( __( 'Continue reading', 'twentytwenty' ) );
             }
             ?>
 
@@ -40,23 +34,4 @@
 
     </div>
 
-    <?php
-
-    /**
-     *  Output comments wrapper if it's a post, or if comments are open,
-     * or if there's a comment number – and check for password.
-     * */
-    if ( ( is_single() || is_page() ) && ( comments_open() || get_comments_number() ) && ! post_password_required() ) {
-        ?>
-
-        <div class="comments-wrapper section-inner">
-
-            <?php comments_template(); ?>
-
-        </div>
-
-        <?php
-    }
-    ?>
-
-</article><!-- .post -->
+</article>

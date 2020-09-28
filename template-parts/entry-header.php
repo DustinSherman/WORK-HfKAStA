@@ -80,7 +80,7 @@
 
             <div class="sidebar_note_link">
 
-                <a href="#content_sidebar-note_anchor" onclick="scroll()">
+                <a href="#content_sidebar-note_anchor" onclick="scroll()" class="scroll">
 
                     <span><?php the_field('hint_to_sidebar_note', $term); ?></span>
 
