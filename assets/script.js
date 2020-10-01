@@ -85,7 +85,7 @@ function scroll() {
 function setTickerValues() {
     let ticker = document.getElementById('ticker');
     let tickerWidth = -ticker.clientWidth / tickerNewsCount;
-    let tickerDuration = ticker.clientWidth * .01;
+    let tickerDuration = ticker.clientWidth * .005;
     let target = document.querySelector('#ticker-style');
     let style = document.createElement('style');
 

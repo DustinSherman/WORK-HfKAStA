@@ -62,12 +62,15 @@ h6 {
             padding-left: 0;
 
             li {
+                position: relative;
                 padding-left: 24.1px;
                 list-style-type: none;
-                background-image: url('../assets/hfkasta_stack.svg#m_dash');
-                background-position: top left;
-                background-repeat: no-repeat;
-                background-size: 24.1px;
+
+                &::before {
+                    content: '-';
+                    position: absolute;
+                    left: 0;
+                }
             }
         }
 
