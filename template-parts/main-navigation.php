@@ -1,11 +1,11 @@
-
+<div class="hamburger hamburger--squeeze" id="hamburger">
+    <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+    </div>
+</div>
 
 <nav id="nav">
-    <div class="hamburger hamburger--squeeze" id="hamburger">
-        <div class="hamburger-box">
-            <div class="hamburger-inner"></div>
-        </div>
-    </div>
+    <!-- original place for hamburger -->
 
     <?php if (get_field('sidebar_note_top')) : ?>
         <div class="sidebar_note_top">

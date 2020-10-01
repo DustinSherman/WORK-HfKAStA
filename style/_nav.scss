@@ -10,11 +10,6 @@
     top: $ticker-height_s;
     top: 0;
     z-index: 32;
-
-    &.is-active {
-        position: absolute;
-        top: 0 !important;
-    }
 }
 
 nav {
@@ -29,7 +24,7 @@ nav {
     border-left: $border-weight_m solid $brand-primary-color;
     z-index: 30;
     transition: right $transition-time ease;
-    padding: (20px + 15px + 24px) 20px (20px + $ticker-height_s) 20px;
+    padding: (15px + 24px) $sidebar-padding ($sidebar-padding + $ticker-height_s) $sidebar-padding;
     box-sizing: border-box;
     overflow-y: overlay;
 
@@ -62,6 +57,15 @@ nav {
 
             &:not(:last-child) {
                 margin-bottom: 10px;
+            }
+
+            // Temporary Menu Item
+            &.temp a {
+                font-family: 'GT-Haptik-Regular-Oblique', sans-serif;
+            }
+
+            &.temp.current-menu-item>a {
+                font-family: 'GT-Haptik-Bold-Oblique', sans-serif;
             }
 
             a {
@@ -145,9 +149,9 @@ nav {
 
     .search-form {
         height: $search-bar-height_m !important;
-        width: 100%;
+        width: calc(100% + (#{$sidebar-padding} * 2));
         position: relative;
-        margin-left: -$search-form-padding;
+        margin-left: -$sidebar-padding;
 
         input {
             border-radius: 0;
@@ -158,7 +162,8 @@ nav {
         }
 
         .search-bar {
-            border: $border-weight_m solid $brand-primary-color !important;
+            border-top: $border-weight_m solid $brand-primary-color !important;
+            border-bottom: $border-weight_m solid $brand-primary-color !important;
             height: 100%;
             display: block;
         }
@@ -167,7 +172,7 @@ nav {
             width: 100%;
             height: 100%;
             min-height: 100%;
-            padding: $search-form-padding;
+            padding: $search-form-padding $sidebar-padding;
             border: 0 !important;
             outline: none !important;
             border-radius: 0 !important;
@@ -240,7 +245,7 @@ nav {
         .search-submit,
         .search-icon {
             position: absolute;
-            right: 0;
+            right: 10px;
             top: 0;
         }
     }
@@ -321,7 +326,7 @@ nav {
         ul li.menu-item-has-children .dropdown-btn:active,
         ul li.menu-item-has-children .dropdown-btn:focus {
             margin: 0 0 2.5px 6px;
-            width: 16.2px;
+            width: 18.2px;
         }
     }
 
@@ -340,7 +345,7 @@ nav {
         margin: 0;
         right: auto;
         top: 0 !important;
-        padding: 20px;
+        padding: $sidebar-padding;
         overflow: visible;
         height: auto;
 
@@ -349,16 +354,17 @@ nav {
         .sidebar_note_top {
             display: inline-block;
             width: calc(100% + 42px);
-            margin: 0 -21px 20px;
-            padding: 0 20px 20px 20px;
+            padding: 0 $sidebar-padding $sidebar-padding;
         }
 
         .sidebar_note {
             border-top: $border-weight_m solid $brand-primary-color;
+            margin: 0 (-$sidebar-padding - 1) $sidebar-padding;
         }
 
         .sidebar_note_top {
             border-bottom: $border-weight_m solid $brand-primary-color;
+            margin: 0 (-$sidebar-padding);
 
             p {
                 margin: 0;
@@ -367,6 +373,10 @@ nav {
 
         &.is-open {
             margin-left: 0;
+        }
+
+        .search-form .search-bar {
+            border-top: 0 !important;
         }
     }
 

@@ -1,3 +1,4 @@
+// For each function in Vanilla JS
 let forEach = function (t, o, r) {
     if ("[object Object]" === Object.prototype.toString.call(t))
         for (var c in t) Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t);
@@ -134,8 +135,6 @@ function getSubMenuHeights() {
 
     let iterate = 1;
     let css = '';
-
-    console.log(navPoints.length);
 
     if (navPoints.length > 0) {
         forEach(navPoints, function (navPoint) {
