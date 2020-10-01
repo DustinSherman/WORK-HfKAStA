@@ -486,6 +486,7 @@ nav .sidebar_note_top {
   nav ul li.menu-item-has-children .dropdown-btn:focus {
     margin: 0 0 2.5px 6px;
     width: 18.2px;
+    height: 12.1px;
   }
   .home-link {
     position: fixed;
@@ -501,7 +502,7 @@ nav .sidebar_note_top {
     margin: 0;
     right: auto;
     top: 0 !important;
-    padding: 20px;
+    padding: 0 20px;
     overflow: visible;
     height: auto;
   }
@@ -2399,6 +2400,15 @@ body .wpcf7 form.unaccepted .wpcf7-response-output {
   padding: 20px;
 }
 
+body .wpcf7-response-output {
+  font-family: 'GT-Haptik-Regular', sans-serif;
+  font-size: 1.125rem;
+  color: #fff;
+  background: #5a00be;
+  padding: 20px;
+  border: 0;
+}
+
 body div.wpcf7 .ajax-loader {
   background-image: none;
   border: 2px solid #5a00be;
@@ -2528,6 +2538,7 @@ span,
 a,
 li,
 input,
+textarea,
 button,
 figcaption,
 td,
