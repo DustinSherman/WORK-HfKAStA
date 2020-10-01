@@ -126,6 +126,8 @@
     pll_register_string('Category Menu Title', 'Was möchtest du sehen?', 'Wordpress');
     pll_register_string('Search Result Success', 'Suchergebnis für', 'Wordpress');
     pll_register_string('Search Result Fail', 'Kein Suchergebnis für', 'Wordpress');
+    pll_register_string('Last modified at:', 'Zuletzt geändert am:', 'Wordpress');
+    pll_register_string('No Posts were found.', 'Hierzu wurden keine Beiträge gefunden.', 'Wordpress');
 
     // exclude styling (css) from "The newsletter plugin"
     // see: https://www.thenewsletterplugin.com/documentation/customization/subscription-forms-style/

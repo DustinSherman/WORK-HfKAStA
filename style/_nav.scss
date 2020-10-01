@@ -378,6 +378,7 @@ nav {
 @media screen and (min-width: $breakpoint-screen) {
     nav {
         width: 30%;
+        border-left: $border-weight_l solid $brand-primary-color;
 
         // font-size
         ul li a,

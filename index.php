@@ -24,17 +24,21 @@
                 'exclude' => array(
                     $ticker_cat_id
                 ),
+                'hide_empty' => FALSE
             )); ?>
         </div>
 
         <?php 
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $default_posts_per_page = get_option( 'posts_per_page' );
+            $category_id = get_the_ID();
 
             $data= new WP_Query(array(
                 'post_type'=>'post', // your post type name
                 'posts_per_page' => $default_posts_per_page, // post per page
                 'paged' => $paged,
+                // 'category__not_in' => $ticker_cat_id,
+                'cat' => get_query_var('cat') ,
             ));
 
             if($data->have_posts()) : ?>
@@ -87,7 +91,7 @@
                 </div>
         <?php else :?>
             <h3>
-                <?php _e('404 Error&#58; Not Found', ''); ?>
+                <?php pll_e('Hierzu wurden keine Beiträge gefunden.'); ?>
             </h3>
         <?php endif; ?>
         <?php wp_reset_postdata();?>

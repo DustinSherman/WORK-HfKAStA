@@ -105,7 +105,7 @@ h6 {
         }
 
         // Image-Element
-        figure.wp-block-image {
+        .wp-block-image {
             margin: 0;
 
             img {
@@ -306,6 +306,11 @@ h6 {
                 figcaption {
                     font-size: $font-size-25;
                 }
+            }
+
+            // Seperator
+            .wp-block-separator {
+                border-width: $border-weight_l;
             }
         }
     }

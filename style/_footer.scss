@@ -47,3 +47,9 @@ footer {
         }
     }
 }
+
+@media (min-width: $breakpoint-screen) {
+    footer {
+        border-top: $border-weight_l solid $brand-primary-color;
+    }
+}

@@ -184,6 +184,7 @@
     .ticker-wrap {
         height: $ticker-height-l;
         margin-bottom: -($ticker-height-l + 2px);
+        border-bottom: $border-weight_l solid $brand-primary-color;
 
         .ticker {
             margin-top: -4px;

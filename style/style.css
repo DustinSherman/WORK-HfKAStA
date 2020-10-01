@@ -527,6 +527,7 @@ nav .sidebar_note_top {
 @media screen and (min-width: 1680px) {
   nav {
     width: 30%;
+    border-left: 3px solid #5a00be;
   }
   nav ul li a,
   nav .search-form .search-field,
@@ -636,6 +637,12 @@ footer ul li {
     width: auto;
     margin: 0 20px 0 0;
     text-align: left;
+  }
+}
+
+@media (min-width: 1680px) {
+  footer {
+    border-top: 3px solid #5a00be;
   }
 }
 
@@ -1148,6 +1155,7 @@ body.page-child .entry-header h1 {
   .ticker-wrap {
     height: 65px;
     margin-bottom: -67px;
+    border-bottom: 3px solid #5a00be;
   }
   .ticker-wrap .ticker {
     margin-top: -4px;
@@ -1634,6 +1642,7 @@ main .content .wp-block-image a::before {
 @media (min-width: 1680px) {
   .language-switch {
     margin-top: 30px;
+    border: 3px solid #5a00be;
   }
 }
 
@@ -1772,11 +1781,11 @@ h6 {
   padding: 5px 10px;
 }
 
-.wrapper main .content figure.wp-block-image {
+.wrapper main .content .wp-block-image {
   margin: 0;
 }
 
-.wrapper main .content figure.wp-block-image img {
+.wrapper main .content .wp-block-image img {
   height: auto;
 }
 
@@ -1939,6 +1948,9 @@ h6 {
   }
   .wrapper main .content figure.wp-block-gallery li.blocks-gallery-item figure figcaption {
     font-size: 1.5625rem;
+  }
+  .wrapper main .content .wp-block-separator {
+    border-width: 3px;
   }
 }
 
