@@ -24,7 +24,7 @@ nav {
     border-left: $border-weight_m solid $brand-primary-color;
     z-index: 30;
     transition: right $transition-time ease;
-    padding: (15px + 24px) $sidebar-padding ($sidebar-padding + $ticker-height_s) $sidebar-padding;
+    padding: 58px $sidebar-padding ($sidebar-padding + $ticker-height_s) $sidebar-padding;
     box-sizing: border-box;
     overflow-y: overlay;
 
