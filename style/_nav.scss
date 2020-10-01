@@ -22,6 +22,7 @@ nav {
     top: $ticker-height_m;
     right: -$sidebar-width;
     width: $sidebar-width;
+    min-width: $sidebar-width;
     height: 100%;
     background: #fff;
     color: $brand-primary-color;

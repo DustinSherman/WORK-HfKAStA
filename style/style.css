@@ -187,6 +187,7 @@ nav {
   top: 50px;
   right: -325px;
   width: 325px;
+  min-width: 325px;
   height: 100%;
   background: #fff;
   color: #5a00be;
