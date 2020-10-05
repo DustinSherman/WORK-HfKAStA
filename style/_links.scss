@@ -58,6 +58,15 @@ main .content_sidebar-note p {
             background-position: left center;
             align-self: center;
         }
+
+        // Fallback
+        &::before {
+            background-image: url('../assets/hfkasta_stack.svg#m_link_internal-red');
+        }
+
+        &:hover::before {
+            background-image: url('../assets/hfkasta_stack.svg#m_link_internal');
+        }
     }
 
     // Exclude telefon-links
@@ -161,7 +170,6 @@ main .content .wp-block-image {
 
         // Exclude telefon-links
         a:not([href*='tel:']) {
-            height: $font-size-25 * 2;
 
             &::before {
                 width: 36px;

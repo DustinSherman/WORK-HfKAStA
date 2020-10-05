@@ -750,7 +750,7 @@ body.page-child .entry-header h1 {
   }
   .entry-header {
     position: relative;
-    padding: 2rem 15px 3rem;
+    padding: 2rem 15px 1rem;
   }
   .entry-header .boxes {
     position: relative;
@@ -765,7 +765,7 @@ body.page-child .entry-header h1 {
   .entry-header .note-line {
     margin-left: calc(50% - 267.4px);
     width: 267.4px;
-    height: 220.7px;
+    height: 182px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -789,14 +789,14 @@ body.page-child .entry-header h1 {
     background-image: url("../assets/hfkasta_stack.svg#m_swoosh_1");
   }
   .entry-header .note-swoosh-1 .note {
-    top: -125px;
-    left: -106px;
+    top: -141px;
+    left: -110px;
   }
   .entry-header .note-swoosh-2 {
     background-image: url("../assets/hfkasta_stack.svg#m_swoosh_2");
   }
   .entry-header .note-swoosh-2 .note {
-    top: -85px;
+    top: -99px;
     left: -116px;
   }
   .entry-header .note-swoosh-3 {
@@ -832,7 +832,7 @@ body.page-child .entry-header h1 {
   .entry-header .note-line {
     margin-left: calc(50% - 271px);
     width: 271px;
-    height: 223px;
+    height: 182px;
   }
   .entry-header .note {
     font-size: 2.1875rem;
@@ -842,15 +842,15 @@ body.page-child .entry-header h1 {
     background-image: url("../assets/hfkasta_stack.svg#l_swoosh_1");
   }
   .entry-header .note-swoosh-1 .note {
-    top: -126px;
-    left: -134px;
+    top: -142px;
+    left: -137px;
   }
   .entry-header .note-swoosh-2 {
     background-image: url("../assets/hfkasta_stack.svg#l_swoosh_2");
   }
   .entry-header .note-swoosh-2 .note {
-    top: -89px;
-    left: -136px;
+    top: -102px;
+    left: -141px;
   }
   .entry-header .note-swoosh-3 {
     background-image: url("../assets/hfkasta_stack.svg#l_swoosh_3");
@@ -1293,6 +1293,22 @@ main .content_sidebar-note p a::before {
       align-self: center;
 }
 
+main .content p a::before,
+main .content li a::before,
+nav .sidebar_note p a::before,
+nav .sidebar_note_top p a::before,
+main .content_sidebar-note p a::before {
+  background-image: url("../assets/hfkasta_stack.svg#m_link_internal-red");
+}
+
+main .content p a:hover::before,
+main .content li a:hover::before,
+nav .sidebar_note p a:hover::before,
+nav .sidebar_note_top p a:hover::before,
+main .content_sidebar-note p a:hover::before {
+  background-image: url("../assets/hfkasta_stack.svg#m_link_internal");
+}
+
 main .content p a[href*='tel:'],
 main .content li a[href*='tel:'],
 nav .sidebar_note p a[href*='tel:'],
@@ -1454,13 +1470,6 @@ main .content .wp-block-image a::before {
 }
 
 @media (min-width: 1680px) {
-  main .content p a:not([href*='tel:']),
-  main .content li a:not([href*='tel:']),
-  nav .sidebar_note p a:not([href*='tel:']),
-  nav .sidebar_note_top p a:not([href*='tel:']),
-  main .content_sidebar-note p a:not([href*='tel:']) {
-    height: 3.125rem;
-  }
   main .content p a:not([href*='tel:'])::before,
   main .content li a:not([href*='tel:'])::before,
   nav .sidebar_note p a:not([href*='tel:'])::before,
@@ -1956,8 +1965,6 @@ h6 {
   }
   .wrapper main .content > ul li {
     padding-left: 36px;
-    background-size: 36px;
-    background-image: url("../assets/hfkasta_stack.svg#l_dash");
   }
   .wrapper main .content figure.wp-block-gallery li.blocks-gallery-item figure figcaption {
     font-size: 1.5625rem;
