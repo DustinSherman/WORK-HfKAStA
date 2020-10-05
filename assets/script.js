@@ -39,8 +39,6 @@ window.onresize = function () {
     footerHeight = document.getElementById('footer').offsetHeight;
 
     scroll();
-    setTickerValues();
-    setWrapperPadding();
 
     if (window.innerWidth < 768) {
         state = 0;
@@ -54,6 +52,10 @@ window.onresize = function () {
 
     if (state != prevState) {
         getSubMenuHeights();
+        setTickerValues();
+        setWrapperPadding();
+
+        console.log("Viewport changed");
 
         prevState = state;
     }
@@ -106,10 +108,14 @@ function setTickerValues() {
     let ticker = document.getElementById('ticker');
     let tickerWidth = -ticker.clientWidth / tickerNewsCount;
     let tickerDuration = ticker.clientWidth * .005;
+
     let target = document.querySelector('#ticker-style');
     let style = document.createElement('style');
 
     style.innerHTML = ('.ticker-wrap .ticker {-webkit-animation-duration: ' + tickerDuration + 's;animation-duration: ' + tickerDuration + 's;} @-webkit-keyframes ticker {0% {-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);visibility: visible;}100% {-webkit-transform: translate3d(' + tickerWidth + 'px, 0, 0);transform: translate3d(' + tickerWidth + 'px, 0, 0);}}@keyframes ticker {0% {-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0); visibility: visible;}100% {-webkit-transform: translate3d(' + tickerWidth + 'px, 0, 0);transform: translate3d(' + tickerWidth + 'px, 0, 0);}}')
+
+    let prevStyle = document.querySelector('#ticker-style').nextSibling;
+    prevStyle.remove();
 
     target.parentNode.insertBefore(style, target.nextSibling);
 }
@@ -170,10 +176,13 @@ function getSubMenuHeights() {
         })
     }
 
-    let target = document.querySelector('#ticker-style');
+    let target = document.querySelector('#submenu-style');
     let style = document.createElement('style');
 
     style.innerHTML = css;
+
+    let prevStyle = document.querySelector('#submenu-style').nextSibling;
+    prevStyle.remove();
 
     target.parentNode.insertBefore(style, target.nextSibling);
 }

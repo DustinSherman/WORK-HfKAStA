@@ -22,6 +22,7 @@
     <script src="<?php echo get_template_directory_uri(); ?>/assets/zenscroll-min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/script.js"></script>
     <div id="ticker-style"></div>
+    <div id="submenu-style"></div>
     </body>
 
     <?php wp_footer(); ?>
