@@ -355,12 +355,12 @@ nav {
         .sidebar_note_top {
             display: inline-block;
             width: calc(100% + 42px);
-            padding: 0 $sidebar-padding $sidebar-padding;
         }
 
         .sidebar_note {
             border-top: $border-weight_m solid $brand-primary-color;
             margin: 0 (-$sidebar-padding - 1) $sidebar-padding;
+            padding: 0 $sidebar-padding $sidebar-padding;
         }
 
         .sidebar_note_top {

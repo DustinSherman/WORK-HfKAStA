@@ -510,11 +510,11 @@ nav .sidebar_note_top {
   nav .sidebar_note_top {
     display: inline-block;
     width: calc(100% + 42px);
-    padding: 0 20px 20px;
   }
   nav .sidebar_note {
     border-top: 2px solid #5a00be;
     margin: 0 -21px 20px;
+    padding: 0 20px 20px;
   }
   nav .sidebar_note_top {
     border-bottom: 2px solid #5a00be;
