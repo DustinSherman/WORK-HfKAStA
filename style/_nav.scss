@@ -366,6 +366,7 @@ nav {
         .sidebar_note_top {
             border-bottom: $border-weight_m solid $brand-primary-color;
             margin: 0 (-$sidebar-padding);
+            padding: $sidebar-padding;
 
             p {
                 margin: 0;
