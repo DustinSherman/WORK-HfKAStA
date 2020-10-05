@@ -347,7 +347,7 @@ nav .search-form .search-field {
   width: 100%;
   height: 100%;
   min-height: 100%;
-  padding: 5px 20px;
+  padding: 5px 48.29px 5px 20px;
   border: 0 !important;
   outline: none !important;
   border-radius: 0 !important;
@@ -594,7 +594,7 @@ nav .sidebar_note_top {
     height: 50px !important;
   }
   nav .search-form .search-bar {
-    border: 3px solid #5a00be !important;
+    border-bottom: 3px solid #5a00be !important;
   }
   nav .search-form .search-icon {
     width: 30.99px;
@@ -2492,6 +2492,10 @@ body div.wpcf7 .ajax-loader {
     border: none;
     position: relative;
   }
+}
+
+#start {
+  margin: 0;
 }
 
 *,

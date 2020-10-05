@@ -21,6 +21,9 @@ let footerHeight = document.getElementById('footer').offsetHeight;
 
 let documentHeight = document.body.clientHeight;
 
+let state = 0;
+let prevState = state;
+
 window.onload = function () {
     scroll();
     setTickerValues();
@@ -38,6 +41,22 @@ window.onresize = function () {
     scroll();
     setTickerValues();
     setWrapperPadding();
+
+    if (window.innerWidth < 768) {
+        state = 0;
+    } else if (window.innerWidth < 1024) {
+        state = 1;
+    } else if (window.innerWidth < 1680) {
+        state = 2;
+    } else {
+        state = 3;
+    }
+
+    if (state != prevState) {
+        getSubMenuHeights();
+
+        prevState = state;
+    }
 }
 
 // Toogle Classes on hamburger Menu
