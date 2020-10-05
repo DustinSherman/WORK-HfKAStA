@@ -2405,15 +2405,17 @@ body .wpcf7 form.unaccepted .wpcf7-response-output {
   font-size: 1.125rem;
   color: #d50e31;
   padding: 20px;
+  background: none;
 }
 
-body .wpcf7-response-output {
+body .wpcf7 form .wpcf7-response-output {
   font-family: 'GT-Haptik-Regular', sans-serif;
   font-size: 1.125rem;
   color: #fff;
   background: #5a00be;
   padding: 20px;
   border: 0;
+  margin: 0;
 }
 
 body div.wpcf7 .ajax-loader {
