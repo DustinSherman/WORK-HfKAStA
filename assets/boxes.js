@@ -22,7 +22,7 @@ function setup() {
 }
 
 function draw() {
-    background(240);
+    background(255);
 
     for (let i = 0; i < boxes.length; i++) {
         boxes[i].draw();
@@ -75,12 +75,15 @@ class box {
 
 
         // Debug Draw
+        /*
         strokeWeight(1);
         stroke(0);
         line(0, 0, 20, 0);
+        */
 
         pop();
 
+        /*
         noStroke();
         ellipseMode(CENTER);
 
@@ -89,6 +92,7 @@ class box {
             ellipse(this.corners[i].x, this.corners[i].y, 2, 2);
             ellipse(this.hoverCorners[i].x, this.hoverCorners[i].y, 4, 4);
         };
+        */
 
         this.hover();
     }
@@ -120,9 +124,11 @@ class box {
                 let angle = this.direction.angleBetween(originVector);
 
                 // Debug Draw
+                /*
                 stroke(0);
                 strokeWeight(1);
                 line(this.pos.x, this.pos.y, this.pos.x + this.direction.x, this.pos.y + this.direction.y);
+                */
 
                 if (abs(degrees(angle)) > 5) {
                     this.rotation -= angle / 10;

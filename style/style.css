@@ -612,6 +612,7 @@ nav .sidebar_note_top {
 footer {
   border-top: 2px solid #5a00be;
   background: #fff;
+  z-index: 20;
   position: relative;
   width: 100%;
   height: auto;

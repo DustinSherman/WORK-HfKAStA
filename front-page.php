@@ -2,7 +2,7 @@
 
     get_header();
 
-    $show_js_boxes = FALSE;
+    $show_js_boxes = TRUE;
 ?>
 
     <div class="content" id="start">
