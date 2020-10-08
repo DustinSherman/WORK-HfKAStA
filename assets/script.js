@@ -55,8 +55,6 @@ window.onresize = function () {
         setTickerValues();
         setWrapperPadding();
 
-        console.log("Viewport changed");
-
         prevState = state;
     }
 }
@@ -65,6 +63,7 @@ window.onresize = function () {
 hamburger.addEventListener("click", function () {
     this.classList.toggle("is-active");
     nav.classList.toggle("is-open");
+    document.body.classList.toggle("nav-is-open");
 }, false);
 
 function scroll() {
