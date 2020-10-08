@@ -641,6 +641,10 @@ footer ul li {
   text-align: center;
 }
 
+body.nav-is-open footer {
+  z-index: 10;
+}
+
 @media (min-width: 768px) {
   footer {
     padding: 10px 20px;
@@ -649,6 +653,12 @@ footer ul li {
     width: auto;
     margin: 0 20px 0 0;
     text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  body.nav-is-open footer {
+    z-index: 20;
   }
 }
 
